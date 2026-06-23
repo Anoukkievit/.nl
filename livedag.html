@@ -13,29 +13,27 @@
       --coral-dark: #e06a48;
       --blue:       #2596be;
       --blue-dark:  #1a7a9e;
-      --blue-deep:  #0f3a50;
       --gold:       #e0ae44;
       --pink:       #EEC3E5;
       --pink-light: #F9EFF7;
       --cream:      #FDFAF7;
       --white:      #FFFFFF;
-      --ink:        #0f3a50;
-      --ink-soft:   #2e6e8e;
-      --sand:       #EDF5F9;
+      --text:       #1a1a1a;
+      --text-soft:  #555555;
+      --line:       #e8e8e8;
     }
 
     html { scroll-behavior: smooth; }
     body {
       font-family: 'Jost', sans-serif;
-      background: var(--cream);
-      color: var(--ink);
+      background: var(--white);
+      color: var(--text);
       font-size: 17px;
       line-height: 1.85;
     }
 
-    .serif { font-family: 'Cormorant Garamond', serif; }
-    .container { max-width: 720px; margin: 0 auto; padding: 0 28px; }
-    .container--wide { max-width: 1020px; margin: 0 auto; padding: 0 28px; }
+    .container      { max-width: 720px;  margin: 0 auto; padding: 0 28px; }
+    .container--wide{ max-width: 1020px; margin: 0 auto; padding: 0 28px; }
     .center { text-align: center; }
     p { margin-bottom: 20px; }
     p:last-child { margin-bottom: 0; }
@@ -55,14 +53,12 @@
       cursor: pointer;
       border: none;
     }
-    .btn--coral { background: var(--coral); color: var(--white); }
-    .btn--coral:hover { background: var(--coral-dark); transform: translateY(-3px); box-shadow: 0 12px 32px rgba(254,138,103,.35); }
-    .btn--blue { background: var(--blue); color: var(--white); }
-    .btn--blue:hover { background: var(--blue-dark); transform: translateY(-3px); }
-    .btn--outline { background: transparent; border: 2px solid var(--coral); color: var(--coral); }
-    .btn--outline:hover { background: var(--coral); color: var(--white); }
-    .btn--white { background: var(--white); color: var(--coral-dark); }
-    .btn--white:hover { background: var(--cream); transform: translateY(-2px); }
+    .btn--coral   { background: var(--coral); color: var(--white); }
+    .btn--coral:hover { background: var(--coral-dark); transform: translateY(-3px); box-shadow: 0 12px 32px rgba(254,138,103,.3); }
+    .btn--blue    { background: var(--blue);  color: var(--white); }
+    .btn--blue:hover  { background: var(--blue-dark);  transform: translateY(-3px); }
+    .btn--outline { background: transparent; border: 2px solid var(--text); color: var(--text); }
+    .btn--outline:hover { background: var(--text); color: var(--white); }
 
     /* ── LABELS ── */
     .label {
@@ -74,8 +70,8 @@
       margin-bottom: 16px;
     }
     .label--coral { color: var(--coral); }
-    .label--blue { color: var(--blue); }
-    .label--gold { color: var(--gold); }
+    .label--blue  { color: var(--blue); }
+    .label--gold  { color: #b88a1a; }
 
     /* ══════════════════════════════════════
        URGENCY BAR
@@ -92,41 +88,30 @@
     }
 
     /* ══════════════════════════════════════
-       HERO
+       HERO — wit, grote typografie
     ══════════════════════════════════════ */
     .hero {
-      background: var(--blue-deep);
-      color: var(--white);
-      padding: 110px 28px 100px;
+      background: var(--white);
+      padding: 100px 28px 88px;
       text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    .hero::before {
-      content: '';
-      position: absolute; inset: 0;
-      background:
-        radial-gradient(ellipse at 20% 50%, rgba(37,150,190,.18) 0%, transparent 60%),
-        radial-gradient(ellipse at 80% 30%, rgba(254,138,103,.15) 0%, transparent 60%);
-      pointer-events: none;
+      border-bottom: 1px solid var(--line);
     }
     .hero__event-name {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 13px;
-      letter-spacing: 8px;
+      font-size: 11px;
+      letter-spacing: 6px;
       text-transform: uppercase;
-      color: var(--pink);
-      margin-bottom: 24px;
+      color: var(--coral);
+      margin-bottom: 28px;
       display: block;
-      font-weight: 400;
+      font-weight: 600;
     }
     .hero__headline {
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(56px, 10vw, 96px);
+      font-size: clamp(60px, 11vw, 108px);
       font-weight: 300;
-      line-height: 1.0;
-      color: var(--white);
-      margin-bottom: 12px;
+      line-height: .95;
+      color: var(--text);
+      margin-bottom: 16px;
     }
     .hero__headline em {
       font-style: italic;
@@ -134,17 +119,17 @@
     }
     .hero__subline {
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(22px, 3vw, 30px);
+      font-size: clamp(22px, 3vw, 32px);
       font-weight: 300;
       font-style: italic;
-      color: rgba(255,255,255,.55);
+      color: var(--text-soft);
       margin-bottom: 44px;
     }
     .hero__body {
       font-size: 17px;
       font-weight: 300;
-      color: rgba(255,255,255,.75);
-      max-width: 540px;
+      color: var(--text-soft);
+      max-width: 520px;
       margin: 0 auto 52px;
       line-height: 1.8;
     }
@@ -159,25 +144,18 @@
       padding: 40px 28px;
     }
     .strip__grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 48px;
-      max-width: 800px;
-      margin: 0 auto;
+      display: flex; flex-wrap: wrap;
+      justify-content: center; gap: 48px;
+      max-width: 800px; margin: 0 auto;
     }
     .strip__item__label {
-      font-size: 9px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--blue);
-      font-weight: 600;
-      margin-bottom: 5px;
+      font-size: 9px; letter-spacing: 3px;
+      text-transform: uppercase; color: var(--blue);
+      font-weight: 600; margin-bottom: 5px;
     }
     .strip__item__val {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 21px;
-      color: var(--ink);
+      font-size: 21px; color: var(--text);
     }
 
     /* ══════════════════════════════════════
@@ -191,13 +169,12 @@
       font-weight: 300;
       line-height: 1.15;
       margin-bottom: 32px;
-      color: var(--ink);
+      color: var(--text);
     }
     h2.section-title em { font-style: italic; color: var(--coral); }
-    h2.section-title strong { font-weight: 600; color: var(--blue); }
 
     /* ══════════════════════════════════════
-       OPENER — THE MIRROR
+       MIRROR — OPENER
     ══════════════════════════════════════ */
     .mirror { background: var(--white); }
     .mirror__intro {
@@ -206,62 +183,51 @@
       font-weight: 300;
       font-style: italic;
       line-height: 1.5;
-      color: var(--ink-soft);
+      color: var(--text);
       margin-bottom: 44px;
       padding-bottom: 44px;
-      border-bottom: 1px solid var(--sand);
+      border-bottom: 1px solid var(--line);
     }
-    .mirror__intro strong {
-      font-style: normal;
-      font-weight: 600;
-      color: var(--ink);
-    }
-    .mirror__list {
-      list-style: none;
-      margin: 0 0 40px;
-    }
+    .mirror__intro strong { font-style: normal; font-weight: 600; }
+    .mirror__list { list-style: none; margin: 0 0 40px; }
     .mirror__list li {
       padding: 18px 0 18px 36px;
-      border-bottom: 1px solid var(--sand);
+      border-bottom: 1px solid var(--line);
       position: relative;
       font-size: 17px;
       line-height: 1.65;
     }
     .mirror__list li::before {
       content: '';
-      position: absolute;
-      left: 0;
-      top: 26px;
-      width: 8px;
-      height: 8px;
+      position: absolute; left: 0; top: 28px;
+      width: 8px; height: 8px;
       border-radius: 50%;
       background: var(--coral);
     }
-    .mirror__list li strong { color: var(--ink); }
 
     /* ══════════════════════════════════════
-       BIG QUOTE
+       CORAL QUOTE BAND
     ══════════════════════════════════════ */
-    .big-quote {
-      background: var(--blue);
-      padding: 88px 28px;
+    .coral-band {
+      background: var(--coral);
+      padding: 80px 28px;
       text-align: center;
     }
-    .big-quote__text {
+    .coral-band__text {
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(28px, 4.5vw, 50px);
+      font-size: clamp(26px, 4vw, 46px);
       font-weight: 300;
       font-style: italic;
       color: var(--white);
       line-height: 1.35;
-      max-width: 760px;
-      margin: 0 auto 20px;
+      max-width: 720px;
+      margin: 0 auto 16px;
     }
-    .big-quote__sub {
-      font-size: 13px;
+    .coral-band__sub {
+      font-size: 12px;
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: rgba(255,255,255,.5);
+      color: rgba(255,255,255,.65);
     }
 
     /* ══════════════════════════════════════
@@ -278,368 +244,339 @@
     .hzvha__card {
       border-radius: 6px;
       padding: 40px 36px;
-      position: relative;
-      overflow: hidden;
     }
     .hzvha__card--coral { background: var(--coral); }
     .hzvha__card--blue  { background: var(--blue); }
     .hzvha__card--gold  { background: var(--gold); }
     .hzvha__card--pink  { background: var(--pink); }
-    .hzvha__card--sand  { background: var(--sand); border: 2px solid var(--blue); }
+    .hzvha__card--lightblue { background: var(--pink-light); border: 2px solid var(--blue); }
     .hzvha__card--white { background: var(--white); border: 2px solid var(--coral); }
     .hzvha__eyebrow {
-      font-size: 9px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      font-weight: 700;
-      opacity: .6;
-      margin-bottom: 14px;
-      display: block;
+      font-size: 9px; letter-spacing: 3px;
+      text-transform: uppercase; font-weight: 700;
+      opacity: .6; margin-bottom: 14px; display: block;
       color: var(--white);
     }
-    .hzvha__card--gold  .hzvha__eyebrow { color: var(--ink); }
-    .hzvha__card--pink  .hzvha__eyebrow { color: var(--ink); }
-    .hzvha__card--sand  .hzvha__eyebrow { color: var(--blue); }
-    .hzvha__card--white .hzvha__eyebrow { color: var(--coral); }
+    .hzvha__card--gold  .hzvha__eyebrow,
+    .hzvha__card--pink  .hzvha__eyebrow,
+    .hzvha__card--lightblue .hzvha__eyebrow { color: var(--blue); opacity: 1; }
+    .hzvha__card--white .hzvha__eyebrow { color: var(--coral); opacity: 1; }
     .hzvha__q {
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(22px, 2.5vw, 30px);
+      font-size: clamp(21px, 2.5vw, 28px);
+      font-weight: 300; font-style: italic;
+      line-height: 1.35; color: var(--white);
+    }
+    .hzvha__card--gold .hzvha__q,
+    .hzvha__card--pink .hzvha__q,
+    .hzvha__card--lightblue .hzvha__q,
+    .hzvha__card--white .hzvha__q { color: var(--text); }
+    .hzvha__card--wide {
+      grid-column: 1 / -1;
+      background: var(--blue);
+      text-align: center;
+      padding: 56px 40px;
+      border-radius: 6px;
+    }
+    .hzvha__card--wide .hzvha__q {
+      font-size: clamp(26px, 3.5vw, 40px);
+      color: var(--white);
+      max-width: 620px; margin: 0 auto;
+    }
+    .hzvha__card--wide .hzvha__eyebrow { color: rgba(255,255,255,.65); }
+
+    /* ══════════════════════════════════════
+       DIE STEM — spiegel sectie
+    ══════════════════════════════════════ */
+    .stem { background: var(--white); }
+    .stem__voices {
+      margin: 48px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .stem__voice {
+      padding: 20px 28px 20px 56px;
+      border-left: 3px solid var(--line);
+      position: relative;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(18px, 2.5vw, 24px);
+      font-style: italic;
+      color: var(--text-soft);
+      line-height: 1.4;
+    }
+    .stem__voice::before {
+      content: '"';
+      position: absolute;
+      left: 16px;
+      top: 14px;
+      font-size: 40px;
+      color: var(--pink);
+      font-family: 'Cormorant Garamond', serif;
+      line-height: 1;
+    }
+    .stem__shift {
+      background: var(--pink-light);
+      border-left: 4px solid var(--coral);
+      border-radius: 0 6px 6px 0;
+      padding: 28px 32px;
+      margin: 36px 0;
+    }
+    .stem__shift p {
+      font-size: 17px;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+    .stem__shift p:last-child { margin-bottom: 0; }
+    .stem__shift strong { color: var(--coral-dark); }
+    .stem__big-line {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(28px, 4vw, 46px);
       font-weight: 300;
       font-style: italic;
       line-height: 1.3;
-      color: var(--white);
+      color: var(--text);
+      border-top: 1px solid var(--line);
+      padding-top: 48px;
+      margin-top: 48px;
     }
-    .hzvha__card--gold .hzvha__q { color: var(--ink); }
-    .hzvha__card--pink .hzvha__q { color: var(--ink); }
-    .hzvha__card--sand .hzvha__q { color: var(--ink); }
-    .hzvha__card--white .hzvha__q { color: var(--ink); }
-    .hzvha__card--wide {
-      grid-column: 1 / -1;
-      background: var(--blue-deep);
-      text-align: center;
-      padding: 52px 40px;
-    }
-    .hzvha__card--wide .hzvha__q {
-      font-size: clamp(26px, 3.5vw, 42px);
-      color: var(--white);
-      max-width: 640px;
-      margin: 0 auto;
-    }
-    .hzvha__card--wide .hzvha__eyebrow { color: var(--pink); }
+    .stem__big-line em { color: var(--coral); font-style: normal; }
 
     /* ══════════════════════════════════════
-       THE DAY
+       GOLD BAND
     ══════════════════════════════════════ */
-    .the-day { background: var(--white); }
-    .the-day__intro {
-      font-size: 19px;
-      font-weight: 300;
-      line-height: 1.8;
-      color: var(--ink-soft);
-      margin-bottom: 52px;
-      padding-bottom: 52px;
-      border-bottom: 1px solid var(--sand);
-    }
-    .the-day__blocks {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 28px;
-    }
-    @media (max-width: 620px) { .the-day__blocks { grid-template-columns: 1fr; } }
-    .day-block {
-      background: var(--sand);
-      border-radius: 4px;
-      padding: 36px 32px;
-      border-top: 4px solid var(--gold);
-    }
-    .day-block__time {
-      font-size: 9px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--gold);
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-    .day-block__title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 26px;
-      margin-bottom: 14px;
-      color: var(--ink);
-    }
-    .day-block p { font-size: 15px; color: var(--ink-soft); line-height: 1.75; }
-
-    /* ══════════════════════════════════════
-       OUTCOMES — GLOW CARDS
-    ══════════════════════════════════════ */
-    .outcomes { background: var(--pink-light); }
-    .outcomes__grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      margin-top: 52px;
-    }
-    .glow-card {
-      background: var(--white);
-      border-radius: 4px;
-      padding: 36px 28px 32px;
-      text-align: center;
-      border-top: 3px solid var(--pink);
-      transition: transform .2s ease;
-    }
-    .glow-card:hover { transform: translateY(-4px); }
-    .glow-card__num {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 48px;
-      font-weight: 300;
-      color: var(--pink);
-      line-height: 1;
-      margin-bottom: 6px;
-    }
-    .glow-card__title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 22px;
-      color: var(--ink);
-      margin-bottom: 10px;
-    }
-    .glow-card p { font-size: 14px; color: var(--ink-soft); line-height: 1.7; }
-
-    /* ══════════════════════════════════════
-       FOR WHO
-    ══════════════════════════════════════ */
-    .for-who { background: var(--white); }
-    .for-who__list {
-      list-style: none;
-      margin: 36px 0;
-    }
-    .for-who__list li {
-      padding: 16px 0 16px 40px;
-      border-bottom: 1px solid var(--sand);
-      position: relative;
-      font-size: 17px;
-      line-height: 1.65;
-    }
-    .for-who__list li::before {
-      content: '→';
-      position: absolute;
-      left: 0;
-      color: var(--coral);
-      font-weight: 600;
-    }
-
-    /* ══════════════════════════════════════
-       GOLD DIVIDER QUOTE
-    ══════════════════════════════════════ */
-    .gold-break {
+    .gold-band {
       background: var(--gold);
       padding: 72px 28px;
       text-align: center;
     }
-    .gold-break__text {
+    .gold-band__text {
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(24px, 4vw, 42px);
+      font-size: clamp(24px, 4vw, 44px);
       font-weight: 400;
       font-style: italic;
-      color: var(--ink);
+      color: var(--text);
       line-height: 1.4;
       max-width: 640px;
       margin: 0 auto;
     }
 
     /* ══════════════════════════════════════
+       THE DAY
+    ══════════════════════════════════════ */
+    .the-day { background: var(--cream); }
+    .the-day__intro {
+      font-size: 19px; font-weight: 300;
+      line-height: 1.8; color: var(--text-soft);
+      margin-bottom: 52px; padding-bottom: 52px;
+      border-bottom: 1px solid var(--line);
+    }
+    .the-day__blocks { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+    @media (max-width: 620px) { .the-day__blocks { grid-template-columns: 1fr; } }
+    .day-block {
+      background: var(--white);
+      border-radius: 4px; padding: 36px 32px;
+      border-top: 4px solid var(--gold);
+    }
+    .day-block__time {
+      font-size: 9px; letter-spacing: 3px;
+      text-transform: uppercase; color: #b88a1a;
+      font-weight: 700; margin-bottom: 10px;
+    }
+    .day-block__title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px; margin-bottom: 14px; color: var(--text);
+    }
+    .day-block p { font-size: 15px; color: var(--text-soft); line-height: 1.75; }
+
+    /* ══════════════════════════════════════
+       OUTCOMES
+    ══════════════════════════════════════ */
+    .outcomes { background: var(--white); }
+    .outcomes__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px; margin-top: 52px;
+    }
+    .glow-card {
+      background: var(--pink-light);
+      border-radius: 4px; padding: 36px 28px 32px;
+      text-align: center; border-top: 3px solid var(--pink);
+      transition: transform .2s ease;
+    }
+    .glow-card:hover { transform: translateY(-4px); }
+    .glow-card__num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 48px; font-weight: 300;
+      color: var(--pink); line-height: 1; margin-bottom: 6px;
+    }
+    .glow-card__title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px; color: var(--text); margin-bottom: 10px;
+    }
+    .glow-card p { font-size: 14px; color: var(--text-soft); line-height: 1.7; }
+
+    /* ══════════════════════════════════════
+       FOR WHO
+    ══════════════════════════════════════ */
+    .for-who { background: var(--cream); }
+    .for-who__list { list-style: none; margin: 36px 0; }
+    .for-who__list li {
+      padding: 16px 0 16px 40px;
+      border-bottom: 1px solid var(--line);
+      position: relative; font-size: 17px; line-height: 1.65;
+    }
+    .for-who__list li::before {
+      content: '→'; position: absolute; left: 0;
+      color: var(--coral); font-weight: 600;
+    }
+
+    /* ══════════════════════════════════════
        PRICING
     ══════════════════════════════════════ */
-    .pricing { background: var(--cream); }
+    .pricing { background: var(--white); }
     .pricing__cards {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-      margin-top: 56px;
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 24px; margin-top: 56px;
     }
-    @media (max-width: 640px) { .pricing__cards { grid-template-columns: 1fr; } }
-
+    @media (max-width: 840px) { .pricing__cards { grid-template-columns: 1fr; } }
     .price-card {
-      border-radius: 4px;
-      padding: 48px 36px;
-      position: relative;
-      background: var(--white);
-      border: 2px solid var(--sand);
+      border-radius: 4px; padding: 48px 36px;
+      position: relative; background: var(--white);
+      border: 2px solid var(--line);
     }
     .price-card--featured {
-      background: var(--blue-deep);
       border-color: var(--coral);
+      background: var(--cream);
     }
     .price-card__badge {
-      position: absolute;
-      top: -15px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: var(--coral);
-      color: var(--white);
-      font-size: 9px;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-      font-weight: 700;
-      padding: 6px 20px;
-      border-radius: 60px;
-      white-space: nowrap;
+      position: absolute; top: -15px;
+      left: 50%; transform: translateX(-50%);
+      background: var(--coral); color: var(--white);
+      font-size: 9px; letter-spacing: 2.5px;
+      text-transform: uppercase; font-weight: 700;
+      padding: 6px 20px; border-radius: 60px; white-space: nowrap;
     }
     .price-card__type {
-      font-size: 9px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      font-weight: 700;
-      color: var(--blue);
-      margin-bottom: 6px;
+      font-size: 9px; letter-spacing: 3px;
+      text-transform: uppercase; font-weight: 700;
+      color: var(--blue); margin-bottom: 6px;
     }
-    .price-card--featured .price-card__type { color: var(--pink); }
-
+    .price-card--featured .price-card__type { color: var(--coral); }
     .price-card__name {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 36px;
-      font-weight: 400;
-      color: var(--ink);
-      margin-bottom: 6px;
+      font-size: 36px; font-weight: 400;
+      color: var(--text); margin-bottom: 6px;
     }
-    .price-card--featured .price-card__name { color: var(--white); }
-
     .price-card__tagline {
-      font-size: 14px;
-      font-style: italic;
-      color: var(--ink-soft);
-      margin-bottom: 28px;
-      padding-bottom: 24px;
-      border-bottom: 1px solid var(--sand);
+      font-size: 14px; font-style: italic; color: var(--text-soft);
+      margin-bottom: 28px; padding-bottom: 24px;
+      border-bottom: 1px solid var(--line);
     }
-    .price-card--featured .price-card__tagline { color: rgba(255,255,255,.5); border-color: rgba(255,255,255,.12); }
-
     .price-card__old {
-      font-size: 14px;
-      text-decoration: line-through;
-      color: var(--ink-soft);
-      opacity: .5;
+      font-size: 14px; text-decoration: line-through;
+      color: var(--text-soft); opacity: .5;
     }
     .price-card__price {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 64px;
-      font-weight: 300;
-      color: var(--coral);
-      line-height: 1;
-      margin: 4px 0 4px;
+      font-size: 64px; font-weight: 300;
+      color: var(--coral); line-height: 1; margin: 4px 0;
     }
-    .price-card--featured .price-card__price { color: var(--coral); }
-    .price-card__note {
-      font-size: 12px;
-      color: var(--ink-soft);
-      margin-bottom: 32px;
-    }
-    .price-card--featured .price-card__note { color: rgba(255,255,255,.4); }
-
-    .price-card__includes {
-      list-style: none;
-      margin-bottom: 36px;
-    }
+    .price-card__note { font-size: 12px; color: var(--text-soft); margin-bottom: 32px; }
+    .price-card__includes { list-style: none; margin-bottom: 36px; }
     .price-card__includes li {
-      font-size: 14px;
-      padding: 10px 0;
-      border-bottom: 1px solid var(--sand);
-      display: flex;
-      gap: 10px;
-      align-items: flex-start;
-      color: var(--ink);
-    }
-    .price-card--featured .price-card__includes li {
-      color: rgba(255,255,255,.8);
-      border-color: rgba(255,255,255,.1);
+      font-size: 14px; padding: 10px 0;
+      border-bottom: 1px solid var(--line);
+      display: flex; gap: 10px; align-items: flex-start;
+      color: var(--text);
     }
     .price-card__includes li::before {
-      content: '✓';
-      color: var(--coral);
-      flex-shrink: 0;
-      font-weight: 700;
-      margin-top: 1px;
+      content: '✓'; color: var(--coral);
+      flex-shrink: 0; font-weight: 700; margin-top: 1px;
     }
     .price-card .btn { width: 100%; text-align: center; }
 
     /* ══════════════════════════════════════
-       ABOUT
+       ABOUT — het echte verhaal
     ══════════════════════════════════════ */
-    .about { background: var(--sand); }
+    .about { background: var(--cream); }
     .about__inner {
-      display: grid;
-      grid-template-columns: 280px 1fr;
-      gap: 64px;
-      align-items: start;
+      display: grid; grid-template-columns: 280px 1fr;
+      gap: 64px; align-items: start;
     }
     @media (max-width: 660px) {
       .about__inner { grid-template-columns: 1fr; }
       .about__photo { max-width: 260px; margin: 0 auto; }
     }
     .about__photo {
-      aspect-ratio: 4/5;
-      background: var(--pink-light);
-      border-radius: 4px;
-      overflow: hidden;
+      aspect-ratio: 4/5; background: var(--pink-light);
+      border-radius: 4px; overflow: hidden;
       border: 3px solid var(--pink);
     }
     .about__photo img { width: 100%; height: 100%; object-fit: cover; }
     .about__photo-placeholder {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-      color: var(--pink);
-      font-size: 13px;
-      text-align: center;
-      padding: 24px;
+      display: flex; align-items: center; justify-content: center;
+      height: 100%; color: var(--coral);
+      font-size: 13px; text-align: center; padding: 24px;
     }
     .about__text h2 { margin-bottom: 24px; }
-    .about__text p { font-size: 16px; color: var(--ink-soft); }
+    .about__text p { font-size: 16px; color: var(--text-soft); }
+    .about__text strong { color: var(--text); }
+    .about__pullquote {
+      background: var(--white);
+      border-left: 4px solid var(--coral);
+      padding: 20px 24px;
+      margin: 28px 0;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-style: italic;
+      color: var(--text);
+      line-height: 1.4;
+    }
 
     /* ══════════════════════════════════════
        FAQ
     ══════════════════════════════════════ */
     .faq { background: var(--white); }
-    .faq__item { border-bottom: 1px solid var(--sand); padding: 26px 0; }
+    .faq__item { border-bottom: 1px solid var(--line); padding: 26px 0; }
     .faq__q {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 24px;
-      color: var(--ink);
-      margin-bottom: 10px;
+      font-size: 24px; color: var(--text); margin-bottom: 10px;
     }
-    .faq__a { font-size: 15px; color: var(--ink-soft); line-height: 1.75; }
+    .faq__a { font-size: 15px; color: var(--text-soft); line-height: 1.75; }
 
     /* ══════════════════════════════════════
        FINAL CTA
     ══════════════════════════════════════ */
     .final-cta {
-      background: var(--coral);
+      background: var(--blue);
       padding: 112px 28px;
       text-align: center;
     }
     .final-cta h2 { color: var(--white); margin-bottom: 24px; }
     .final-cta h2 em { color: rgba(255,255,255,.7); }
     .final-cta p { color: rgba(255,255,255,.85); max-width: 500px; margin: 0 auto 44px; font-size: 18px; font-weight: 300; }
+    .btn--white { background: var(--white); color: var(--blue-dark); }
+    .btn--white:hover { background: var(--pink-light); transform: translateY(-2px); }
 
     /* ══════════════════════════════════════
        FOOTER
     ══════════════════════════════════════ */
     footer {
-      background: var(--blue-deep);
-      color: rgba(255,255,255,.35);
+      background: var(--cream);
+      border-top: 1px solid var(--line);
+      color: var(--text-soft);
       text-align: center;
       padding: 36px 28px;
-      font-size: 12px;
-      letter-spacing: .5px;
+      font-size: 12px; letter-spacing: .5px;
     }
-    footer a { color: var(--pink); text-decoration: none; }
+    footer a { color: var(--coral); text-decoration: none; }
   </style>
 </head>
 <body>
 
 <!-- URGENCY BAR -->
-<div class="urgency-bar">
-  ✦ &nbsp; Nog maar een handvol plekken beschikbaar &nbsp; ✦
-</div>
+<div class="urgency-bar">✦ &nbsp; Nog maar een handvol plekken beschikbaar &nbsp; ✦</div>
 
 
 <!-- ══════════════════════════════════════
@@ -647,7 +584,7 @@
 ══════════════════════════════════════ -->
 <section class="hero">
   <div class="container">
-    <span class="hero__event-name">DURF &nbsp;·&nbsp; met Anouk Kievit</span>
+    <span class="hero__event-name">DURF &nbsp;·&nbsp; een dagdeel met Anouk Kievit</span>
     <h1 class="hero__headline">
       Jij weet al<br>
       dat er <em>meer</em> is.
@@ -690,7 +627,7 @@
 
 
 <!-- ══════════════════════════════════════
-     DE SPIEGEL — OPENER
+     MIRROR — OPENER
 ══════════════════════════════════════ -->
 <section class="mirror">
   <div class="container">
@@ -699,42 +636,41 @@
     <p class="mirror__intro">
       Er is een versie van jou die <strong>anders wakker wordt 's ochtends.</strong>
       Die beslissingen neemt vanuit zekerheid in plaats van angst.
-      Die een prijs noemt zonder daarna drie keer door haar telefoon scrolt om te kijken
-      of iemand wel reageert. Die zegt wat ze denkt.
+      Die een prijs noemt zonder daarna drie keer door haar telefoon scrolt.
+      Die zegt wat ze denkt.
       <strong>Die leeft.</strong>
     </p>
 
     <p>Die versie van jou bestaat al. Ze zit al in je. Ze wacht al zo lang.</p>
-
     <p>Maar er is iets wat haar tegenhoudt. En je weet exact wat het is.</p>
 
     <ul class="mirror__list">
       <li>Je wilt je prijs verhogen. Maar iedere keer als je het bijna doet, hoor je die stem: <strong>"maar dan haak iemand af."</strong></li>
-      <li>Je wilt zichtbaarder zijn. Je schrijft de post, je leest hem drie keer, en dan <strong>verwijder je hem toch.</strong></li>
+      <li>Je wilt zichtbaarder zijn. Je schrijft de post, leest hem drie keer — en dan <strong>verwijder je hem toch.</strong></li>
       <li>Je weet dat je toe bent aan iets nieuws. Maar je hebt geen idee wat — of je gelooft niet dat jij degene bent die het mag.</li>
-      <li>Je zegt ja terwijl je nee bedoelt. En 's avonds lig je wakker met de vraag: <strong>wanneer ben ik eindelijk eens voor mezelf?</strong></li>
-      <li>Je doet het allemaal goed. Je bent succesvol, bekwaam, aardig. En toch voelt er ergens iets <strong>hol.</strong></li>
+      <li>Je zegt ja terwijl je nee bedoelt. En 's avonds lig je wakker: <strong>wanneer ben ik eindelijk eens voor mezelf?</strong></li>
+      <li>Je doet het allemaal goed. Succesvol, bekwaam, aardig. En toch voelt er ergens iets <strong>hol.</strong></li>
     </ul>
 
     <p>
       Dat gevoel heeft een naam. Het heet: leven vanuit angst in plaats van vanuit wie jij werkelijk bent.
     </p>
     <p>
-      En het bijzondere — en het hoopvolle — is dit: het ligt niet aan jou. Het ligt aan wat
-      je ooit hebt geleerd over veiligheid, over succes, over wat je 'moet' zijn.
-      <strong>Die lessen zijn niet de waarheid. Ze zijn een gewoonte. En gewoontes kun je veranderen.</strong>
+      En het bijzondere — het hoopvolle — is dit: <strong>het ligt niet aan jou.</strong>
+      Het ligt aan wat je ooit hebt geleerd over veiligheid, over succes, over wat je 'moet' zijn.
+      Die lessen zijn niet de waarheid. Ze zijn een gewoonte. En gewoontes kun je veranderen.
     </p>
   </div>
 </section>
 
 
-<!-- BIG QUOTE -->
-<div class="big-quote">
-  <p class="big-quote__text">
+<!-- CORAL QUOTE BAND -->
+<div class="coral-band">
+  <p class="coral-band__text">
     "Angst verdwijnt niet als je omstandigheden veranderen.<br>
     Angst verdwijnt als jíj verandert."
   </p>
-  <p class="big-quote__sub">— Anouk Kievit</p>
+  <p class="coral-band__sub">— Anouk Kievit</p>
 </div>
 
 
@@ -749,52 +685,99 @@
         Hoe zou het zijn<br>
         <em>als…</em>
       </h2>
-      <p style="max-width:500px;margin:0 auto;color:var(--ink-soft);">
-        Lees dit langzaam. Voel wat er in je beweegt als je het leest.
+      <p style="max-width:500px;margin:0 auto;color:var(--text-soft);">
+        Lees dit langzaam. Voel wat er in je beweegt.
         Dat gevoel — dát is waar we naartoe gaan.
       </p>
     </div>
 
     <div class="hzvha__grid">
-
       <div class="hzvha__card hzvha__card--coral">
         <span class="hzvha__eyebrow">Hoe zou het zijn als</span>
         <p class="hzvha__q">je je prijs noemde — zonder verontschuldiging, zonder twijfel, zonder daarna te checken of iemand nog reageert?</p>
       </div>
-
       <div class="hzvha__card hzvha__card--blue">
         <span class="hzvha__eyebrow">Hoe zou het zijn als</span>
         <p class="hzvha__q">je 's ochtends wakker werd met het gevoel: ik weet wat ik doe. En ik wil het echt.</p>
       </div>
-
       <div class="hzvha__card hzvha__card--gold">
         <span class="hzvha__eyebrow">Hoe zou het zijn als</span>
         <p class="hzvha__q">die post gewoon live ging — en je er trots op was in plaats van bang voor de reactie?</p>
       </div>
-
       <div class="hzvha__card hzvha__card--pink">
         <span class="hzvha__eyebrow">Hoe zou het zijn als</span>
         <p class="hzvha__q">je voor jezelf koos — niet als uitzondering, niet als luxe, maar gewoon als standaard?</p>
       </div>
-
-      <div class="hzvha__card hzvha__card--sand">
+      <div class="hzvha__card hzvha__card--lightblue">
         <span class="hzvha__eyebrow">Hoe zou het zijn als</span>
         <p class="hzvha__q">je een beslissing nam en er daarna bij bleef — zonder de twijfel die altijd terugkomt?</p>
       </div>
-
       <div class="hzvha__card hzvha__card--white">
         <span class="hzvha__eyebrow">Hoe zou het zijn als</span>
         <p class="hzvha__q">angst er nog was — maar jij er gewoon langs liep, in plaats van te wachten tot hij weg is?</p>
       </div>
-
       <div class="hzvha__card hzvha__card--wide">
         <span class="hzvha__eyebrow">En bovenal — hoe zou het zijn als</span>
         <p class="hzvha__q">"jij eindelijk leefde zoals jij het bedoeld hebt — niet meer, niet minder, gewoon echt jezelf?"</p>
       </div>
-
     </div>
   </div>
 </section>
+
+
+<!-- ══════════════════════════════════════
+     DIE STEM — de spiegel
+══════════════════════════════════════ -->
+<section class="stem">
+  <div class="container">
+    <span class="label label--coral">Herken je deze stem?</span>
+    <h2 class="section-title">
+      Je hoort hem al jaren.<br>
+      <em>Maar je bent hem niet.</em>
+    </h2>
+
+    <p>
+      Er is een stem in je hoofd. Je kent hem. Hij is er als je je prijs wil verhogen,
+      als je iets groters wil zeggen, als je zichtbaarder wil zijn.
+    </p>
+
+    <div class="stem__voices">
+      <div class="stem__voice">Wie denk jij wel niet dat je bent?</div>
+      <div class="stem__voice">Straks vinden mensen er wat van.</div>
+      <div class="stem__voice">Straks mislukt het.</div>
+      <div class="stem__voice">Straks raak je klanten kwijt.</div>
+      <div class="stem__voice">Straks vinden ze je arrogant.</div>
+    </div>
+
+    <div class="stem__shift">
+      <p><strong>Vroeger geloofde je die stem.</strong> Je viel ermee samen. Je wás die stem.</p>
+      <p>Nu herken je die stem. En dat is een heel ander verhaal.</p>
+      <p>Want bewustwording lost het probleem niet op — maar bewustwording zorgt ervoor dat je niet meer samenvalt met het probleem.</p>
+      <p><strong>Vroeger was je die stem. Nu hoor je die stem. Dat is vrijheid.</strong></p>
+    </div>
+
+    <p>
+      En het verschil tussen mensen die doorbreken en mensen die blijven hangen is niet
+      intelligentie, niet talent, niet de juiste strategie.
+    </p>
+    <p>Het is dit:</p>
+
+    <div class="stem__big-line">
+      De één gelooft iedere angstige gedachte.<br>
+      De ander hoort die gedachte, <em>glimlacht</em>, en loopt toch door.
+    </div>
+  </div>
+</section>
+
+
+<!-- GOLD BAND -->
+<div class="gold-band">
+  <p class="gold-band__text">
+    "Mijn leven veranderde niet toen de angst verdween.<br>
+    Mijn leven veranderde toen ik stopte met luisteren<br>
+    naar iedere angstige gedachte."
+  </p>
+</div>
 
 
 <!-- ══════════════════════════════════════
@@ -807,14 +790,12 @@
       Dit dagdeel is<br>
       <em>niet voor erbij.</em>
     </h2>
-
     <p class="the-day__intro">
       Een brug die er werkelijk toe doet, bouw je niet tussen twee meetings door.
       Geen losse tools die je daarna toch niet gebruikt. Geen inspiratie die na drie dagen
       vervaagt. Dit is een dagdeel dat compleet om <em>jou</em> draait — met de stilte,
       de ruimte en de eerlijkheid die nodig zijn om er echt iets mee te doen.
     </p>
-
     <div class="the-day__blocks">
       <div class="day-block">
         <div class="day-block__time">Eerste helft</div>
@@ -822,21 +803,17 @@
         <p>
           We beginnen met stilte — niet als bijzaak, maar als eerste stap.
           Je hoofd staat aan, altijd. Dat zetten we als eerste uit.
-          Daarna kijk je eerlijk naar het verhaal dat jij al jaren over jezelf vertelt
-          en zie je precies hoe dat verhaal jou klein houdt. Je ontmoet de angst die
-          je al die tijd hebt tegengehouden — niet om hem weg te denken,
-          maar om hem eindelijk écht onder ogen te komen.
+          Je ontmoet de angst die je al die tijd hebt tegengehouden — niet om hem
+          weg te denken, maar om hem eindelijk écht onder ogen te komen.
         </p>
       </div>
       <div class="day-block">
         <div class="day-block__time">Tweede helft</div>
         <div class="day-block__title">Kiezen. Bewegen. Doen.</div>
         <p>
-          We vertalen wat je voelt naar wat je gaat doen. Geen vage intenties —
-          maar één heldere, concrete stap voor de komende tijd.
-          Met het obstakel dat je altijd tegenhoudt al verwerkt in je plan.
-          Je gaat naar huis met meer dan aantekeningen.
-          Je gaat naar huis met een gevoel dat dit de moeite waard was
+          We vertalen wat je voelt naar wat je gaat doen. Eén heldere, concrete stap
+          voor de komende tijd — met het obstakel dat je altijd tegenhoudt al verwerkt
+          in je plan. Je gaat naar huis met een gevoel dat dit de moeite waard was
           om voor jezelf te nemen.
         </p>
       </div>
@@ -853,48 +830,37 @@
     <div class="center">
       <span class="label label--blue">Waar je mee wegloopt</span>
       <h2 class="section-title">
-        Om 17:00 stap je<br>
-        <em>anders</em> naar buiten.
+        Je stapt <em>anders</em> naar buiten.
       </h2>
-      <p style="max-width:520px;margin:0 auto;color:var(--ink-soft);">
+      <p style="max-width:520px;margin:0 auto;color:var(--text-soft);">
         Niet met een notitieboek vol goede voornemens die over drie weken vergeten zijn.
         Maar met iets wat veel verder gaat.
       </p>
     </div>
-
     <div class="outcomes__grid">
       <div class="glow-card">
         <div class="glow-card__num">01</div>
         <div class="glow-card__title">Ruimte in je hoofd</div>
-        <p>De ruis valt weg. Niet tijdelijk — maar omdat je nu weet hoe je hem zelf stil zet. Je voelt het verschil nog voordat je buiten stapt.</p>
+        <p>De ruis valt weg. Niet tijdelijk — maar omdat je nu weet hoe je hem zelf stil zet.</p>
       </div>
       <div class="glow-card">
         <div class="glow-card__num">02</div>
         <div class="glow-card__title">Eén helder doel</div>
-        <p>Niet tien plannen die je nooit uitvoert. Één concrete volgende stap — waar jij morgen al mee begint. Echt.</p>
+        <p>Niet tien plannen. Één concrete volgende stap — waar jij morgen al mee begint. Echt.</p>
       </div>
       <div class="glow-card">
         <div class="glow-card__num">03</div>
         <div class="glow-card__title">Angst zonder stuur</div>
-        <p>De angst is er nog. Maar hij rijdt niet meer. Jij rijdt. Dat voelt als het grootste verschil dat je ooit hebt gevoeld.</p>
+        <p>De angst is er nog. Maar hij rijdt niet meer. Jij rijdt. Dat voelt als het grootste verschil.</p>
       </div>
       <div class="glow-card">
         <div class="glow-card__num">04</div>
         <div class="glow-card__title">Eindelijk jezelf</div>
-        <p>Misschien is de volgende stap niet groter worden. Misschien is de volgende stap — eindelijk — meer jezelf worden.</p>
+        <p>Misschien is de volgende stap niet groter worden. Misschien is het — eindelijk — meer jezelf.</p>
       </div>
     </div>
   </div>
 </section>
-
-
-<!-- GOLD BREAK -->
-<div class="gold-break">
-  <p class="gold-break__text">
-    "Wat als je helemaal niet hoeft te wachten<br>
-    tot je je er klaar voor voelt?"
-  </p>
-</div>
 
 
 <!-- ══════════════════════════════════════
@@ -907,21 +873,18 @@
       Dit is niet voor iedereen.<br>
       <em>Maar misschien wel voor jou.</em>
     </h2>
-
     <p>
       Je hoeft geen ondernemer te zijn. Geen carrièretijger. Geen mens met een 'grand plan'.
       Wel iemand die eerlijk kan zeggen: ik weet dat er meer in zit — en ik ben klaar om
       daar eindelijk écht naar te kijken.
     </p>
-
     <ul class="for-who__list">
       <li>Je zorgt uitstekend voor iedereen om je heen. Alleen niet zo goed voor jezelf.</li>
       <li>Je hoofd staat nooit écht uit. Ook niet als je 'ontspant'.</li>
       <li>Je weet wat je wilt. Maar de waan van de dag — of de twijfel — wint het altijd.</li>
-      <li>Je bent klaar met wachten op het juiste moment. Je beseft dat dat moment nooit vanzelf komt.</li>
+      <li>Je bent klaar met wachten op het juiste moment. Dat moment komt niet vanzelf.</li>
       <li>Je voelt dat er iets groters op je wacht. En je bent eindelijk bereid het te gaan halen.</li>
     </ul>
-
     <p>Herken je iets? Dan is dit jouw dag.</p>
   </div>
 </section>
@@ -938,13 +901,12 @@
         Stop met overdenken.<br>
         <em>Start met kiezen.</em>
       </h2>
-      <p style="max-width:480px;margin:0 auto;color:var(--ink-soft);">
+      <p style="max-width:480px;margin:0 auto;color:var(--text-soft);">
         Twee manieren. Beide intiem, beide krachtig.
         Jij kiest wat bij jou past.
       </p>
     </div>
-
-    <div class="pricing__cards">
+    <div class="pricing__cards" style="grid-template-columns: repeat(3, 1fr);">
 
       <!-- GROEP -->
       <div class="price-card">
@@ -953,7 +915,6 @@
         <div class="price-card__tagline">
           Maximaal 10 mensen. Geen grote zaal, geen anonieme massa.
           Jij en een handvol gelijkgestemden die ook voluit voor zichzelf kiezen.
-          De energie van een groep, de diepgang van een intieme setting.
         </div>
         <div class="price-card__old">€239</div>
         <div class="price-card__price">€179</div>
@@ -968,21 +929,39 @@
         <a href="#contact" class="btn btn--blue">Ik wil een groepsplek</a>
       </div>
 
-      <!-- 1:1 -->
+      <!-- ONLINE 1:1 CALL -->
+      <div class="price-card">
+        <div class="price-card__type">Online sessie</div>
+        <div class="price-card__name">DURF<br><small style="font-size:18px;opacity:.6;">1:1 Call</small></div>
+        <div class="price-card__tagline">
+          90 minuten online, volledig om jou. Snel, direct, diep.
+          Perfect als je weet wat je wil bespreken en actie wil zetten.
+        </div>
+        <div class="price-card__price">€195</div>
+        <div class="price-card__note">90 minuten · online · op maat</div>
+        <ul class="price-card__includes">
+          <li>90 min 1:1 online sessie met Anouk</li>
+          <li>Datum samen in te plannen</li>
+          <li>Gericht op jóuw situatie</li>
+          <li>Concrete stap voor daarna</li>
+        </ul>
+        <a href="#contact" class="btn btn--blue">Ik wil een online sessie</a>
+      </div>
+
+      <!-- LIVE 1:1 DAGDEEL -->
       <div class="price-card price-card--featured">
         <div class="price-card__badge">Meest persoonlijk</div>
-        <div class="price-card__type">Privé dagdeel</div>
-        <div class="price-card__name">DURF<br><small style="font-size:18px;opacity:.6;">1 : 1</small></div>
+        <div class="price-card__type">Privé live dagdeel</div>
+        <div class="price-card__name">DURF<br><small style="font-size:18px;opacity:.6;">1:1 Live</small></div>
         <div class="price-card__tagline">
-          Alleen jij en Anouk. Alles draait om jouw verhaal, jouw angst,
-          jouw volgende stap. Geen groepsdynamiek — alleen diepe,
-          onverdeelde aandacht. Voor jou.
+          Alleen jij en Anouk. 2,5 tot 3 uur live, volledig om jouw verhaal,
+          jouw angst, jouw volgende stap. Onverdeelde aandacht.
         </div>
-        <div class="price-card__price">€333</div>
-        <div class="price-card__note">Volledig op maat · één plek</div>
+        <div class="price-card__price">€475</div>
+        <div class="price-card__note">2,5 – 3 uur live · volledig op maat</div>
         <ul class="price-card__includes">
           <li>2,5 – 3 uur privé dagdeel met Anouk</li>
-          <li>Datum en tijdstip samen te plannen</li>
+          <li>Ochtend of middag — samen te plannen</li>
           <li>Persoonlijk werkboek</li>
           <li>100% gericht op jóuw situatie</li>
           <li>Geen wachten — alles is voor jou</li>
@@ -996,7 +975,7 @@
 
 
 <!-- ══════════════════════════════════════
-     ABOUT
+     ABOUT — het echte verhaal
 ══════════════════════════════════════ -->
 <section class="about">
   <div class="container--wide">
@@ -1007,24 +986,41 @@
       <div class="about__text">
         <span class="label label--coral">Even voorstellen</span>
         <h2 class="section-title">Hoi,<br>ik ben <em>Anouk.</em></h2>
+
         <p>
-          Ik weet hoe het voelt om te weten dat er meer in zit — en het toch niet te doen.
-          Jarenlang liet ik angst bepalen wat ik wel en niet durfde. Niet omdat ik het niet
-          zag. Maar omdat het veiliger leek om te blijven waar ik was.
+          Ik hield mezelf klein omdat het veilig voelde.
         </p>
         <p>
-          Tot ik ontdekte dat vrijheid geen kwestie is van de juiste omstandigheden.
-          Vrijheid ontstaat op het moment dat je anders leert omgaan met wat er in je hoofd
-          gebeurt. Dat klinkt simpel. Het is het niet. Maar het is wél mogelijk.
+          Ik kende de strijd van binnenuit — de strijd tussen de stem die je klein houdt
+          en het leven dat je eigenlijk wilt leven. Ik kende die stem al heel lang.
+          <strong>Straks vinden ze je arrogant. Straks mislukt het. Wie denk jij wel niet dat je bent?</strong>
         </p>
         <p>
-          Sindsdien laat één vraag me niet meer los: <em>hoeveel van wat jou tegenhoudt
-          is eigenlijk écht waar?</em> Die vraag stel ik ook aan jou. Niet om te confronteren —
-          maar omdat ik weet wat er aan de andere kant van dat antwoord wacht.
+          Ik dacht dat ik die stem moest overwinnen. Ik dacht dat als ik hem maar lang genoeg
+          begreep, analyseerde, bestu­deerde, hij vanzelf zou weggaan.
+          Dat deed hij niet.
         </p>
         <p>
-          Ik werk met mensen die klaar zijn om dat eerlijk onder ogen te komen.
-          Met echte ruimte, echte stilte en een spiegel die niet liegt.
+          Wat ik ontdekte veranderde alles: <strong>angst verdwijnt niet door denken.
+          Angst verdwijnt door ontmoeten.</strong> Door er honderden keren doorheen te lopen.
+          Niet één keer. Keer op keer, tot je lichaam weet dat je veilig bent
+          terwijl je doet wat je vreest.
+        </p>
+
+        <div class="about__pullquote">
+          Vroeger was ik die stem.<br>
+          Nu hoor ik die stem.<br>
+          Dat is het verschil.
+        </div>
+
+        <p>
+          Succesvolle mensen zijn niet minder bang. Ze zijn alleen
+          <strong>minder gehoorzaam aan hun angst.</strong>
+          Ze horen de gedachte, glimlachen, en lopen toch door.
+        </p>
+        <p>
+          Dat leer ik jou. Niet in theorie.
+          In een dagdeel dat compleet om jou draait.
         </p>
         <p style="margin-top:32px;">
           <a href="#investering" class="btn btn--coral">Boek jouw plek</a>
@@ -1046,32 +1042,27 @@
     <div class="faq__item">
       <div class="faq__q">Groep of 1:1 — hoe weet ik wat bij mij past?</div>
       <div class="faq__a">
-        Haal jij energie uit de aanwezigheid van anderen, en vind je het fijn te weten
-        dat je niet de enige bent? Dan is de groep jouw plek.
-        Weet je al dat je wilt dat alles 100% om jóu draait — geen compromissen,
-        geen groepsdynamiek? Dan is 1:1 wat je zoekt.
+        Haal jij energie uit de aanwezigheid van anderen en vind je het fijn te weten dat
+        je niet de enige bent? Dan is de groep jouw plek. Weet je al dat je wilt dat
+        alles 100% om jóu draait, geen compromissen? Dan is 1:1 wat je zoekt.
       </div>
     </div>
-
     <div class="faq__item">
       <div class="faq__q">Wat als ik me er nog niet klaar voor voel?</div>
       <div class="faq__a">
         Dan ben je precies de juiste persoon voor deze dag.
         Het wachten op het juiste gevoel is precies het patroon dat we doorbreken.
-        Als er iets in je zegt 'dit is het' — vertrouw dat. Dat stemmetje heeft het vaker
-        bij het rechte eind dan je denkt.
+        Als er iets in je zegt 'dit is het' — vertrouw dat.
       </div>
     </div>
-
     <div class="faq__item">
       <div class="faq__q">Wat als ik al 'aan mezelf werk'?</div>
       <div class="faq__a">
         Dan weet je al hoe waardevol het is om echt de tijd en ruimte te nemen.
-        Deze dag is niet voor beginners óf voor gevorderden.
-        Hij is voor mensen die bereid zijn om eerlijk te zijn. Met zichzelf.
+        Deze dag is niet voor beginners óf gevorderden — hij is voor mensen die
+        bereid zijn om eerlijk te zijn. Met zichzelf.
       </div>
     </div>
-
     <div class="faq__item">
       <div class="faq__q">Heb ik nog vragen voor ik boek?</div>
       <div class="faq__a">
@@ -1094,8 +1085,9 @@
       <em>Misschien is het eindelijk meer jezelf.</em>
     </h2>
     <p>
-      Niet harder. Niet meer. Niet anders. Gewoon dichter bij wie jij
-      werkelijk bent. En dat begint hier. Op deze dag.
+      Niet harder. Niet meer. Niet anders.
+      Gewoon dichter bij wie jij werkelijk bent.
+      En dat begint hier. Op deze dag.
     </p>
     <a href="mailto:hallo@anoukkievit.nl" class="btn btn--white">Ja, ik wil een plek →</a>
   </div>
