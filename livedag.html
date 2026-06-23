@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DE VRIJE DAG – Anouk Kievit</title>
+  <title>DURF – Anouk Kievit</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -13,14 +13,15 @@
       --coral-dark: #e06a48;
       --blue:       #2596be;
       --blue-dark:  #1a7a9e;
+      --blue-deep:  #0f3a50;
       --gold:       #e0ae44;
       --pink:       #EEC3E5;
       --pink-light: #F9EFF7;
       --cream:      #FDFAF7;
       --white:      #FFFFFF;
-      --ink:        #1E1410;
-      --ink-soft:   #4A3728;
-      --sand:       #F5EDE4;
+      --ink:        #0f3a50;
+      --ink-soft:   #2e6e8e;
+      --sand:       #EDF5F9;
     }
 
     html { scroll-behavior: smooth; }
@@ -94,7 +95,7 @@
        HERO
     ══════════════════════════════════════ */
     .hero {
-      background: var(--ink);
+      background: var(--blue-deep);
       color: var(--white);
       padding: 110px 28px 100px;
       text-align: center;
@@ -264,52 +265,67 @@
     }
 
     /* ══════════════════════════════════════
-       TRANSFORMATION — BEFORE / AFTER
+       HOE ZOU HET ZIJN ALS
     ══════════════════════════════════════ */
-    .transform { background: var(--cream); }
-    .transform__grid {
+    .hzvha { background: var(--cream); }
+    .hzvha__grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 28px;
+      gap: 20px;
       margin-top: 52px;
     }
-    @media (max-width: 620px) { .transform__grid { grid-template-columns: 1fr; } }
-    .transform__col {
+    @media (max-width: 620px) { .hzvha__grid { grid-template-columns: 1fr; } }
+    .hzvha__card {
+      border-radius: 6px;
       padding: 40px 36px;
-      border-radius: 4px;
+      position: relative;
+      overflow: hidden;
     }
-    .transform__col--before {
-      background: var(--sand);
-      border-left: 4px solid var(--ink-soft);
-    }
-    .transform__col--after {
-      background: var(--ink);
-      border-left: 4px solid var(--coral);
-      color: var(--white);
-    }
-    .transform__col-label {
+    .hzvha__card--coral { background: var(--coral); }
+    .hzvha__card--blue  { background: var(--blue); }
+    .hzvha__card--gold  { background: var(--gold); }
+    .hzvha__card--pink  { background: var(--pink); }
+    .hzvha__card--sand  { background: var(--sand); border: 2px solid var(--blue); }
+    .hzvha__card--white { background: var(--white); border: 2px solid var(--coral); }
+    .hzvha__eyebrow {
       font-size: 9px;
       letter-spacing: 3px;
       text-transform: uppercase;
       font-weight: 700;
-      margin-bottom: 20px;
+      opacity: .6;
+      margin-bottom: 14px;
+      display: block;
+      color: var(--white);
     }
-    .transform__col--before .transform__col-label { color: var(--ink-soft); }
-    .transform__col--after .transform__col-label { color: var(--coral); }
-    .transform__col ul { list-style: none; }
-    .transform__col ul li {
-      padding: 11px 0;
-      font-size: 15px;
-      line-height: 1.6;
-      border-bottom: 1px solid rgba(0,0,0,.07);
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
+    .hzvha__card--gold  .hzvha__eyebrow { color: var(--ink); }
+    .hzvha__card--pink  .hzvha__eyebrow { color: var(--ink); }
+    .hzvha__card--sand  .hzvha__eyebrow { color: var(--blue); }
+    .hzvha__card--white .hzvha__eyebrow { color: var(--coral); }
+    .hzvha__q {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(22px, 2.5vw, 30px);
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.3;
+      color: var(--white);
     }
-    .transform__col--after ul li { border-color: rgba(255,255,255,.1); color: rgba(255,255,255,.85); }
-    .transform__col ul li::before { flex-shrink: 0; margin-top: 3px; }
-    .transform__col--before ul li::before { content: '✗'; color: var(--ink-soft); font-size: 13px; }
-    .transform__col--after ul li::before { content: '✓'; color: var(--coral); font-size: 13px; }
+    .hzvha__card--gold .hzvha__q { color: var(--ink); }
+    .hzvha__card--pink .hzvha__q { color: var(--ink); }
+    .hzvha__card--sand .hzvha__q { color: var(--ink); }
+    .hzvha__card--white .hzvha__q { color: var(--ink); }
+    .hzvha__card--wide {
+      grid-column: 1 / -1;
+      background: var(--blue-deep);
+      text-align: center;
+      padding: 52px 40px;
+    }
+    .hzvha__card--wide .hzvha__q {
+      font-size: clamp(26px, 3.5vw, 42px);
+      color: var(--white);
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .hzvha__card--wide .hzvha__eyebrow { color: var(--pink); }
 
     /* ══════════════════════════════════════
        THE DAY
@@ -449,7 +465,7 @@
       border: 2px solid var(--sand);
     }
     .price-card--featured {
-      background: var(--ink);
+      background: var(--blue-deep);
       border-color: var(--coral);
     }
     .price-card__badge {
@@ -608,7 +624,7 @@
        FOOTER
     ══════════════════════════════════════ */
     footer {
-      background: var(--ink);
+      background: var(--blue-deep);
       color: rgba(255,255,255,.35);
       text-align: center;
       padding: 36px 28px;
@@ -631,7 +647,7 @@
 ══════════════════════════════════════ -->
 <section class="hero">
   <div class="container">
-    <span class="hero__event-name">De Vrije Dag &nbsp;·&nbsp; met Anouk Kievit</span>
+    <span class="hero__event-name">DURF &nbsp;·&nbsp; met Anouk Kievit</span>
     <h1 class="hero__headline">
       Jij weet al<br>
       dat er <em>meer</em> is.
@@ -723,42 +739,57 @@
 
 
 <!-- ══════════════════════════════════════
-     VOOR/NA — TRANSFORMATION
+     HOE ZOU HET ZIJN ALS
 ══════════════════════════════════════ -->
-<section class="transform" id="wat-is-dit">
+<section class="hzvha" id="wat-is-dit">
   <div class="container--wide">
     <div class="center">
-      <span class="label label--coral">Wat er verandert</span>
+      <span class="label label--blue">Stel je voor</span>
       <h2 class="section-title">
-        Van dit gevoel<br>
-        <em>naar dit leven.</em>
+        Hoe zou het zijn<br>
+        <em>als…</em>
       </h2>
+      <p style="max-width:500px;margin:0 auto;color:var(--ink-soft);">
+        Lees dit langzaam. Voel wat er in je beweegt als je het leest.
+        Dat gevoel — dát is waar we naartoe gaan.
+      </p>
     </div>
 
-    <div class="transform__grid">
+    <div class="hzvha__grid">
 
-      <div class="transform__col transform__col--before">
-        <div class="transform__col-label">Hoe het nu voelt</div>
-        <ul>
-          <li>Je rent van dag naar dag, maar voelt je nergens echt aanwezig</li>
-          <li>Elke grote beslissing voelt als een obstakel in plaats van een kans</li>
-          <li>Je wacht op het moment dat je 'klaar' bent — dat moment komt niet</li>
-          <li>Je zorgt voor iedereen. Behalve voor jezelf</li>
-          <li>Je weet wat je wilt. Je doet het gewoon niet</li>
-          <li>Succes voelt goed van buiten. Maar van binnen klopt er iets niet</li>
-        </ul>
+      <div class="hzvha__card hzvha__card--coral">
+        <span class="hzvha__eyebrow">Hoe zou het zijn als</span>
+        <p class="hzvha__q">je je prijs noemde — zonder verontschuldiging, zonder twijfel, zonder daarna te checken of iemand nog reageert?</p>
       </div>
 
-      <div class="transform__col transform__col--after">
-        <div class="transform__col-label">Hoe het voelt na deze dag</div>
-        <ul>
-          <li>Je weet precies wat je volgende stap is — en je bent er klaar voor</li>
-          <li>Die innerlijke criticus is er nog, maar hij heeft het stuur niet meer</li>
-          <li>Je neemt beslissingen vanuit helderheid in plaats van angst</li>
-          <li>Je voelt je lichter. Echt. Niet als cliché — maar als een fysiek verschil</li>
-          <li>Je hebt iets gezegd, gevoeld of beslist wat je al jaren voor je uitschoof</li>
-          <li>Je weet wie je bent. En dat voelt als thuiskomen.</li>
-        </ul>
+      <div class="hzvha__card hzvha__card--blue">
+        <span class="hzvha__eyebrow">Hoe zou het zijn als</span>
+        <p class="hzvha__q">je 's ochtends wakker werd met het gevoel: ik weet wat ik doe. En ik wil het echt.</p>
+      </div>
+
+      <div class="hzvha__card hzvha__card--gold">
+        <span class="hzvha__eyebrow">Hoe zou het zijn als</span>
+        <p class="hzvha__q">die post gewoon live ging — en je er trots op was in plaats van bang voor de reactie?</p>
+      </div>
+
+      <div class="hzvha__card hzvha__card--pink">
+        <span class="hzvha__eyebrow">Hoe zou het zijn als</span>
+        <p class="hzvha__q">je voor jezelf koos — niet als uitzondering, niet als luxe, maar gewoon als standaard?</p>
+      </div>
+
+      <div class="hzvha__card hzvha__card--sand">
+        <span class="hzvha__eyebrow">Hoe zou het zijn als</span>
+        <p class="hzvha__q">je een beslissing nam en er daarna bij bleef — zonder de twijfel die altijd terugkomt?</p>
+      </div>
+
+      <div class="hzvha__card hzvha__card--white">
+        <span class="hzvha__eyebrow">Hoe zou het zijn als</span>
+        <p class="hzvha__q">angst er nog was — maar jij er gewoon langs liep, in plaats van te wachten tot hij weg is?</p>
+      </div>
+
+      <div class="hzvha__card hzvha__card--wide">
+        <span class="hzvha__eyebrow">En bovenal — hoe zou het zijn als</span>
+        <p class="hzvha__q">"jij eindelijk leefde zoals jij het bedoeld hebt — niet meer, niet minder, gewoon echt jezelf?"</p>
       </div>
 
     </div>
@@ -918,7 +949,7 @@
       <!-- GROEP -->
       <div class="price-card">
         <div class="price-card__type">Klein groepsdagdeel</div>
-        <div class="price-card__name">De Vrije Dag<br><small style="font-size:18px;opacity:.6;">Groep</small></div>
+        <div class="price-card__name">DURF<br><small style="font-size:18px;opacity:.6;">Groep</small></div>
         <div class="price-card__tagline">
           Maximaal 10 mensen. Geen grote zaal, geen anonieme massa.
           Jij en een handvol gelijkgestemden die ook voluit voor zichzelf kiezen.
@@ -941,7 +972,7 @@
       <div class="price-card price-card--featured">
         <div class="price-card__badge">Meest persoonlijk</div>
         <div class="price-card__type">Privé dagdeel</div>
-        <div class="price-card__name">De Vrije Dag<br><small style="font-size:18px;opacity:.6;">1 : 1</small></div>
+        <div class="price-card__name">DURF<br><small style="font-size:18px;opacity:.6;">1 : 1</small></div>
         <div class="price-card__tagline">
           Alleen jij en Anouk. Alles draait om jouw verhaal, jouw angst,
           jouw volgende stap. Geen groepsdynamiek — alleen diepe,
