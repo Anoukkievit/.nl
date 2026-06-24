@@ -227,32 +227,8 @@
     </p>
     <div class="intro__cta-wrap">
       <button class="btn btn--coral" onclick="startQuiz()">Start de quiz →</button>
-      <p class="intro__meta">15 vragen &nbsp;·&nbsp; 5 minuten &nbsp;·&nbsp; geen e-mail nodig</p>
+      <p class="intro__meta">15 vragen &nbsp;·&nbsp; 5 minuten</p>
     </div>
-  </div>
-
-  <div class="intro-mirror">
-    <div class="intro-mirror__inner">
-      <p class="intro-mirror__title">
-        Misschien herken jij dit.
-      </p>
-      <ul class="intro-mirror__list">
-        <li>Je weet wat je wilt — maar doet het <strong>toch niet.</strong></li>
-        <li>Je werkt hard, leert veel, doet je best — maar het gevoel van <strong>'goed genoeg'</strong> komt niet.</li>
-        <li>Je zegt ja terwijl je nee bedoelt. En 's avonds vraag je je af: <strong>wanneer ben ik eindelijk eens voor mezelf?</strong></li>
-        <li>Je wacht op het juiste moment. <strong>Dat moment komt niet vanzelf.</strong></li>
-        <li>Aan de buitenkant klopt alles. Van binnen voelt het <strong>te klein.</strong></li>
-      </ul>
-      <p class="intro-mirror__close">
-        Dit is geen karakterfout.<br>
-        Dit is een patroon. En elk patroon heeft een naam.<br>
-        <em>Tijd om de jouwe te ontdekken.</em>
-      </p>
-    </div>
-  </div>
-
-  <div class="intro-bottom">
-    <button class="btn btn--coral" onclick="startQuiz()">Start de quiz →</button>
   </div>
 
 </div>
@@ -295,7 +271,7 @@
       jou <em>tegenhoudt.</em>
     </h2>
     <p class="email__sub">
-      Laat je naam en e-mailadres achter — dan stuur ik je de uitslag ook toe,
+      Laat je naam en e-mailadres achter, dan stuur ik je de uitslag ook toe,
       zodat je hem straks terug kunt lezen.
     </p>
     <!--
@@ -305,8 +281,9 @@
       ongeacht of de e-mail succesvol verstuurd is.
     -->
     <form class="email-form" id="email-form" action="https://formspree.io/f/JOUW_ID" method="POST" onsubmit="submitEmail(event)">
-      <input type="text"  name="name"  placeholder="Jouw voornaam" autocomplete="given-name" />
+      <input type="text"  name="name"  placeholder="Jouw voornaam" autocomplete="given-name" required />
       <input type="email" name="email" placeholder="Jouw e-mailadres" required autocomplete="email" />
+      <input type="tel"   name="phone" placeholder="Jouw telefoonnummer (06)" autocomplete="tel" />
       <button type="submit" class="btn btn--coral">Laat mij mijn uitslag zien →</button>
     </form>
     <button class="email__skip" onclick="showResult()">Sla over, ik wil direct mijn uitslag</button>
@@ -345,7 +322,7 @@
 
   <div class="result-reframe">
     <div class="result-reframe__inner">
-      <p class="result-reframe__label">Wat jij denkt — en wat er écht speelt</p>
+      <p class="result-reframe__label">Wat jij denkt en wat er écht speelt</p>
       <p class="result-reframe__think" id="result-think"></p>
       <p class="result-reframe__but">Maar eigenlijk</p>
       <p class="result-reframe__truth" id="result-truth"></p>
@@ -355,7 +332,7 @@
   <div class="result-share">
     <div class="result-share__inner">
       <p class="result-share__title">Herken jij dit bij iemand anders ook?</p>
-      <p class="result-share__sub">Stuur de quiz door — soms is de spiegel een cadeau.</p>
+      <p class="result-share__sub">Stuur de quiz door soms is de spiegel een cadeau.</p>
       <div class="share-buttons">
         <a id="share-wa" href="#" target="_blank" rel="noopener" class="btn btn--wa">↗ Deel via WhatsApp</a>
         <button class="btn btn--outline" onclick="copyLink()">Kopieer link</button>
@@ -372,7 +349,7 @@
       </h2>
       <p>
         Bewustwording is stap één. Maar inzicht zonder nieuwe ervaring
-        verandert niets in je brein. Dat is precies wat we doen in DURF —
+        verandert niets in je brein. Dat is precies wat we doen in DURF.
         een dagdeel volledig rond jouw patroon, jouw blokkade, jouw volgende stap.
       </p>
       <div class="result-cta__buttons">
@@ -395,7 +372,7 @@ const questions = [
   {
     text: "Als je iets nieuws wilt starten, wat is dan je eerste reactie?",
     options: [
-      { text: "Ik maak eerst een uitgebreid plan — dan pas begin ik.", p: "C" },
+      { text: "Ik maak eerst een uitgebreid plan, dan pas begin ik.", p: "C" },
       { text: "Ik wil me eerst verder verdiepen en meer leren.", p: "B" },
       { text: "Ik wacht op het juiste moment.", p: "V" },
       { text: "Ik check eerst of anderen er ook achter staan.", p: "P" },
@@ -433,7 +410,7 @@ const questions = [
     ]
   },
   {
-    text: "Als je een grote stap wilt zetten — wat doe je dan?",
+    text: "Als je een grote stap wilt zetten wat doe je dan?",
     options: [
       { text: "Ik plan het tot in de puntjes voor ik begin.", p: "C" },
       { text: "Ik volg eerst nog een cursus of training.", p: "B" },
@@ -526,14 +503,14 @@ const questions = [
     text: "Hoe ga jij om met complimenten?",
     options: [
       { text: "Ik denk direct aan wat er beter had gekund.", p: "C" },
-      { text: "Ik geniet ervan — maar geloof ze nooit helemaal.", p: "B" },
+      { text: "Ik geniet ervan maar geloof ze nooit helemaal.", p: "B" },
       { text: "Ik weet niet goed hoe ik erop moet reageren.", p: "V" },
       { text: "Ik merk dat ik het veel fijner vind om anderen te complimenteren.", p: "P" },
       { text: "Ik denk: mooi, maar dit is niet alles wat in mij zit.", p: "Z" },
     ]
   },
   {
-    text: "Als je terugkijkt op de afgelopen tijd — wat is het patroon?",
+    text: "Als je terugkijkt op de afgelopen tijd wat is het patroon?",
     options: [
       { text: "Ik houd alles goed bij, maar voel me zelden echt vrij.", p: "C" },
       { text: "Ik groei constant, maar voel me zelden écht goed genoeg.", p: "B" },
@@ -552,14 +529,14 @@ const patterns = {
     shock: "Je probeert rust te creëren door controle. Maar controle is niet hetzelfde als vrijheid.",
     description: `
       <p>Je denkt veel. Plant veel. Bereidt veel voor.</p>
-      <p>Niet omdat je precies weet wat je doet — maar omdat jij <strong>van onzekerheid afkomt</strong> door zo veel mogelijk te regelen. Als alles gepland is, kan het niet misgaan. Zo werkt jouw brein.</p>
-      <p>Het klinkt slim. En in veel situaties is het ook effectief. Maar ergens onderweg <strong>werd controle jouw kooi.</strong> Want échte keuzes, échte groei, echt leven — dat vraagt om durven zonder garantie.</p>
+      <p>Niet omdat je precies weet wat je doet maar omdat jij <strong>van onzekerheid afkomt</strong> door zo veel mogelijk te regelen. Als alles gepland is, kan het niet misgaan. Zo werkt jouw brein.</p>
+      <p>Het klinkt slim. En in veel situaties is het ook effectief. Maar ergens onderweg <strong>werd controle jouw kooi.</strong> Want échte keuzes, échte groei, echt leven dat vraagt om durven zonder garantie.</p>
       <p>Diep vanbinnen ben je bang dat het misgaat als jij even loslaat. Of dat jij zelf in verval raakt als je stopt met regelen. <strong>Dat is de leugen die jou klein houdt.</strong></p>
     `,
     signs: [
       "Je maakt een plan voor je plan maakt.",
       "Delegeren voelt als controle verliezen.",
-      "Je kunt niet echt ontspannen — er is altijd iets wat je hoofd bezighoudt.",
+      "Je kunt niet echt ontspannen er is altijd iets wat je hoofd bezighoudt.",
       "Je zegt 'ik ben er klaar voor' pas als je alles hebt voorzien. Dat moment komt zelden.",
     ],
     secondary: "Veel mensen met het Controle-patroon herkennen ook elementen van het Bewijs-patroon: achter de behoefte aan controle schuilt vaak de vraag of je goed genoeg bent als je het niet perfect doet.",
@@ -575,12 +552,12 @@ const patterns = {
       <p>Nog een opleiding. Nog een certificaat. Nog meer kennis.</p>
       <p>Van buitenaf lijkt het alsof jij altijd bezig bent te groeien. En dat is ook zo. Maar <strong>achter al die groei zit een leegte</strong> die nooit echt gevuld raakt. Want hoe meer je leert, hoe meer je ziet wat je nog niet weet.</p>
       <p>Jij hebt een innerlijke lat die altijd net iets hoger hangt dan je kunt springen. En omdat die lat nooit bereikt wordt, <strong>voel jij je nooit echt goed genoeg.</strong></p>
-      <p>Wat je eigenlijk zoekt is geen diploma. Het is toestemming. <strong>Toestemming om te staan voor wie je al bent</strong> — nu, zonder dat je er iets extra's voor hoeft te doen.</p>
+      <p>Wat je eigenlijk zoekt is geen diploma. Het is toestemming. <strong>Toestemming om te staan voor wie je al bent</strong> nu, zonder dat je er iets extra's voor hoeft te doen.</p>
     `,
     signs: [
       "Je hebt al veel geleerd, maar het gevoel van 'klaar zijn' blijft uit.",
       "Je twijfelt aan je mening tenzij je een expert bent op het gebied.",
-      "Complimenten landen niet echt — je denkt altijd aan wat er beter had gekund.",
+      "Complimenten landen niet echt je denkt altijd aan wat er beter had gekund.",
       "Je vergelijkt jezelf regelmatig met anderen die 'verder' lijken te zijn.",
     ],
     secondary: "Veel mensen met het Bewijs-patroon herkennen ook het Veiligheids-patroon: je blijft leren omdat het veiliger voelt dan te handelen op wat je al weet.",
@@ -591,15 +568,15 @@ const patterns = {
     titleLine1: "Het",
     titleLine2: "Veiligheids-",
     titleLine3: "patroon",
-    shock: "Je weet wat je wilt. Maar kiest steeds voor wat veilig voelt — niet omdat je het niet kunt.",
+    shock: "Je weet wat je wilt. Maar kiest steeds voor wat veilig voelt niet omdat je het niet kunt.",
     description: `
       <p>Je ziet de kansen. Je voelt de mogelijkheden. Je weet wat de logische stap is.</p>
-      <p>Maar net als je de stap wil zetten, <strong>trekt jouw brein aan de rem.</strong> Niet omdat die stap verkeerd is. Maar omdat jouw brein risico wil vermijden — en alles buiten het vertrouwde ervaart als gevaar.</p>
+      <p>Maar net als je de stap wil zetten, <strong>trekt jouw brein aan de rem.</strong> Niet omdat die stap verkeerd is. Maar omdat jouw brein risico wil vermijden en alles buiten het vertrouwde ervaart als gevaar.</p>
       <p>Het resultaat: <strong>je leeft veilig, maar niet vrij.</strong> Je doet wat werkt, maar niet wat klopt. Je kiest voor wat je kent, ook als je weet dat je er eigenlijk allang overheen bent gegroeid.</p>
-      <p>Je hebt meer lef dan je denkt. Je hebt het alleen nog niet bewezen — aan jezelf.</p>
+      <p>Je hebt meer lef dan je denkt. Je hebt het alleen nog niet bewezen aan jezelf.</p>
     `,
     signs: [
-      "Je hebt een kans voorbij laten gaan omdat het 'te risicovol' voelde — en er achteraf spijt van gehad.",
+      "Je hebt een kans voorbij laten gaan omdat het 'te risicovol' voelde en er achteraf spijt van gehad.",
       "Je weet precies wat je zou willen doen. Maar je doet het niet.",
       "Je comfortzone is kleiner geworden dan hij ooit was.",
       "Anderen zien in jou mogelijkheden die jij zelf niet durft te zien.",
@@ -612,11 +589,11 @@ const patterns = {
     titleLine1: "Het",
     titleLine2: "Pleaser-",
     titleLine3: "patroon",
-    shock: "Je bent er voor iedereen. Maar jezelf vergeet je vaak — en dat begint zijn tol te eisen.",
+    shock: "Je bent er voor iedereen. Maar jezelf vergeet je vaak en dat begint zijn tol te eisen.",
     description: `
       <p>Je bent de persoon waar anderen op kunnen rekenen. Altijd beschikbaar. Altijd behulpzaam. Altijd bereid om te geven.</p>
-      <p>Maar ergens in dat geven is <strong>jij verdwenen.</strong> Jouw behoeften komen als laatste. Jouw grenzen zijn vaag. Nee zeggen voelt als iemand kwetsen — en kwetsen is iets wat jij ten koste van alles probeert te vermijden.</p>
-      <p>Wat er onder zit is niet behulpzaamheid. Het is de diepgewortelde overtuiging dat <strong>jij er pas mag zijn als je van waarde bent voor een ander.</strong> Dat jouw plek verdiend moet worden — elke dag opnieuw.</p>
+      <p>Maar ergens in dat geven is <strong>jij verdwenen.</strong> Jouw behoeften komen als laatste. Jouw grenzen zijn vaag. Nee zeggen voelt als iemand kwetsen en kwetsen is iets wat jij ten koste van alles probeert te vermijden.</p>
+      <p>Wat er onder zit is niet behulpzaamheid. Het is de diepgewortelde overtuiging dat <strong>jij er pas mag zijn als je van waarde bent voor een ander.</strong> Dat jouw plek verdiend moet worden elke dag opnieuw.</p>
       <p>Jij hoeft niet meer te verdienen. Je mag er gewoon zijn.</p>
     `,
     signs: [
@@ -635,18 +612,18 @@ const patterns = {
     titleLine3: "patroon",
     shock: "Je voelt dat je bent uitgegroeid aan je huidige situatie. Maar je weet nog niet precies wat daarna komt.",
     description: `
-      <p>Er zit iets in je dat onrustig is. Niet omdat het slecht gaat — maar omdat het te klein voelt.</p>
+      <p>Er zit iets in je dat onrustig is. Niet omdat het slecht gaat maar omdat het te klein voelt.</p>
       <p>Je hebt genoeg bereikt. Je leeft een goed leven. Maar <strong>diep vanbinnen weet je dat dit het niet helemaal is.</strong> Er is iets groters, iets authentieker, iets dat meer bij jou past.</p>
       <p>Het probleem is: je weet niet precies wat dat is. En dus blijf je zoeken. Nieuwe ideeën, nieuwe richtingen. <strong>Altijd op zoek, maar nooit helemaal landend.</strong></p>
       <p>Je probleem is niet dat je geen richting hebt. Je probleem is dat je nog niet volledig hebt durven kiezen voor wat je al voelt.</p>
     `,
     signs: [
-      "Je bent ergens mee begonnen met enthousiasme — en na een tijdje was de vonk weg.",
-      "Je volgt veel mensen, leest veel, absorbeert veel — maar voelt je zelden thuis ergens.",
+      "Je bent ergens mee begonnen met enthousiasme en na een tijdje was de vonk weg.",
+      "Je volgt veel mensen, leest veel, absorbeert veel maar voelt je zelden thuis ergens.",
       "Als iemand vraagt wat jij nou écht wil, duurt het even voor je antwoord.",
       "Je weet dat er iets op je wacht. Maar je durft er nog niet volledig op in te zetten.",
     ],
-    secondary: "Veel mensen met het Zoekers-patroon herkennen ook het Veiligheids-patroon: het niet kiezen is ook een manier om je te beschermen — want als je nooit kiest, kun je ook nooit de verkeerde keuze maken.",
+    secondary: "Veel mensen met het Zoekers-patroon herkennen ook het Veiligheids-patroon: het niet kiezen is ook een manier om je te beschermen. Want als je nooit kiest, kun je ook nooit de verkeerde keuze maken.",
     think: "Je denkt dat je geen richting hebt.",
     truth: "Maar misschien durf je nog niet volledig te kiezen."
   }
@@ -745,7 +722,7 @@ function selectOption(btn, pattern, list) {
 function submitEmail(e) {
   e.preventDefault();
   const form = document.getElementById('email-form');
-  // Fire and forget — don't wait for response
+  // Fire and forget don't wait for response
   fetch(form.action, {
     method: 'POST',
     body: new FormData(form),
@@ -773,7 +750,7 @@ function showResult() {
 
   // Secondary pattern
   document.getElementById('result-secondary').innerHTML = `
-    <div class="result-secondary__label">Ook herkenbaar — je secondaire patroon</div>
+    <div class="result-secondary__label">Ook herkenbaar je secondaire patroon</div>
     <p class="result-secondary__text">${p.secondary}</p>
   `;
 
