@@ -4,298 +4,300 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Waarom houd jij jezelf nog klein? – Anouk Kievit</title>
-  <meta name="description" content="Beantwoord 15 vragen en ontdek welk verborgen patroon jou tegenhoudt. Gratis zelfinzicht van Anouk Kievit." />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <meta name="description" content="Ontdek welk verborgen patroon jou als ondernemer tegenhoudt. 15 vragen, direct inzicht." />
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
       --coral:      #fe8a67;
-      --coral-dark: #e06a48;
+      --coral-dark: #d96a47;
       --blue:       #2596be;
       --blue-dark:  #1a7a9e;
       --gold:       #e0ae44;
+      --gold-dark:  #b88a1a;
       --pink:       #EEC3E5;
-      --pink-light: #F9EFF7;
-      --cream:      #FDFAF7;
-      --white:      #FFFFFF;
-      --text:       #1a1a1a;
-      --text-soft:  #555555;
-      --line:       #e8e8e8;
+      --pink-light: #faf2f8;
+      --navy:       #1a3a50;
+      --navy-soft:  #3a5a70;
+      --line:       #eaeaea;
+      --white:      #ffffff;
+      --cream:      #fdfaf7;
     }
     html { scroll-behavior: smooth; }
-    body { font-family: 'Jost', sans-serif; background: var(--white); color: var(--text); font-size: 17px; line-height: 1.85; min-height: 100vh; }
+    body { font-family: 'Jost', sans-serif; background: var(--white); color: var(--navy); font-size: 17px; line-height: 1.8; min-height: 100vh; }
 
-    /* ── UTILS ── */
+    /* UTILS */
     .btn {
-      display: inline-block; padding: 18px 48px; border-radius: 60px;
+      display: inline-block; padding: 18px 48px; border-radius: 6px;
       font-family: 'Jost', sans-serif; font-size: 12px; letter-spacing: 2.5px;
-      text-transform: uppercase; font-weight: 600; text-decoration: none;
-      transition: all .25s ease; cursor: pointer; border: none;
+      text-transform: uppercase; font-weight: 700; text-decoration: none;
+      transition: all .2s ease; cursor: pointer; border: none;
     }
     .btn--coral { background: var(--coral); color: var(--white); }
-    .btn--coral:hover { background: var(--coral-dark); transform: translateY(-3px); box-shadow: 0 12px 32px rgba(254,138,103,.3); }
-    .btn--blue  { background: var(--blue);  color: var(--white); }
-    .btn--blue:hover  { background: var(--blue-dark); transform: translateY(-3px); }
-    .btn--outline { background: transparent; border: 2px solid var(--text); color: var(--text); }
-    .btn--outline:hover { background: var(--text); color: var(--white); }
+    .btn--coral:hover { background: var(--coral-dark); transform: translateY(-2px); box-shadow: 0 10px 28px rgba(254,138,103,.35); }
+    .btn--blue  { background: var(--blue); color: var(--white); }
+    .btn--blue:hover  { background: var(--blue-dark); transform: translateY(-2px); }
+    .btn--outline { background: transparent; border: 2px solid var(--coral); color: var(--coral); }
+    .btn--outline:hover { background: var(--coral); color: var(--white); }
     .btn--wa { background: #25D366; color: var(--white); }
-    .btn--wa:hover { background: #1db954; transform: translateY(-3px); }
-    .label { display: inline-block; font-size: 10px; letter-spacing: 3px; text-transform: uppercase; font-weight: 600; margin-bottom: 16px; }
-    .label--coral { color: var(--coral); }
-    .label--blue  { color: var(--blue);  }
+    .btn--wa:hover { background: #1db954; transform: translateY(-2px); }
 
-    /* ── SCREENS ── */
-    .screen { display: none; opacity: 0; transition: opacity .35s ease; }
+    /* SCREENS */
+    .screen { display: none; opacity: 0; transition: opacity .3s ease; }
     .screen.active { display: block; opacity: 1; }
     .screen.flex-screen { display: none; }
     .screen.flex-screen.active { display: flex; }
 
-    /* ── INTRO ── */
-    #screen-intro {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
+    /* ============================
+       INTRO
+    ============================ */
+    #screen-intro { flex-direction: column; align-items: center; background: var(--white); }
+
+    .intro-hero {
+      width: 100%; padding: 96px 28px 80px; text-align: center;
+      display: flex; flex-direction: column; align-items: center;
       background: var(--white);
     }
-
-    .intro-hero { padding: 80px 28px 72px; display: flex; flex-direction: column; align-items: center; width: 100%; }
-    .intro__eyebrow { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; font-weight: 600; color: var(--coral); margin-bottom: 36px; }
-    .intro__title { font-family: 'Cormorant Garamond', serif; font-size: clamp(44px, 7.5vw, 88px); font-weight: 300; line-height: 1.0; color: var(--text); margin-bottom: 20px; max-width: 800px; }
-    .intro__title em { font-style: italic; color: var(--coral); }
-    .intro__sub { font-family: 'Cormorant Garamond', serif; font-size: clamp(18px, 2.3vw, 25px); font-style: italic; font-weight: 300; color: var(--text-soft); margin-bottom: 48px; max-width: 500px; line-height: 1.55; }
-    .intro__cta-wrap { display: flex; flex-direction: column; align-items: center; gap: 14px; }
-    .intro__meta { font-size: 12px; color: var(--text-soft); letter-spacing: 1px; }
-
-    /* Confrontatie-sectie */
-    .intro-mirror { background: var(--cream); width: 100%; padding: 72px 28px; border-top: 1px solid var(--line); }
-    .intro-mirror__inner { max-width: 560px; margin: 0 auto; text-align: left; }
-    .intro-thought { font-family: 'Cormorant Garamond', serif; font-size: clamp(21px, 2.8vw, 30px); font-weight: 300; font-style: italic; color: var(--text); line-height: 1.45; margin-bottom: 32px; padding-bottom: 32px; border-bottom: 1px solid var(--line); }
-    .intro-thought:last-of-type { border-bottom: none; padding-bottom: 0; margin-bottom: 0; }
-    .intro-thought em { font-style: normal; font-weight: 600; color: var(--coral); }
-
-    /* Punch-band */
-    .intro-punch { background: var(--text); width: 100%; padding: 72px 28px; text-align: center; }
-    .intro-punch__inner { max-width: 640px; margin: 0 auto; }
-    .intro-punch__line { font-family: 'Cormorant Garamond', serif; font-size: clamp(26px, 4vw, 48px); font-weight: 300; font-style: italic; color: var(--white); line-height: 1.35; margin-bottom: 16px; }
-    .intro-punch__line strong { font-style: normal; color: var(--coral); font-weight: 600; }
-    .intro-punch__sub { font-size: 14px; color: rgba(255,255,255,.55); letter-spacing: .5px; line-height: 1.7; }
-
-    /* Belofte-sectie */
-    .intro-promise { background: var(--cream); width: 100%; padding: 72px 28px; }
-    .intro-promise__inner { max-width: 600px; margin: 0 auto; text-align: left; }
-    .intro-promise__title { font-family: 'Cormorant Garamond', serif; font-size: clamp(24px, 3vw, 36px); font-weight: 300; color: var(--text); margin-bottom: 36px; text-align: center; line-height: 1.3; }
-    .intro-promise__title em { font-style: italic; color: var(--coral); }
-    .promise-item { display: flex; gap: 20px; align-items: flex-start; padding: 20px 0; border-bottom: 1px solid var(--line); }
-    .promise-item:last-child { border-bottom: none; }
-    .promise-item__num { font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 300; color: var(--pink); line-height: 1; flex-shrink: 0; width: 36px; }
-    .promise-item__text strong { display: block; font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
-    .promise-item__text span { font-size: 14px; color: var(--text-soft); line-height: 1.65; }
-
-    /* Bottom CTA */
-    .intro-cta-block { background: var(--white); width: 100%; padding: 80px 28px 96px; text-align: center; }
-    .intro-cta-block__inner { max-width: 480px; margin: 0 auto; }
-    .intro-cta-block__title { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 3.8vw, 46px); font-weight: 300; line-height: 1.2; color: var(--text); margin-bottom: 32px; }
-    .intro-cta-block__title em { color: var(--coral); font-style: italic; }
-
-    /* Acties op uitslag */
-    .result-actions { background: var(--cream); width: 100%; padding: 72px 28px; }
-    .result-actions__inner { max-width: 680px; margin: 0 auto; text-align: left; }
-    .result-actions__title { font-family: 'Cormorant Garamond', serif; font-size: clamp(24px, 3vw, 36px); font-weight: 300; color: var(--text); margin-bottom: 8px; }
-    .result-actions__sub { font-size: 15px; color: var(--text-soft); margin-bottom: 36px; }
-    .action-item { display: flex; gap: 24px; align-items: flex-start; padding: 24px 0; border-bottom: 1px solid var(--line); }
-    .action-item:last-child { border-bottom: none; }
-    .action-item__num { font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 300; color: var(--coral); line-height: 1; flex-shrink: 0; width: 40px; }
-    .action-item__body strong { display: block; font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
-    .action-item__body p { font-size: 15px; color: var(--text-soft); line-height: 1.7; margin: 0; }
-
-    /* ── QUIZ ── */
-    #screen-quiz {
-      flex-direction: column;
-      align-items: center;
-      padding: 0 28px 80px;
-      background: var(--cream);
+    .intro__label {
+      font-size: 10px; letter-spacing: 4px; text-transform: uppercase;
+      font-weight: 700; color: var(--coral); margin-bottom: 32px;
     }
+    .intro__title {
+      font-size: clamp(44px, 7vw, 84px); font-weight: 800; line-height: 1.0;
+      color: var(--navy); margin-bottom: 24px; max-width: 780px; letter-spacing: -1px;
+    }
+    .intro__title span { color: var(--coral); }
+    .intro__sub {
+      font-size: clamp(17px, 2.2vw, 22px); font-weight: 300; color: var(--navy-soft);
+      margin-bottom: 52px; max-width: 500px; line-height: 1.65;
+    }
+    .intro__cta-wrap { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+    .intro__meta { font-size: 12px; color: var(--navy-soft); letter-spacing: 1px; opacity: .7; }
 
-    .quiz-topbar { width: 100%; max-width: 680px; padding: 32px 0 40px; display: flex; align-items: center; gap: 20px; }
-    .quiz-back { background: none; border: none; cursor: pointer; color: var(--text-soft); font-family: 'Jost', sans-serif; font-size: 13px; letter-spacing: 1px; padding: 0; display: flex; align-items: center; gap: 6px; transition: color .2s; flex-shrink: 0; }
+    .intro-mirror { background: var(--cream); width: 100%; padding: 80px 28px; border-top: 3px solid var(--pink); }
+    .intro-mirror__inner { max-width: 580px; margin: 0 auto; }
+    .intro-thought {
+      font-size: clamp(20px, 2.8vw, 28px); font-weight: 600; color: var(--navy);
+      line-height: 1.4; margin-bottom: 28px; padding-bottom: 28px;
+      border-bottom: 1px solid var(--line);
+    }
+    .intro-thought:last-of-type { border-bottom: none; padding-bottom: 0; margin-bottom: 0; }
+    .intro-thought span { color: var(--coral); }
+
+    .intro-punch {
+      background: var(--blue); width: 100%; padding: 80px 28px; text-align: center;
+    }
+    .intro-punch__inner { max-width: 640px; margin: 0 auto; }
+    .intro-punch__line {
+      font-size: clamp(24px, 3.8vw, 44px); font-weight: 700; color: var(--white);
+      line-height: 1.3; margin-bottom: 16px; letter-spacing: -.5px;
+    }
+    .intro-punch__line span { color: var(--pink); }
+    .intro-punch__sub { font-size: 15px; color: rgba(255,255,255,.6); line-height: 1.75; }
+
+    .intro-promise { background: var(--white); width: 100%; padding: 80px 28px; }
+    .intro-promise__inner { max-width: 600px; margin: 0 auto; }
+    .intro-promise__title {
+      font-size: clamp(26px, 3.5vw, 40px); font-weight: 800; color: var(--navy);
+      margin-bottom: 40px; text-align: center; letter-spacing: -.5px;
+    }
+    .intro-promise__title span { color: var(--coral); }
+    .promise-item { display: flex; gap: 20px; align-items: flex-start; padding: 22px 0; border-bottom: 1px solid var(--line); }
+    .promise-item:last-child { border-bottom: none; }
+    .promise-item__icon {
+      width: 40px; height: 40px; border-radius: 6px; background: var(--coral);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 13px; font-weight: 800; color: var(--white); flex-shrink: 0;
+    }
+    .promise-item__text strong { display: block; font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 3px; }
+    .promise-item__text span { font-size: 14px; color: var(--navy-soft); line-height: 1.6; }
+
+    .intro-cta-block { background: var(--coral); width: 100%; padding: 80px 28px 96px; text-align: center; }
+    .intro-cta-block__inner { max-width: 480px; margin: 0 auto; }
+    .intro-cta-block__title {
+      font-size: clamp(28px, 4vw, 48px); font-weight: 800; line-height: 1.15;
+      color: var(--white); margin-bottom: 32px; letter-spacing: -.5px;
+    }
+    .btn--white { background: var(--white); color: var(--coral); }
+    .btn--white:hover { background: var(--pink-light); transform: translateY(-2px); }
+
+    /* ============================
+       QUIZ
+    ============================ */
+    #screen-quiz {
+      flex-direction: column; align-items: center;
+      padding: 0 28px 80px; background: var(--cream);
+    }
+    .quiz-topbar {
+      width: 100%; max-width: 680px; padding: 32px 0 36px;
+      display: flex; align-items: center; gap: 20px;
+    }
+    .quiz-back {
+      background: none; border: none; cursor: pointer; color: var(--navy-soft);
+      font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 600;
+      letter-spacing: 1px; padding: 0; transition: color .2s; flex-shrink: 0;
+    }
     .quiz-back:hover { color: var(--coral); }
     .quiz-back:disabled { opacity: 0; pointer-events: none; }
     .quiz-progress-wrap { flex: 1; }
-    .quiz-progress-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--coral); font-weight: 600; margin-bottom: 8px; }
-    .quiz-progress-bar { height: 3px; background: var(--line); border-radius: 60px; overflow: hidden; }
-    .quiz-progress-fill { height: 100%; background: var(--coral); border-radius: 60px; transition: width .5s ease; }
+    .quiz-progress-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--coral); font-weight: 700; margin-bottom: 8px; }
+    .quiz-progress-bar { height: 4px; background: var(--line); border-radius: 4px; overflow: hidden; }
+    .quiz-progress-fill { height: 100%; background: var(--coral); border-radius: 4px; transition: width .5s ease; }
 
-    .question-wrap { width: 100%; max-width: 680px; position: relative; }
+    .question-wrap { width: 100%; max-width: 680px; }
     .question-card {
-      background: var(--white); border-radius: 6px; padding: 52px 48px;
-      border-top: 3px solid var(--coral);
+      background: var(--white); border-radius: 8px; padding: 48px 44px;
+      border-top: 4px solid var(--coral);
       transition: opacity .2s ease, transform .2s ease;
     }
-    .question-card.leaving { opacity: 0; transform: translateX(-24px); }
-    .question-card.entering { opacity: 0; transform: translateX(24px); }
-    @media (max-width: 560px) { .question-card { padding: 32px 22px; } }
-    .question-number { font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--text-soft); margin-bottom: 18px; font-weight: 600; }
-    .question-text { font-family: 'Cormorant Garamond', serif; font-size: clamp(22px, 3.5vw, 34px); font-weight: 300; line-height: 1.25; color: var(--text); margin-bottom: 36px; }
-
+    @media (max-width: 560px) { .question-card { padding: 30px 20px; } }
+    .question-number { font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--coral); margin-bottom: 16px; font-weight: 700; }
+    .question-text {
+      font-size: clamp(20px, 3vw, 30px); font-weight: 700; line-height: 1.3;
+      color: var(--navy); margin-bottom: 32px; letter-spacing: -.3px;
+    }
     .options { display: flex; flex-direction: column; gap: 10px; }
     .option {
-      padding: 16px 22px;
-      border: 2px solid var(--line);
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 15px;
-      color: var(--text);
+      padding: 16px 20px; border: 2px solid var(--line); border-radius: 6px;
+      cursor: pointer; font-size: 15px; font-weight: 400; color: var(--navy);
       transition: border-color .15s, background .15s, transform .15s;
-      background: var(--white);
-      text-align: left;
-      line-height: 1.5;
+      background: var(--white); text-align: left; line-height: 1.5;
       font-family: 'Jost', sans-serif;
     }
     .option:hover { border-color: var(--coral); background: var(--pink-light); transform: translateX(4px); }
     .option.selected { border-color: var(--coral); background: var(--pink-light); pointer-events: none; }
     .option:disabled { pointer-events: none; }
 
-    /* ── EMAIL CAPTURE ── */
+    /* ============================
+       EMAIL CAPTURE
+    ============================ */
     #screen-email {
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      background: var(--white);
-      padding: 80px 28px;
-      text-align: center;
+      flex-direction: column; align-items: center; justify-content: center;
+      min-height: 100vh; background: var(--white); padding: 80px 28px; text-align: center;
     }
-    .email-card { max-width: 540px; width: 100%; }
-    .email__eyebrow { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: var(--coral); font-weight: 600; margin-bottom: 28px; }
-    .email__title { font-family: 'Cormorant Garamond', serif; font-size: clamp(32px, 5vw, 56px); font-weight: 300; line-height: 1.1; color: var(--text); margin-bottom: 20px; }
-    .email__title em { font-style: italic; color: var(--coral); }
-    .email__sub { font-size: 16px; color: var(--text-soft); margin-bottom: 48px; line-height: 1.8; max-width: 420px; margin-left: auto; margin-right: auto; }
-    .email-form { display: flex; flex-direction: column; gap: 14px; margin-bottom: 16px; }
+    .email-card { max-width: 520px; width: 100%; }
+    .email__eyebrow { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: var(--coral); font-weight: 700; margin-bottom: 24px; }
+    .email__title { font-size: clamp(32px, 5vw, 54px); font-weight: 800; line-height: 1.1; color: var(--navy); margin-bottom: 16px; letter-spacing: -.5px; }
+    .email__title span { color: var(--coral); }
+    .email__sub { font-size: 16px; color: var(--navy-soft); margin-bottom: 44px; line-height: 1.75; max-width: 400px; margin-left: auto; margin-right: auto; }
+    .email-form { display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px; }
     .email-form input {
       padding: 16px 20px; border: 2px solid var(--line); border-radius: 6px;
-      font-family: 'Jost', sans-serif; font-size: 15px; color: var(--text);
-      background: var(--cream); transition: border-color .2s;
-      outline: none; width: 100%;
+      font-family: 'Jost', sans-serif; font-size: 15px; color: var(--navy);
+      background: var(--cream); transition: border-color .2s; outline: none; width: 100%;
     }
     .email-form input:focus { border-color: var(--coral); background: var(--white); }
-    .email-form input::placeholder { color: #aaa; }
+    .email-form input::placeholder { color: #aab; }
     .email-form .btn { width: 100%; }
-    .email__skip { margin-top: 12px; font-size: 13px; color: var(--text-soft); cursor: pointer; background: none; border: none; font-family: 'Jost', sans-serif; text-decoration: underline; text-underline-offset: 3px; }
-    .email__skip:hover { color: var(--coral); }
-    .email__privacy { font-size: 11px; color: #aaa; margin-top: 20px; line-height: 1.6; }
+    .email__privacy { font-size: 11px; color: #aab; margin-top: 20px; line-height: 1.6; }
 
-    /* ── RESULT ── */
+    /* ============================
+       RESULT
+    ============================ */
     #screen-result { flex-direction: column; align-items: center; text-align: center; }
 
     .result-hero { background: var(--white); width: 100%; padding: 100px 28px 72px; }
-    .result-hero__inner { max-width: 700px; margin: 0 auto; }
-    .result-pattern-label { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: var(--coral); font-weight: 600; margin-bottom: 24px; }
-    .result-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(44px, 8vw, 96px); font-weight: 300; line-height: .92; color: var(--text); margin-bottom: 8px; }
+    .result-hero__inner { max-width: 720px; margin: 0 auto; }
+    .result-pattern-label { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: var(--coral); font-weight: 700; margin-bottom: 20px; }
+    .result-title {
+      font-size: clamp(48px, 9vw, 104px); font-weight: 800; line-height: .95;
+      color: var(--navy); margin-bottom: 8px; letter-spacing: -2px;
+    }
     .result-title span { display: block; }
-    .result-title em { font-style: italic; color: var(--coral); }
-    .result-divider { width: 48px; height: 3px; background: var(--coral); margin: 32px auto; }
-    .result-shock { font-family: 'Cormorant Garamond', serif; font-size: clamp(19px, 2.8vw, 28px); font-style: italic; font-weight: 300; color: var(--text-soft); max-width: 580px; margin: 0 auto; line-height: 1.5; }
+    .result-title span.accent { color: var(--coral); }
+    .result-divider { width: 48px; height: 4px; background: var(--coral); margin: 32px auto; border-radius: 2px; }
+    .result-shock {
+      font-size: clamp(18px, 2.5vw, 26px); font-weight: 400; color: var(--navy-soft);
+      max-width: 580px; margin: 0 auto; line-height: 1.6;
+    }
 
     .result-insight { background: var(--cream); width: 100%; padding: 72px 28px; }
     .result-insight__inner { max-width: 680px; margin: 0 auto; text-align: left; }
+    .result-insight__label { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--coral); font-weight: 700; margin-bottom: 20px; display: block; }
     .result-insight__block { background: var(--white); border-left: 4px solid var(--coral); border-radius: 0 6px 6px 0; padding: 32px 36px; margin-bottom: 36px; }
-    .result-insight__block p { font-size: 16px; color: var(--text); line-height: 1.85; margin-bottom: 16px; }
+    .result-insight__block p { font-size: 16px; color: var(--navy); line-height: 1.85; margin-bottom: 16px; }
     .result-insight__block p:last-child { margin-bottom: 0; }
-    .result-insight__block strong { color: var(--coral-dark); }
-    @media (max-width: 480px) { .result-insight__block { padding: 24px 20px; } }
+    .result-insight__block strong { color: var(--coral-dark); font-weight: 700; }
+    @media (max-width: 480px) { .result-insight__block { padding: 22px 18px; } }
 
-    .result-signs { margin-top: 0; }
-    .result-signs__title { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 400; color: var(--text); margin-bottom: 20px; }
+    .result-signs__title { font-size: 18px; font-weight: 700; color: var(--navy); margin-bottom: 16px; }
     .result-signs__list { list-style: none; }
-    .result-signs__list li { padding: 14px 0 14px 32px; border-bottom: 1px solid var(--line); position: relative; font-size: 15px; color: var(--text-soft); line-height: 1.6; }
+    .result-signs__list li { padding: 13px 0 13px 28px; border-bottom: 1px solid var(--line); position: relative; font-size: 15px; color: var(--navy-soft); line-height: 1.6; }
     .result-signs__list li:last-child { border-bottom: none; }
-    .result-signs__list li::before { content: '→'; position: absolute; left: 0; color: var(--coral); font-weight: 600; }
+    .result-signs__list li::before { content: ''; position: absolute; left: 0; top: 21px; width: 8px; height: 8px; border-radius: 2px; background: var(--coral); }
 
-    .result-secondary { background: var(--pink-light); border: 1px solid var(--pink); border-radius: 6px; padding: 24px 28px; margin-top: 24px; }
-    .result-secondary__label { font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--blue); font-weight: 600; margin-bottom: 8px; }
-    .result-secondary__text { font-size: 15px; color: var(--text-soft); line-height: 1.7; }
+    .result-secondary { background: var(--pink-light); border: 2px solid var(--pink); border-radius: 6px; padding: 22px 26px; margin-top: 24px; }
+    .result-secondary__label { font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--blue); font-weight: 700; margin-bottom: 8px; }
+    .result-secondary__text { font-size: 14px; color: var(--navy-soft); line-height: 1.7; }
 
-    .result-reframe { background: var(--blue); width: 100%; padding: 80px 28px; }
+    .result-reframe { background: var(--navy); width: 100%; padding: 80px 28px; }
     .result-reframe__inner { max-width: 640px; margin: 0 auto; text-align: center; }
-    .result-reframe__label { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,.55); font-weight: 600; margin-bottom: 36px; }
-    .result-reframe__think { font-family: 'Cormorant Garamond', serif; font-size: clamp(19px, 2.8vw, 30px); font-weight: 300; font-style: italic; color: rgba(255,255,255,.65); line-height: 1.4; margin-bottom: 8px; }
-    .result-reframe__but { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--pink); margin: 20px 0; font-weight: 600; }
-    .result-reframe__truth { font-family: 'Cormorant Garamond', serif; font-size: clamp(22px, 3.5vw, 40px); font-weight: 600; font-style: italic; color: var(--white); line-height: 1.3; }
+    .result-reframe__label { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,.45); font-weight: 700; margin-bottom: 36px; }
+    .result-reframe__think { font-size: clamp(18px, 2.5vw, 26px); font-weight: 400; color: rgba(255,255,255,.55); line-height: 1.5; margin-bottom: 8px; }
+    .result-reframe__but { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--pink); margin: 20px 0; font-weight: 700; }
+    .result-reframe__truth { font-size: clamp(22px, 3.5vw, 38px); font-weight: 800; color: var(--white); line-height: 1.3; letter-spacing: -.5px; }
+
+    .result-actions { background: var(--gold); width: 100%; padding: 72px 28px; }
+    .result-actions__inner { max-width: 680px; margin: 0 auto; text-align: left; }
+    .result-actions__title { font-size: clamp(24px, 3vw, 36px); font-weight: 800; color: var(--navy); margin-bottom: 6px; letter-spacing: -.5px; }
+    .result-actions__sub { font-size: 15px; color: var(--navy-soft); margin-bottom: 36px; }
+    .action-item { display: flex; gap: 20px; align-items: flex-start; padding: 24px 0; border-bottom: 1px solid rgba(26,58,80,.15); }
+    .action-item:last-child { border-bottom: none; }
+    .action-item__num { font-size: 36px; font-weight: 800; color: var(--white); line-height: 1; flex-shrink: 0; width: 36px; }
+    .action-item__body strong { display: block; font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+    .action-item__body p { font-size: 15px; color: var(--navy-soft); line-height: 1.7; margin: 0; }
 
     .result-share { background: var(--cream); width: 100%; padding: 56px 28px; }
     .result-share__inner { max-width: 480px; margin: 0 auto; text-align: center; }
-    .result-share__title { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 300; color: var(--text); margin-bottom: 8px; }
-    .result-share__sub { font-size: 14px; color: var(--text-soft); margin-bottom: 24px; }
+    .result-share__title { font-size: 22px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+    .result-share__sub { font-size: 14px; color: var(--navy-soft); margin-bottom: 24px; }
     .share-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 
-    .result-cta { background: var(--white); width: 100%; padding: 96px 28px; }
+    .result-cta { background: var(--coral); width: 100%; padding: 96px 28px; }
     .result-cta__inner { max-width: 560px; margin: 0 auto; text-align: center; }
-    .result-cta__title { font-family: 'Cormorant Garamond', serif; font-size: clamp(30px, 4.5vw, 52px); font-weight: 300; line-height: 1.2; color: var(--text); margin-bottom: 24px; }
-    .result-cta__title em { color: var(--coral); font-style: italic; }
-    .result-cta p { font-size: 16px; color: var(--text-soft); margin-bottom: 40px; line-height: 1.85; }
+    .result-cta__title { font-size: clamp(30px, 4.5vw, 52px); font-weight: 800; line-height: 1.15; color: var(--white); margin-bottom: 20px; letter-spacing: -.5px; }
+    .result-cta p { font-size: 16px; color: rgba(255,255,255,.8); margin-bottom: 40px; line-height: 1.8; }
     .result-cta__buttons { display: flex; flex-direction: column; align-items: center; gap: 16px; }
-    .result-cta__retry { font-size: 13px; color: var(--text-soft); cursor: pointer; background: none; border: none; font-family: 'Jost', sans-serif; text-decoration: underline; text-underline-offset: 3px; }
-    .result-cta__retry:hover { color: var(--coral); }
 
-    footer { background: var(--cream); border-top: 1px solid var(--line); color: var(--text-soft); text-align: center; padding: 36px 28px; font-size: 12px; letter-spacing: .5px; }
+    footer { background: var(--navy); color: rgba(255,255,255,.4); text-align: center; padding: 32px 28px; font-size: 12px; letter-spacing: .5px; }
     footer a { color: var(--coral); text-decoration: none; }
   </style>
 </head>
 <body>
 
-<!-- ══════════════════════════════════════
+<!-- ============================
      INTRO
-══════════════════════════════════════ -->
+============================ -->
 <div id="screen-intro" class="screen flex-screen active">
 
-  <!-- HERO -->
   <div class="intro-hero">
-    <p class="intro__eyebrow">Anouk Kievit &nbsp;·&nbsp; Gratis zelfinzicht</p>
+    <p class="intro__label">Anouk Kievit &nbsp;·&nbsp; Voor ondernemers</p>
     <h1 class="intro__title">
-      Waarom houd jij jezelf<br>nog <em>klein?</em>
+      Waarom houd jij<br>jezelf nog <span>klein?</span>
     </h1>
     <p class="intro__sub">
-      Beantwoord 15 vragen en ontdek welk verborgen patroon jou tegenhoudt.
+      Je hebt al bewezen dat je het kunt. Maar je weet dat er meer in zit. Ontdek in 5 minuten welk patroon jou tegenhoudt.
     </p>
     <div class="intro__cta-wrap">
-      <button class="btn btn--coral" onclick="startQuiz()">Ontdek jouw patroon →</button>
-      <p class="intro__meta">5 minuten &nbsp;·&nbsp; gratis &nbsp;·&nbsp; direct inzicht</p>
+      <button class="btn btn--coral" onclick="startQuiz()">Ontdek jouw patroon &rarr;</button>
+      <p class="intro__meta">15 vragen &nbsp;&middot;&nbsp; 5 minuten &nbsp;&middot;&nbsp; gratis</p>
     </div>
   </div>
 
-  <!-- CONFRONTATIE -->
   <div class="intro-mirror">
     <div class="intro-mirror__inner">
-
-      <p class="intro-thought">
-        Je schrijft de post. Leest hem nog een keer.<br>
-        En verwijdert hem <em>toch.</em>
-      </p>
-
-      <p class="intro-thought">
-        Je weet je prijs. Je noemt hem.<br>
-        En vraagt je daarna af of het niet <em>te veel</em> is.
-      </p>
-
-      <p class="intro-thought">
-        Je hebt het plan. Al maanden.<br>
-        Het moment voelt <em>nooit</em> goed genoeg.
-      </p>
-
-      <p class="intro-thought">
-        Je doet het voor iedereen.<br>
-        Behalve voor <em>jezelf.</em>
-      </p>
-
+      <p class="intro-thought">Je bedrijf draait. Maar jij <span>draait er zelf in mee.</span></p>
+      <p class="intro-thought">Je prijs kan omhoog. Je weet het. Maar je <span>noemt hem toch niet.</span></p>
+      <p class="intro-thought">Je neemt beslissingen voor iedereen. <span>Behalve die ene voor jezelf.</span></p>
+      <p class="intro-thought">Je bent klaar voor de volgende stap. Het voelt alleen <span>nooit het juiste moment.</span></p>
     </div>
   </div>
 
-  <!-- PUNCH -->
   <div class="intro-punch">
     <div class="intro-punch__inner">
       <p class="intro-punch__line">
-        Dit is geen gebrek aan wilskracht.<br>
-        Dit is een patroon. <strong>En het heeft een naam.</strong>
+        Dit is geen kwestie van strategie.<br>
+        Dit is een patroon. <span>En het heeft een naam.</span>
       </p>
       <p class="intro-punch__sub">
         Zodra je weet welk patroon jou tegenhoudt,<br>kun je er eindelijk iets mee doen.
@@ -303,44 +305,41 @@
     </div>
   </div>
 
-  <!-- BELOFTE: wat je terugkrijgt -->
   <div class="intro-promise">
     <div class="intro-promise__inner">
-      <h2 class="intro-promise__title">Dit ontvang je<br><em>na 15 vragen</em></h2>
+      <h2 class="intro-promise__title">Dit ontvang je<br><span>na 15 vragen</span></h2>
       <div class="promise-item">
-        <div class="promise-item__num">1</div>
+        <div class="promise-item__icon">1</div>
         <div class="promise-item__text">
-          <strong>Jouw verborgen patroon — bij naam</strong>
-          <span>Je ontdekt welk onbewust patroon jou steeds weer tegenhoudt. Niet vaag, maar concreet en herkenbaar.</span>
+          <strong>Jouw verborgen patroon bij naam</strong>
+          <span>Concreet en herkenbaar. Niet vaag, niet algemeen.</span>
         </div>
       </div>
       <div class="promise-item">
-        <div class="promise-item__num">2</div>
+        <div class="promise-item__icon">2</div>
         <div class="promise-item__text">
           <strong>Een beschrijving die voelt alsof je erin wordt gekeken</strong>
-          <span>Je leest over jezelf en denkt: hoe weet ze dit? Dat is het moment waarop iets verschuift.</span>
+          <span>Je leest het en denkt: hoe weet zij dit? Dat is het moment waarop iets verschuift.</span>
         </div>
       </div>
       <div class="promise-item">
-        <div class="promise-item__num">3</div>
+        <div class="promise-item__icon">3</div>
         <div class="promise-item__text">
           <strong>3 concrete acties die je deze week kunt zetten</strong>
-          <span>Geen theorie. Drie stappen die direct aansluiten op jouw patroon en die je morgen al kunt beginnen.</span>
+          <span>Geen theorie. Drie stappen die direct aansluiten op jouw patroon.</span>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- BOTTOM CTA -->
   <div class="intro-cta-block">
     <div class="intro-cta-block__inner">
       <h2 class="intro-cta-block__title">
-        Ontdek in 5 minuten<br>
-        wat jou <em>echt</em> tegenhoudt.
+        Ontdek wat jou echt tegenhoudt.
       </h2>
       <div class="intro__cta-wrap">
-        <button class="btn btn--coral" onclick="startQuiz()">Start de quiz →</button>
-        <p class="intro__meta">15 vragen &nbsp;·&nbsp; anoniem &nbsp;·&nbsp; geen verplichtingen</p>
+        <button class="btn btn--white" onclick="startQuiz()">Start de quiz &rarr;</button>
+        <p class="intro__meta" style="color:rgba(255,255,255,.6);">15 vragen &nbsp;&middot;&nbsp; anoniem &nbsp;&middot;&nbsp; geen verplichtingen</p>
       </div>
     </div>
   </div>
@@ -348,67 +347,51 @@
 </div>
 
 
-<!-- ══════════════════════════════════════
+<!-- ============================
      QUIZ
-══════════════════════════════════════ -->
+============================ -->
 <div id="screen-quiz" class="screen flex-screen">
-
   <div class="quiz-topbar">
-    <button class="quiz-back" id="btn-back" onclick="goBack()" disabled>← Terug</button>
+    <button class="quiz-back" id="btn-back" onclick="goBack()" disabled>&larr; Terug</button>
     <div class="quiz-progress-wrap">
       <div class="quiz-progress-label" id="progress-label">Vraag 1 van 15</div>
       <div class="quiz-progress-bar">
-        <div class="quiz-progress-fill" id="progress-fill" style="width: 0%"></div>
+        <div class="quiz-progress-fill" id="progress-fill" style="width:0%"></div>
       </div>
     </div>
   </div>
-
   <div class="question-wrap">
     <div class="question-card" id="question-card">
-      <div class="question-number" id="question-number">Vraag 01 / 15</div>
+      <div class="question-number" id="question-number">01 / 15</div>
       <p class="question-text" id="question-text"></p>
       <div class="options" id="options-list"></div>
     </div>
   </div>
-
 </div>
 
 
-<!-- ══════════════════════════════════════
-     E-MAIL CAPTURE
-══════════════════════════════════════ -->
+<!-- ============================
+     EMAIL
+============================ -->
 <div id="screen-email" class="screen flex-screen">
   <div class="email-card">
     <p class="email__eyebrow">Jouw uitslag is klaar</p>
-    <h2 class="email__title">
-      Ontdek welk patroon<br>
-      jou <em>tegenhoudt.</em>
-    </h2>
-    <p class="email__sub">
-      Laat je naam en e-mailadres achter, dan stuur ik je de uitslag ook toe,
-      zodat je hem straks terug kunt lezen.
-    </p>
-    <!--
-      Vervang de action-URL door jouw eigen formulier-endpoint,
-      bijv. https://formspree.io/f/JOUW_ID of een ConvertKit/Mailchimp-url.
-      Het JS onderschept de submit en toont de uitslag direct,
-      ongeacht of de e-mail succesvol verstuurd is.
-    -->
+    <h2 class="email__title">Ontdek welk patroon<br>jou <span>tegenhoudt</span></h2>
+    <p class="email__sub">Vul je gegevens in en ontvang je persoonlijke uitslag direct op het scherm en in je inbox.</p>
     <form class="email-form" id="email-form" action="https://formspree.io/f/JOUW_ID" method="POST" onsubmit="submitEmail(event)">
       <input type="text"  name="name"  placeholder="Jouw voornaam" autocomplete="given-name" required />
       <input type="email" name="email" placeholder="Jouw e-mailadres" required autocomplete="email" />
       <input type="tel"   name="phone" placeholder="Jouw telefoonnummer (06)" autocomplete="tel" />
-      <button type="submit" class="btn btn--coral">Laat mij mijn uitslag zien →</button>
+      <button type="submit" class="btn btn--coral">Laat mij mijn uitslag zien &rarr;</button>
     </form>
-    <button class="email__skip" onclick="showResult()">Sla over, ik wil direct mijn uitslag</button>
     <p class="email__privacy">Geen spam. Alleen relevante inzichten van Anouk. Je kunt je altijd afmelden.</p>
   </div>
 </div>
 
 
-<!-- ══════════════════════════════════════
+<!-- ============================
      RESULT
-══════════════════════════════════════ -->
+============================ -->
 <div id="screen-result" class="screen flex-screen">
 
   <div class="result-hero">
@@ -422,23 +405,19 @@
 
   <div class="result-insight">
     <div class="result-insight__inner">
-      <span class="label label--coral">Wat dit over jou zegt</span>
+      <span class="result-insight__label">Wat dit over jou zegt</span>
       <div class="result-insight__block" id="result-description"></div>
-
-      <div class="result-signs">
-        <p class="result-signs__title">Jij herkent waarschijnlijk dit:</p>
-        <ul class="result-signs__list" id="result-signs"></ul>
-      </div>
-
+      <p class="result-signs__title">Jij herkent waarschijnlijk dit:</p>
+      <ul class="result-signs__list" id="result-signs"></ul>
       <div class="result-secondary" id="result-secondary"></div>
     </div>
   </div>
 
   <div class="result-reframe">
     <div class="result-reframe__inner">
-      <p class="result-reframe__label">Wat jij denkt en wat er écht speelt</p>
+      <p class="result-reframe__label">Wat jij denkt vs. wat er echt speelt</p>
       <p class="result-reframe__think" id="result-think"></p>
-      <p class="result-reframe__but">Maar eigenlijk</p>
+      <p class="result-reframe__but">maar eigenlijk</p>
       <p class="result-reframe__truth" id="result-truth"></p>
     </div>
   </div>
@@ -454,9 +433,9 @@
   <div class="result-share">
     <div class="result-share__inner">
       <p class="result-share__title">Herken jij dit bij iemand anders ook?</p>
-      <p class="result-share__sub">Stuur de quiz door soms is de spiegel een cadeau.</p>
+      <p class="result-share__sub">Stuur de quiz door. Soms is de spiegel een cadeau.</p>
       <div class="share-buttons">
-        <a id="share-wa" href="#" target="_blank" rel="noopener" class="btn btn--wa">↗ Deel via WhatsApp</a>
+        <a id="share-wa" href="#" target="_blank" rel="noopener" class="btn btn--wa">Deel via WhatsApp</a>
         <button class="btn btn--outline" onclick="copyLink()">Kopieer link</button>
       </div>
       <p id="copy-confirm" style="font-size:13px;color:var(--coral);margin-top:12px;opacity:0;transition:opacity .3s;">Link gekopieerd!</p>
@@ -465,25 +444,17 @@
 
   <div class="result-cta">
     <div class="result-cta__inner">
-      <h2 class="result-cta__title">
-        Klaar om dit patroon<br>
-        <em>écht te doorbreken?</em>
-      </h2>
-      <p>
-        Bewustwording is stap één. Maar inzicht zonder nieuwe ervaring
-        verandert niets in je brein. Dat is precies wat we doen in DURF.
-        een dagdeel volledig rond jouw patroon, jouw blokkade, jouw volgende stap.
-      </p>
+      <h2 class="result-cta__title">Klaar om dit patroon echt te doorbreken?</h2>
+      <p>Bewustwording is stap een. Maar inzicht zonder nieuwe ervaring verandert niets in je brein. Dat is precies wat we doen in DURF.</p>
       <div class="result-cta__buttons">
-        <a href="livedag.html" class="btn btn--coral">Lees meer over DURF →</a>
-        <a href="mailto:anouk@anoukkeivit.nl" class="btn btn--outline">Stel een vraag</a>
-        <button class="result-cta__retry" onclick="restartQuiz()">Quiz opnieuw doen</button>
+        <a href="livedag.html" class="btn btn--white">Lees meer over DURF &rarr;</a>
+        <a href="mailto:anouk@anoukkeivit.nl" class="btn btn--outline" style="border-color:rgba(255,255,255,.5);color:var(--white);">Stel een vraag</a>
       </div>
     </div>
   </div>
 
   <footer>
-    <p>© 2025 Anouk Kievit &nbsp;·&nbsp; <a href="/privacy">Privacy</a> &nbsp;·&nbsp; <a href="/algemene-voorwaarden">Algemene voorwaarden</a></p>
+    <p>&copy; 2025 Anouk Kievit &nbsp;&middot;&nbsp; <a href="/privacy">Privacy</a> &nbsp;&middot;&nbsp; <a href="/algemene-voorwaarden">Algemene voorwaarden</a></p>
   </footer>
 
 </div>
@@ -491,138 +462,142 @@
 
 <script>
 const questions = [
-  { // drop Z
-    text: "Als je iets nieuws wilt starten, wat is dan je eerste reactie?",
+  {
+    text: "Je weet dat je prijs omhoog kan. Wat doe je?",
     options: [
-      { text: "Ik maak eerst een uitgebreid plan, dan pas begin ik.", p: "C" },
-      { text: "Ik wil me eerst verder verdiepen en meer leren.", p: "B" },
-      { text: "Ik wacht op het juiste moment.", p: "V" },
-      { text: "Ik check eerst of anderen er ook achter staan.", p: "P" },
+      { text: "Ik bereken het opnieuw en wil het zeker weten voor ik iets verander.", p: "C" },
+      { text: "Ik wacht tot ik genoeg resultaten kan laten zien.", p: "B" },
+      { text: "Ik verhoog hem — maar vraag me daarna af of het niet te veel is.", p: "V" },
     ]
   },
-  { // drop C
-    text: "Wat zegt die stem in je hoofd het vaakst?",
+  {
+    text: "Wat zegt die stem als je op het punt staat iets groots te doen?",
     options: [
-      { text: "\"Je weet nog niet genoeg.\"", p: "B" },
-      { text: "\"Nu is het nog niet het juiste moment.\"", p: "V" },
-      { text: "\"Wat zullen anderen ervan vinden?\"", p: "P" },
-      { text: "\"Er moet toch meer zijn dan dit.\"", p: "Z" },
+      { text: "Wat als het misgaat?", p: "C" },
+      { text: "Je weet nog niet genoeg.", p: "B" },
+      { text: "Nu is het nog niet het juiste moment.", p: "V" },
+      { text: "Wat zullen anderen ervan vinden?", p: "P" },
+      { text: "Is dit wel echt wat ik wil?", p: "Z" },
     ]
   },
-  { // drop B
-    text: "Als je 's avonds in bed ligt, waar gaan je gedachten dan naartoe?",
+  {
+    text: "Je hebt een belangrijke beslissing te nemen. Wat doe je als eerste?",
     options: [
-      { text: "Alles wat nog op mijn to-do lijst staat.", p: "C" },
-      { text: "Wat er fout had kunnen gaan vandaag.", p: "V" },
-      { text: "Of ik iemand heb teleurgesteld.", p: "P" },
-      { text: "Of dit echt het leven is dat ik wil.", p: "Z" },
+      { text: "Ik wil eerst alle informatie en mogelijke scenario's op een rij.", p: "C" },
+      { text: "Ik overleg met mensen om me heen voor ik iets besluit.", p: "P" },
+      { text: "Ik stel het uit tot het duidelijker voelt.", p: "V" },
+      { text: "Ik vraag me af of dit past bij waar ik naartoe wil.", p: "Z" },
     ]
   },
-  { // drop V
-    text: "Wat houdt jou het meest tegen als je een keuze moet maken?",
+  {
+    text: "Wat kost jou als ondernemer de meeste mentale energie?",
+    options: [
+      { text: "Dingen loslaten en vertrouwen dat het goed komt zonder mij.", p: "C" },
+      { text: "Het gevoel dat ik nog niet goed genoeg ben voor de volgende stap.", p: "B" },
+      { text: "Iemand teleurstellen of een nee geven aan een klant.", p: "P" },
+      { text: "Stilstaan terwijl ik het gevoel heb dat ik verder moet.", p: "Z" },
+    ]
+  },
+  {
+    text: "Als je eerlijk bent: waarop wacht je eigenlijk?",
+    options: [
+      { text: "Tot ik alles goed op orde heb.", p: "C" },
+      { text: "Tot ik me echt klaar voel.", p: "B" },
+      { text: "Tot het zeker genoeg is.", p: "V" },
+      { text: "Tot anderen zeggen dat ik het mag of kan.", p: "P" },
+      { text: "Tot ik weet wat ik echt wil.", p: "Z" },
+    ]
+  },
+  {
+    text: "Hoe reageer jij als iets niet loopt zoals gepland?",
+    options: [
+      { text: "Ik maak direct een nieuw plan en ga door.", p: "C" },
+      { text: "Ik denk dat ik me beter had moeten voorbereiden.", p: "B" },
+      { text: "Ik schrik en heb even tijd nodig voor ik verder ga.", p: "V" },
+    ]
+  },
+  {
+    text: "Wat is jouw grootste valkuil als ondernemer?",
+    options: [
+      { text: "Alles zelf willen doen omdat ik het anders niet vertrouw.", p: "C" },
+      { text: "Te lang blijven leren en voorbereiden in plaats van doen.", p: "B" },
+      { text: "Kansen laten liggen omdat ze risicovol voelen.", p: "V" },
+      { text: "Ja zeggen terwijl ik nee bedoel.", p: "P" },
+      { text: "Van focus wisselen als iets nieuwer of spannender lijkt.", p: "Z" },
+    ]
+  },
+  {
+    text: "Hoe ga jij om met zichtbaarheid — posten, spreken, jezelf laten zien?",
+    options: [
+      { text: "Ik plan het, maar perfectie weerhoudt me om het live te zetten.", p: "C" },
+      { text: "Ik wacht tot ik genoeg te vertellen heb of goed genoeg ben.", p: "B" },
+      { text: "Ik doe het, maar vraag me daarna altijd af hoe het is gevallen.", p: "P" },
+      { text: "Ik doe het liever niet. Het voelt te kwetsbaar.", p: "V" },
+    ]
+  },
+  {
+    text: "Je krijgt een groot compliment over je werk. Wat gebeurt er in je?",
+    options: [
+      { text: "Ik denk direct aan wat er beter had gekund.", p: "C" },
+      { text: "Ik geniet ervan maar geloof het nooit helemaal.", p: "B" },
+      { text: "Ik vind het fijner om anderen te complimenteren dan zelf te ontvangen.", p: "P" },
+      { text: "Ik denk: mooi, maar dit is niet alles wat in mij zit.", p: "Z" },
+    ]
+  },
+  {
+    text: "Wat houdt jou het vaakst tegen als je een stap wilt zetten?",
     options: [
       { text: "Dat ik niet alle gevolgen kan overzien.", p: "C" },
       { text: "Dat ik me nog niet klaar voel.", p: "B" },
+      { text: "De kans dat het fout gaat.", p: "V" },
       { text: "Dat ik iemand anders ermee raak.", p: "P" },
       { text: "Dat ik niet zeker weet of dit echt is wat ik wil.", p: "Z" },
     ]
   },
-  { // drop P
-    text: "Als je een grote stap wilt zetten, wat doe je dan?",
+  {
+    text: "Wat houdt jou tegen om je team meer te vertrouwen en los te laten?",
     options: [
-      { text: "Ik plan het tot in de puntjes voor ik begin.", p: "C" },
-      { text: "Ik volg eerst nog een cursus of training.", p: "B" },
-      { text: "Ik wacht tot het veiliger voelt.", p: "V" },
-      { text: "Ik twijfel of dit wel de juiste stap voor mij is.", p: "Z" },
+      { text: "Ik doe het sneller en beter zelf.", p: "C" },
+      { text: "Ik wil niet dat anderen denken dat ik het niet meer aankan.", p: "P" },
+      { text: "Ik weet nog niet goed wat ik dan zelf zou moeten doen.", p: "Z" },
     ]
   },
-  { // drop Z
-    text: "Wat geeft jou het meeste energie?",
+  {
+    text: "Wat zou voor jou de grootste doorbraak zijn als ondernemer?",
     options: [
-      { text: "Als alles loopt zoals gepland.", p: "C" },
-      { text: "Als ik iets nieuws leer of een certificaat haal.", p: "B" },
-      { text: "Als ik weet wat er gaat komen.", p: "V" },
-      { text: "Als anderen blij zijn met wat ik doe.", p: "P" },
-    ]
-  },
-  { // drop C
-    text: "Wat kost jou de meeste energie?",
-    options: [
-      { text: "Het gevoel dat ik niet goed genoeg ben.", p: "B" },
-      { text: "Risico nemen zonder te weten hoe het afloopt.", p: "V" },
-      { text: "Iemand teleurstellen.", p: "P" },
-      { text: "Stilstaan en hetzelfde blijven doen.", p: "Z" },
-    ]
-  },
-  { // drop B
-    text: "Als je eerlijk bent: waarop wacht je eigenlijk?",
-    options: [
-      { text: "Tot ik alles goed geregeld heb.", p: "C" },
-      { text: "Tot het zeker genoeg is.", p: "V" },
-      { text: "Tot anderen zeggen dat ik het mag of kan.", p: "P" },
-      { text: "Tot ik weet wat ik écht wil.", p: "Z" },
-    ]
-  },
-  { // drop V
-    text: "Wat is jouw grootste valkuil?",
-    options: [
-      { text: "Alles zelf willen doen en controleren.", p: "C" },
-      { text: "Te lang blijven leren in plaats van te doen.", p: "B" },
-      { text: "Ja zeggen terwijl ik nee bedoel.", p: "P" },
-      { text: "Van het een naar het ander springen zonder te landen.", p: "Z" },
-    ]
-  },
-  { // drop P
-    text: "Hoe reageer je als iets niet gaat zoals gepland?",
-    options: [
-      { text: "Ik maak direct een nieuw plan.", p: "C" },
-      { text: "Ik denk dat ik me beter had moeten voorbereiden.", p: "B" },
-      { text: "Ik schrik en trek me terug.", p: "V" },
-      { text: "Ik vraag me af of ik wel op het goede pad zat.", p: "Z" },
-    ]
-  },
-  { // drop Z
-    text: "Wat zeggen mensen die jou goed kennen over jou?",
-    options: [
-      { text: "\"Jij denkt aan alles.\"", p: "C" },
-      { text: "\"Jij bent altijd bezig jezelf te verbeteren.\"", p: "B" },
-      { text: "\"Jij speelt het veilig.\"", p: "V" },
-      { text: "\"Jij staat altijd voor iedereen klaar.\"", p: "P" },
-    ]
-  },
-  { // drop C
-    text: "Wat zou voor jou de grootste bevrijding zijn?",
-    options: [
-      { text: "Eindelijk het gevoel hebben: ik ben goed genoeg.", p: "B" },
+      { text: "Eindelijk echt loslaten en vertrouwen dat het goed gaat.", p: "C" },
+      { text: "Staan voor wat ik waard ben zonder dat ik het hoef te bewijzen.", p: "B" },
       { text: "Een keuze durven maken zonder angst voor de gevolgen.", p: "V" },
-      { text: "Nee kunnen zeggen zonder me schuldig te voelen.", p: "P" },
-      { text: "Weten welke richting ik op wil.", p: "Z" },
+      { text: "Nee zeggen zonder me schuldig te voelen.", p: "P" },
+      { text: "Weten welke richting ik op wil en daar volledig voor gaan.", p: "Z" },
     ]
   },
-  { // drop B
-    text: "Wanneer ben jij het meest jezelf?",
+  {
+    text: "Wanneer ben jij echt in je kracht als ondernemer?",
     options: [
-      { text: "Als ik overzicht heb en dingen onder controle zijn.", p: "C" },
-      { text: "Als ik weet dat er niets mis kan gaan.", p: "V" },
-      { text: "Als ik bijdraag aan iemand anders.", p: "P" },
+      { text: "Als ik overzicht heb en de regie in handen.", p: "C" },
+      { text: "Als ik ergens echt goed in ben en dat ook laat zien.", p: "B" },
+      { text: "Als ik bijdraag aan iemand anders zijn succes.", p: "P" },
       { text: "Als ik iets totaal nieuws aan het ontdekken ben.", p: "Z" },
     ]
   },
-  { // drop V
-    text: "Hoe ga jij om met complimenten?",
+  {
+    text: "Wat zeggen mensen die jou goed kennen over jou?",
     options: [
-      { text: "Ik denk direct aan wat er beter had gekund.", p: "C" },
-      { text: "Ik geniet ervan maar geloof ze nooit helemaal.", p: "B" },
-      { text: "Ik merk dat ik het veel fijner vind om anderen te complimenteren.", p: "P" },
-      { text: "Ik denk: mooi, maar dit is niet alles wat in mij zit.", p: "Z" },
+      { text: "Jij denkt aan alles.", p: "C" },
+      { text: "Jij bent altijd bezig jezelf te verbeteren.", p: "B" },
+      { text: "Jij speelt het veilig.", p: "V" },
+      { text: "Jij staat altijd voor iedereen klaar.", p: "P" },
+      { text: "Jij zit altijd te zoeken naar iets.", p: "Z" },
     ]
   },
-  { // drop P
+  {
     text: "Als je terugkijkt op de afgelopen tijd, wat is het patroon?",
     options: [
       { text: "Ik houd alles goed bij, maar voel me zelden echt vrij.", p: "C" },
-      { text: "Ik groei constant, maar voel me zelden écht goed genoeg.", p: "B" },
+      { text: "Ik groei constant, maar voel me zelden echt goed genoeg.", p: "B" },
       { text: "Ik doe wat veilig is, maar voel dat ik mezelf tekortkom.", p: "V" },
+      { text: "Ik doe voor iedereen, maar vergeet mezelf.", p: "P" },
       { text: "Ik voel dat ik ergens naartoe moet, maar weet nog niet waar.", p: "Z" },
     ]
   },
@@ -630,141 +605,131 @@ const questions = [
 
 const patterns = {
   C: {
-    titleLine1: "Het",
-    titleLine2: "Controle-",
-    titleLine3: "patroon",
+    line1: "Het", line2: "Controle", line3: "patroon",
     shock: "Je probeert rust te creëren door controle. Maar controle is niet hetzelfde als vrijheid.",
     description: `
       <p>Je denkt veel. Plant veel. Bereidt veel voor.</p>
-      <p>Niet omdat je precies weet wat je doet maar omdat jij <strong>van onzekerheid afkomt</strong> door zo veel mogelijk te regelen. Als alles gepland is, kan het niet misgaan. Zo werkt jouw brein.</p>
-      <p>Het klinkt slim. En in veel situaties is het ook effectief. Maar ergens onderweg <strong>werd controle jouw kooi.</strong> Want échte keuzes, échte groei, echt leven dat vraagt om durven zonder garantie.</p>
-      <p>Diep vanbinnen ben je bang dat het misgaat als jij even loslaat. Of dat jij zelf in verval raakt als je stopt met regelen. <strong>Dat is de leugen die jou klein houdt.</strong></p>
+      <p>Niet omdat je precies weet wat je doet, maar omdat jij van onzekerheid afkomt door zo veel mogelijk te regelen. Als alles gepland is, kan het niet misgaan. Als jij alles weet, kan het niet fout gaan.</p>
+      <p>Het klinkt slim. En in veel situaties is het ook effectief. Maar ergens onderweg <strong>werd controle jouw kooi.</strong> Want echte groei, echte doorbraken, echt ondernemen, dat vraagt om durven zonder garantie.</p>
+      <p>Diep vanbinnen ben je bang dat het misgaat als jij even loslaat. Dat anderen het zonder jou niet redden. Of dat jij zelf in verval raakt als je stopt met regelen.</p>
     `,
     signs: [
       "Je maakt een plan voor je plan maakt.",
       "Delegeren voelt als controle verliezen.",
-      "Je kunt niet echt ontspannen er is altijd iets wat je hoofd bezighoudt.",
-      "Je zegt 'ik ben er klaar voor' pas als je alles hebt voorzien. Dat moment komt zelden.",
+      "Je kunt niet echt ontspannen. Er is altijd iets wat je hoofd bezighoudt.",
+      "Je bedrijf draait goed, maar jij draait er zelf in mee.",
     ],
-    secondary: "Veel mensen met het Controle-patroon herkennen ook elementen van het Bewijs-patroon: achter de behoefte aan controle schuilt vaak de vraag of je goed genoeg bent als je het niet perfect doet.",
+    secondary: "Veel ondernemers met het Controle-patroon herkennen ook elementen van het Bewijs-patroon: achter de behoefte aan controle schuilt vaak de vraag of je goed genoeg bent als je het niet perfect doet.",
     think: "Je denkt dat je probleem onzekerheid is.",
     truth: "Maar eigenlijk vertrouw je jezelf nog niet volledig.",
     actions: [
-      { title: "Laat één ding bewust los", body: "Kies deze week één taak die je normaal zelf doet en geef hem aan iemand anders. Zonder te checken of het goed gaat. Merk wat er in je gebeurt." },
-      { title: "Zet de beslissing die er al maanden ligt", body: "Je weet welke het is. Zet hem vandaag — niet als alles perfect is, maar nu. Een imperfect besluit is beter dan geen besluit." },
-      { title: "Schrijf op: wat is het ergste dat kan gebeuren?", body: "Schrijf het werkelijk op. Dan: hoe groot is die kans? En wat zou je doen als het wél gebeurt? Je zult merken dat je het aan kunt." },
+      { title: "Laat bewust iets los", body: "Kies deze week een taak die je normaal zelf doet en geef hem aan iemand anders. Zonder te checken of het goed gaat. Merk wat er in je gebeurt." },
+      { title: "Zet de beslissing die er al maanden ligt", body: "Je weet welke het is. Zet hem vandaag, niet als alles perfect is, maar nu. Een imperfect besluit is beter dan geen besluit." },
+      { title: "Schrijf op: wat is het ergste dat kan gebeuren?", body: "Schrijf het werkelijk op. Dan: hoe groot is die kans? En wat zou je doen als het wel gebeurt? Je zult merken dat je het aankunt." },
     ]
   },
   B: {
-    titleLine1: "Het",
-    titleLine2: "Bewijs-",
-    titleLine3: "patroon",
+    line1: "Het", line2: "Bewijs", line3: "patroon",
     shock: "Je bent voortdurend bezig jezelf te bewijzen. Maar wat je zoekt, vind je niet in nog een cursus.",
     description: `
       <p>Nog een opleiding. Nog een certificaat. Nog meer kennis.</p>
       <p>Van buitenaf lijkt het alsof jij altijd bezig bent te groeien. En dat is ook zo. Maar <strong>achter al die groei zit een leegte</strong> die nooit echt gevuld raakt. Want hoe meer je leert, hoe meer je ziet wat je nog niet weet.</p>
-      <p>Jij hebt een innerlijke lat die altijd net iets hoger hangt dan je kunt springen. En omdat die lat nooit bereikt wordt, <strong>voel jij je nooit echt goed genoeg.</strong></p>
-      <p>Wat je eigenlijk zoekt is geen diploma. Het is toestemming. <strong>Toestemming om te staan voor wie je al bent</strong> nu, zonder dat je er iets extra's voor hoeft te doen.</p>
+      <p>Jij hebt een innerlijke lat die altijd net iets hoger hangt dan je kunt springen. En omdat die lat nooit bereikt wordt, voel jij je nooit echt goed genoeg.</p>
+      <p>Wat je eigenlijk zoekt is geen diploma. Het is toestemming. <strong>Toestemming om te staan voor wie je al bent</strong>, nu, zonder dat je er iets extra's voor hoeft te doen.</p>
     `,
     signs: [
-      "Je hebt al veel geleerd, maar het gevoel van 'klaar zijn' blijft uit.",
-      "Je twijfelt aan je mening tenzij je een expert bent op het gebied.",
-      "Complimenten landen niet echt je denkt altijd aan wat er beter had gekund.",
-      "Je vergelijkt jezelf regelmatig met anderen die 'verder' lijken te zijn.",
+      "Je hebt al veel geleerd, maar het gevoel van klaar zijn blijft uit.",
+      "Je twijfelt aan je mening tenzij je echt expert bent op dat gebied.",
+      "Complimenten landen niet echt. Je denkt altijd aan wat er beter had gekund.",
+      "Je vergelijkt jezelf regelmatig met anderen die verder lijken te zijn.",
     ],
-    secondary: "Veel mensen met het Bewijs-patroon herkennen ook het Veiligheids-patroon: je blijft leren omdat het veiliger voelt dan te handelen op wat je al weet.",
+    secondary: "Veel ondernemers met het Bewijs-patroon herkennen ook het Veiligheids-patroon: je blijft leren omdat het veiliger voelt dan te handelen op wat je al weet.",
     think: "Je denkt dat je meer kennis nodig hebt.",
     truth: "Maar eigenlijk wacht je op toestemming.",
     actions: [
-      { title: "Doe iets op basis van wat je al weet", body: "Kies deze week één actie die je steeds uitstelde omdat je je 'nog niet klaar' voelde. Doe het met wat je nu hebt. Genoeg is genoeg." },
-      { title: "Schrijf op wat je al kunt", body: "Maak een lijst van alles wat je weet, hebt geleerd en kunt. Lees hem hardop voor. Dit is wie je al bent — zonder het volgende certificaat." },
-      { title: "Zeg het hardop", body: "Noem tegenover één persoon iets wat jij goed kunt — zonder relativeren, zonder 'maar'. Eén zin. Oefen met staan voor wat je al bent." },
+      { title: "Doe iets op basis van wat je al weet", body: "Kies een actie die je steeds uitstelde omdat je je niet klaar voelde. Doe het met wat je nu hebt. Genoeg is genoeg." },
+      { title: "Schrijf op wat je al kunt", body: "Maak een lijst van alles wat je weet, hebt geleerd en kunt. Lees hem hardop voor. Dit is wie je al bent, zonder het volgende certificaat." },
+      { title: "Zeg het hardop", body: "Noem tegenover een klant of collega iets wat jij goed kunt, zonder relativeren, zonder maar. Een zin. Oefen met staan voor wat je al bent." },
     ]
   },
   V: {
-    titleLine1: "Het",
-    titleLine2: "Veiligheids-",
-    titleLine3: "patroon",
-    shock: "Je weet wat je wilt. Maar kiest steeds voor wat veilig voelt niet omdat je het niet kunt.",
+    line1: "Het", line2: "Veiligheids", line3: "patroon",
+    shock: "Je weet wat je wilt. Maar kiest steeds voor wat veilig voelt, niet omdat je het niet kunt.",
     description: `
       <p>Je ziet de kansen. Je voelt de mogelijkheden. Je weet wat de logische stap is.</p>
       <p>Maar net als je de stap wil zetten, <strong>trekt jouw brein aan de rem.</strong> Niet omdat die stap verkeerd is. Maar omdat jouw brein risico wil vermijden en alles buiten het vertrouwde ervaart als gevaar.</p>
-      <p>Het resultaat: <strong>je leeft veilig, maar niet vrij.</strong> Je doet wat werkt, maar niet wat klopt. Je kiest voor wat je kent, ook als je weet dat je er eigenlijk allang overheen bent gegroeid.</p>
-      <p>Je hebt meer lef dan je denkt. Je hebt het alleen nog niet bewezen aan jezelf.</p>
+      <p>Het resultaat: je leeft veilig, maar niet vrij. Je doet wat werkt, maar niet wat klopt. Je kiest voor wat je kent, ook als je weet dat je er allang overheen bent gegroeid.</p>
+      <p>Je hebt meer lef dan je denkt. Je hebt het alleen nog niet bewezen, aan jezelf.</p>
     `,
     signs: [
-      "Je hebt een kans voorbij laten gaan omdat het 'te risicovol' voelde en er achteraf spijt van gehad.",
+      "Je hebt een kans voorbij laten gaan omdat het te risicovol voelde, en er later spijt van gehad.",
       "Je weet precies wat je zou willen doen. Maar je doet het niet.",
       "Je comfortzone is kleiner geworden dan hij ooit was.",
       "Anderen zien in jou mogelijkheden die jij zelf niet durft te zien.",
     ],
-    secondary: "Veel mensen met het Veiligheids-patroon herkennen ook het Pleaser-patroon: een deel van het veilig spelen komt voort uit de angst wat anderen ervan vinden als je kiest voor jezelf.",
+    secondary: "Veel ondernemers met het Veiligheids-patroon herkennen ook het Pleaser-patroon: een deel van het veilig spelen komt voort uit de angst wat anderen ervan vinden als je kiest voor jezelf.",
     think: "Je denkt dat je meer zelfvertrouwen nodig hebt.",
     truth: "Maar eigenlijk probeer je afwijzing te vermijden.",
     actions: [
-      { title: "Doe één spannend ding — hoe klein ook", body: "Kies iets wat je al lang wilt maar steeds uitstelt. Stuur die mail. Maak die afspraak. Zet die post live. Jouw brein heeft bewijs nodig dat je veilig bent." },
-      { title: "Vertel het hardop", body: "Zeg tegen één persoon wat je eigenlijk wil. Niet als plan, maar als feit: 'Ik wil dit.' Hardop benoemen maakt het reëel — en minder eng." },
-      { title: "Schrijf op wat je wint als je het doet", body: "Niet wat er mis kan gaan — dat weet je al. Schrijf op wat je wint. Wat is de beste uitkomst? Lees dit elke ochtend deze week." },
+      { title: "Doe een ding dat je al lang uitstelt", body: "Stuur die mail. Maak die afspraak. Zet die post live. Hoe klein ook. Jouw brein heeft bewijs nodig dat je veilig bent als je het doet." },
+      { title: "Vertel het hardop", body: "Zeg tegen een persoon wat je eigenlijk wil. Niet als plan, maar als feit: ik wil dit. Hardop benoemen maakt het reeel, en minder eng." },
+      { title: "Schrijf op wat je wint als je het doet", body: "Niet wat er mis kan gaan, dat weet je al. Schrijf op wat je wint. Wat is de beste uitkomst? Lees dit elke ochtend deze week." },
     ]
   },
   P: {
-    titleLine1: "Het",
-    titleLine2: "Pleaser-",
-    titleLine3: "patroon",
-    shock: "Je bent er voor iedereen. Maar jezelf vergeet je vaak en dat begint zijn tol te eisen.",
+    line1: "Het", line2: "Pleaser", line3: "patroon",
+    shock: "Je bent er voor iedereen. Maar jezelf vergeet je vaak, en dat begint zijn tol te eisen.",
     description: `
-      <p>Je bent de persoon waar anderen op kunnen rekenen. Altijd beschikbaar. Altijd behulpzaam. Altijd bereid om te geven.</p>
-      <p>Maar ergens in dat geven is <strong>jij verdwenen.</strong> Jouw behoeften komen als laatste. Jouw grenzen zijn vaag. Nee zeggen voelt als iemand kwetsen en kwetsen is iets wat jij ten koste van alles probeert te vermijden.</p>
-      <p>Wat er onder zit is niet behulpzaamheid. Het is de diepgewortelde overtuiging dat <strong>jij er pas mag zijn als je van waarde bent voor een ander.</strong> Dat jouw plek verdiend moet worden elke dag opnieuw.</p>
+      <p>Je bent de ondernemer waar anderen op kunnen rekenen. Altijd beschikbaar. Altijd behulpzaam. Altijd bereid om te geven.</p>
+      <p>Maar ergens in dat geven is <strong>jij verdwenen.</strong> Jouw behoeften komen als laatste. Jouw grenzen zijn vaag. Nee zeggen voelt als iemand kwetsen, en kwetsen is iets wat jij ten koste van alles probeert te vermijden.</p>
+      <p>Wat er onder zit is niet behulpzaamheid. Het is de overtuiging dat <strong>jij er pas mag zijn als je van waarde bent voor een ander.</strong> Dat jouw plek verdiend moet worden, elke dag opnieuw.</p>
       <p>Jij hoeft niet meer te verdienen. Je mag er gewoon zijn.</p>
     `,
     signs: [
-      "Je zegt ja, en denkt pas daarna na of je het eigenlijk wil.",
+      "Je zegt ja en denkt pas daarna na of je het eigenlijk wil.",
       "Als iemand boos op je is, kost dat je dagen energie.",
-      "Jouw eigen behoeften benoemen voelt egoïstisch.",
+      "Jouw eigen behoeften benoemen voelt egoistisch.",
       "Je weet precies wat iedereen om je heen nodig heeft. Voor jezelf is dat minder duidelijk.",
     ],
-    secondary: "Veel mensen met het Pleaser-patroon herkennen ook het Bewijs-patroon: als jij pas mag bestaan als je van waarde bent, heb je constant het gevoel dat je meer moet bewijzen.",
+    secondary: "Veel ondernemers met het Pleaser-patroon herkennen ook het Bewijs-patroon: als jij pas mag bestaan als je van waarde bent, heb je constant het gevoel dat je meer moet bewijzen.",
     think: "Je denkt dat je behulpzaam bent.",
     truth: "Maar misschien ben je bang mensen teleur te stellen.",
     actions: [
-      { title: "Zeg één keer nee — zonder uitleg", body: "Kies deze week één verzoek en zeg nee. Geen sorry, geen reden, geen alternatief. Alleen: 'Dat lukt me niet.' Merk hoe het voelt. En dat de wereld niet instort." },
-      { title: "Plan één uur dat alleen voor jou is", body: "Elke dag deze week. Geen uitzonderingen. Niet voor de kinderen, niet voor een klant. Voor jou. Begin klein. Maar begin." },
+      { title: "Zeg een keer nee, zonder uitleg", body: "Kies deze week een verzoek en zeg nee. Geen sorry, geen reden, geen alternatief. Alleen: dat lukt me niet. Merk hoe het voelt. En dat de wereld niet instort." },
+      { title: "Plan een uur dat alleen voor jou is", body: "Elke dag deze week. Geen uitzonderingen. Niet voor een klant, niet voor je team. Voor jou. Begin klein. Maar begin." },
       { title: "Schrijf op wat jij wil", body: "Niet wat anderen van je verwachten. Wat wil jij? Schrijf het op zonder het te censureren. Dit is de vraag die je het langst hebt vermeden." },
     ]
   },
   Z: {
-    titleLine1: "Het",
-    titleLine2: "Zoekers-",
-    titleLine3: "patroon",
+    line1: "Het", line2: "Zoekers", line3: "patroon",
     shock: "Je voelt dat je bent uitgegroeid aan je huidige situatie. Maar je weet nog niet precies wat daarna komt.",
     description: `
-      <p>Er zit iets in je dat onrustig is. Niet omdat het slecht gaat maar omdat het te klein voelt.</p>
-      <p>Je hebt genoeg bereikt. Je leeft een goed leven. Maar <strong>diep vanbinnen weet je dat dit het niet helemaal is.</strong> Er is iets groters, iets authentieker, iets dat meer bij jou past.</p>
-      <p>Het probleem is: je weet niet precies wat dat is. En dus blijf je zoeken. Nieuwe ideeën, nieuwe richtingen. <strong>Altijd op zoek, maar nooit helemaal landend.</strong></p>
+      <p>Er zit iets in je dat onrustig is. Niet omdat het slecht gaat, maar omdat het te klein voelt.</p>
+      <p>Je hebt genoeg bereikt. Je hebt een bedrijf dat draait. Maar <strong>diep vanbinnen weet je dat dit het niet helemaal is.</strong> Er is iets groters, iets authentieker, iets dat meer bij jou past.</p>
+      <p>Het probleem is: je weet niet precies wat dat is. En dus blijf je zoeken. Nieuwe ideeen, nieuwe richtingen. Altijd op zoek, maar nooit helemaal landend.</p>
       <p>Je probleem is niet dat je geen richting hebt. Je probleem is dat je nog niet volledig hebt durven kiezen voor wat je al voelt.</p>
     `,
     signs: [
       "Je bent ergens mee begonnen met enthousiasme en na een tijdje was de vonk weg.",
       "Je volgt veel mensen, leest veel, absorbeert veel maar voelt je zelden thuis ergens.",
-      "Als iemand vraagt wat jij nou écht wil, duurt het even voor je antwoord.",
+      "Als iemand vraagt wat jij nou echt wil, duurt het even voor je antwoord.",
       "Je weet dat er iets op je wacht. Maar je durft er nog niet volledig op in te zetten.",
     ],
-    secondary: "Veel mensen met het Zoekers-patroon herkennen ook het Veiligheids-patroon: het niet kiezen is ook een manier om je te beschermen. Want als je nooit kiest, kun je ook nooit de verkeerde keuze maken.",
+    secondary: "Veel ondernemers met het Zoekers-patroon herkennen ook het Veiligheids-patroon: het niet kiezen is ook een manier om je te beschermen. Want als je nooit kiest, kun je ook nooit de verkeerde keuze maken.",
     think: "Je denkt dat je geen richting hebt.",
     truth: "Maar misschien durf je nog niet volledig te kiezen.",
     actions: [
-      { title: "Schrijf op wat je al lang weet", body: "Er is iets wat je al tijden voelt maar niet hardop zegt. Schrijf het op. Niet als plan — als waarheid. Dan: wat houdt je tegen om er volledig voor te kiezen?" },
-      { title: "Kies één ding en doe het 30 dagen", body: "Eén project, één richting, één gewoonte. Geen nieuw idee toelaten. Geen switchen. Dertig dagen. Wat je zoekt, vind je niet door meer te verkennen maar door dieper te gaan." },
-      { title: "Praat met iemand die doet wat jij wilt doen", body: "Niet om informatie te verzamelen. Maar om te voelen of het klopt. Luister naar hoe ze erover praten. Let op wat er in jou beweegt." },
+      { title: "Schrijf op wat je al lang weet", body: "Er is iets wat je al tijden voelt maar niet hardop zegt. Schrijf het op. Niet als plan, als waarheid. Dan: wat houdt je tegen om er volledig voor te kiezen?" },
+      { title: "Kies een ding en doe het 30 dagen", body: "Een project, een richting, een gewoonte. Geen nieuw idee toelaten. Geen switchen. Dertig dagen. Wat je zoekt, vind je niet door meer te verkennen maar door dieper te gaan." },
+      { title: "Praat met iemand die doet wat jij wilt doen", body: "Niet om informatie te verzamelen. Maar om te voelen of het klopt. Luister hoe ze erover praten. Let op wat er in jou beweegt." },
     ]
   }
 };
 
 let currentQuestion = 0;
 let scores = { C: 0, B: 0, V: 0, P: 0, Z: 0 };
-let history = []; // [{questionIndex, pattern}]
-let shuffledOptions = []; // options per question in shuffled order
+let history = [];
+let shuffledOptions = [];
 
 function startQuiz() {
   currentQuestion = 0;
@@ -775,12 +740,10 @@ function startQuiz() {
   renderQuestion(false);
 }
 
-function restartQuiz() {
-  showScreen('screen-intro');
-}
+function restartQuiz() { showScreen('screen-intro'); }
 
 function goBack() {
-  if (history.length === 0) return;
+  if (!history.length) return;
   const last = history.pop();
   scores[last.pattern]--;
   currentQuestion = last.questionIndex;
@@ -789,8 +752,7 @@ function goBack() {
 
 function showScreen(id) {
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
-  const el = document.getElementById(id);
-  el.classList.add('active');
+  document.getElementById(id).classList.add('active');
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
@@ -802,30 +764,25 @@ function renderQuestion(goingBack) {
   document.getElementById('progress-label').textContent = `Vraag ${currentQuestion + 1} van ${total}`;
   document.getElementById('progress-fill').style.width = `${progress}%`;
   document.getElementById('question-number').textContent =
-    `Vraag ${String(currentQuestion + 1).padStart(2, '0')} / ${String(total).padStart(2, '0')}`;
-
-  const backBtn = document.getElementById('btn-back');
-  backBtn.disabled = history.length === 0;
+    `${String(currentQuestion + 1).padStart(2, '0')} / ${String(total).padStart(2, '0')}`;
+  document.getElementById('btn-back').disabled = history.length === 0;
 
   const card = document.getElementById('question-card');
-  const direction = goingBack ? 'translateX(24px)' : 'translateX(-24px)';
-
   card.style.transition = 'none';
   card.style.opacity = '0';
-  card.style.transform = direction;
+  card.style.transform = goingBack ? 'translateX(24px)' : 'translateX(-24px)';
 
   requestAnimationFrame(() => {
     document.getElementById('question-text').textContent = q.text;
-    const optionsList = document.getElementById('options-list');
-    optionsList.innerHTML = '';
+    const list = document.getElementById('options-list');
+    list.innerHTML = '';
     shuffledOptions[currentQuestion].forEach(opt => {
       const btn = document.createElement('button');
       btn.className = 'option';
       btn.textContent = opt.text;
-      btn.addEventListener('click', () => selectOption(btn, opt.p, optionsList));
-      optionsList.appendChild(btn);
+      btn.addEventListener('click', () => selectOption(btn, opt.p, list));
+      list.appendChild(btn);
     });
-
     requestAnimationFrame(() => {
       card.style.transition = 'opacity .25s ease, transform .25s ease';
       card.style.opacity = '1';
@@ -837,71 +794,45 @@ function renderQuestion(goingBack) {
 function selectOption(btn, pattern, list) {
   list.querySelectorAll('.option').forEach(b => { b.classList.remove('selected'); b.disabled = true; });
   btn.classList.add('selected');
-
   setTimeout(() => {
     history.push({ questionIndex: currentQuestion, pattern });
     scores[pattern]++;
     currentQuestion++;
-
-    if (currentQuestion < questions.length) {
-      renderQuestion(false);
-    } else {
-      showScreen('screen-email');
-    }
+    currentQuestion < questions.length ? renderQuestion(false) : showScreen('screen-email');
   }, 300);
 }
 
 function submitEmail(e) {
   e.preventDefault();
   const form = document.getElementById('email-form');
-  // Fire and forget don't wait for response
-  fetch(form.action, {
-    method: 'POST',
-    body: new FormData(form),
-    headers: { 'Accept': 'application/json' }
-  }).catch(() => {});
+  fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } }).catch(() => {});
   showResult();
 }
 
 function showResult() {
   const sorted = Object.entries(scores).sort((a, b) => b[1] - a[1]);
   const winnerKey = sorted[0][0];
-  const runnerKey = sorted[1][0];
   const p = patterns[winnerKey];
 
-  // Title
   document.getElementById('result-title').innerHTML =
-    `<span>${p.titleLine1}</span><span><em>${p.titleLine2}</em></span><span>${p.titleLine3}</span>`;
-
+    `<span>${p.line1}</span><span class="accent">${p.line2}-</span><span>${p.line3}</span>`;
   document.getElementById('result-shock').textContent = p.shock;
   document.getElementById('result-description').innerHTML = p.description;
-
-  // Signs
-  const signsList = document.getElementById('result-signs');
-  signsList.innerHTML = p.signs.map(s => `<li>${s}</li>`).join('');
-
-  // Secondary pattern
+  document.getElementById('result-signs').innerHTML = p.signs.map(s => `<li>${s}</li>`).join('');
   document.getElementById('result-secondary').innerHTML = `
-    <div class="result-secondary__label">Ook herkenbaar je secondaire patroon</div>
+    <div class="result-secondary__label">Ook herkenbaar</div>
     <p class="result-secondary__text">${p.secondary}</p>
   `;
-
   document.getElementById('result-think').textContent = p.think;
   document.getElementById('result-truth').textContent = p.truth;
-
-  // Acties
   document.getElementById('result-actions-list').innerHTML = p.actions.map((a, i) => `
     <div class="action-item">
       <div class="action-item__num">${i + 1}</div>
-      <div class="action-item__body">
-        <strong>${a.title}</strong>
-        <p>${a.body}</p>
-      </div>
+      <div class="action-item__body"><strong>${a.title}</strong><p>${a.body}</p></div>
     </div>
   `).join('');
 
-  // WhatsApp share
-  const shareText = encodeURIComponent(`Ik deed de quiz van Anouk Kievit en ontdekte mijn verborgen patroon: ${p.titleLine1} ${p.titleLine2}${p.titleLine3} 👀 Doe hem ook: ${window.location.href}`);
+  const shareText = encodeURIComponent(`Ik deed de quiz van Anouk Kievit en ontdekte mijn verborgen patroon: Het ${p.line2}-${p.line3}. Doe hem ook: ${window.location.href}`);
   document.getElementById('share-wa').href = `https://wa.me/?text=${shareText}`;
 
   showScreen('screen-result');
@@ -909,12 +840,11 @@ function showResult() {
 
 function copyLink() {
   navigator.clipboard.writeText(window.location.href).then(() => {
-    const confirm = document.getElementById('copy-confirm');
-    confirm.style.opacity = '1';
-    setTimeout(() => { confirm.style.opacity = '0'; }, 2500);
+    const c = document.getElementById('copy-confirm');
+    c.style.opacity = '1';
+    setTimeout(() => { c.style.opacity = '0'; }, 2500);
   });
 }
 </script>
-
 </body>
 </html>
