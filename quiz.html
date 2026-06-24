@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welk patroon houdt jou tegen? – Anouk Kievit</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --coral:      #fe8a67;
+      --coral-dark: #e06a48;
+      --blue:       #2596be;
+      --blue-dark:  #1a7a9e;
+      --gold:       #e0ae44;
+      --pink:       #EEC3E5;
+      --pink-light: #F9EFF7;
+      --cream:      #FDFAF7;
+      --white:      #FFFFFF;
+      --text:       #1a1a1a;
+      --text-soft:  #555555;
+      --line:       #e8e8e8;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Jost', sans-serif; background: var(--white); color: var(--text); font-size: 17px; line-height: 1.85; min-height: 100vh; }
+
+    .btn {
+      display: inline-block; padding: 18px 48px; border-radius: 60px;
+      font-family: 'Jost', sans-serif; font-size: 12px; letter-spacing: 2.5px;
+      text-transform: uppercase; font-weight: 600; text-decoration: none;
+      transition: all .25s ease; cursor: pointer; border: none;
+    }
+    .btn--coral  { background: var(--coral);  color: var(--white); }
+    .btn--coral:hover  { background: var(--coral-dark); transform: translateY(-3px); box-shadow: 0 12px 32px rgba(254,138,103,.3); }
+    .btn--blue   { background: var(--blue);   color: var(--white); }
+    .btn--blue:hover   { background: var(--blue-dark);  transform: translateY(-3px); }
+    .btn--outline{ background: transparent; border: 2px solid var(--text); color: var(--text); }
+    .btn--outline:hover{ background: var(--text); color: var(--white); }
+    .label { display: inline-block; font-size: 10px; letter-spacing: 3px; text-transform: uppercase; font-weight: 600; margin-bottom: 16px; }
+    .label--coral { color: var(--coral); }
+    .label--blue  { color: var(--blue);  }
+
+    /* ── SCREENS ── */
+    .screen { display: none; }
+    .screen.active { display: block; }
+
+    /* ── INTRO ── */
+    #screen-intro {
+      min-height: 100vh;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 28px;
+      background: var(--white);
+    }
+    #screen-intro.active { display: flex; }
+    .intro__eyebrow { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; font-weight: 600; color: var(--coral); margin-bottom: 32px; }
+    .intro__title { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 6vw, 72px); font-weight: 300; line-height: 1.1; color: var(--text); margin-bottom: 24px; max-width: 820px; }
+    .intro__title em { font-style: italic; color: var(--coral); }
+    .intro__sub { font-family: 'Cormorant Garamond', serif; font-size: clamp(20px, 2.5vw, 28px); font-style: italic; font-weight: 300; color: var(--text-soft); margin-bottom: 52px; max-width: 600px; }
+    .intro__meta { font-size: 13px; color: var(--text-soft); letter-spacing: 1px; margin-top: 24px; }
+
+    /* ── QUIZ ── */
+    #screen-quiz {
+      min-height: 100vh;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      padding: 60px 28px 80px;
+      background: var(--cream);
+    }
+    #screen-quiz.active { display: flex; }
+
+    .quiz-header { width: 100%; max-width: 680px; margin-bottom: 40px; }
+    .quiz-progress-label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--coral); font-weight: 600; margin-bottom: 10px; }
+    .quiz-progress-bar { height: 3px; background: var(--line); border-radius: 60px; overflow: hidden; }
+    .quiz-progress-fill { height: 100%; background: var(--coral); border-radius: 60px; transition: width .4s ease; }
+
+    .question-card { width: 100%; max-width: 680px; background: var(--white); border-radius: 6px; padding: 52px 48px; border-top: 3px solid var(--coral); }
+    @media (max-width: 560px) { .question-card { padding: 36px 24px; } }
+    .question-number { font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--text-soft); margin-bottom: 20px; font-weight: 600; }
+    .question-text { font-family: 'Cormorant Garamond', serif; font-size: clamp(24px, 3.5vw, 36px); font-weight: 300; line-height: 1.25; color: var(--text); margin-bottom: 40px; }
+
+    .options { display: flex; flex-direction: column; gap: 12px; }
+    .option {
+      padding: 18px 24px;
+      border: 2px solid var(--line);
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 15px;
+      color: var(--text);
+      transition: all .2s ease;
+      background: var(--white);
+      text-align: left;
+      line-height: 1.5;
+    }
+    .option:hover { border-color: var(--coral); background: var(--pink-light); transform: translateX(4px); }
+    .option.selected { border-color: var(--coral); background: var(--pink-light); }
+
+    /* ── RESULT ── */
+    #screen-result {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    #screen-result.active { display: flex; }
+
+    .result-hero { background: var(--white); width: 100%; padding: 100px 28px 80px; }
+    .result-pattern-label { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: var(--coral); font-weight: 600; margin-bottom: 20px; }
+    .result-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(42px, 7vw, 88px); font-weight: 300; line-height: .95; color: var(--text); margin-bottom: 32px; }
+    .result-title em { font-style: italic; color: var(--coral); }
+    .result-shock { font-family: 'Cormorant Garamond', serif; font-size: clamp(20px, 2.8vw, 30px); font-style: italic; font-weight: 300; color: var(--text-soft); max-width: 640px; margin: 0 auto 20px; line-height: 1.5; }
+
+    .result-insight { background: var(--cream); width: 100%; padding: 72px 28px; }
+    .result-insight__inner { max-width: 680px; margin: 0 auto; text-align: left; }
+    .result-insight__block { background: var(--white); border-left: 4px solid var(--coral); border-radius: 0 6px 6px 0; padding: 32px 36px; margin-bottom: 32px; }
+    .result-insight__block p { font-size: 16px; color: var(--text); line-height: 1.8; margin-bottom: 14px; }
+    .result-insight__block p:last-child { margin-bottom: 0; }
+    .result-insight__block strong { color: var(--coral-dark); }
+
+    .result-reframe { background: var(--blue); width: 100%; padding: 72px 28px; }
+    .result-reframe__inner { max-width: 640px; margin: 0 auto; text-align: center; }
+    .result-reframe__label { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,.6); font-weight: 600; margin-bottom: 24px; }
+    .result-reframe__line { font-family: 'Cormorant Garamond', serif; font-size: clamp(22px, 3.5vw, 38px); font-weight: 300; font-style: italic; color: var(--white); line-height: 1.4; margin-bottom: 12px; }
+    .result-reframe__truth { font-family: 'Cormorant Garamond', serif; font-size: clamp(22px, 3.5vw, 38px); font-weight: 600; font-style: italic; color: var(--pink); line-height: 1.4; }
+
+    .result-cta { background: var(--white); width: 100%; padding: 96px 28px; }
+    .result-cta__inner { max-width: 540px; margin: 0 auto; text-align: center; }
+    .result-cta__title { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 4vw, 48px); font-weight: 300; line-height: 1.2; color: var(--text); margin-bottom: 24px; }
+    .result-cta__title em { color: var(--coral); font-style: italic; }
+    .result-cta p { font-size: 16px; color: var(--text-soft); margin-bottom: 36px; line-height: 1.8; }
+    .result-cta__retry { margin-top: 20px; font-size: 13px; color: var(--text-soft); cursor: pointer; text-decoration: underline; text-underline-offset: 3px; background: none; border: none; font-family: 'Jost', sans-serif; }
+    .result-cta__retry:hover { color: var(--coral); }
+
+    footer { background: var(--cream); border-top: 1px solid var(--line); color: var(--text-soft); text-align: center; padding: 36px 28px; font-size: 12px; letter-spacing: .5px; }
+    footer a { color: var(--coral); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<!-- ══ INTRO ══ -->
+<div id="screen-intro" class="screen active">
+  <p class="intro__eyebrow">Anouk Kievit &nbsp;·&nbsp; Gratis zelfinzicht</p>
+  <h1 class="intro__title">
+    Je probleem is waarschijnlijk<br>
+    niet je <em>echte</em> probleem.
+  </h1>
+  <p class="intro__sub">
+    Ontdek binnen 5 minuten welk verborgen patroon jou tegenhoudt.
+  </p>
+  <button class="btn btn--coral" onclick="startQuiz()">Start de quiz →</button>
+  <p class="intro__meta">15 vragen &nbsp;·&nbsp; anoniem &nbsp;·&nbsp; geen e-mail nodig</p>
+</div>
+
+
+<!-- ══ QUIZ ══ -->
+<div id="screen-quiz" class="screen">
+  <div class="quiz-header">
+    <div class="quiz-progress-label" id="progress-label">Vraag 1 van 15</div>
+    <div class="quiz-progress-bar">
+      <div class="quiz-progress-fill" id="progress-fill" style="width: 6.67%"></div>
+    </div>
+  </div>
+
+  <div class="question-card" id="question-card">
+    <div class="question-number" id="question-number">Vraag 01 / 15</div>
+    <p class="question-text" id="question-text"></p>
+    <div class="options" id="options-list"></div>
+  </div>
+</div>
+
+
+<!-- ══ RESULT ══ -->
+<div id="screen-result" class="screen">
+
+  <div class="result-hero">
+    <p class="result-pattern-label" id="result-label">Jouw patroon</p>
+    <h1 class="result-title" id="result-title"></h1>
+    <p class="result-shock" id="result-shock"></p>
+  </div>
+
+  <div class="result-insight">
+    <div class="result-insight__inner">
+      <span class="label label--coral" id="insight-label">Wat dit betekent</span>
+      <div class="result-insight__block" id="result-description"></div>
+    </div>
+  </div>
+
+  <div class="result-reframe">
+    <div class="result-reframe__inner">
+      <p class="result-reframe__label">Wat jij denkt vs. wat er echt speelt</p>
+      <p class="result-reframe__line" id="result-think"></p>
+      <p class="result-reframe__truth" id="result-truth"></p>
+    </div>
+  </div>
+
+  <div class="result-cta">
+    <div class="result-cta__inner">
+      <h2 class="result-cta__title">
+        Klaar om dit patroon<br>
+        <em>écht te doorbreken?</em>
+      </h2>
+      <p>
+        Bewustwording is de eerste stap. Maar inzicht zonder nieuwe ervaring
+        verandert niets in je brein. Dat is precies wat we doen in DURF —
+        een dagdeel volledig om jou en dit patroon.
+      </p>
+      <a href="livedag.html" class="btn btn--coral">Lees meer over DURF →</a>
+      <br>
+      <button class="result-cta__retry" onclick="restartQuiz()">Quiz opnieuw doen</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Anouk Kievit &nbsp;·&nbsp; <a href="/privacy">Privacy</a> &nbsp;·&nbsp; <a href="/algemene-voorwaarden">Algemene voorwaarden</a></p>
+  </footer>
+
+</div>
+
+
+<script>
+  // Patterns: C = Controle, B = Bewijs, V = Veiligheid, P = Pleaser, Z = Zoeker
+  const questions = [
+    {
+      text: "Als je iets nieuws wilt starten, wat is dan je eerste reactie?",
+      options: [
+        { text: "Ik maak eerst een uitgebreid plan — dan pas begin ik.", pattern: "C" },
+        { text: "Ik wil me eerst verder verdiepen en meer leren.", pattern: "B" },
+        { text: "Ik wacht op het juiste moment.", pattern: "V" },
+        { text: "Ik check eerst of anderen er ook achter staan.", pattern: "P" },
+        { text: "Ik vraag me af of dit eigenlijk wel past bij wat ik wil.", pattern: "Z" },
+      ]
+    },
+    {
+      text: "Wat zegt die stem in je hoofd het vaakst?",
+      options: [
+        { text: "\"Wat als het misgaat?\"", pattern: "C" },
+        { text: "\"Je weet nog niet genoeg.\"", pattern: "B" },
+        { text: "\"Nu is het nog niet het juiste moment.\"", pattern: "V" },
+        { text: "\"Wat zullen anderen ervan vinden?\"", pattern: "P" },
+        { text: "\"Er moet toch meer zijn dan dit.\"", pattern: "Z" },
+      ]
+    },
+    {
+      text: "Als je 's avonds in bed ligt, waar gaan je gedachten dan naartoe?",
+      options: [
+        { text: "Alles wat nog op mijn to-do lijst staat.", pattern: "C" },
+        { text: "Of ik wel goed genoeg ben.", pattern: "B" },
+        { text: "Wat er fout had kunnen gaan vandaag.", pattern: "V" },
+        { text: "Of ik iemand heb teleurgesteld.", pattern: "P" },
+        { text: "Of dit echt het leven is dat ik wil.", pattern: "Z" },
+      ]
+    },
+    {
+      text: "Wat houdt jou het meest tegen als je een keuze moet maken?",
+      options: [
+        { text: "Dat ik niet alle gevolgen kan overzien.", pattern: "C" },
+        { text: "Dat ik me nog niet klaar voel.", pattern: "B" },
+        { text: "De kans dat het misgaat.", pattern: "V" },
+        { text: "Dat ik iemand anders ermee raak.", pattern: "P" },
+        { text: "Dat ik niet zeker weet of dit echt is wat ik wil.", pattern: "Z" },
+      ]
+    },
+    {
+      text: "Als je een grote stap wilt zetten — wat doe je dan?",
+      options: [
+        { text: "Ik plan het tot in de puntjes voor ik begin.", pattern: "C" },
+        { text: "Ik volg eerst nog een cursus of training.", pattern: "B" },
+        { text: "Ik wacht tot het veiliger voelt.", pattern: "V" },
+        { text: "Ik vraag iedereen om me heen wat ze ervan vinden.", pattern: "P" },
+        { text: "Ik twijfel of dit wel de juiste stap voor mij is.", pattern: "Z" },
+      ]
+    },
+    {
+      text: "Wat geeft jou het meeste energie?",
+      options: [
+        { text: "Als alles loopt zoals gepland.", pattern: "C" },
+        { text: "Als ik iets nieuws leer of een certificaat haal.", pattern: "B" },
+        { text: "Als ik weet wat er gaat komen.", pattern: "V" },
+        { text: "Als anderen blij zijn met wat ik doe.", pattern: "P" },
+        { text: "Als ik iets nieuws ontdek of probeer.", pattern: "Z" },
+      ]
+    },
+    {
+      text: "Wat kost jou de meeste energie?",
+      options: [
+        { text: "Onzekerheid en dingen die ik niet kan controleren.", pattern: "C" },
+        { text: "Het gevoel dat ik niet goed genoeg ben.", pattern: "B" },
+        { text: "Risico nemen zonder te weten hoe het afloopt.", pattern: "V" },
+        { text: "Iemand teleurstellen.", pattern: "P" },
+        { text: "Stilstaan en hetzelfde blijven doen.", pattern: "Z" },
+      ]
+    },
+    {
+      text: "Als je eerlijk bent: waarop wacht je eigenlijk?",
+      options: [
+        { text: "Tot ik alles goed geregeld heb.", pattern: "C" },
+        { text: "Tot ik me écht klaar voel.", pattern: "B" },
+        { text: "Tot het zeker genoeg is.", pattern: "V" },
+        { text: "Tot anderen zeggen dat ik het mag of kan.", pattern: "P" },
+        { text: "Tot ik weet wat ik écht wil.", pattern: "Z" },
+      ]
+    },
+    {
+      text: "Wat is jouw grootste valkuil?",
+      options: [
+        { text: "Alles zelf willen doen en controleren.", pattern: "C" },
+        { text: "Te lang blijven leren in plaats van te doen.", pattern: "B" },
+        { text: "Kiezen voor de veilige optie, ook als die me minder gelukkig maakt.", pattern: "V" },
+        { text: "Ja zeggen terwijl ik nee bedoel.", pattern: "P" },
+        { text: "Van het een naar het ander springen zonder te landen.", pattern: "Z" },
+      ]
+    },
+    {
+      text: "Hoe reageer je als iets niet gaat zoals gepland?",
+      options: [
+        { text: "Ik maak direct een nieuw plan.", pattern: "C" },
+        { text: "Ik denk dat ik me beter had moeten voorbereiden.", pattern: "B" },
+        { text: "Ik schrik en trek me terug.", pattern: "V" },
+        { text: "Ik check of ik iemand heb teleurgesteld.", pattern: "P" },
+        { text: "Ik vraag me af of ik wel op het goede pad zat.", pattern: "Z" },
+      ]
+    },
+    {
+      text: "Wat zeggen mensen die jou goed kennen over jou?",
+      options: [
+        { text: "\"Jij denkt aan alles.\"", pattern: "C" },
+        { text: "\"Jij bent altijd bezig jezelf te verbeteren.\"", pattern: "B" },
+        { text: "\"Jij speelt het veilig.\"", pattern: "V" },
+        { text: "\"Jij staat altijd voor iedereen klaar.\"", pattern: "P" },
+        { text: "\"Jij zit altijd te zoeken naar iets.\"", pattern: "Z" },
+      ]
+    },
+    {
+      text: "Wat zou voor jou de grootste bevrijding zijn?",
+      options: [
+        { text: "Loslaten en vertrouwen dat het goed komt zonder dat ik alles regel.", pattern: "C" },
+        { text: "Eindelijk het gevoel hebben: ik ben goed genoeg.", pattern: "B" },
+        { text: "Een keuze durven maken zonder angst voor de gevolgen.", pattern: "V" },
+        { text: "Nee kunnen zeggen zonder me schuldig te voelen.", pattern: "P" },
+        { text: "Weten welke richting ik op wil.", pattern: "Z" },
+      ]
+    },
+    {
+      text: "Wanneer ben jij het meest jezelf?",
+      options: [
+        { text: "Als ik overzicht heb en dingen onder controle zijn.", pattern: "C" },
+        { text: "Als ik ergens goed in ben en dat ook laat zien.", pattern: "B" },
+        { text: "Als ik weet dat er niets mis kan gaan.", pattern: "V" },
+        { text: "Als ik bijdraag aan iemand anders.", pattern: "P" },
+        { text: "Als ik iets totaal nieuws aan het ontdekken ben.", pattern: "Z" },
+      ]
+    },
+    {
+      text: "Hoe ga jij om met complimenten?",
+      options: [
+        { text: "Ik denk direct aan wat er beter had gekund.", pattern: "C" },
+        { text: "Ik geniet ervan — maar geloof ze nooit helemaal.", pattern: "B" },
+        { text: "Ik weet niet goed hoe ik erop moet reageren.", pattern: "V" },
+        { text: "Ik merk dat ik het veel fijner vind om anderen te complimenteren.", pattern: "P" },
+        { text: "Ik denk: mooi, maar dit is niet alles wat in mij zit.", pattern: "Z" },
+      ]
+    },
+    {
+      text: "Als je terugkijkt op de afgelopen tijd — wat is het patroon?",
+      options: [
+        { text: "Ik houd alles goed bij, maar voel me zelden echt vrij.", pattern: "C" },
+        { text: "Ik groei constant, maar voel me zelden écht goed genoeg.", pattern: "B" },
+        { text: "Ik doe wat veilig is, maar voel dat ik mezelf tekortkom.", pattern: "V" },
+        { text: "Ik doe voor iedereen, maar vergeet mezelf.", pattern: "P" },
+        { text: "Ik voel dat ik ergens naartoe moet, maar weet nog niet waar.", pattern: "Z" },
+      ]
+    },
+  ];
+
+  const patterns = {
+    C: {
+      name: "Het Controle-patroon",
+      label: "Jouw patroon",
+      shock: "Je probeert rust te creëren door controle. Maar controle is niet hetzelfde als vrijheid.",
+      description: `
+        <p>Je denkt veel. Plant veel. Bereidt veel voor.</p>
+        <p>Niet omdat je precies weet wat je doet — maar omdat jij <strong>van onzekerheid afkomt</strong> door zo veel mogelijk te regelen. Als alles gepland is, kan het niet misgaan. Als jij alles weet, kan het niet fout gaan. Zo werkt jouw brein.</p>
+        <p>Het klinkt slim. En in veel situaties is het ook effectief. Maar ergens onderweg <strong>werd controle jouw kooi.</strong> Want échte keuzes, échte groei, echt leven — dat vraagt om durven zonder garantie.</p>
+        <p>Diep vanbinnen ben je bang dat het misgaat als jij even loslaat. Dat anderen het zonder jou niet redden. Of dat jij zelf in verval raakt als je stopt met regelen.</p>
+      `,
+      think: "Je denkt dat je probleem onzekerheid is.",
+      truth: "Maar eigenlijk vertrouw je jezelf nog niet volledig."
+    },
+    B: {
+      name: "Het Bewijs-patroon",
+      label: "Jouw patroon",
+      shock: "Je bent voortdurend bezig jezelf te bewijzen. Maar wat je zoekt, vind je niet in nog een cursus.",
+      description: `
+        <p>Nog een opleiding. Nog een certificaat. Nog meer kennis.</p>
+        <p>Van buitenaf lijkt het alsof jij altijd bezig bent te groeien. En dat is ook zo. Maar <strong>achter al die groei zit een leegte</strong> die nooit echt gevuld raakt. Want hoe meer je leert, hoe meer je ziet wat je nog niet weet.</p>
+        <p>Jij hebt een innerlijke lat die altijd net iets hoger hangt dan je kunt springen. En omdat die lat nooit bereikt wordt, <strong>voel jij je nooit echt goed genoeg.</strong></p>
+        <p>Wat je eigenlijk zoekt is geen diploma. Het is toestemming. Toestemming om te staan voor wie je al bent — nu, zonder dat je er iets extra's voor hoeft te doen.</p>
+      `,
+      think: "Je denkt dat je meer kennis nodig hebt.",
+      truth: "Maar eigenlijk wacht je op toestemming."
+    },
+    V: {
+      name: "Het Veiligheids-patroon",
+      label: "Jouw patroon",
+      shock: "Je weet wat je wilt. Maar kiest steeds voor wat veilig voelt — niet omdat je het niet kunt.",
+      description: `
+        <p>Je ziet de kansen. Je voelt de mogelijkheden. Je weet wat de logische stap is.</p>
+        <p>Maar net als je de stap wil zetten, <strong>trekt jouw brein aan de rem.</strong> Niet omdat die stap verkeerd is. Maar omdat jouw brein risico wil vermijden — en al datgene wat buiten het vertrouwde valt, ervaart als gevaar.</p>
+        <p>Het resultaat: <strong>je leeft veilig, maar niet vrij.</strong> Je doet wat werkt, maar niet wat klopt. Je kiest voor wat je kent, ook als je weet dat je er eigenlijk allang overheen bent gegroeid.</p>
+        <p>Je hebt meer lef dan je denkt. Je hebt het alleen nog niet bewezen — aan jezelf.</p>
+      `,
+      think: "Je denkt dat je meer zelfvertrouwen nodig hebt.",
+      truth: "Maar eigenlijk probeer je afwijzing te vermijden."
+    },
+    P: {
+      name: "Het Pleaser-patroon",
+      label: "Jouw patroon",
+      shock: "Je bent er voor iedereen. Maar jezelf vergeet je vaak — en dat begint zijn tol te eisen.",
+      description: `
+        <p>Je bent de persoon waar anderen op kunnen rekenen. Altijd beschikbaar. Altijd behulpzaam. Altijd bereid om te geven.</p>
+        <p>Maar ergens in dat geven is <strong>jij verdwenen.</strong> Jouw behoeften komen als laatste. Jouw grenzen zijn vaag. Nee zeggen voelt als iemand kwetsen — en kwetsen is iets wat jij ten koste van alles probeert te vermijden.</p>
+        <p>Wat er onder zit is niet behulpzaamheid. Het is de diepgewortelde overtuiging dat <strong>jij er pas mag zijn als je van waarde bent voor een ander.</strong> Dat jouw plek in de wereld verdiend moet worden — elke dag opnieuw.</p>
+        <p>Jij hoeft niet meer te verdienen. Je mag er gewoon zijn.</p>
+      `,
+      think: "Je denkt dat je behulpzaam bent.",
+      truth: "Maar misschien ben je bang mensen teleur te stellen."
+    },
+    Z: {
+      name: "Het Zoekers-patroon",
+      label: "Jouw patroon",
+      shock: "Je voelt dat je bent uitgegroeid aan je huidige situatie. Maar je weet nog niet precies wat daarna komt.",
+      description: `
+        <p>Er zit iets in je dat onrustig is. Niet omdat het slecht gaat — maar omdat het te klein voelt.</p>
+        <p>Je hebt genoeg bereikt. Je leeft een goed leven. Maar <strong>diep vanbinnen weet je dat dit het niet helemaal is.</strong> Er is iets groters, iets authentieker, iets dat meer bij jou past.</p>
+        <p>Het probleem is: je weet niet precies wat dat is. En dus blijf je zoeken — nieuwe ideeën, nieuwe richtingen, nieuwe mogelijkheden. Van het een naar het ander. <strong>Altijd op zoek, maar nooit helemaal landend.</strong></p>
+        <p>Je probleem is niet dat je geen richting hebt. Je probleem is dat je nog niet volledig hebt durven kiezen voor wat je al voelt.</p>
+      `,
+      think: "Je denkt dat je geen richting hebt.",
+      truth: "Maar misschien durf je nog niet volledig te kiezen."
+    }
+  };
+
+  let currentQuestion = 0;
+  let scores = { C: 0, B: 0, V: 0, P: 0, Z: 0 };
+
+  function startQuiz() {
+    currentQuestion = 0;
+    scores = { C: 0, B: 0, V: 0, P: 0, Z: 0 };
+    showScreen('screen-quiz');
+    renderQuestion();
+  }
+
+  function restartQuiz() {
+    showScreen('screen-intro');
+  }
+
+  function showScreen(id) {
+    document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function renderQuestion() {
+    const q = questions[currentQuestion];
+    const total = questions.length;
+    const progress = ((currentQuestion) / total) * 100;
+
+    document.getElementById('progress-label').textContent = `Vraag ${currentQuestion + 1} van ${total}`;
+    document.getElementById('progress-fill').style.width = `${progress}%`;
+    document.getElementById('question-number').textContent = `Vraag ${String(currentQuestion + 1).padStart(2, '0')} / ${String(total).padStart(2, '0')}`;
+    document.getElementById('question-text').textContent = q.text;
+
+    const optionsList = document.getElementById('options-list');
+    optionsList.innerHTML = '';
+
+    // Shuffle options for each render
+    const shuffled = [...q.options].sort(() => Math.random() - 0.5);
+    shuffled.forEach(opt => {
+      const btn = document.createElement('button');
+      btn.className = 'option';
+      btn.textContent = opt.text;
+      btn.addEventListener('click', () => selectOption(btn, opt.pattern, optionsList));
+      optionsList.appendChild(btn);
+    });
+  }
+
+  function selectOption(btn, pattern, list) {
+    // Visual feedback
+    list.querySelectorAll('.option').forEach(b => b.classList.remove('selected'));
+    btn.classList.add('selected');
+
+    setTimeout(() => {
+      scores[pattern]++;
+      currentQuestion++;
+
+      if (currentQuestion < questions.length) {
+        renderQuestion();
+      } else {
+        showResult();
+      }
+    }, 280);
+  }
+
+  function showResult() {
+    const winner = Object.entries(scores).sort((a, b) => b[1] - a[1])[0][0];
+    const p = patterns[winner];
+
+    document.getElementById('result-label').textContent = p.label;
+    document.getElementById('result-title').innerHTML = p.name.replace('Het ', 'Het<br><em>').replace('-patroon', '</em>-patroon');
+    document.getElementById('result-shock').textContent = p.shock;
+    document.getElementById('result-description').innerHTML = p.description;
+    document.getElementById('result-think').textContent = p.think;
+    document.getElementById('result-truth').textContent = p.truth;
+
+    showScreen('screen-result');
+  }
+</script>
+
+</body>
+</html>
