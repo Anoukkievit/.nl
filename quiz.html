@@ -57,25 +57,29 @@
       text-align: center;
       background: var(--white);
     }
-    .intro-top { padding: 80px 28px 0; display: flex; flex-direction: column; align-items: center; }
-    .intro__eyebrow { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; font-weight: 600; color: var(--coral); margin-bottom: 36px; }
-    .intro__title { font-family: 'Cormorant Garamond', serif; font-size: clamp(40px, 7vw, 80px); font-weight: 300; line-height: 1.05; color: var(--text); margin-bottom: 24px; max-width: 760px; }
+    .intro-hero { padding: 88px 28px 64px; display: flex; flex-direction: column; align-items: center; max-width: 780px; margin: 0 auto; }
+    .intro__eyebrow { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; font-weight: 600; color: var(--coral); margin-bottom: 32px; }
+    .intro__title { font-family: 'Cormorant Garamond', serif; font-size: clamp(44px, 7.5vw, 88px); font-weight: 300; line-height: 1.0; color: var(--text); margin-bottom: 28px; }
     .intro__title em { font-style: italic; color: var(--coral); }
-    .intro__sub { font-family: 'Cormorant Garamond', serif; font-size: clamp(18px, 2.5vw, 26px); font-style: italic; font-weight: 300; color: var(--text-soft); margin-bottom: 52px; max-width: 560px; line-height: 1.5; }
-    .intro__cta-wrap { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+    .intro__sub { font-family: 'Cormorant Garamond', serif; font-size: clamp(19px, 2.5vw, 27px); font-style: italic; font-weight: 300; color: var(--text-soft); margin-bottom: 48px; max-width: 540px; line-height: 1.5; }
+
+    .intro-voices { background: var(--cream); width: 100%; padding: 56px 28px; border-top: 1px solid var(--line); }
+    .intro-voices__inner { max-width: 580px; margin: 0 auto; text-align: left; }
+    .intro-voices__label { font-size: 9px; letter-spacing: 3px; text-transform: uppercase; font-weight: 600; color: var(--coral); margin-bottom: 28px; display: block; }
+    .intro-voice { font-family: 'Cormorant Garamond', serif; font-size: clamp(19px, 2.5vw, 26px); font-style: italic; font-weight: 300; color: var(--text); line-height: 1.4; padding: 18px 0 18px 28px; border-left: 3px solid var(--pink); margin-bottom: 12px; }
+    .intro-voice:last-of-type { margin-bottom: 0; }
+
+    .intro-cost { background: var(--blue); width: 100%; padding: 64px 28px; text-align: center; }
+    .intro-cost__inner { max-width: 600px; margin: 0 auto; }
+    .intro-cost__text { font-family: 'Cormorant Garamond', serif; font-size: clamp(22px, 3vw, 34px); font-weight: 300; font-style: italic; color: var(--white); line-height: 1.45; margin-bottom: 12px; }
+    .intro-cost__text strong { font-style: normal; font-weight: 600; color: var(--pink); }
+
+    .intro-cta-block { background: var(--white); width: 100%; padding: 72px 28px 96px; text-align: center; }
+    .intro-cta-block__inner { max-width: 520px; margin: 0 auto; }
+    .intro-cta-block__title { font-family: 'Cormorant Garamond', serif; font-size: clamp(26px, 3.5vw, 40px); font-weight: 300; line-height: 1.25; color: var(--text); margin-bottom: 28px; }
+    .intro-cta-block__title em { color: var(--coral); font-style: italic; }
+    .intro__cta-wrap { display: flex; flex-direction: column; align-items: center; gap: 14px; }
     .intro__meta { font-size: 12px; color: var(--text-soft); letter-spacing: 1px; }
-
-    .intro-mirror { background: var(--cream); width: 100%; padding: 64px 28px; margin-top: 72px; }
-    .intro-mirror__inner { max-width: 640px; margin: 0 auto; text-align: left; }
-    .intro-mirror__title { font-family: 'Cormorant Garamond', serif; font-size: clamp(22px, 3vw, 32px); font-weight: 300; font-style: italic; color: var(--text); margin-bottom: 32px; line-height: 1.4; }
-    .intro-mirror__list { list-style: none; margin-bottom: 36px; }
-    .intro-mirror__list li { padding: 14px 0 14px 32px; border-bottom: 1px solid var(--line); position: relative; font-size: 16px; line-height: 1.6; color: var(--text-soft); }
-    .intro-mirror__list li::before { content: ''; position: absolute; left: 0; top: 24px; width: 7px; height: 7px; border-radius: 50%; background: var(--coral); }
-    .intro-mirror__list li strong { color: var(--text); }
-    .intro-mirror__close { font-family: 'Cormorant Garamond', serif; font-size: clamp(18px, 2vw, 24px); font-style: italic; color: var(--text); line-height: 1.5; padding-top: 28px; border-top: 1px solid var(--line); margin-top: 12px; }
-    .intro-mirror__close em { color: var(--coral); font-style: normal; font-weight: 600; }
-
-    .intro-bottom { background: var(--white); width: 100%; padding: 64px 28px 96px; text-align: center; }
 
     /* ── QUIZ ── */
     #screen-quiz {
@@ -217,7 +221,8 @@
 ══════════════════════════════════════ -->
 <div id="screen-intro" class="screen flex-screen active">
 
-  <div class="intro-top">
+  <!-- HERO -->
+  <div class="intro-hero">
     <p class="intro__eyebrow">Anouk Kievit &nbsp;·&nbsp; Gratis zelfinzicht</p>
     <h1 class="intro__title">
       Waarom houd jij jezelf<br>nog <em>klein?</em>
@@ -226,8 +231,46 @@
       Beantwoord 15 vragen en ontdek welk verborgen patroon jou tegenhoudt.
     </p>
     <div class="intro__cta-wrap">
-      <button class="btn btn--coral" onclick="startQuiz()">Start de quiz →</button>
-      <p class="intro__meta">15 vragen &nbsp;·&nbsp; 5 minuten</p>
+      <button class="btn btn--coral" onclick="startQuiz()">Ontdek jouw patroon →</button>
+      <p class="intro__meta">5 minuten &nbsp;·&nbsp; gratis &nbsp;·&nbsp; direct inzicht</p>
+    </div>
+  </div>
+
+  <!-- VOICES: herkenningszinnen -->
+  <div class="intro-voices">
+    <div class="intro-voices__inner">
+      <span class="intro-voices__label">Herken jij dit?</span>
+      <p class="intro-voice">Je weet wat je wilt. Maar je doet het toch niet.</p>
+      <p class="intro-voice">Je werkt hard, leert veel — maar goed genoeg voelt het nooit.</p>
+      <p class="intro-voice">Je zegt ja terwijl je nee bedoelt. En 's avonds vraag je je af wanneer jij eindelijk eens voor jezelf kiest.</p>
+      <p class="intro-voice">Er zit meer in jou dan eruit komt. En ergens weet je dat ook.</p>
+    </div>
+  </div>
+
+  <!-- COST: wat het kost om het niet te weten -->
+  <div class="intro-cost">
+    <div class="intro-cost__inner">
+      <p class="intro-cost__text">
+        Het probleem is niet dat je te weinig doet.<br>
+        Het probleem is dat je <strong>het verkeerde tegenhoudt</strong> zonder dat je het doorhebt.
+      </p>
+      <p style="font-size:15px;color:rgba(255,255,255,.7);margin-top:16px;line-height:1.7;">
+        Elk patroon heeft een naam. En zodra je de naam kent,<br>kun je er eindelijk iets mee doen.
+      </p>
+    </div>
+  </div>
+
+  <!-- BOTTOM CTA -->
+  <div class="intro-cta-block">
+    <div class="intro-cta-block__inner">
+      <h2 class="intro-cta-block__title">
+        Ontdek in 5 minuten<br>
+        wat jou <em>echt</em> tegenhoudt.
+      </h2>
+      <div class="intro__cta-wrap">
+        <button class="btn btn--coral" onclick="startQuiz()">Start de quiz →</button>
+        <p class="intro__meta">15 vragen &nbsp;·&nbsp; anoniem &nbsp;·&nbsp; geen verplichtingen</p>
+      </div>
     </div>
   </div>
 
