@@ -369,153 +369,138 @@
 
 <script>
 const questions = [
-  {
+  { // drop Z
     text: "Als je iets nieuws wilt starten, wat is dan je eerste reactie?",
     options: [
       { text: "Ik maak eerst een uitgebreid plan, dan pas begin ik.", p: "C" },
       { text: "Ik wil me eerst verder verdiepen en meer leren.", p: "B" },
       { text: "Ik wacht op het juiste moment.", p: "V" },
       { text: "Ik check eerst of anderen er ook achter staan.", p: "P" },
-      { text: "Ik vraag me af of dit eigenlijk wel past bij wat ik wil.", p: "Z" },
     ]
   },
-  {
+  { // drop C
     text: "Wat zegt die stem in je hoofd het vaakst?",
     options: [
-      { text: "\"Wat als het misgaat?\"", p: "C" },
       { text: "\"Je weet nog niet genoeg.\"", p: "B" },
       { text: "\"Nu is het nog niet het juiste moment.\"", p: "V" },
       { text: "\"Wat zullen anderen ervan vinden?\"", p: "P" },
       { text: "\"Er moet toch meer zijn dan dit.\"", p: "Z" },
     ]
   },
-  {
+  { // drop B
     text: "Als je 's avonds in bed ligt, waar gaan je gedachten dan naartoe?",
     options: [
       { text: "Alles wat nog op mijn to-do lijst staat.", p: "C" },
-      { text: "Of ik wel goed genoeg ben.", p: "B" },
       { text: "Wat er fout had kunnen gaan vandaag.", p: "V" },
       { text: "Of ik iemand heb teleurgesteld.", p: "P" },
       { text: "Of dit echt het leven is dat ik wil.", p: "Z" },
     ]
   },
-  {
+  { // drop V
     text: "Wat houdt jou het meest tegen als je een keuze moet maken?",
     options: [
       { text: "Dat ik niet alle gevolgen kan overzien.", p: "C" },
       { text: "Dat ik me nog niet klaar voel.", p: "B" },
-      { text: "De kans dat het misgaat.", p: "V" },
       { text: "Dat ik iemand anders ermee raak.", p: "P" },
       { text: "Dat ik niet zeker weet of dit echt is wat ik wil.", p: "Z" },
     ]
   },
-  {
-    text: "Als je een grote stap wilt zetten wat doe je dan?",
+  { // drop P
+    text: "Als je een grote stap wilt zetten, wat doe je dan?",
     options: [
       { text: "Ik plan het tot in de puntjes voor ik begin.", p: "C" },
       { text: "Ik volg eerst nog een cursus of training.", p: "B" },
       { text: "Ik wacht tot het veiliger voelt.", p: "V" },
-      { text: "Ik vraag iedereen om me heen wat ze ervan vinden.", p: "P" },
       { text: "Ik twijfel of dit wel de juiste stap voor mij is.", p: "Z" },
     ]
   },
-  {
+  { // drop Z
     text: "Wat geeft jou het meeste energie?",
     options: [
       { text: "Als alles loopt zoals gepland.", p: "C" },
       { text: "Als ik iets nieuws leer of een certificaat haal.", p: "B" },
       { text: "Als ik weet wat er gaat komen.", p: "V" },
       { text: "Als anderen blij zijn met wat ik doe.", p: "P" },
-      { text: "Als ik iets totaal nieuws ontdek of probeer.", p: "Z" },
     ]
   },
-  {
+  { // drop C
     text: "Wat kost jou de meeste energie?",
     options: [
-      { text: "Onzekerheid en dingen die ik niet kan controleren.", p: "C" },
       { text: "Het gevoel dat ik niet goed genoeg ben.", p: "B" },
       { text: "Risico nemen zonder te weten hoe het afloopt.", p: "V" },
       { text: "Iemand teleurstellen.", p: "P" },
       { text: "Stilstaan en hetzelfde blijven doen.", p: "Z" },
     ]
   },
-  {
+  { // drop B
     text: "Als je eerlijk bent: waarop wacht je eigenlijk?",
     options: [
       { text: "Tot ik alles goed geregeld heb.", p: "C" },
-      { text: "Tot ik me écht klaar voel.", p: "B" },
       { text: "Tot het zeker genoeg is.", p: "V" },
       { text: "Tot anderen zeggen dat ik het mag of kan.", p: "P" },
       { text: "Tot ik weet wat ik écht wil.", p: "Z" },
     ]
   },
-  {
+  { // drop V
     text: "Wat is jouw grootste valkuil?",
     options: [
       { text: "Alles zelf willen doen en controleren.", p: "C" },
       { text: "Te lang blijven leren in plaats van te doen.", p: "B" },
-      { text: "Kiezen voor de veilige optie, ook als die me minder gelukkig maakt.", p: "V" },
       { text: "Ja zeggen terwijl ik nee bedoel.", p: "P" },
       { text: "Van het een naar het ander springen zonder te landen.", p: "Z" },
     ]
   },
-  {
+  { // drop P
     text: "Hoe reageer je als iets niet gaat zoals gepland?",
     options: [
       { text: "Ik maak direct een nieuw plan.", p: "C" },
       { text: "Ik denk dat ik me beter had moeten voorbereiden.", p: "B" },
       { text: "Ik schrik en trek me terug.", p: "V" },
-      { text: "Ik check of ik iemand heb teleurgesteld.", p: "P" },
       { text: "Ik vraag me af of ik wel op het goede pad zat.", p: "Z" },
     ]
   },
-  {
+  { // drop Z
     text: "Wat zeggen mensen die jou goed kennen over jou?",
     options: [
       { text: "\"Jij denkt aan alles.\"", p: "C" },
       { text: "\"Jij bent altijd bezig jezelf te verbeteren.\"", p: "B" },
       { text: "\"Jij speelt het veilig.\"", p: "V" },
       { text: "\"Jij staat altijd voor iedereen klaar.\"", p: "P" },
-      { text: "\"Jij zit altijd te zoeken naar iets.\"", p: "Z" },
     ]
   },
-  {
+  { // drop C
     text: "Wat zou voor jou de grootste bevrijding zijn?",
     options: [
-      { text: "Loslaten en vertrouwen dat het goed komt zonder dat ik alles regel.", p: "C" },
       { text: "Eindelijk het gevoel hebben: ik ben goed genoeg.", p: "B" },
       { text: "Een keuze durven maken zonder angst voor de gevolgen.", p: "V" },
       { text: "Nee kunnen zeggen zonder me schuldig te voelen.", p: "P" },
       { text: "Weten welke richting ik op wil.", p: "Z" },
     ]
   },
-  {
+  { // drop B
     text: "Wanneer ben jij het meest jezelf?",
     options: [
       { text: "Als ik overzicht heb en dingen onder controle zijn.", p: "C" },
-      { text: "Als ik ergens goed in ben en dat ook laat zien.", p: "B" },
       { text: "Als ik weet dat er niets mis kan gaan.", p: "V" },
       { text: "Als ik bijdraag aan iemand anders.", p: "P" },
       { text: "Als ik iets totaal nieuws aan het ontdekken ben.", p: "Z" },
     ]
   },
-  {
+  { // drop V
     text: "Hoe ga jij om met complimenten?",
     options: [
       { text: "Ik denk direct aan wat er beter had gekund.", p: "C" },
       { text: "Ik geniet ervan maar geloof ze nooit helemaal.", p: "B" },
-      { text: "Ik weet niet goed hoe ik erop moet reageren.", p: "V" },
       { text: "Ik merk dat ik het veel fijner vind om anderen te complimenteren.", p: "P" },
       { text: "Ik denk: mooi, maar dit is niet alles wat in mij zit.", p: "Z" },
     ]
   },
-  {
-    text: "Als je terugkijkt op de afgelopen tijd wat is het patroon?",
+  { // drop P
+    text: "Als je terugkijkt op de afgelopen tijd, wat is het patroon?",
     options: [
       { text: "Ik houd alles goed bij, maar voel me zelden echt vrij.", p: "C" },
       { text: "Ik groei constant, maar voel me zelden écht goed genoeg.", p: "B" },
       { text: "Ik doe wat veilig is, maar voel dat ik mezelf tekortkom.", p: "V" },
-      { text: "Ik doe voor iedereen, maar vergeet mezelf.", p: "P" },
       { text: "Ik voel dat ik ergens naartoe moet, maar weet nog niet waar.", p: "Z" },
     ]
   },
