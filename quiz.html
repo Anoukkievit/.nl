@@ -80,11 +80,33 @@
     .intro-punch__line strong { font-style: normal; color: var(--coral); font-weight: 600; }
     .intro-punch__sub { font-size: 14px; color: rgba(255,255,255,.55); letter-spacing: .5px; line-height: 1.7; }
 
+    /* Belofte-sectie */
+    .intro-promise { background: var(--cream); width: 100%; padding: 72px 28px; }
+    .intro-promise__inner { max-width: 600px; margin: 0 auto; text-align: left; }
+    .intro-promise__title { font-family: 'Cormorant Garamond', serif; font-size: clamp(24px, 3vw, 36px); font-weight: 300; color: var(--text); margin-bottom: 36px; text-align: center; line-height: 1.3; }
+    .intro-promise__title em { font-style: italic; color: var(--coral); }
+    .promise-item { display: flex; gap: 20px; align-items: flex-start; padding: 20px 0; border-bottom: 1px solid var(--line); }
+    .promise-item:last-child { border-bottom: none; }
+    .promise-item__num { font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 300; color: var(--pink); line-height: 1; flex-shrink: 0; width: 36px; }
+    .promise-item__text strong { display: block; font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
+    .promise-item__text span { font-size: 14px; color: var(--text-soft); line-height: 1.65; }
+
     /* Bottom CTA */
     .intro-cta-block { background: var(--white); width: 100%; padding: 80px 28px 96px; text-align: center; }
     .intro-cta-block__inner { max-width: 480px; margin: 0 auto; }
     .intro-cta-block__title { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 3.8vw, 46px); font-weight: 300; line-height: 1.2; color: var(--text); margin-bottom: 32px; }
     .intro-cta-block__title em { color: var(--coral); font-style: italic; }
+
+    /* Acties op uitslag */
+    .result-actions { background: var(--cream); width: 100%; padding: 72px 28px; }
+    .result-actions__inner { max-width: 680px; margin: 0 auto; text-align: left; }
+    .result-actions__title { font-family: 'Cormorant Garamond', serif; font-size: clamp(24px, 3vw, 36px); font-weight: 300; color: var(--text); margin-bottom: 8px; }
+    .result-actions__sub { font-size: 15px; color: var(--text-soft); margin-bottom: 36px; }
+    .action-item { display: flex; gap: 24px; align-items: flex-start; padding: 24px 0; border-bottom: 1px solid var(--line); }
+    .action-item:last-child { border-bottom: none; }
+    .action-item__num { font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 300; color: var(--coral); line-height: 1; flex-shrink: 0; width: 40px; }
+    .action-item__body strong { display: block; font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+    .action-item__body p { font-size: 15px; color: var(--text-soft); line-height: 1.7; margin: 0; }
 
     /* ── QUIZ ── */
     #screen-quiz {
@@ -281,6 +303,34 @@
     </div>
   </div>
 
+  <!-- BELOFTE: wat je terugkrijgt -->
+  <div class="intro-promise">
+    <div class="intro-promise__inner">
+      <h2 class="intro-promise__title">Dit ontvang je<br><em>na 15 vragen</em></h2>
+      <div class="promise-item">
+        <div class="promise-item__num">1</div>
+        <div class="promise-item__text">
+          <strong>Jouw verborgen patroon — bij naam</strong>
+          <span>Je ontdekt welk onbewust patroon jou steeds weer tegenhoudt. Niet vaag, maar concreet en herkenbaar.</span>
+        </div>
+      </div>
+      <div class="promise-item">
+        <div class="promise-item__num">2</div>
+        <div class="promise-item__text">
+          <strong>Een beschrijving die voelt alsof je erin wordt gekeken</strong>
+          <span>Je leest over jezelf en denkt: hoe weet ze dit? Dat is het moment waarop iets verschuift.</span>
+        </div>
+      </div>
+      <div class="promise-item">
+        <div class="promise-item__num">3</div>
+        <div class="promise-item__text">
+          <strong>3 concrete acties die je deze week kunt zetten</strong>
+          <span>Geen theorie. Drie stappen die direct aansluiten op jouw patroon en die je morgen al kunt beginnen.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- BOTTOM CTA -->
   <div class="intro-cta-block">
     <div class="intro-cta-block__inner">
@@ -390,6 +440,14 @@
       <p class="result-reframe__think" id="result-think"></p>
       <p class="result-reframe__but">Maar eigenlijk</p>
       <p class="result-reframe__truth" id="result-truth"></p>
+    </div>
+  </div>
+
+  <div class="result-actions">
+    <div class="result-actions__inner">
+      <h2 class="result-actions__title">3 acties voor deze week</h2>
+      <p class="result-actions__sub">Direct toepasbaar. Afgestemd op jouw patroon.</p>
+      <div id="result-actions-list"></div>
     </div>
   </div>
 
@@ -590,7 +648,12 @@ const patterns = {
     ],
     secondary: "Veel mensen met het Controle-patroon herkennen ook elementen van het Bewijs-patroon: achter de behoefte aan controle schuilt vaak de vraag of je goed genoeg bent als je het niet perfect doet.",
     think: "Je denkt dat je probleem onzekerheid is.",
-    truth: "Maar eigenlijk vertrouw je jezelf nog niet volledig."
+    truth: "Maar eigenlijk vertrouw je jezelf nog niet volledig.",
+    actions: [
+      { title: "Laat één ding bewust los", body: "Kies deze week één taak die je normaal zelf doet en geef hem aan iemand anders. Zonder te checken of het goed gaat. Merk wat er in je gebeurt." },
+      { title: "Zet de beslissing die er al maanden ligt", body: "Je weet welke het is. Zet hem vandaag — niet als alles perfect is, maar nu. Een imperfect besluit is beter dan geen besluit." },
+      { title: "Schrijf op: wat is het ergste dat kan gebeuren?", body: "Schrijf het werkelijk op. Dan: hoe groot is die kans? En wat zou je doen als het wél gebeurt? Je zult merken dat je het aan kunt." },
+    ]
   },
   B: {
     titleLine1: "Het",
@@ -611,7 +674,12 @@ const patterns = {
     ],
     secondary: "Veel mensen met het Bewijs-patroon herkennen ook het Veiligheids-patroon: je blijft leren omdat het veiliger voelt dan te handelen op wat je al weet.",
     think: "Je denkt dat je meer kennis nodig hebt.",
-    truth: "Maar eigenlijk wacht je op toestemming."
+    truth: "Maar eigenlijk wacht je op toestemming.",
+    actions: [
+      { title: "Doe iets op basis van wat je al weet", body: "Kies deze week één actie die je steeds uitstelde omdat je je 'nog niet klaar' voelde. Doe het met wat je nu hebt. Genoeg is genoeg." },
+      { title: "Schrijf op wat je al kunt", body: "Maak een lijst van alles wat je weet, hebt geleerd en kunt. Lees hem hardop voor. Dit is wie je al bent — zonder het volgende certificaat." },
+      { title: "Zeg het hardop", body: "Noem tegenover één persoon iets wat jij goed kunt — zonder relativeren, zonder 'maar'. Eén zin. Oefen met staan voor wat je al bent." },
+    ]
   },
   V: {
     titleLine1: "Het",
@@ -632,7 +700,12 @@ const patterns = {
     ],
     secondary: "Veel mensen met het Veiligheids-patroon herkennen ook het Pleaser-patroon: een deel van het veilig spelen komt voort uit de angst wat anderen ervan vinden als je kiest voor jezelf.",
     think: "Je denkt dat je meer zelfvertrouwen nodig hebt.",
-    truth: "Maar eigenlijk probeer je afwijzing te vermijden."
+    truth: "Maar eigenlijk probeer je afwijzing te vermijden.",
+    actions: [
+      { title: "Doe één spannend ding — hoe klein ook", body: "Kies iets wat je al lang wilt maar steeds uitstelt. Stuur die mail. Maak die afspraak. Zet die post live. Jouw brein heeft bewijs nodig dat je veilig bent." },
+      { title: "Vertel het hardop", body: "Zeg tegen één persoon wat je eigenlijk wil. Niet als plan, maar als feit: 'Ik wil dit.' Hardop benoemen maakt het reëel — en minder eng." },
+      { title: "Schrijf op wat je wint als je het doet", body: "Niet wat er mis kan gaan — dat weet je al. Schrijf op wat je wint. Wat is de beste uitkomst? Lees dit elke ochtend deze week." },
+    ]
   },
   P: {
     titleLine1: "Het",
@@ -653,7 +726,12 @@ const patterns = {
     ],
     secondary: "Veel mensen met het Pleaser-patroon herkennen ook het Bewijs-patroon: als jij pas mag bestaan als je van waarde bent, heb je constant het gevoel dat je meer moet bewijzen.",
     think: "Je denkt dat je behulpzaam bent.",
-    truth: "Maar misschien ben je bang mensen teleur te stellen."
+    truth: "Maar misschien ben je bang mensen teleur te stellen.",
+    actions: [
+      { title: "Zeg één keer nee — zonder uitleg", body: "Kies deze week één verzoek en zeg nee. Geen sorry, geen reden, geen alternatief. Alleen: 'Dat lukt me niet.' Merk hoe het voelt. En dat de wereld niet instort." },
+      { title: "Plan één uur dat alleen voor jou is", body: "Elke dag deze week. Geen uitzonderingen. Niet voor de kinderen, niet voor een klant. Voor jou. Begin klein. Maar begin." },
+      { title: "Schrijf op wat jij wil", body: "Niet wat anderen van je verwachten. Wat wil jij? Schrijf het op zonder het te censureren. Dit is de vraag die je het langst hebt vermeden." },
+    ]
   },
   Z: {
     titleLine1: "Het",
@@ -674,7 +752,12 @@ const patterns = {
     ],
     secondary: "Veel mensen met het Zoekers-patroon herkennen ook het Veiligheids-patroon: het niet kiezen is ook een manier om je te beschermen. Want als je nooit kiest, kun je ook nooit de verkeerde keuze maken.",
     think: "Je denkt dat je geen richting hebt.",
-    truth: "Maar misschien durf je nog niet volledig te kiezen."
+    truth: "Maar misschien durf je nog niet volledig te kiezen.",
+    actions: [
+      { title: "Schrijf op wat je al lang weet", body: "Er is iets wat je al tijden voelt maar niet hardop zegt. Schrijf het op. Niet als plan — als waarheid. Dan: wat houdt je tegen om er volledig voor te kiezen?" },
+      { title: "Kies één ding en doe het 30 dagen", body: "Eén project, één richting, één gewoonte. Geen nieuw idee toelaten. Geen switchen. Dertig dagen. Wat je zoekt, vind je niet door meer te verkennen maar door dieper te gaan." },
+      { title: "Praat met iemand die doet wat jij wilt doen", body: "Niet om informatie te verzamelen. Maar om te voelen of het klopt. Luister naar hoe ze erover praten. Let op wat er in jou beweegt." },
+    ]
   }
 };
 
@@ -805,6 +888,17 @@ function showResult() {
 
   document.getElementById('result-think').textContent = p.think;
   document.getElementById('result-truth').textContent = p.truth;
+
+  // Acties
+  document.getElementById('result-actions-list').innerHTML = p.actions.map((a, i) => `
+    <div class="action-item">
+      <div class="action-item__num">${i + 1}</div>
+      <div class="action-item__body">
+        <strong>${a.title}</strong>
+        <p>${a.body}</p>
+      </div>
+    </div>
+  `).join('');
 
   // WhatsApp share
   const shareText = encodeURIComponent(`Ik deed de quiz van Anouk Kievit en ontdekte mijn verborgen patroon: ${p.titleLine1} ${p.titleLine2}${p.titleLine3} 👀 Doe hem ook: ${window.location.href}`);
