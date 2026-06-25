@@ -145,14 +145,36 @@
     .program__step-result { display: inline-block; background: var(--pink-light); border-left: 3px solid var(--coral); padding: 8px 16px; font-size: 13px; color: var(--text); border-radius: 0 4px 4px 0; margin-top: 6px; }
     @media (max-width: 560px) { .program__step { grid-template-columns: 1fr; } .program__step-num { font-size: 36px; } }
 
-    /* ── OUTCOMES ── */
-    .outcomes { background: var(--white); }
-    .outcomes__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-top: 52px; }
-    .glow-card { background: var(--pink-light); border-radius: 4px; padding: 36px 28px 32px; text-align: center; border-top: 3px solid var(--pink); transition: transform .2s ease; }
-    .glow-card:hover { transform: translateY(-4px); }
-    .glow-card__num { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 300; color: var(--pink); line-height: 1; margin-bottom: 6px; }
-    .glow-card__title { font-family: 'Cormorant Garamond', serif; font-size: 22px; color: var(--text); margin-bottom: 10px; }
-    .glow-card p { font-size: 14px; color: var(--text-soft); line-height: 1.7; }
+    /* ── ZO VOELT HET ── */
+    .feeling { background: var(--white); }
+    .feeling__moments { margin-top: 56px; display: flex; flex-direction: column; gap: 0; }
+    .feeling__moment {
+      padding: 36px 0;
+      border-bottom: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+    @media (max-width: 600px) { .feeling__moment { grid-template-columns: 1fr; gap: 10px; } }
+    .feeling__moment:last-child { border-bottom: none; }
+    .feeling__moment-when {
+      font-size: 10px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--coral);
+      font-weight: 600;
+      padding-top: 6px;
+    }
+    .feeling__moment-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(20px, 2.5vw, 26px);
+      font-weight: 300;
+      line-height: 1.45;
+      color: var(--text);
+    }
+    .feeling__moment-text em { font-style: italic; color: var(--coral); }
+    .feeling__moment-text strong { font-style: normal; font-weight: 600; }
 
     /* ── FOR WHO ── */
     .for-who { background: var(--cream); }
@@ -523,38 +545,75 @@
 </section>
 
 
-<!-- ══ OUTCOMES ══ -->
-<section class="outcomes">
-  <div class="container--wide">
-    <div class="center">
-      <span class="label label--blue">Waar je mee wegloopt</span>
-      <h2 class="section-title">Je stapt <em>anders</em> naar buiten.</h2>
-      <p style="max-width:520px;margin:0 auto;color:var(--text-soft);">
-        Niet met een notitieboek vol goede voornemens.
-        Met iets wat veel verder gaat dan dat.
-      </p>
-    </div>
-    <div class="outcomes__grid">
-      <div class="glow-card">
-        <div class="glow-card__num">01</div>
-        <div class="glow-card__title">Ruimte in je hoofd</div>
-        <p>De ruis valt weg. Niet tijdelijk — maar omdat je nu weet hoe je hem zelf stil zet.</p>
+<!-- ══ ZO VOELT HET ══ -->
+<section class="feeling">
+  <div class="container">
+    <span class="label label--coral">Zo voelt het daarna</span>
+    <h2 class="section-title">
+      Dit is hoe jouw dag<br>
+      <em>er dan uitziet.</em>
+    </h2>
+    <p style="color:var(--text-soft);max-width:560px;">
+      Niet abstract. Niet 'je voelt je beter'. Maar concreet — de momenten die je nu
+      het meeste energie kosten, voelen dan zo:
+    </p>
+
+    <div class="feeling__moments">
+
+      <div class="feeling__moment">
+        <div class="feeling__moment-when">'s Ochtends wakker worden</div>
+        <div class="feeling__moment-text">
+          Je eerste gedachte is geen angst meer. Geen lijstje van wat er allemaal mis kan gaan.
+          Gewoon: <em>vandaag ga ik dit doen.</em> En je meent het ook.
+        </div>
       </div>
-      <div class="glow-card">
-        <div class="glow-card__num">02</div>
-        <div class="glow-card__title">Een nieuw zelfbeeld</div>
-        <p>Je weet wie je bent — en wie je wordt. Niet wie je moet zijn voor anderen. Wie jij wil zijn.</p>
+
+      <div class="feeling__moment">
+        <div class="feeling__moment-when">Je prijs noemen</div>
+        <div class="feeling__moment-text">
+          Je noemt het bedrag. Je voegt geen uitleg toe. Geen verontschuldiging.
+          Je wacht op antwoord — <em>zonder in de tussentijd te twijfelen of je het wel waard bent.</em>
+        </div>
       </div>
-      <div class="glow-card">
-        <div class="glow-card__num">03</div>
-        <div class="glow-card__title">Angst zonder stuur</div>
-        <p>Angst is er nog. Maar hij rijdt niet meer. Jij rijdt. Dat is het grootste verschil dat er is.</p>
+
+      <div class="feeling__moment">
+        <div class="feeling__moment-when">Een post plaatsen</div>
+        <div class="feeling__moment-text">
+          Je schrijft wat je denkt. Je leest het één keer terug.
+          Je drukt op publiceren. <em>Je legt je telefoon weg.</em>
+          Je checkt niet iedere vijf minuten of iemand reageert.
+        </div>
       </div>
-      <div class="glow-card">
-        <div class="glow-card__num">04</div>
-        <div class="glow-card__title">Één concrete stap</div>
-        <p>Niet tien plannen. Eén stap. Met een datum. Die je morgen al zet. Echt.</p>
+
+      <div class="feeling__moment">
+        <div class="feeling__moment-when">Nee zeggen</div>
+        <div class="feeling__moment-text">
+          Iemand vraagt iets wat niet past. Je zegt nee.
+          <em>Zonder drie dagen van tevoren al bezig te zijn met hoe je het gaat formuleren.</em>
+          Zonder achteraf te piekeren of je het goed gedaan hebt.
+        </div>
       </div>
+
+      <div class="feeling__moment">
+        <div class="feeling__moment-when">Die stem horen</div>
+        <div class="feeling__moment-text">
+          Je hoort hem nog steeds. "Wie denk jij wel niet dat je bent?"
+          Maar je denkt: <em>oh jij weer.</em>
+          En je doet het toch. Niet omdat de angst weg is.
+          <strong>Maar omdat jij nu groter bent dan die stem.</strong>
+        </div>
+      </div>
+
+      <div class="feeling__moment">
+        <div class="feeling__moment-when">De avond</div>
+        <div class="feeling__moment-text">
+          Je ligt in bed. Je hebt iets gedaan wat je al tijden voor je uitschoof.
+          Niet perfect. Niet zonder spanning.
+          Maar <em>je hebt het gedaan.</em>
+          En dat voelt als thuiskomen bij jezelf.
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
