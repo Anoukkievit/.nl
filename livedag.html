@@ -167,8 +167,8 @@
 
     /* ── PRICING ── */
     .pricing { background: var(--white); }
-    .pricing__cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 56px; }
-    @media (max-width: 860px) { .pricing__cards { grid-template-columns: 1fr; } }
+    .pricing__cards { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 56px; }
+    @media (max-width: 700px) { .pricing__cards { grid-template-columns: 1fr; } }
     .price-card { border-radius: 4px; padding: 48px 36px; position: relative; background: var(--white); border: 2px solid var(--line); }
     .price-card--featured { border-color: var(--coral); background: var(--cream); }
     .price-card__badge { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--coral); color: var(--white); font-size: 9px; letter-spacing: 2.5px; text-transform: uppercase; font-weight: 700; padding: 6px 20px; border-radius: 60px; white-space: nowrap; }
@@ -612,65 +612,48 @@
     </div>
     <div class="pricing__cards">
 
+      <!-- 1:1 CALL -->
       <div class="price-card">
-        <div class="price-card__type">Klein groepsdagdeel</div>
-        <div class="price-card__name">DURF<br><small style="font-size:18px;opacity:.6;">Groep</small></div>
+        <div class="price-card__type">Online · 90 minuten</div>
+        <div class="price-card__name">De Doorbraakcall</div>
         <div class="price-card__tagline">
-          Maximaal 10 mensen. Geen grote zaal.
-          Jij en een handvol gelijkgestemden die ook voluit voor zichzelf kiezen.
-          De kracht van een groep, de diepgang van een intieme setting.
-        </div>
-        <div class="price-card__old">€239</div>
-        <div class="price-card__price">€179</div>
-        <div class="price-card__note">Early bird · max. 10 plekken</div>
-        <ul class="price-card__includes">
-          <li>2,5 – 3 uur live dagdeel met Anouk</li>
-          <li>Alle 5 programmaonderdelen</li>
-          <li>Persoonlijk werkboek</li>
-          <li>Jouw concrete volgende stap</li>
-          <li>Veilige, intieme groepssfeer</li>
-        </ul>
-        <a href="#contact" class="btn btn--blue">Ik wil een groepsplek</a>
-      </div>
-
-      <div class="price-card">
-        <div class="price-card__type">Online sessie</div>
-        <div class="price-card__name">DURF<br><small style="font-size:18px;opacity:.6;">1:1 Call</small></div>
-        <div class="price-card__tagline">
-          90 minuten online. Volledig om jou.
-          Direct, diep en gericht op jouw specifieke situatie.
-          Perfect als je weet wat je wil doorbreken.
+          Eén call. Negentig minuten. Volledig om jou.
+          Je brengt je vastgelopen punt mee — we werken er doorheen
+          en je gaat naar huis met een concrete volgende stap.
         </div>
         <div class="price-card__price">€195</div>
-        <div class="price-card__note">90 minuten · online · op maat</div>
+        <div class="price-card__note">90 minuten · online · datum samen in te plannen</div>
         <ul class="price-card__includes">
-          <li>90 min 1:1 online sessie met Anouk</li>
-          <li>Datum samen in te plannen</li>
-          <li>100% gericht op jóuw situatie</li>
+          <li>90 minuten 1:1 met Anouk via video</li>
+          <li>Jouw specifieke situatie centraal</li>
+          <li>Eén heldere doorbraak als doel</li>
           <li>Concrete stap voor daarna</li>
+          <li>Datum flexibel in te plannen</li>
         </ul>
-        <a href="#contact" class="btn btn--blue">Ik wil een online sessie</a>
+        <a href="#contact" class="btn btn--blue">Ik boek de doorbraakcall</a>
       </div>
 
+      <!-- HALVE DAG LIVE -->
       <div class="price-card price-card--featured">
-        <div class="price-card__badge">Meest persoonlijk</div>
-        <div class="price-card__type">Privé live dagdeel</div>
-        <div class="price-card__name">DURF<br><small style="font-size:18px;opacity:.6;">1:1 Live</small></div>
+        <div class="price-card__badge">Meest diepgaand</div>
+        <div class="price-card__type">Live · halve dag</div>
+        <div class="price-card__name">De Halve Dag</div>
         <div class="price-card__tagline">
-          Alleen jij en Anouk. 2,5 tot 3 uur live.
-          Alle 5 programmaonderdelen, volledig afgestemd op jouw verhaal,
-          jouw angst, jouw volgende stap.
+          Alleen jij en Anouk. Een halve dag live werken —
+          met de ruimte, de stilte en de diepgang die een call
+          niet kan bieden. Hier gebeurt de echte verschuiving.
         </div>
-        <div class="price-card__price">€475</div>
-        <div class="price-card__note">2,5 – 3 uur live · volledig op maat</div>
+        <div class="price-card__price">€500</div>
+        <div class="price-card__note">Halve dag live · volledig op maat · ochtend of middag</div>
         <ul class="price-card__includes">
-          <li>2,5 – 3 uur privé dagdeel met Anouk</li>
+          <li>Halve dag 1:1 live met Anouk</li>
           <li>Alle 5 programmaonderdelen voor jou</li>
           <li>Ochtend of middag — samen te plannen</li>
           <li>Persoonlijk werkboek</li>
-          <li>Geen wachten — alles is voor jou</li>
+          <li>Lichamelijk én mentaal werk</li>
+          <li>Concrete 90-dagenplan als afsluiter</li>
         </ul>
-        <a href="#contact" class="btn btn--coral">Ik wil mijn privéplek</a>
+        <a href="#contact" class="btn btn--coral">Ik boek de halve dag</a>
       </div>
 
     </div>
