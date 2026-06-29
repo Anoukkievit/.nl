@@ -269,7 +269,7 @@ get_header(); ?>
     </p>
     <div class="hero__ctas">
       <a href="#investering" class="btn btn--coral">Dit wil ik →</a>
-      <a href="#verlangen" class="btn btn--pink">Wat is er mogelijk?</a>
+      <a href="#verlangen" class="btn btn--outline-dark">Wat is er mogelijk?</a>
     </div>
   </div>
 </section>
