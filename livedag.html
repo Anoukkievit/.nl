@@ -67,7 +67,7 @@
     h2.section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 5.5vw, 58px); font-weight: 300; line-height: 1.15; margin-bottom: 32px; color: var(--text); }
     h2.section-title em { font-style: italic; color: var(--coral); }
 
-    /* THOUGHT EXAMPLES — de gedachten die we als feit leven */
+    /* THOUGHT EXAMPLES */
     .thoughts { background: var(--white); }
     .thoughts__intro { font-family: 'Cormorant Garamond', serif; font-size: clamp(20px, 3vw, 30px); font-weight: 300; font-style: italic; line-height: 1.5; color: var(--text); margin-bottom: 52px; padding-bottom: 52px; border-bottom: 1px solid var(--line); }
     .thoughts__intro strong { font-style: normal; font-weight: 600; }
@@ -114,7 +114,7 @@
     .hzvha__card--wide .hzvha__q { font-size: clamp(26px, 3.5vw, 40px); max-width: 620px; margin: 0 auto; }
     .hzvha__card--wide .hzvha__eyebrow { color: rgba(255,255,255,.65); }
 
-    /* DE METHODE — 4 stappen */
+    /* DE METHODE */
     .methode { background: var(--cream); }
     .methode__steps { margin-top: 52px; display: flex; flex-direction: column; gap: 0; }
     .methode__step { display: grid; grid-template-columns: 80px 1fr; gap: 32px; padding: 40px 0; border-bottom: 1px solid var(--line); align-items: start; }
@@ -129,9 +129,22 @@
     .methode__step-example-label { font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: var(--coral); font-weight: 700; margin-bottom: 8px; display: block; }
     .methode__step-example p { font-size: 14px; color: var(--text); margin-bottom: 4px; font-style: italic; }
 
+    /* QUOTE BAND — angst */
+    .angst-band { background: var(--pink-light); border-top: 3px solid var(--pink); border-bottom: 3px solid var(--pink); padding: 72px 28px; text-align: center; }
+    .angst-band__text { font-family: 'Cormorant Garamond', serif; font-size: clamp(24px, 4vw, 48px); font-weight: 300; font-style: italic; color: var(--text); line-height: 1.35; max-width: 700px; margin: 0 auto 16px; }
+    .angst-band__sub { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-soft); }
+
     /* ZO VOELT HET */
     .feeling { background: var(--white); }
-    .feeling__moments { margin-top: 56px; }
+    .feeling__intro { font-family: 'Cormorant Garamond', serif; font-size: clamp(20px, 2.5vw, 28px); font-weight: 300; font-style: italic; color: var(--text-soft); line-height: 1.5; margin-bottom: 52px; max-width: 600px; }
+    .feeling__outcomes { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 64px; }
+    @media (max-width: 600px) { .feeling__outcomes { grid-template-columns: 1fr; } }
+    .feeling__outcome { padding: 32px 28px; border-radius: 4px; background: var(--cream); border-top: 3px solid var(--coral); }
+    .feeling__outcome-num { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 300; color: var(--pink); line-height: 1; margin-bottom: 10px; }
+    .feeling__outcome-title { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 400; color: var(--text); margin-bottom: 8px; }
+    .feeling__outcome-desc { font-size: 14px; color: var(--text-soft); line-height: 1.7; }
+    .feeling__moments { margin-top: 0; }
+    .feeling__moments-label { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; font-weight: 600; color: var(--coral); margin-bottom: 36px; }
     .feeling__moment { padding: 36px 0; border-bottom: 1px solid var(--line); display: grid; grid-template-columns: 200px 1fr; gap: 40px; align-items: start; }
     @media (max-width: 600px) { .feeling__moment { grid-template-columns: 1fr; gap: 10px; } }
     .feeling__moment:last-child { border-bottom: none; }
@@ -140,19 +153,27 @@
     .feeling__moment-text em { font-style: italic; color: var(--coral); }
     .feeling__moment-text strong { font-style: normal; font-weight: 600; }
 
+    /* VERSIE VAN JOU BAND */
+    .versie-band { background: var(--blue); padding: 88px 28px; text-align: center; }
+    .versie-band__text { font-family: 'Cormorant Garamond', serif; font-size: clamp(22px, 3.5vw, 44px); font-weight: 300; font-style: italic; color: var(--white); line-height: 1.4; max-width: 760px; margin: 0 auto; }
+    .versie-band__text strong { font-style: normal; font-weight: 600; }
+
     /* FOR WHO */
     .for-who { background: var(--cream); }
     .for-who__list { list-style: none; margin: 36px 0; }
     .for-who__list li { padding: 16px 0 16px 40px; border-bottom: 1px solid var(--line); position: relative; font-size: 17px; line-height: 1.65; }
-    .for-who__list li::before { content: '→'; position: absolute; left: 0; color: var(--coral); font-weight: 600; }
+    .for-who__list li::before { content: 'o'; position: absolute; left: 0; color: var(--coral); font-weight: 600; font-size: 20px; top: 14px; }
 
     /* GOLD BAND */
     .gold-band { background: var(--gold); padding: 72px 28px; text-align: center; }
-    .gold-band__text { font-family: 'Cormorant Garamond', serif; font-size: clamp(24px, 4vw, 44px); font-weight: 400; font-style: italic; color: var(--text); line-height: 1.4; max-width: 700px; margin: 0 auto; }
+    .gold-band__text { font-family: 'Cormorant Garamond', serif; font-size: clamp(24px, 4vw, 44px); font-weight: 400; font-style: italic; color: var(--text); line-height: 1.4; max-width: 700px; margin: 0 auto 16px; }
+    .gold-band__attr { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: rgba(26,26,26,.55); }
 
     /* PRICING */
     .pricing { background: var(--white); }
-    .pricing__cards { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 56px; }
+    .pricing__intro { max-width: 560px; margin: 0 auto 56px; text-align: center; }
+    .pricing__intro-line { font-family: 'Cormorant Garamond', serif; font-size: clamp(20px, 2.5vw, 28px); font-weight: 300; font-style: italic; color: var(--text-soft); line-height: 1.5; margin-bottom: 16px; }
+    .pricing__cards { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 0; }
     @media (max-width: 700px) { .pricing__cards { grid-template-columns: 1fr; } }
     .price-card { border-radius: 4px; padding: 48px 36px; position: relative; background: var(--white); border: 2px solid var(--line); }
     .price-card--featured { border-color: var(--coral); background: var(--cream); }
@@ -165,7 +186,7 @@
     .price-card__note { font-size: 12px; color: var(--text-soft); margin-bottom: 32px; }
     .price-card__includes { list-style: none; margin-bottom: 36px; }
     .price-card__includes li { font-size: 14px; padding: 10px 0; border-bottom: 1px solid var(--line); display: flex; gap: 10px; align-items: flex-start; color: var(--text); }
-    .price-card__includes li::before { content: '✓'; color: var(--coral); flex-shrink: 0; font-weight: 700; margin-top: 1px; }
+    .price-card__includes li::before { content: 'v'; color: var(--coral); flex-shrink: 0; font-weight: 700; margin-top: 1px; }
     .price-card .btn { width: 100%; text-align: center; }
 
     /* ABOUT */
@@ -191,6 +212,7 @@
     .final-cta h2 { color: var(--white); margin-bottom: 24px; }
     .final-cta h2 em { color: rgba(255,255,255,.7); }
     .final-cta p { color: rgba(255,255,255,.85); max-width: 500px; margin: 0 auto 44px; font-size: 18px; font-weight: 300; }
+    .final-cta__versie { font-family: 'Cormorant Garamond', serif; font-size: clamp(18px, 2.5vw, 26px); font-style: italic; font-weight: 300; color: rgba(255,255,255,.9); line-height: 1.55; max-width: 560px; margin: 0 auto 52px; }
 
     /* FOOTER */
     footer { background: var(--cream); border-top: 1px solid var(--line); color: var(--text-soft); text-align: center; padding: 36px 28px; font-size: 12px; }
@@ -202,7 +224,7 @@
 <div class="urgency-bar">✦ &nbsp; Nog maar een paar plekken beschikbaar &nbsp; ✦</div>
 
 
-<!-- ══ HERO ══ -->
+<!-- HERO -->
 <section class="hero">
   <div class="container">
     <span class="hero__event-name">Anouk Kievit &nbsp;·&nbsp; De Gedachte Methode</span>
@@ -215,8 +237,8 @@
       We leven vanuit wat we geloven.
     </p>
     <p class="hero__body">
-      Niet je gedrag houdt jou tegen. De gedachte vóór het gedrag doet dat.
-      En die gedachte heeft een naam. In één sessie of dagdeel vinden we hem —
+      Niet je gedrag houdt jou tegen. De gedachte voor het gedrag doet dat.
+      En die gedachte heeft een naam. In een sessie of dagdeel vinden we hem
       en testen we of hij klopt.
     </p>
     <div class="hero__ctas">
@@ -236,7 +258,7 @@
 </div>
 
 
-<!-- ══ DE GEDACHTEN DIE WE ALS FEIT LEVEN ══ -->
+<!-- DE GEDACHTEN DIE WE ALS FEIT LEVEN -->
 <section class="thoughts">
   <div class="container">
     <span class="label label--coral">Herken jij dit?</span>
@@ -247,7 +269,7 @@
 
     <p class="thoughts__intro">
       Ergens onderweg heb jij een gedachte opgepikt en hem behandeld als een feit.
-      Niet bewust. Het gebeurde gewoon. En sindsdien <strong>leef je ernaar —
+      Niet bewust. Het gebeurde gewoon. En sindsdien <strong>leef je ernaar
       zonder ooit te checken of hij eigenlijk wel klopt.</strong>
     </p>
 
@@ -277,8 +299,8 @@
     <p class="thoughts__truth">
       Zie je wat hier gebeurt?<br>
       Het gaat nooit over je gedrag.<br>
-      Het gaat altijd over <em>de gedachte vóór het gedrag.</em><br>
-      En dát is precies wat we gaan ontmaskeren.
+      Het gaat altijd over <em>de gedachte voor het gedrag.</em><br>
+      En dat is precies wat we gaan ontmaskeren.
     </p>
   </div>
 </section>
@@ -294,7 +316,7 @@
 </div>
 
 
-<!-- ══ HOE ZOU HET ZIJN ALS ══ -->
+<!-- HOE ZOU HET ZIJN ALS -->
 <section class="hzvha">
   <div class="container--wide">
     <div class="center">
@@ -302,13 +324,13 @@
       <h2 class="section-title">Hoe zou het zijn<br><em>als…</em></h2>
       <p style="max-width:500px;margin:0 auto;color:var(--text-soft);">
         Lees dit langzaam. Voel wat er in je beweegt.
-        Dát gevoel is waar we naartoe gaan.
+        Dat gevoel is waar we naartoe gaan.
       </p>
     </div>
     <div class="hzvha__grid">
       <div class="hzvha__card hzvha__card--coral">
         <span class="hzvha__eyebrow">Hoe zou het zijn als</span>
-        <p class="hzvha__q">je je prijs noemde — zonder verontschuldiging, zonder twijfel, zonder daarna te checken of iemand nog reageert?</p>
+        <p class="hzvha__q">je je prijs noemde zonder verontschuldiging, zonder twijfel, zonder daarna te checken of iemand nog reageert?</p>
       </div>
       <div class="hzvha__card hzvha__card--blue">
         <span class="hzvha__eyebrow">Hoe zou het zijn als</span>
@@ -316,30 +338,30 @@
       </div>
       <div class="hzvha__card hzvha__card--gold">
         <span class="hzvha__eyebrow">Hoe zou het zijn als</span>
-        <p class="hzvha__q">die post gewoon live ging — en je er trots op was in plaats van bang voor de reactie?</p>
+        <p class="hzvha__q">die post gewoon live ging en je er trots op was in plaats van bang voor de reactie?</p>
       </div>
       <div class="hzvha__card hzvha__card--pink">
         <span class="hzvha__eyebrow">Hoe zou het zijn als</span>
-        <p class="hzvha__q">je voor jezelf koos — niet als uitzondering, niet als luxe, maar gewoon als standaard?</p>
+        <p class="hzvha__q">je voor jezelf koos niet als uitzondering, niet als luxe, maar gewoon als standaard?</p>
       </div>
       <div class="hzvha__card hzvha__card--lb">
         <span class="hzvha__eyebrow">Hoe zou het zijn als</span>
-        <p class="hzvha__q">je ontdekte dat de gedachte die jou al jaren tegenhoudt — simpelweg niet waar is?</p>
+        <p class="hzvha__q">je ontdekte dat de gedachte die jou al jaren tegenhoudt simpelweg niet waar is?</p>
       </div>
       <div class="hzvha__card hzvha__card--wh">
         <span class="hzvha__eyebrow">Hoe zou het zijn als</span>
-        <p class="hzvha__q">je een beslissing nam vanuit wie je werkelijk bent — in plaats van vanuit wat je gelooft dat veilig is?</p>
+        <p class="hzvha__q">je een beslissing nam vanuit wie je werkelijk bent in plaats van vanuit wat je gelooft dat veilig is?</p>
       </div>
       <div class="hzvha__card hzvha__card--wide">
         <span class="hzvha__eyebrow">En bovenal — hoe zou het zijn als</span>
-        <p class="hzvha__q">"je eindelijk leefde vanuit de werkelijkheid — in plaats van vanuit een gedachte die je ooit voor waarheid aannam?"</p>
+        <p class="hzvha__q">"je eindelijk leefde vanuit de werkelijkheid in plaats van vanuit een gedachte die je ooit voor waarheid aannam?"</p>
       </div>
     </div>
   </div>
 </section>
 
 
-<!-- ══ DE GEDACHTE METHODE — 4 stappen ══ -->
+<!-- DE GEDACHTE METHODE -->
 <section class="methode" id="de-methode">
   <div class="container">
     <span class="label label--gold">De Gedachte Methode</span>
@@ -360,7 +382,7 @@
         <div>
           <span class="methode__step-tag">Stap 1 — Gedrag</span>
           <div class="methode__step-title">Waar loop je vast?</div>
-          <p>We beginnen niet bij jouw hoofd. We beginnen bij wat je doet — of juist niet doet. Welk gedrag zie je steeds terugkomen? Wat stel je uit, wat vermijd je, wat doe je op de automatische piloot?</p>
+          <p>We beginnen niet bij jouw hoofd. We beginnen bij wat je doet of juist niet doet. Welk gedrag zie je steeds terugkomen? Wat stel je uit, wat vermijd je, wat doe je op de automatische piloot?</p>
           <div class="methode__step-example">
             <span class="methode__step-example-label">Voorbeeld</span>
             <p>"Ik verkoop niet."</p>
@@ -375,7 +397,7 @@
         <div>
           <span class="methode__step-tag">Stap 2 — De Gedachte</span>
           <div class="methode__step-title">Welke gedachte zit daaronder?</div>
-          <p>Achter elk vastgelopen gedrag zit een gedachte. Niet bewust gekozen — maar ergens onderweg opgepikt en sindsdien als feit behandeld. We graven tot we hem vinden. Die ene zin. Die onzichtbare regel.</p>
+          <p>Achter elk vastgelopen gedrag zit een gedachte. Niet bewust gekozen maar ergens onderweg opgepikt en sindsdien als feit behandeld. We graven tot we hem vinden. Die ene zin. Die onzichtbare regel.</p>
           <div class="methode__step-example">
             <span class="methode__step-example-label">Voorbeeld</span>
             <p>"Mensen vinden me te commercieel."</p>
@@ -390,8 +412,8 @@
         <div>
           <span class="methode__step-tag">Stap 3 — Onderzoeken</span>
           <div class="methode__step-title">Is het waar?</div>
-          <p>Nu gaan we de gedachte bevragen. Niet wegredeneren — maar echt onderzoeken. Waar heb je bewijs? Waar heb je tegenbewijs? Wie zou jij zijn zonder die gedachte?</p>
-          <p>Want wat jij jarenlang als waarheid hebt behandeld, is bijna altijd een aanname. Een verhaal. Een conclusie die je ooit trok — en daarna nooit meer in twijfel trok.</p>
+          <p>Nu gaan we de gedachte bevragen. Niet wegredeneren maar echt onderzoeken. Waar heb je bewijs? Waar heb je tegenbewijs? Wie zou jij zijn zonder die gedachte?</p>
+          <p>Want wat jij jarenlang als waarheid hebt behandeld, is bijna altijd een aanname. Een verhaal. Een conclusie die je ooit trok en daarna nooit meer in twijfel trok.</p>
           <div class="methode__step-example">
             <span class="methode__step-example-label">De vraag die alles verandert</span>
             <p>"Wie zou jij zijn zonder die gedachte?"</p>
@@ -404,11 +426,11 @@
         <div>
           <span class="methode__step-tag">Stap 4 — Experiment</span>
           <div class="methode__step-title">Ga hem testen.</div>
-          <p>Niet affirmaties. Niet journalen. Maar: doen. De gedachte testen in de werkelijkheid. Want alleen nieuwe ervaringen geven je brein nieuw bewijs. Alleen door erdoorheen te lopen — keer op keer — ontdek je dat de gedachte niet waar was.</p>
+          <p>Niet affirmaties. Niet journalen. Maar: doen. De gedachte testen in de werkelijkheid. Want alleen nieuwe ervaringen geven je brein nieuw bewijs. Alleen door erdoorheen te lopen keer op keer ontdek je dat de gedachte niet waar was.</p>
           <p>Dit is precies wat jij al deed. Bij anorexia: de gedachte getest door te eten. Als ondernemer: de gedachte getest door zichtbaar te zijn. <strong>Het bleek niet waar. En dat veranderde alles.</strong></p>
           <div class="methode__step-example">
             <span class="methode__step-example-label">Je gaat naar huis met</span>
-            <p>"Eén concreet experiment voor de komende tijd — zodat jouw brein nieuw bewijs krijgt."</p>
+            <p>"Een concreet experiment voor de komende tijd zodat jouw brein nieuw bewijs krijgt."</p>
           </div>
         </div>
       </div>
@@ -418,18 +440,52 @@
 </section>
 
 
-<!-- ══ ZO VOELT HET ══ -->
+<!-- ANGST BAND -->
+<div class="angst-band">
+  <p class="angst-band__text">
+    Succesvolle mensen zijn niet minder bang.<br>
+    Ze zijn alleen minder gehoorzaam aan hun angst.
+  </p>
+</div>
+
+
+<!-- ZO VOELT HET -->
 <section class="feeling">
   <div class="container">
     <span class="label label--coral">Zo voelt het daarna</span>
     <h2 class="section-title">
-      Dit is hoe jouw dag<br>
-      <em>er dan uitziet.</em>
+      Je stapt anders<br>
+      <em>naar buiten.</em>
     </h2>
-    <p style="color:var(--text-soft);max-width:560px;">
-      Niet abstract. Niet 'je voelt je beter'.
-      Maar concreet — de momenten die je nu het meeste kosten, voelen dan zo:
+    <p class="feeling__intro">
+      Niet met een notitieboek vol goede voornemens.<br>
+      Met iets wat veel verder gaat dan dat.
     </p>
+
+    <div class="feeling__outcomes">
+      <div class="feeling__outcome">
+        <div class="feeling__outcome-num">01</div>
+        <div class="feeling__outcome-title">Ruimte in je hoofd</div>
+        <div class="feeling__outcome-desc">De ruis valt weg. Niet tijdelijk maar omdat je nu weet hoe je hem zelf stil zet.</div>
+      </div>
+      <div class="feeling__outcome">
+        <div class="feeling__outcome-num">02</div>
+        <div class="feeling__outcome-title">Een nieuw zelfbeeld</div>
+        <div class="feeling__outcome-desc">Je weet wie je bent en wie je wordt. Niet wie je moet zijn voor anderen. Wie jij wil zijn.</div>
+      </div>
+      <div class="feeling__outcome">
+        <div class="feeling__outcome-num">03</div>
+        <div class="feeling__outcome-title">Angst zonder stuur</div>
+        <div class="feeling__outcome-desc">Angst is er nog. Maar hij rijdt niet meer. Jij rijdt. Dat is het grootste verschil dat er is.</div>
+      </div>
+      <div class="feeling__outcome">
+        <div class="feeling__outcome-num">04</div>
+        <div class="feeling__outcome-title">Een concrete stap</div>
+        <div class="feeling__outcome-desc">Niet tien plannen. Een stap. Met een datum. Die je morgen al zet. Echt.</div>
+      </div>
+    </div>
+
+    <p class="feeling__moments-label">En dit is hoe jouw dag er dan uitziet</p>
 
     <div class="feeling__moments">
       <div class="feeling__moment">
@@ -438,11 +494,11 @@
       </div>
       <div class="feeling__moment">
         <div class="feeling__moment-when">Je prijs noemen</div>
-        <div class="feeling__moment-text">Je noemt het bedrag. Je voegt geen uitleg toe. Geen verontschuldiging. Je wacht op antwoord — <em>zonder in de tussentijd te twijfelen of je het wel waard bent.</em></div>
+        <div class="feeling__moment-text">Je noemt het bedrag. Je voegt geen uitleg toe. Geen verontschuldiging. Je wacht op antwoord <em>zonder in de tussentijd te twijfelen of je het wel waard bent.</em></div>
       </div>
       <div class="feeling__moment">
         <div class="feeling__moment-when">Een post plaatsen</div>
-        <div class="feeling__moment-text">Je schrijft wat je denkt. Je leest het één keer terug. Je drukt op publiceren. <em>Je legt je telefoon weg.</em> Je checkt niet iedere vijf minuten of iemand reageert.</div>
+        <div class="feeling__moment-text">Je schrijft wat je denkt. Je leest het een keer terug. Je drukt op publiceren. <em>Je legt je telefoon weg.</em> Je checkt niet iedere vijf minuten of iemand reageert.</div>
       </div>
       <div class="feeling__moment">
         <div class="feeling__moment-when">Nee zeggen</div>
@@ -461,6 +517,18 @@
 </section>
 
 
+<!-- VERSIE VAN JOU BAND -->
+<div class="versie-band">
+  <p class="versie-band__text">
+    Er is een versie van jou die anders wakker wordt 's ochtends.<br>
+    Die haar prijs noemt zonder verontschuldiging.<br>
+    Die beslissingen neemt vanuit zekerheid.<br>
+    Die zegt wat ze denkt. Die <strong>leeft.</strong><br><br>
+    Die versie bestaat al. Ze zit in je. Ze wacht.
+  </p>
+</div>
+
+
 <!-- GOLD BAND -->
 <div class="gold-band">
   <p class="gold-band__text">
@@ -468,10 +536,11 @@
     Want verhalen bewonder je.<br>
     Spiegels veranderen je."
   </p>
+  <p class="gold-band__attr">— Anouk Kievit</p>
 </div>
 
 
-<!-- ══ VOOR WIE ══ -->
+<!-- VOOR WIE -->
 <section class="for-who">
   <div class="container">
     <span class="label label--coral">Is dit voor jou?</span>
@@ -479,32 +548,32 @@
       Dit is niet voor iedereen.<br>
       <em>Maar misschien wel voor jou.</em>
     </h2>
-    <p>Je hoeft geen ondernemer te zijn. Geen carrièretijger. Wel iemand die eerlijk kan zeggen: ik weet dat er een gedachte is die mij al tijden in de weg zit — en ik ben klaar om hem eindelijk te ontmaskeren.</p>
+    <p>Je hoeft geen ondernemer te zijn. Geen carrièretijger. Wel iemand die eerlijk kan zeggen: ik weet dat er meer in zit en ik ben klaar om daar eindelijk echt naar te kijken.</p>
     <ul class="for-who__list">
-      <li>Je doet wat je moet doen. Maar de gedachte vóór het doen klopt niet — en je weet het.</li>
-      <li>Je hoofd staat nooit écht uit. Er is altijd die stem die zegt dat het niet goed genoeg is.</li>
-      <li>Je weet wat je wilt. Maar een onzichtbare overtuiging wint het altijd van jouw intentie.</li>
-      <li>Je bent klaar met wachten tot je je klaar voelt. Dat moment komt niet vanzelf.</li>
-      <li>Je wil weten welke gedachte aan het stuur zit — en wat er gebeurt als jij dat stuur overneemt.</li>
+      <li>Je zorgt uitstekend voor iedereen om je heen. Alleen niet zo goed voor jezelf.</li>
+      <li>Je hoofd staat nooit echt uit. Ook niet als je 'ontspant'.</li>
+      <li>Je weet wat je wilt. Maar de waan van de dag of de twijfel wint het altijd.</li>
+      <li>Je bent klaar met wachten op het juiste moment. Dat moment komt niet vanzelf.</li>
+      <li>Je voelt dat er iets groters op je wacht. En je bent eindelijk bereid het te gaan halen.</li>
     </ul>
-    <p>Herken je iets? Dan is dit jouw plek.</p>
+    <p>Herken je iets? Dan is dit jouw moment.</p>
   </div>
 </section>
 
 
-<!-- ══ PRICING ══ -->
+<!-- PRICING -->
 <section class="pricing" id="investering">
   <div class="container--wide">
     <div class="center">
       <span class="label label--coral">Jouw investering</span>
       <h2 class="section-title">
-        Kies wat bij jou past.<br>
-        <em>Beide zijn diep.</em>
+        Stop met overdenken.<br>
+        <em>Start met kiezen.</em>
       </h2>
-      <p style="max-width:480px;margin:0 auto;color:var(--text-soft);">
-        Eén online sessie om de gedachte te vinden en te testen.
-        Of een halve dag live voor de ruimte die echt iets verschuift.
-      </p>
+    </div>
+
+    <div class="pricing__intro">
+      <p class="pricing__intro-line">Twee manieren. Allemaal gericht op hetzelfde: jij die door je angst heen loopt. Jij kiest wat bij jou past.</p>
     </div>
 
     <div class="pricing__cards">
@@ -513,7 +582,7 @@
         <div class="price-card__type">Online · 60–90 minuten</div>
         <div class="price-card__name">De Gedachte Sessie</div>
         <div class="price-card__tagline">
-          Eén sessie. We vinden de gedachte die jou tegenhoudt,
+          Een sessie. We vinden de gedachte die jou tegenhoudt,
           onderzoeken of hij klopt, en bepalen jouw eerste experiment.
           Concreet. Direct. Diep.
         </div>
@@ -522,8 +591,8 @@
         <ul class="price-card__includes">
           <li>60–90 min 1:1 online met Anouk</li>
           <li>De Gedachte Methode: alle 4 stappen</li>
-          <li>Jouw gedachte gevonden én onderzocht</li>
-          <li>Eén concreet experiment als vertrekpunt</li>
+          <li>Jouw gedachte gevonden en onderzocht</li>
+          <li>Een concreet experiment als vertrekpunt</li>
           <li>Datum flexibel in te plannen</li>
         </ul>
         <a href="#contact" class="btn btn--blue">Ik boek de sessie</a>
@@ -534,7 +603,7 @@
         <div class="price-card__type">Live · halve dag</div>
         <div class="price-card__name">De Gedachte Dag</div>
         <div class="price-card__tagline">
-          2,5 tot 3 uur live — alleen jij en Anouk.
+          2,5 tot 3 uur live alleen jij en Anouk.
           De ruimte, de stilte en de diepgang die een call
           niet kan bieden. Hier gebeurt de echte verschuiving.
         </div>
@@ -543,10 +612,10 @@
         <ul class="price-card__includes">
           <li>2,5–3 uur 1:1 live met Anouk</li>
           <li>De Gedachte Methode: alle 4 stappen</li>
-          <li>Lichamelijk én mentaal werk</li>
+          <li>Lichamelijk en mentaal werk</li>
           <li>Persoonlijk werkboek</li>
           <li>Concreet 90-dagen experiment als afsluiter</li>
-          <li>Ochtend of middag — samen in te plannen</li>
+          <li>Ochtend of middag, samen in te plannen</li>
         </ul>
         <a href="#contact" class="btn btn--coral">Ik boek de dag</a>
       </div>
@@ -556,7 +625,7 @@
 </section>
 
 
-<!-- ══ ABOUT ══ -->
+<!-- ABOUT -->
 <section class="about">
   <div class="container--wide">
     <div class="about__inner">
@@ -566,16 +635,16 @@
       <div class="about__text">
         <span class="label label--coral">Even voorstellen</span>
         <h2 class="section-title">Hoi,<br>ik ben <em>Anouk.</em></h2>
-        <p>Ik hield mezelf klein omdat het veilig voelde. Jarenlang. En ik begreep niet waarom — want ik wist wat ik wilde. Ik deed gewoon niet wat ik wist.</p>
+        <p>Ik hield mezelf klein omdat het veilig voelde. Jarenlang. En ik begreep niet waarom want ik wist wat ik wilde. Ik deed gewoon niet wat ik wist.</p>
         <p>Tot ik de gedachte vond. Die ene zin die ik al jaren als feit behandelde: <strong>"als ik te groot word, raak ik mensen kwijt."</strong> Geen feit. Een gedachte. Maar ik leefde ernaar alsof mijn leven ervan afhing.</p>
-        <p>Wat ik ontdekte veranderde alles: het ging nooit over mijn gedrag. Het ging altijd over de gedachte vóór het gedrag. En toen ik begon die gedachten te testen — in plaats van ze te geloven — veranderde er iets wat ik niet verwacht had.</p>
+        <p>Wat ik ontdekte veranderde alles: het ging nooit over mijn gedrag. Het ging altijd over de gedachte voor het gedrag. En toen ik begon die gedachten te testen in plaats van ze te geloven veranderde er iets wat ik niet verwacht had.</p>
 
         <div class="about__pullquote">
           Niet de angst verdween.<br>
           De gehoorzaamheid aan de angst verdween.
         </div>
 
-        <p>Ik help jou dezelfde ontdekking doen. Niet in theorie. Maar in een sessie of dagdeel dat compleet om jóu draait.</p>
+        <p>Ik help jou dezelfde ontdekking doen. Niet in theorie. Maar in een sessie of dagdeel dat compleet om jou draait.</p>
         <p style="margin-top:32px;">
           <a href="#investering" class="btn btn--coral">Boek jouw plek</a>
         </p>
@@ -585,7 +654,7 @@
 </section>
 
 
-<!-- ══ FAQ ══ -->
+<!-- FAQ -->
 <section class="faq">
   <div class="container">
     <span class="label label--blue">Vragen</span>
@@ -593,7 +662,7 @@
 
     <div class="faq__item">
       <div class="faq__q">Sessie of dag — hoe weet ik wat bij mij past?</div>
-      <div class="faq__a">De sessie is krachtig en direct — ideaal als je weet dat er iets vastzit en je er snel in wil. De dag biedt meer ruimte: voor stilte, voor het werk in je lijf, voor dingen die meer tijd nodig hebben om echt te landen. Als je twijfelt: kies de dag.</div>
+      <div class="faq__a">De sessie is krachtig en direct, ideaal als je weet dat er iets vastzit en je er snel in wil. De dag biedt meer ruimte: voor stilte, voor het werk in je lijf, voor dingen die meer tijd nodig hebben om echt te landen. Als je twijfelt: kies de dag.</div>
     </div>
     <div class="faq__item">
       <div class="faq__q">Wat als ik niet weet welke gedachte mij tegenhoudt?</div>
@@ -601,7 +670,7 @@
     </div>
     <div class="faq__item">
       <div class="faq__q">Wat als ik me er nog niet klaar voor voel?</div>
-      <div class="faq__a">Dan ben je precies de juiste persoon voor deze dag. "Klaar voelen" is zelf ook een gedachte — eentje die we hier direct kunnen onderzoeken.</div>
+      <div class="faq__a">"Klaar voelen" is zelf ook een gedachte — en precies de soort gedachte die we hier direct kunnen onderzoeken. Je hoeft je niet klaar te voelen. Je hoeft alleen eerlijk te zijn.</div>
     </div>
     <div class="faq__item">
       <div class="faq__q">Heb ik nog vragen voor ik boek?</div>
@@ -611,17 +680,20 @@
 </section>
 
 
-<!-- ══ FINAL CTA ══ -->
+<!-- FINAL CTA -->
 <section class="final-cta" id="contact">
   <div class="container">
     <h2 class="section-title">
       De gedachte die jou tegenhoudt<br>
       <em>is geen feit.</em>
     </h2>
-    <p>
-      Het is tijd om hem te ontmaskeren.
-      In één sessie of een halve dag — en nooit meer hetzelfde daarna.
-    </p>
+    <div class="final-cta__versie">
+      Er is een versie van jou die anders wakker wordt 's ochtends.<br>
+      Die haar prijs noemt zonder verontschuldiging.<br>
+      Die beslissingen neemt vanuit zekerheid.<br>
+      Die zegt wat ze denkt. Die leeft.<br>
+      Die versie bestaat al. Ze zit in je. Ze wacht.
+    </div>
     <a href="mailto:hallo@anoukkievit.nl" class="btn btn--white">Ja, ik wil een plek →</a>
   </div>
 </section>
