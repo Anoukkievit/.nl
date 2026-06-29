@@ -15,15 +15,17 @@
     :root {
       --coral:  #E07035;
       --coral-d:#C05820;
-      --blue:   #7B7AAA;
-      --blue-d: #5E5D8A;
-      --gold:   #C9A030;
+      --blue:   #5B6BB0;
+      --blue-d: #4454A0;
+      --gold:   #D4A832;
+      --gold-bg:#C9A030;
+      --purple: #7B7AAA;
       --pink:   #D4A8C8;
       --cream:  #EDE5DA;
       --off:    #F5F0E8;
       --white:  #FFFFFF;
       --text:   #1a1a1a;
-      --soft:   #8B7260;
+      --soft:   #7D5C45;
       --line:   #DDD5C8;
     }
     html { scroll-behavior: smooth; }
@@ -100,7 +102,7 @@
     .band--coral { background: var(--coral); }
     .band--coral .band__text { color: #fff; }
     .band--coral .band__attr { color: rgba(255,255,255,.55); }
-    .band--gold   { background: var(--gold); }
+    .band--gold   { background: var(--gold-bg); }
     .band--gold .band__text { color: var(--text); }
     .band--gold .band__attr { color: rgba(26,26,26,.4); }
     .band--pink   { background: var(--pink); }
@@ -141,7 +143,7 @@
     .watals__copy p { font-size: 15px; color: var(--soft); line-height: 1.8; }
 
     /* ═══ VERSIE BAND ═══ */
-    .versie { background: var(--blue); padding: 96px 40px; }
+    .versie { background: var(--purple); padding: 96px 40px; }
     .versie__inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; max-width: 1100px; margin: 0 auto; }
     @media (max-width:760px) { .versie__inner { grid-template-columns: 1fr; gap: 40px; } }
     .versie__photo { border-radius: 2px; overflow: hidden; }
