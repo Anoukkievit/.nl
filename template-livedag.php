@@ -1,16 +1,10 @@
 <?php
 /*
- * Template Name: Livedag
- * Template Post Type: page
- */
-?><!DOCTYPE html>
-<html <?php language_attributes(); ?>>
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Doorbraak Sessie – Anouk Kievit</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Dancing+Script:wght@600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <style>
+Template Name: Livedag
+*/
+get_header(); ?>
+<style>
+
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
       --coral:  #E07035;
@@ -21,8 +15,8 @@
       --gold-bg:#C9A030;
       --purple: #7B7AAA;
       --pink:   #D4A8C8;
-      --cream:  #EDE5DA;
-      --off:    #F5F0E8;
+      --cream:  #FAF5EE;
+      --off:    #FDFAF7;
       --white:  #FFFFFF;
       --text:   #1a1a1a;
       --soft:   #1a1a1a;
@@ -118,12 +112,12 @@
     .band__attr  { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; display: block; margin-top: 16px; }
 
     /* ═══ VERLANGEN ═══ */
-    .verlangen { background: var(--white); padding: 100px 0; }
+    .verlangen { background: var(--blue); padding: 100px 0; }
     .verlangen__header { text-align: center; max-width: 640px; margin: 0 auto 72px; }
-    .verlangen__header p { font-size: 17px; color: var(--soft); line-height: 1.8; }
-    .verlangen__header h2 { color: var(--text); font-size: clamp(52px, 10vw, 130px); text-transform: uppercase; letter-spacing: -1px; font-weight: 300; line-height: 1; }
-    .verlangen__header .eyebrow { color: var(--blue); }
-    .verlangen__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); }
+    .verlangen__header p { font-size: 17px; color: rgba(255,255,255,.85); line-height: 1.8; }
+    .verlangen__header h2 { color: #fff; font-size: clamp(52px, 10vw, 130px); text-transform: uppercase; letter-spacing: -1px; font-weight: 300; line-height: 1; }
+    .verlangen__header .eyebrow { color: rgba(255,255,255,.65); }
+    .verlangen__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(255,255,255,.2); border: 1px solid rgba(255,255,255,.2); }
     @media (max-width:640px) { .verlangen__grid { grid-template-columns: 1fr; } }
     .verlangen__card { background: var(--white); padding: 48px 44px; }
     .verlangen__card:nth-child(odd) { background: var(--off); }
@@ -233,15 +227,7 @@
     footer { background: var(--coral); color: rgba(255,255,255,.7); text-align: center; padding: 18px 28px; font-size: 11px; letter-spacing: 1.5px; }
     footer a { color: #fff; text-decoration: none; }
   
-
-  .hero--photo ~ * { }
-  .hero.has-photo .hero__pretitle { color: rgba(255,255,255,.7); }
-  .hero.has-photo .hero__h1 { color: #fff; }
-  .hero.has-photo .hero__sub { color: rgba(255,255,255,.85); }
-  </style>
-  <?php wp_head(); ?>
-</head>
-<body>
+</style>
 
 
 <script>
@@ -626,6 +612,4 @@
 </footer>
 
 
-<?php wp_footer(); ?>
-</body>
-</html>
+<?php get_footer(); ?>
