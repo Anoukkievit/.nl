@@ -224,12 +224,11 @@
   <div class="hero__content">
     <span class="hero__pretitle">Anouk Kievit</span>
     <h1 class="hero__h1">
-      De gedachte die je<br>
-      als tiener had,<br>
-      <em>stuurt vandaag nog<br>steeds je leven.</em>
+      Er is één ding dat al<br>jouw pogingen steeds<br>
+      <em>weer ondermijnt.</em>
     </h1>
     <p class="hero__sub">
-      Ze noemt zichzelf anders. Soms heet ze perfectionisme. Dan weer uitstelgedrag. Of schuldgevoel. Maar het is dezelfde stem. En na één gesprek zie je haar nooit meer over het hoofd.
+      En het heeft niets te maken met strategie, mindset of discipline. Na één gesprek zie je het. En daarna is er geen weg terug.
     </p>
     <div class="hero__ctas">
       <a href="#investering" class="btn btn--coral">Dit wil ik →</a>
