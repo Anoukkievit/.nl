@@ -16,12 +16,12 @@
       --gold-bg:#C9A030;
       --purple: #7B7AAA;
       --pink:   #D4A8C8;
-      --cream:  #F0E8DA;
-      --off:    #FAF7F2;
+      --cream:  #EDE5DA;
+      --off:    #F5F0E8;
       --white:  #FFFFFF;
       --text:   #1a1a1a;
-      --soft:   #7A5C44;
-      --line:   #E0D4C4;
+      --soft:   #1a1a1a;
+      --line:   #DDD5C8;
     }
     html { scroll-behavior: smooth; }
     body { font-family: 'Jost', sans-serif; background: var(--off); color: var(--text); font-size: 17px; line-height: 1.9; }
@@ -47,6 +47,8 @@
     .btn { display: inline-block; padding: 16px 40px; font-family: 'Jost', sans-serif; font-size: 10px; letter-spacing: 3px; text-transform: uppercase; font-weight: 600; text-decoration: none; transition: all .2s ease; cursor: pointer; border: none; border-radius: 2px; }
     .btn--coral { background: var(--coral); color: #fff; }
     .btn--coral:hover { background: var(--coral-d); transform: translateY(-2px); }
+    .btn--pink { background: var(--pink); color: var(--text); }
+    .btn--pink:hover { background: #C498BA; }
     .btn--outline-dark { background: transparent; border: 1.5px solid var(--text); color: var(--text); }
     .btn--outline-dark:hover { background: var(--text); color: #fff; }
     .btn--outline-white { background: transparent; border: 1.5px solid rgba(255,255,255,.7); color: #fff; }
@@ -234,7 +236,7 @@
     </p>
     <div class="hero__ctas">
       <a href="#investering" class="btn btn--coral">Dit wil ik →</a>
-      <a href="#verlangen" class="btn btn--outline-white">Wat is er mogelijk?</a>
+      <a href="#verlangen" class="btn btn--pink">Wat is er mogelijk?</a>
     </div>
   </div>
 </section>
@@ -477,7 +479,7 @@
           <li>Concreet vertrekpunt om mee verder te gaan</li>
           <li>Datum flexibel in te plannen</li>
         </ul>
-        <a href="#contact" class="btn btn--outline-dark">Ik boek de sessie</a>
+        <a href="#contact" class="btn btn--pink">Ik boek de sessie</a>
       </div>
 
       <div class="price-card price-card--featured">
