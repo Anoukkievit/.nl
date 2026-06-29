@@ -21,12 +21,12 @@
       --gold-bg:#C9A030;
       --purple: #7B7AAA;
       --pink:   #D4A8C8;
-      --cream:  #EDE5DA;
-      --off:    #F5F0E8;
+      --cream:  #F0E8DA;
+      --off:    #FAF7F2;
       --white:  #FFFFFF;
       --text:   #1a1a1a;
-      --soft:   #7D5C45;
-      --line:   #DDD5C8;
+      --soft:   #7A5C44;
+      --line:   #E0D4C4;
     }
     html { scroll-behavior: smooth; }
     body { font-family: 'Jost', sans-serif; background: var(--off); color: var(--text); font-size: 17px; line-height: 1.9; }
