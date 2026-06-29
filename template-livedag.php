@@ -115,7 +115,8 @@ get_header(); ?>
     .verlangen { background: var(--white); padding: 100px 0; }
     .verlangen__header { text-align: center; max-width: 640px; margin: 0 auto 72px; }
     .verlangen__header p { font-size: 17px; color: var(--soft); line-height: 1.8; }
-    .verlangen__header h2 { color: var(--text); font-size: clamp(52px, 10vw, 110px); font-weight: 300; line-height: 1.05; letter-spacing: -1px; }
+    .verlangen__header h2 { color: var(--text); font-size: clamp(36px, 5vw, 64px); font-weight: 300; line-height: 1.1; letter-spacing: -0.5px; }
+    .verlangen__header h2 em { color: var(--blue); font-style: italic; }
     .verlangen__header .eyebrow { color: var(--blue); }
     .verlangen__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); }
     @media (max-width:640px) { .verlangen__grid { grid-template-columns: 1fr; } }
@@ -172,7 +173,7 @@ get_header(); ?>
     .pricing__cards { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: var(--line); border: 1px solid var(--line); }
     @media (max-width:640px) { .pricing__cards { grid-template-columns: 1fr; } }
     .price-card { background: var(--white); padding: 52px 44px; position: relative; }
-    .price-card--featured { background: var(--cream); border-top: 4px solid var(--blue); }
+    .price-card--featured { background: var(--cream); }
     .price-card__badge { display: inline-block; background: var(--coral); color: #fff; font-size: 9px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; padding: 4px 14px; border-radius: 2px; margin-bottom: 16px; }
     .price-card__type { font-size: 9px; letter-spacing: 3px; text-transform: uppercase; font-weight: 700; color: var(--soft); margin-bottom: 6px; }
     .price-card__name { font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 300; color: var(--text); margin-bottom: 8px; }
@@ -221,7 +222,7 @@ get_header(); ?>
     .inzicht__inner { max-width: 760px; margin: 0 auto; }
     .inzicht__body { font-family: 'Cormorant Garamond', serif; font-size: clamp(22px, 3vw, 34px); font-weight: 300; line-height: 1.65; color: var(--text); margin-bottom: 32px; }
     .inzicht__body em { font-style: italic; color: var(--coral); }
-    .inzicht__vraag { font-family: 'Cormorant Garamond', serif; font-size: clamp(26px, 3.5vw, 42px); font-style: italic; font-weight: 300; color: var(--text); line-height: 1.4; border-top: 1px solid var(--line); padding-top: 36px; margin-top: 8px; }
+    .inzicht__vraag { font-family: 'Cormorant Garamond', serif; font-size: clamp(30px, 4.5vw, 56px); font-style: italic; font-weight: 300; color: var(--blue); line-height: 1.3; border-top: 2px solid var(--blue); padding-top: 40px; margin-top: 16px; }
 
     /* ═══ FOOTER ═══ */
     footer { background: var(--coral); color: rgba(255,255,255,.7); text-align: center; padding: 18px 28px; font-size: 11px; letter-spacing: 1.5px; }
