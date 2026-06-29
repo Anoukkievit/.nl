@@ -58,14 +58,15 @@
     .urgency { background: var(--coral); color: #fff; text-align: center; padding: 11px 20px; font-size: 10px; letter-spacing: 3px; text-transform: uppercase; font-weight: 600; }
 
     /* ═══ HERO — full bleed photo ═══ */
-    .hero { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; }
-    .hero__bg { position: absolute; inset: 0; background: url('images/anouk-bogen.jpg') center center / cover no-repeat; background-color: #B86040; }
-    .hero__bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(20,15,10,.45) 0%, rgba(20,15,10,.55) 100%); }
+    .hero { position: relative; min-height: 92vh; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; background: var(--white); }
+    .hero__bg { position: absolute; inset: 0; background: url('images/anouk-bogen.jpg') center center / cover no-repeat; opacity: 0; transition: opacity .5s; }
+    .hero__bg.loaded { opacity: 1; }
+    .hero__bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(20,15,10,.5) 0%, rgba(20,15,10,.6) 100%); }
     .hero__content { position: relative; z-index: 1; padding: 80px 40px; max-width: 900px; }
-    .hero__pretitle { font-size: 10px; letter-spacing: 5px; text-transform: uppercase; color: rgba(255,255,255,.7); font-weight: 500; margin-bottom: 28px; display: block; }
-    .hero__h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(42px, 7.5vw, 96px); font-weight: 300; line-height: 1.05; color: #fff; margin-bottom: 32px; }
+    .hero__pretitle { font-size: 10px; letter-spacing: 5px; text-transform: uppercase; color: var(--soft); font-weight: 500; margin-bottom: 28px; display: block; }
+    .hero__h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(42px, 7.5vw, 96px); font-weight: 300; line-height: 1.05; color: var(--text); margin-bottom: 32px; }
     .hero__h1 em { font-style: italic; color: var(--coral); }
-    .hero__sub { font-family: 'Cormorant Garamond', serif; font-size: clamp(18px, 2.5vw, 26px); font-style: italic; font-weight: 300; color: rgba(255,255,255,.85); max-width: 560px; margin: 0 auto 52px; line-height: 1.55; }
+    .hero__sub { font-family: 'Cormorant Garamond', serif; font-size: clamp(18px, 2.5vw, 26px); font-style: italic; font-weight: 300; color: var(--soft); max-width: 560px; margin: 0 auto 52px; line-height: 1.55; }
     .hero__ctas { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 
     /* ═══ STRIP ═══ */
@@ -222,6 +223,27 @@
 </head>
 <body>
 
+<script>
+(function(){
+  var bg = document.querySelector ? null : null;
+  window.addEventListener('DOMContentLoaded', function(){
+    var bg = document.querySelector('.hero__bg');
+    var content = document.querySelector('.hero__content');
+    var img = new Image();
+    img.onload = function(){
+      bg.classList.add('loaded');
+      content.classList.add('hero--photo');
+    };
+    img.src = 'images/anouk-bogen.jpg';
+  });
+})();
+</script>
+<style>
+  .hero--photo ~ * { }
+  .hero.has-photo .hero__pretitle { color: rgba(255,255,255,.7); }
+  .hero.has-photo .hero__h1 { color: #fff; }
+  .hero.has-photo .hero__sub { color: rgba(255,255,255,.85); }
+</style>
 <div class="urgency">✦ &nbsp; Nog maar een paar plekken beschikbaar &nbsp; ✦</div>
 
 
