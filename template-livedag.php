@@ -13,18 +13,18 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --coral:  #C97B5A;
-      --coral-d:#A85E40;
-      --blue:   #8B7FA8;
-      --blue-d: #6F6391;
-      --gold:   #C9963A;
-      --pink:   #E8C4B0;
-      --cream:  #F2EBE1;
-      --off:    #FAF7F3;
+      --coral:  #E07035;
+      --coral-d:#C05820;
+      --blue:   #7B7AAA;
+      --blue-d: #5E5D8A;
+      --gold:   #C9A030;
+      --pink:   #D4A8C8;
+      --cream:  #EDE5DA;
+      --off:    #F5F0E8;
       --white:  #FFFFFF;
       --text:   #1a1a1a;
-      --soft:   #6a6258;
-      --line:   #E4D9CE;
+      --soft:   #5a5248;
+      --line:   #DDD5C8;
     }
     html { scroll-behavior: smooth; }
     body { font-family: 'Jost', sans-serif; background: var(--off); color: var(--text); font-size: 17px; line-height: 1.9; }
@@ -224,12 +224,12 @@
   <div class="hero__content">
     <span class="hero__pretitle">Anouk Kievit</span>
     <h1 class="hero__h1">
-      Je hebt alles geprobeerd.<br>
-      <em>En loopt toch steeds<br>tegen jezelf aan.</em>
+      De gedachte die je<br>
+      als tiener had,<br>
+      <em>stuurt vandaag nog<br>steeds je leven.</em>
     </h1>
     <p class="hero__sub">
-      Niet omdat jij het probleem bent.<br>
-      Maar omdat niemand je ooit heeft laten zien wat er echt speelt.
+      Ze noemt zichzelf anders. Soms heet ze perfectionisme. Dan weer uitstelgedrag. Of schuldgevoel. Maar het is dezelfde stem. En na één gesprek zie je haar nooit meer over het hoofd.
     </p>
     <div class="hero__ctas">
       <a href="#investering" class="btn btn--coral">Dit wil ik →</a>
