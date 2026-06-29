@@ -8,7 +8,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>De Gedachte Methode – Anouk Kievit</title>
+  <title>Doorbraak Sessie – Anouk Kievit</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -20,6 +20,9 @@
       --gold:       #e0ae44;
       --pink:       #EEC3E5;
       --pink-light: #F9EFF7;
+      --gold-light: #FBF5E6;
+      --coral-light:#FFF0EB;
+      --blue-light: #EBF6FB;
       --cream:      #FDFAF7;
       --white:      #FFFFFF;
       --text:       #1a1a1a;
@@ -35,158 +38,129 @@
     p:last-child { margin-bottom: 0; }
 
     .btn { display: inline-block; padding: 18px 48px; border-radius: 60px; font-family: 'Jost', sans-serif; font-size: 12px; letter-spacing: 2.5px; text-transform: uppercase; font-weight: 600; text-decoration: none; transition: all .25s ease; cursor: pointer; border: none; }
-    .btn--coral  { background: var(--coral);  color: var(--white); }
-    .btn--coral:hover  { background: var(--coral-dark); transform: translateY(-3px); box-shadow: 0 12px 32px rgba(254,138,103,.35); }
-    .btn--blue   { background: var(--blue);   color: var(--white); }
-    .btn--blue:hover   { background: var(--blue-dark); transform: translateY(-3px); }
-    .btn--white  { background: var(--white); color: var(--blue-dark); font-weight: 700; }
-    .btn--white:hover  { background: var(--pink-light); transform: translateY(-2px); }
-    .btn--outline-white { background: transparent; border: 2px solid rgba(255,255,255,.6); color: var(--white); }
-    .btn--outline-white:hover { background: rgba(255,255,255,.12); }
+    .btn--coral { background: var(--coral); color: var(--white); }
+    .btn--coral:hover { background: var(--coral-dark); transform: translateY(-3px); box-shadow: 0 12px 32px rgba(254,138,103,.35); }
+    .btn--blue  { background: var(--blue);  color: var(--white); }
+    .btn--blue:hover  { background: var(--blue-dark); transform: translateY(-3px); }
+    .btn--outline { background: transparent; border: 2px solid var(--coral); color: var(--coral); }
+    .btn--outline:hover { background: var(--coral); color: var(--white); }
 
-    .label { display: inline-block; font-size: 10px; letter-spacing: 3px; text-transform: uppercase; font-weight: 600; margin-bottom: 16px; }
-    .label--coral { color: var(--coral); }
-    .label--blue  { color: var(--blue); }
-    .label--gold  { color: #9a6e0a; }
+    .eyebrow { display: inline-block; font-size: 10px; letter-spacing: 3px; text-transform: uppercase; font-weight: 600; margin-bottom: 20px; }
+    .eyebrow--coral { color: var(--coral); }
+    .eyebrow--blue  { color: var(--blue); }
+    .eyebrow--gold  { color: #9a6e0a; }
 
     /* URGENCY */
-    .urgency-bar { background: var(--text); color: var(--white); text-align: center; padding: 13px 20px; font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; font-weight: 600; }
+    .urgency { background: var(--coral); color: var(--white); text-align: center; padding: 12px 20px; font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; font-weight: 600; }
 
     /* HERO */
-    .hero { background: var(--coral); padding: 108px 28px 96px; text-align: center; }
-    .hero__event-name { font-size: 11px; letter-spacing: 5px; text-transform: uppercase; color: rgba(255,255,255,.75); margin-bottom: 32px; display: block; font-weight: 600; }
-    .hero__headline { font-family: 'Cormorant Garamond', serif; font-size: clamp(46px, 9vw, 88px); font-weight: 300; line-height: 1.05; color: var(--white); margin-bottom: 24px; }
-    .hero__headline em { font-style: italic; color: rgba(255,255,255,.7); }
-    .hero__subline { font-family: 'Cormorant Garamond', serif; font-size: clamp(18px, 2.5vw, 26px); font-weight: 300; font-style: italic; color: rgba(255,255,255,.85); margin-bottom: 52px; max-width: 580px; margin-left: auto; margin-right: auto; line-height: 1.5; }
+    .hero { padding: 100px 28px 88px; background: var(--white); border-bottom: 4px solid var(--coral); text-align: center; }
+    .hero__pretitle { font-size: 11px; letter-spacing: 5px; text-transform: uppercase; color: var(--coral); margin-bottom: 32px; display: block; font-weight: 600; }
+    .hero__h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(42px, 8.5vw, 84px); font-weight: 300; line-height: 1.08; color: var(--text); margin-bottom: 28px; }
+    .hero__h1 em { font-style: italic; color: var(--coral); }
+    .hero__intro { font-family: 'Cormorant Garamond', serif; font-size: clamp(19px, 2.5vw, 26px); font-weight: 300; font-style: italic; color: var(--text-soft); max-width: 600px; margin: 0 auto 52px; line-height: 1.55; }
     .hero__ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
 
-    /* VERSIE BAND — direct na hero */
-    .versie-band { background: var(--white); padding: 72px 28px; text-align: center; border-bottom: 3px solid var(--coral); }
-    .versie-band__text { font-family: 'Cormorant Garamond', serif; font-size: clamp(22px, 3.5vw, 42px); font-weight: 300; font-style: italic; color: var(--text); line-height: 1.45; max-width: 720px; margin: 0 auto 20px; }
-    .versie-band__text strong { font-style: normal; color: var(--coral); }
-    .versie-band__sub { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-soft); }
-
     /* STRIP */
-    .strip { background: var(--blue); padding: 36px 28px; }
-    .strip__grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; max-width: 800px; margin: 0 auto; }
-    .strip__item__label { font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,.6); font-weight: 600; margin-bottom: 4px; }
+    .strip { background: var(--blue); padding: 32px 28px; }
+    .strip__grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; }
+    .strip__item__label { font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,.55); font-weight: 600; margin-bottom: 4px; }
     .strip__item__val { font-family: 'Cormorant Garamond', serif; font-size: 20px; color: var(--white); }
 
     /* SECTIONS */
     section { padding: 88px 0; }
-    h2.section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(34px, 5vw, 56px); font-weight: 300; line-height: 1.15; margin-bottom: 28px; color: var(--text); }
-    h2.section-title em { font-style: italic; color: var(--coral); }
+    h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(34px, 5vw, 54px); font-weight: 300; line-height: 1.15; margin-bottom: 28px; color: var(--text); }
+    h2 em { font-style: italic; color: var(--coral); }
+    h2.on-dark { color: var(--white); }
+    h2.on-dark em { color: rgba(255,255,255,.65); }
 
-    /* THOUGHT CARDS */
-    .thoughts { background: var(--cream); }
-    .thoughts__intro { font-family: 'Cormorant Garamond', serif; font-size: clamp(20px, 3vw, 28px); font-weight: 300; font-style: italic; line-height: 1.5; color: var(--text-soft); margin-bottom: 44px; }
-    .thoughts__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 44px; }
-    @media (max-width: 580px) { .thoughts__grid { grid-template-columns: 1fr; } }
-    .thought-card { padding: 28px 24px; border-radius: 3px; }
-    .thought-card--area { font-size: 9px; letter-spacing: 3px; text-transform: uppercase; font-weight: 700; margin-bottom: 10px; display: block; }
-    .thought-card--q { font-family: 'Cormorant Garamond', serif; font-size: clamp(17px, 2vw, 21px); font-style: italic; color: var(--white); line-height: 1.4; margin-bottom: 10px; }
-    .thought-card--note { font-size: 12px; color: rgba(255,255,255,.75); }
-    .thought-card--note strong { color: var(--white); }
-    .thought-card--coral { background: var(--coral); }
-    .thought-card--coral .thought-card--area { color: rgba(255,255,255,.7); }
-    .thought-card--blue  { background: var(--blue); }
-    .thought-card--blue  .thought-card--area { color: rgba(255,255,255,.7); }
-    .thought-card--gold  { background: var(--gold); }
-    .thought-card--gold  .thought-card--area { color: rgba(26,26,26,.55); }
-    .thought-card--gold  .thought-card--q { color: var(--text); }
-    .thought-card--gold  .thought-card--note { color: var(--text-soft); }
-    .thought-card--gold  .thought-card--note strong { color: var(--text); }
-    .thought-card--pink  { background: var(--pink); }
-    .thought-card--pink  .thought-card--area { color: rgba(26,26,26,.5); }
-    .thought-card--pink  .thought-card--q { color: var(--text); }
-    .thought-card--pink  .thought-card--note { color: var(--text-soft); }
-    .thought-card--pink  .thought-card--note strong { color: var(--text); }
-    .thoughts__truth { font-family: 'Cormorant Garamond', serif; font-size: clamp(20px, 2.8vw, 32px); font-weight: 300; font-style: italic; line-height: 1.45; color: var(--text); border-top: 1px solid var(--line); padding-top: 40px; }
-    .thoughts__truth em { color: var(--coral); font-style: normal; font-weight: 600; }
+    /* WAAR STA JE NU */
+    .nu { background: var(--cream); }
+    .nu__list { margin: 36px 0; list-style: none; }
+    .nu__list li { font-family: 'Cormorant Garamond', serif; font-size: clamp(20px, 2.5vw, 27px); font-weight: 300; font-style: italic; line-height: 1.45; padding: 22px 0 22px 52px; border-bottom: 1px solid var(--line); position: relative; color: var(--text); }
+    .nu__list li:last-child { border-bottom: none; }
+    .nu__list li::before { content: ''; position: absolute; left: 0; top: 28px; width: 28px; height: 3px; background: var(--coral); border-radius: 2px; }
+    .nu__close { font-family: 'Cormorant Garamond', serif; font-size: clamp(18px, 2.2vw, 24px); font-style: italic; font-weight: 300; color: var(--text-soft); border-top: 1px solid var(--line); padding-top: 32px; margin-top: 4px; }
+    .nu__close strong { font-style: normal; color: var(--coral); font-weight: 600; }
 
-    /* HOE ZOU HET ZIJN ALS */
-    .hzvha { background: var(--white); }
-    .hzvha__grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin-top: 44px; }
-    @media (max-width: 720px) { .hzvha__grid { grid-template-columns: 1fr 1fr; } }
-    @media (max-width: 480px) { .hzvha__grid { grid-template-columns: 1fr; } }
-    .hzvha__card { border-radius: 4px; padding: 32px 28px; border: 2px solid var(--line); }
-    .hzvha__eyebrow { font-size: 9px; letter-spacing: 2.5px; text-transform: uppercase; font-weight: 700; color: var(--coral); margin-bottom: 12px; display: block; }
-    .hzvha__q { font-family: 'Cormorant Garamond', serif; font-size: clamp(18px, 2vw, 22px); font-weight: 300; font-style: italic; line-height: 1.4; color: var(--text); }
-    .hzvha__card--wide { grid-column: 1 / -1; background: var(--coral); border-color: var(--coral); text-align: center; padding: 48px 40px; }
-    .hzvha__card--wide .hzvha__eyebrow { color: rgba(255,255,255,.7); }
-    .hzvha__card--wide .hzvha__q { color: var(--white); font-size: clamp(22px, 3vw, 36px); max-width: 600px; margin: 0 auto; }
+    /* CORAL BAND */
+    .coral-band { background: var(--coral); padding: 72px 28px; text-align: center; }
+    .coral-band p { font-family: 'Cormorant Garamond', serif; font-size: clamp(24px, 4vw, 48px); font-weight: 300; font-style: italic; color: var(--white); line-height: 1.35; max-width: 720px; margin: 0 auto 14px; }
+    .coral-band span { font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: rgba(255,255,255,.6); }
 
-    /* DE METHODE */
-    .methode { background: var(--cream); }
-    .methode__steps { margin-top: 44px; }
-    .methode__step { display: grid; grid-template-columns: 64px 1fr; gap: 28px; padding: 36px 0; border-bottom: 1px solid var(--line); align-items: start; }
-    .methode__step:last-child { border-bottom: none; }
-    @media (max-width: 540px) { .methode__step { grid-template-columns: 1fr; } }
-    .methode__step-num { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 300; color: var(--coral); line-height: 1; opacity: .4; }
-    .methode__step-title { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 400; color: var(--text); margin-bottom: 8px; }
-    .methode__step p { font-size: 15px; color: var(--text-soft); line-height: 1.75; }
-    .methode__step-example { background: var(--white); border-left: 3px solid var(--coral); padding: 14px 18px; margin-top: 10px; border-radius: 0 3px 3px 0; font-size: 14px; font-style: italic; color: var(--text-soft); }
+    /* WAT WIL JE EIGENLIJK */
+    .wil { background: var(--white); }
+    .wil__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 44px; }
+    @media (max-width: 580px) { .wil__grid { grid-template-columns: 1fr; } }
+    .wil__card { padding: 32px 28px; border-radius: 4px; }
+    .wil__card--coral { background: var(--coral-light); border-top: 3px solid var(--coral); }
+    .wil__card--blue  { background: var(--blue-light);  border-top: 3px solid var(--blue); }
+    .wil__card--gold  { background: var(--gold-light);  border-top: 3px solid var(--gold); }
+    .wil__card--pink  { background: var(--pink-light);  border-top: 3px solid var(--pink); }
+    .wil__card__q { font-family: 'Cormorant Garamond', serif; font-size: clamp(18px, 2vw, 22px); font-style: italic; font-weight: 300; color: var(--text); line-height: 1.4; }
 
-    /* ZO VOELT HET — outcomes */
-    .feeling { background: var(--white); }
-    .feeling__outcomes { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 44px 0 52px; }
-    @media (max-width: 560px) { .feeling__outcomes { grid-template-columns: 1fr; } }
-    .feeling__outcome { padding: 28px 24px; background: var(--cream); border-top: 3px solid var(--coral); border-radius: 3px; }
-    .feeling__outcome-num { font-family: 'Cormorant Garamond', serif; font-size: 40px; font-weight: 300; color: var(--coral); opacity: .35; line-height: 1; margin-bottom: 8px; }
-    .feeling__outcome-title { font-family: 'Cormorant Garamond', serif; font-size: 21px; font-weight: 400; color: var(--text); margin-bottom: 6px; }
-    .feeling__outcome-desc { font-size: 13px; color: var(--text-soft); line-height: 1.7; }
-    .feeling__moments-label { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; font-weight: 600; color: var(--coral); margin-bottom: 32px; }
-    .feeling__moment { padding: 28px 0; border-bottom: 1px solid var(--line); display: grid; grid-template-columns: 180px 1fr; gap: 32px; align-items: start; }
-    @media (max-width: 580px) { .feeling__moment { grid-template-columns: 1fr; gap: 8px; } }
-    .feeling__moment:last-child { border-bottom: none; }
-    .feeling__moment-when { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--coral); font-weight: 600; padding-top: 5px; }
-    .feeling__moment-text { font-family: 'Cormorant Garamond', serif; font-size: clamp(18px, 2.2vw, 23px); font-weight: 300; line-height: 1.45; color: var(--text); }
-    .feeling__moment-text em { font-style: italic; color: var(--coral); }
+    /* WAT ALS DIT MOGELIJK IS */
+    .watals { background: var(--blue); padding: 88px 0; }
+    .watals h2 { color: var(--white); }
+    .watals h2 em { color: var(--pink); }
+    .watals__intro { font-size: 17px; font-weight: 300; color: rgba(255,255,255,.8); max-width: 520px; margin-bottom: 52px; line-height: 1.8; }
+    .watals__moments { }
+    .watals__moment { padding: 28px 0; border-bottom: 1px solid rgba(255,255,255,.15); display: grid; grid-template-columns: 180px 1fr; gap: 28px; align-items: start; }
+    @media (max-width: 580px) { .watals__moment { grid-template-columns: 1fr; gap: 6px; } }
+    .watals__moment:last-child { border-bottom: none; }
+    .watals__moment-when { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--pink); font-weight: 600; padding-top: 5px; }
+    .watals__moment-text { font-family: 'Cormorant Garamond', serif; font-size: clamp(18px, 2.2vw, 24px); font-weight: 300; line-height: 1.45; color: var(--white); }
+    .watals__moment-text em { font-style: italic; color: var(--pink); }
+
+    /* VERSIE BAND */
+    .versie-band { background: var(--pink); padding: 80px 28px; text-align: center; }
+    .versie-band p { font-family: 'Cormorant Garamond', serif; font-size: clamp(22px, 3.5vw, 44px); font-weight: 300; font-style: italic; color: var(--text); line-height: 1.45; max-width: 760px; margin: 0 auto; }
+    .versie-band p strong { font-style: normal; font-weight: 600; }
+
+    /* HOE WERKT HET */
+    .hoe { background: var(--cream); }
+    .hoe__steps { margin-top: 44px; }
+    .hoe__step { display: grid; grid-template-columns: 56px 1fr; gap: 24px; padding: 32px 0; border-bottom: 1px solid var(--line); align-items: start; }
+    .hoe__step:last-child { border-bottom: none; }
+    @media (max-width: 520px) { .hoe__step { grid-template-columns: 1fr; } }
+    .hoe__step-num { font-family: 'Cormorant Garamond', serif; font-size: 44px; font-weight: 300; color: var(--coral); opacity: .35; line-height: 1; }
+    .hoe__step-title { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 400; color: var(--text); margin-bottom: 6px; }
+    .hoe__step p { font-size: 15px; color: var(--text-soft); line-height: 1.75; }
+    .hoe__example { background: var(--white); border-left: 3px solid var(--coral); padding: 12px 16px; margin-top: 10px; font-size: 14px; font-style: italic; color: var(--text-soft); border-radius: 0 3px 3px 0; }
 
     /* GOLD BAND */
-    .gold-band { background: var(--gold); padding: 72px 28px; text-align: center; }
-    .gold-band__text { font-family: 'Cormorant Garamond', serif; font-size: clamp(24px, 4vw, 44px); font-weight: 400; font-style: italic; color: var(--text); line-height: 1.4; max-width: 680px; margin: 0 auto 14px; }
-    .gold-band__attr { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: rgba(26,26,26,.45); }
-
-    /* FOR WHO */
-    .for-who { background: var(--cream); }
-    .for-who__list { list-style: none; margin: 28px 0 36px; }
-    .for-who__list li { padding: 14px 0 14px 36px; border-bottom: 1px solid var(--line); position: relative; font-size: 16px; line-height: 1.6; }
-    .for-who__list li:last-child { border-bottom: none; }
-    .for-who__list li::before { content: '→'; position: absolute; left: 0; color: var(--coral); font-weight: 600; }
+    .gold-band { background: var(--gold); padding: 64px 28px; text-align: center; }
+    .gold-band p { font-family: 'Cormorant Garamond', serif; font-size: clamp(22px, 3.5vw, 40px); font-weight: 400; font-style: italic; color: var(--text); line-height: 1.4; max-width: 680px; margin: 0 auto 12px; }
+    .gold-band span { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: rgba(26,26,26,.4); }
 
     /* PRICING */
     .pricing { background: var(--white); }
     .pricing__intro { text-align: center; margin-bottom: 52px; }
-    .pricing__intro p { font-size: 16px; color: var(--text-soft); max-width: 480px; margin: 0 auto; }
+    .pricing__intro p { font-size: 16px; color: var(--text-soft); max-width: 460px; margin: 12px auto 0; }
     .pricing__cards { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-    @media (max-width: 680px) { .pricing__cards { grid-template-columns: 1fr; } }
-    .price-card { border-radius: 4px; padding: 44px 32px; position: relative; background: var(--cream); border: 2px solid var(--line); }
+    @media (max-width: 660px) { .pricing__cards { grid-template-columns: 1fr; } }
+    .price-card { border-radius: 4px; padding: 44px 32px; position: relative; border: 2px solid var(--line); background: var(--cream); }
     .price-card--featured { border-color: var(--coral); background: var(--white); }
-    .price-card__badge { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--coral); color: var(--white); font-size: 9px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; padding: 5px 18px; border-radius: 60px; white-space: nowrap; }
+    .price-card__badge { position: absolute; top: -13px; left: 50%; transform: translateX(-50%); background: var(--coral); color: var(--white); font-size: 9px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; padding: 5px 16px; border-radius: 60px; white-space: nowrap; }
     .price-card__type { font-size: 9px; letter-spacing: 3px; text-transform: uppercase; font-weight: 700; color: var(--blue); margin-bottom: 4px; }
     .price-card--featured .price-card__type { color: var(--coral); }
-    .price-card__name { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 400; color: var(--text); margin-bottom: 4px; }
-    .price-card__tagline { font-size: 14px; font-style: italic; color: var(--text-soft); margin-bottom: 24px; padding-bottom: 20px; border-bottom: 1px solid var(--line); line-height: 1.55; }
-    .price-card__price { font-family: 'Cormorant Garamond', serif; font-size: 60px; font-weight: 300; color: var(--coral); line-height: 1; margin: 4px 0 4px; }
-    .price-card__note { font-size: 12px; color: var(--text-soft); margin-bottom: 28px; }
-    .price-card__includes { list-style: none; margin-bottom: 32px; }
-    .price-card__includes li { font-size: 14px; padding: 9px 0; border-bottom: 1px solid var(--line); display: flex; gap: 10px; align-items: flex-start; color: var(--text); }
+    .price-card__name { font-family: 'Cormorant Garamond', serif; font-size: 30px; font-weight: 400; color: var(--text); margin-bottom: 4px; }
+    .price-card__tagline { font-size: 14px; font-style: italic; color: var(--text-soft); margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid var(--line); line-height: 1.55; }
+    .price-card__price { font-family: 'Cormorant Garamond', serif; font-size: 56px; font-weight: 300; color: var(--coral); line-height: 1; margin: 4px 0; }
+    .price-card__note { font-size: 12px; color: var(--text-soft); margin-bottom: 24px; }
+    .price-card__includes { list-style: none; margin-bottom: 28px; }
+    .price-card__includes li { font-size: 14px; padding: 8px 0; border-bottom: 1px solid var(--line); display: flex; gap: 10px; color: var(--text); }
     .price-card__includes li::before { content: '✓'; color: var(--coral); flex-shrink: 0; font-weight: 700; }
     .price-card .btn { width: 100%; text-align: center; }
 
     /* ABOUT */
-    .about { background: var(--blue); }
-    .about__inner { display: grid; grid-template-columns: 260px 1fr; gap: 60px; align-items: start; }
-    @media (max-width: 640px) { .about__inner { grid-template-columns: 1fr; } .about__photo { max-width: 240px; } }
-    .about__photo { aspect-ratio: 4/5; background: rgba(255,255,255,.15); border-radius: 4px; overflow: hidden; border: 3px solid rgba(255,255,255,.3); }
-    .about__photo img { width: 100%; height: 100%; object-fit: cover; }
-    .about__photo-placeholder { display: flex; align-items: center; justify-content: center; height: 100%; min-height: 320px; color: rgba(255,255,255,.5); font-size: 13px; text-align: center; padding: 24px; }
-    .about__text .label { color: rgba(255,255,255,.6); }
-    .about__text h2.section-title { color: var(--white); }
-    .about__text h2.section-title em { color: rgba(255,255,255,.7); }
-    .about__text p { font-size: 16px; color: rgba(255,255,255,.85); line-height: 1.8; }
-    .about__pullquote { border-left: 3px solid rgba(255,255,255,.4); padding: 16px 20px; margin: 24px 0; font-family: 'Cormorant Garamond', serif; font-size: 20px; font-style: italic; color: var(--white); line-height: 1.4; }
+    .about { background: var(--cream); }
+    .about__inner { display: grid; grid-template-columns: 260px 1fr; gap: 56px; align-items: start; }
+    @media (max-width: 640px) { .about__inner { grid-template-columns: 1fr; } }
+    .about__photo { aspect-ratio: 4/5; background: var(--pink-light); border-radius: 4px; overflow: hidden; border: 3px solid var(--pink); }
+    .about__photo-placeholder { display: flex; align-items: center; justify-content: center; height: 100%; min-height: 320px; color: var(--coral); font-size: 13px; text-align: center; padding: 24px; }
+    .about__text p { font-size: 16px; color: var(--text-soft); line-height: 1.8; }
+    .about__pullquote { border-left: 4px solid var(--coral); padding: 16px 20px; margin: 24px 0; font-family: 'Cormorant Garamond', serif; font-size: 21px; font-style: italic; color: var(--text); line-height: 1.4; }
 
     /* FAQ */
     .faq { background: var(--white); }
@@ -195,260 +169,207 @@
     .faq__a { font-size: 15px; color: var(--text-soft); line-height: 1.75; }
 
     /* FINAL CTA */
-    .final-cta { background: var(--text); padding: 104px 28px; text-align: center; }
-    .final-cta h2.section-title { color: var(--white); }
-    .final-cta h2.section-title em { color: var(--coral); }
-    .final-cta p { color: rgba(255,255,255,.7); max-width: 480px; margin: 0 auto 44px; font-size: 18px; font-weight: 300; }
+    .final-cta { background: var(--coral); padding: 100px 28px; text-align: center; }
+    .final-cta h2 { color: var(--white); margin-bottom: 20px; }
+    .final-cta h2 em { color: rgba(255,255,255,.7); }
+    .final-cta p { color: rgba(255,255,255,.85); max-width: 460px; margin: 0 auto 44px; font-size: 18px; font-weight: 300; line-height: 1.7; }
+    .btn--white-solid { background: var(--white); color: var(--coral); font-weight: 700; }
+    .btn--white-solid:hover { background: var(--cream); transform: translateY(-2px); }
 
     /* FOOTER */
-    footer { background: var(--cream); border-top: 1px solid var(--line); color: var(--text-soft); text-align: center; padding: 32px 28px; font-size: 12px; }
+    footer { background: var(--text); color: rgba(255,255,255,.45); text-align: center; padding: 28px; font-size: 12px; }
     footer a { color: var(--coral); text-decoration: none; }
   </style>
   <?php wp_head(); ?>
 </head>
 <body>
-<div class="urgency-bar">✦ &nbsp; Nog maar een paar plekken beschikbaar &nbsp; ✦</div>
+<div class="urgency">✦ &nbsp; Nog maar een paar plekken beschikbaar &nbsp; ✦</div>
 
 
-<!-- HERO -->
+<!-- ══ HERO ══ -->
 <section class="hero">
   <div class="container">
-    <span class="hero__event-name">Anouk Kievit &nbsp;·&nbsp; De Gedachte Methode</span>
-    <h1 class="hero__headline">
-      Welke gedachte leef jij<br>
-      alsof het een <em>feit</em> is?
+    <span class="hero__pretitle">Anouk Kievit</span>
+    <h1 class="hero__h1">
+      Je weet dat er meer<br>
+      in zit. Je doet het<br>
+      alleen <em>niet.</em>
     </h1>
-    <p class="hero__subline">
-      We leven niet vanuit de werkelijkheid.<br>
-      We leven vanuit wat we geloven.
+    <p class="hero__intro">
+      Niet omdat je het niet wil. Niet omdat je het niet kunt.<br>
+      Maar omdat er iets in je hoofd is dat je tegenhoudt<br>
+      en je weet niet precies wat het is.
     </p>
     <div class="hero__ctas">
-      <a href="#investering" class="btn btn--white">Ik wil mijn doorbraak →</a>
-      <a href="#de-methode" class="btn btn--outline-white">Hoe werkt het?</a>
+      <a href="#investering" class="btn btn--coral">Ja, dit ben ik →</a>
+      <a href="#watals" class="btn btn--outline">Wat is er mogelijk?</a>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="strip__grid">
+    <div><div class="strip__item__label">Formaat</div><div class="strip__item__val">Online of live</div></div>
+    <div><div class="strip__item__label">Duur</div><div class="strip__item__val">60 min tot halve dag</div></div>
+    <div><div class="strip__item__label">Locatie</div><div class="strip__item__val">Overal of bij jou</div></div>
+    <div><div class="strip__item__label">Focus</div><div class="strip__item__val">Jouw doorbraak</div></div>
+  </div>
+</div>
+
+
+<!-- ══ WAAR STA JE NU ══ -->
+<section class="nu">
+  <div class="container">
+    <span class="eyebrow eyebrow--coral">Waar sta je nu</span>
+    <h2>
+      Herken jij<br>
+      <em>een van deze?</em>
+    </h2>
+
+    <ul class="nu__list">
+      <li>Je hoofd staat nooit echt uit. Er is altijd een stem die zegt dat het niet goed genoeg is.</li>
+      <li>Je zorgt uitstekend voor iedereen om je heen. Alleen niet zo goed voor jezelf.</li>
+      <li>Je weet wat je wilt. Maar elke keer als je er naartoe beweegt, trekt iets je terug.</li>
+      <li>Je bent klaar met wachten op het juiste moment. Maar je weet niet hoe je het anders moet doen.</li>
+      <li>Je doet wat je moet doen. Maar het voelt niet als leven — het voelt als overleven.</li>
+      <li>Je hebt het gevoel dat er iets groters op je wacht. En je bent eindelijk bereid er echt naar te kijken.</li>
+    </ul>
+
+    <p class="nu__close">
+      Als een van deze zinnen iets in je raakt — dan is dit geen toeval.<br>
+      <strong>Dan is dit precies voor jou.</strong>
+    </p>
+  </div>
+</section>
+
+
+<!-- CORAL BAND -->
+<div class="coral-band">
+  <p>"We leven niet vanuit de werkelijkheid.<br>We leven vanuit wat we geloven."</p>
+  <span>— Anouk Kievit</span>
+</div>
+
+
+<!-- ══ WAT WIL JE EIGENLIJK ══ -->
+<section class="wil">
+  <div class="container">
+    <span class="eyebrow eyebrow--blue">Wat wil je eigenlijk</span>
+    <h2>
+      Diep van binnen<br>
+      <em>weet je het al.</em>
+    </h2>
+    <p style="color:var(--text-soft);max-width:520px;">Je hoeft het niet te verdienen. Je hoeft er niet eerst klaar voor te zijn. Je mag het nu al willen. En dit is wat je wil:</p>
+
+    <div class="wil__grid">
+      <div class="wil__card wil__card--coral">
+        <p class="wil__card__q">"Ik wil 's ochtends wakker worden en weten: vandaag doe ik wat ik wil doen. En ik doe het ook."</p>
+      </div>
+      <div class="wil__card wil__card--blue">
+        <p class="wil__card__q">"Ik wil mijn prijs noemen zonder mijn adem in te houden daarna."</p>
+      </div>
+      <div class="wil__card wil__card--gold">
+        <p class="wil__card__q">"Ik wil stoppen met het uitleggen waarom ik iets wil. En het gewoon willen."</p>
+      </div>
+      <div class="wil__card wil__card--pink">
+        <p class="wil__card__q">"Ik wil een beslissing nemen vanuit zekerheid in plaats van vanuit angst dat ik me vergis."</p>
+      </div>
     </div>
   </div>
 </section>
 
 
-<!-- VERSIE VAN JOU -->
+<!-- ══ WAT ALS DIT MOGELIJK IS ══ -->
+<section class="watals" id="watals">
+  <div class="container">
+    <span class="eyebrow" style="color:var(--pink);">Wat als dit mogelijk is</span>
+    <h2 class="on-dark">
+      Zo voelt het<br>
+      <em>daarna.</em>
+    </h2>
+    <p class="watals__intro">
+      Niet abstract. Niet 'je voelt je beter'. Maar concreet — de momenten die je nu het meeste kosten, voelen dan zo:
+    </p>
+
+    <div class="watals__moments">
+      <div class="watals__moment">
+        <div class="watals__moment-when">'s Ochtends wakker</div>
+        <div class="watals__moment-text">Je eerste gedachte is geen angst. Geen lijst van wat er mis kan gaan. Gewoon: <em>vandaag ga ik dit doen.</em> En je meent het.</div>
+      </div>
+      <div class="watals__moment">
+        <div class="watals__moment-when">Je prijs noemen</div>
+        <div class="watals__moment-text">Je noemt het bedrag. Geen uitleg. Geen verontschuldiging. Je wacht <em>zonder te twijfelen of je het wel waard bent.</em></div>
+      </div>
+      <div class="watals__moment">
+        <div class="watals__moment-when">Nee zeggen</div>
+        <div class="watals__moment-text">Iemand vraagt iets wat niet past. Je zegt nee. <em>Zonder drie dagen later nog na te denken of het wel oké was.</em></div>
+      </div>
+      <div class="watals__moment">
+        <div class="watals__moment-when">Die stem horen</div>
+        <div class="watals__moment-text">"Wie denk jij wel niet dat je bent?" Je denkt: <em>oh jij weer. Ik ken je.</em> En je doet het toch.</div>
+      </div>
+      <div class="watals__moment">
+        <div class="watals__moment-when">De avond</div>
+        <div class="watals__moment-text">Je hebt iets gedaan wat je al tijden voor je uitschoof. Niet perfect. Niet zonder spanning. <em>Maar je hebt het gedaan.</em> En dat voelt als thuiskomen bij jezelf.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- VERSIE BAND -->
 <div class="versie-band">
-  <p class="versie-band__text">
+  <p>
     Er is een versie van jou die anders wakker wordt 's ochtends.<br>
     Die haar prijs noemt zonder verontschuldiging.<br>
-    Die beslissingen neemt vanuit zekerheid.<br>
     Die zegt wat ze denkt. Die <strong>leeft.</strong><br><br>
     Die versie bestaat al. Ze zit in je. Ze wacht.
   </p>
-  <p class="versie-band__sub">En ze wacht op één ding: dat jij de gedachte onderzoekt die haar tegenhoudt.</p>
 </div>
 
 
-<!-- STRIP -->
-<div class="strip">
-  <div class="strip__grid">
-    <div><div class="strip__item__label">Formaat</div><div class="strip__item__val">Altijd 1 op 1</div></div>
-    <div><div class="strip__item__label">Online sessie</div><div class="strip__item__val">60–90 minuten</div></div>
-    <div><div class="strip__item__label">Live dagdeel</div><div class="strip__item__val">2,5–3 uur</div></div>
-    <div><div class="strip__item__label">Methode</div><div class="strip__item__val">De Gedachte Methode</div></div>
-  </div>
-</div>
-
-
-<!-- THOUGHT CARDS -->
-<section class="thoughts">
+<!-- ══ HOE WERKT HET ══ -->
+<section class="hoe" id="hoe">
   <div class="container">
-    <span class="label label--coral">Herken jij dit?</span>
-    <h2 class="section-title">
-      Dit zijn geen feiten.<br>
-      <em>Dit zijn gedachten.</em>
-    </h2>
-
-    <p class="thoughts__intro">
-      Ergens onderweg pik jij een gedachte op en behandel hem als waarheid.
-      Niet bewust. Het gebeurt gewoon. En sindsdien leef je ernaar
-      zonder te checken of hij klopt.
-    </p>
-
-    <div class="thoughts__grid">
-      <div class="thought-card thought-card--coral">
-        <span class="thought-card--area">Zichtbaarheid</span>
-        <p class="thought-card--q">"Mensen gaan me afwijzen als ik echt laat zien wie ik ben."</p>
-        <p class="thought-card--note">Dus je plaatst de post niet. Je maakt hem kleiner. <strong>Geen feit. Een gedachte.</strong></p>
-      </div>
-      <div class="thought-card thought-card--blue">
-        <span class="thought-card--area">Geld</span>
-        <p class="thought-card--q">"Mensen vinden me hebberig als ik meer vraag."</p>
-        <p class="thought-card--note">Dus je noemt de prijs die veilig voelt. <strong>Geen feit. Een gedachte.</strong></p>
-      </div>
-      <div class="thought-card thought-card--gold">
-        <span class="thought-card--area">Grenzen</span>
-        <p class="thought-card--q">"Ik mag niemand teleurstellen."</p>
-        <p class="thought-card--note">Dus je zegt ja terwijl je nee bedoelt. <strong>Geen feit. Een gedachte.</strong></p>
-      </div>
-      <div class="thought-card thought-card--pink">
-        <span class="thought-card--area">Succes</span>
-        <p class="thought-card--q">"Ik ben pas goed genoeg als alles perfect is."</p>
-        <p class="thought-card--note">Dus je wacht. Altijd. <strong>Geen feit. Een gedachte.</strong></p>
-      </div>
-    </div>
-
-    <p class="thoughts__truth">
-      Het gaat nooit over je gedrag.<br>
-      Het gaat over <em>de gedachte voor het gedrag.</em><br>
-      Die gaan we vinden. En testen.
-    </p>
-  </div>
-</section>
-
-
-<!-- HOE ZOU HET ZIJN ALS -->
-<section class="hzvha">
-  <div class="container--wide">
-    <div class="center">
-      <span class="label label--blue">Stel je voor</span>
-      <h2 class="section-title">Hoe zou het zijn<br><em>als…</em></h2>
-    </div>
-    <div class="hzvha__grid">
-      <div class="hzvha__card">
-        <span class="hzvha__eyebrow">Hoe zou het zijn als</span>
-        <p class="hzvha__q">je je prijs noemde zonder verontschuldiging en daarna gewoon zweeg?</p>
-      </div>
-      <div class="hzvha__card">
-        <span class="hzvha__eyebrow">Hoe zou het zijn als</span>
-        <p class="hzvha__q">je 's ochtends wakker werd en dacht: ik weet wat ik doe. En ik wil het echt.</p>
-      </div>
-      <div class="hzvha__card">
-        <span class="hzvha__eyebrow">Hoe zou het zijn als</span>
-        <p class="hzvha__q">die post gewoon live ging en je er trots op was in plaats van bang voor de reactie?</p>
-      </div>
-      <div class="hzvha__card">
-        <span class="hzvha__eyebrow">Hoe zou het zijn als</span>
-        <p class="hzvha__q">je voor jezelf koos niet als uitzondering maar als standaard?</p>
-      </div>
-      <div class="hzvha__card">
-        <span class="hzvha__eyebrow">Hoe zou het zijn als</span>
-        <p class="hzvha__q">de gedachte die jou al jaren tegenhoudt simpelweg niet waar bleek te zijn?</p>
-      </div>
-      <div class="hzvha__card">
-        <span class="hzvha__eyebrow">Hoe zou het zijn als</span>
-        <p class="hzvha__q">je een beslissing nam vanuit wie je werkelijk bent in plaats van vanuit wat veilig lijkt?</p>
-      </div>
-      <div class="hzvha__card hzvha__card--wide">
-        <span class="hzvha__eyebrow">Dat gevoel</span>
-        <p class="hzvha__q">is niet ver weg. Het zit in jou. En het begint bij een gedachte die we gaan ontmaskeren.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- DE GEDACHTE METHODE -->
-<section class="methode" id="de-methode">
-  <div class="container">
-    <span class="label label--gold">De Gedachte Methode</span>
-    <h2 class="section-title">
+    <span class="eyebrow eyebrow--gold">Hoe werkt het</span>
+    <h2>
       Wat we samen<br>
       <em>gaan doen.</em>
     </h2>
-    <p style="font-size:18px;font-weight:300;color:var(--text-soft);">
-      Jij laat zien hoe een gedachte zich vermomt in elke fase van je leven.
-      Van anorexia tot ondernemen, van relaties tot geld.
-      Steeds dezelfde structuur. Altijd dezelfde vraag:
-      welke gedachte veroorzaakt dit gedrag?
+    <p style="color:var(--text-soft);font-size:18px;font-weight:300;margin-bottom:0;">
+      Achter elk vastgelopen gedrag zit een gedachte. Jij laat zien hoe die gedachte zich vermomt in elke fase van je leven. Van anorexia tot ondernemen, van relaties tot geld. Steeds dezelfde structuur. Altijd dezelfde vraag: welke gedachte veroorzaakt dit?
     </p>
 
-    <div class="methode__steps">
-
-      <div class="methode__step">
-        <div class="methode__step-num">01</div>
+    <div class="hoe__steps">
+      <div class="hoe__step">
+        <div class="hoe__step-num">01</div>
         <div>
-          <div class="methode__step-title">Waar loop je vast?</div>
-          <p>We beginnen bij wat je doet of juist niet doet. Welk gedrag zie je terugkomen? Wat stel je uit, wat vermijd je?</p>
-          <div class="methode__step-example">"Ik verkoop niet." &nbsp;·&nbsp; "Ik maak mezelf klein." &nbsp;·&nbsp; "Ik stel het steeds uit."</div>
+          <div class="hoe__step-title">Waar loop je vast?</div>
+          <p>We beginnen bij wat je doet of juist niet doet. Welk gedrag zie je terugkomen?</p>
+          <div class="hoe__example">"Ik verkoop niet." &nbsp;·&nbsp; "Ik maak mezelf klein." &nbsp;·&nbsp; "Ik stel het steeds uit."</div>
         </div>
       </div>
-
-      <div class="methode__step">
-        <div class="methode__step-num">02</div>
+      <div class="hoe__step">
+        <div class="hoe__step-num">02</div>
         <div>
-          <div class="methode__step-title">Welke gedachte zit daaronder?</div>
-          <p>Achter elk vastgelopen gedrag zit een zin die je ooit als feit bent gaan behandelen. Die zin vinden we.</p>
-          <div class="methode__step-example">"Ik ben pas goed genoeg als..." &nbsp;·&nbsp; "Als ik meer vraag, haken ze af." &nbsp;·&nbsp; "Ik mag geen ruimte innemen."</div>
+          <div class="hoe__step-title">Welke gedachte zit daaronder?</div>
+          <p>Achter elk patroon zit een zin die je ooit als feit bent gaan behandelen. Die zin vinden we samen.</p>
+          <div class="hoe__example">"Ik ben pas goed genoeg als..." &nbsp;·&nbsp; "Als ik meer vraag, haken ze af."</div>
         </div>
       </div>
-
-      <div class="methode__step">
-        <div class="methode__step-num">03</div>
+      <div class="hoe__step">
+        <div class="hoe__step-num">03</div>
         <div>
-          <div class="methode__step-title">Is het waar?</div>
-          <p>Nu gaan we de gedachte bevragen. Niet wegredeneren maar echt onderzoeken. Waar heb je bewijs? Waar heb je tegenbewijs? Wie zou jij zijn zonder die gedachte?</p>
-          <div class="methode__step-example">"Wie zou jij zijn zonder die gedachte?" &nbsp;— de vraag die alles verandert.</div>
+          <div class="hoe__step-title">Is het waar?</div>
+          <p>We bevragen de gedachte. Niet wegredeneren maar echt onderzoeken. Wie zou jij zijn zonder die gedachte?</p>
+          <div class="hoe__example">"Wie zou jij zijn zonder die gedachte?" — de vraag die alles verandert.</div>
         </div>
       </div>
-
-      <div class="methode__step">
-        <div class="methode__step-num">04</div>
+      <div class="hoe__step">
+        <div class="hoe__step-num">04</div>
         <div>
-          <div class="methode__step-title">Ga hem testen.</div>
-          <p>Je gaat naar huis met een concreet experiment. Niet tien plannen. Een stap. Met een datum. Die je morgen al zet. Want alleen nieuwe ervaringen geven je brein nieuw bewijs.</p>
+          <div class="hoe__step-title">Een concrete stap.</div>
+          <p>Niet tien plannen. Een stap. Met een datum. Die je morgen al zet. Want alleen nieuwe ervaringen geven je brein nieuw bewijs.</p>
         </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- ZO VOELT HET -->
-<section class="feeling">
-  <div class="container">
-    <span class="label label--coral">Zo voelt het daarna</span>
-    <h2 class="section-title">
-      Je stapt anders<br>
-      <em>naar buiten.</em>
-    </h2>
-
-    <div class="feeling__outcomes">
-      <div class="feeling__outcome">
-        <div class="feeling__outcome-num">01</div>
-        <div class="feeling__outcome-title">Ruimte in je hoofd</div>
-        <div class="feeling__outcome-desc">De ruis valt weg. Niet tijdelijk maar omdat je nu weet hoe je hem zelf stil zet.</div>
-      </div>
-      <div class="feeling__outcome">
-        <div class="feeling__outcome-num">02</div>
-        <div class="feeling__outcome-title">Een nieuw zelfbeeld</div>
-        <div class="feeling__outcome-desc">Je weet wie je bent en wie je wordt. Niet wie je moet zijn voor anderen. Wie jij wil zijn.</div>
-      </div>
-      <div class="feeling__outcome">
-        <div class="feeling__outcome-num">03</div>
-        <div class="feeling__outcome-title">Angst zonder stuur</div>
-        <div class="feeling__outcome-desc">Angst is er nog. Maar hij rijdt niet meer. Jij rijdt. Dat is het grootste verschil dat er is.</div>
-      </div>
-      <div class="feeling__outcome">
-        <div class="feeling__outcome-num">04</div>
-        <div class="feeling__outcome-title">Een concrete stap</div>
-        <div class="feeling__outcome-desc">Niet tien plannen. Een stap. Met een datum. Die je morgen al zet. Echt.</div>
-      </div>
-    </div>
-
-    <p class="feeling__moments-label">En dit is hoe jouw dag er dan uitziet</p>
-
-    <div class="feeling__moments">
-      <div class="feeling__moment">
-        <div class="feeling__moment-when">'s Ochtends wakker</div>
-        <div class="feeling__moment-text">Je eerste gedachte is geen angst meer. Gewoon: <em>vandaag ga ik dit doen.</em> En je meent het ook.</div>
-      </div>
-      <div class="feeling__moment">
-        <div class="feeling__moment-when">Je prijs noemen</div>
-        <div class="feeling__moment-text">Je noemt het bedrag. Geen uitleg. Geen verontschuldiging. Je wacht <em>zonder te twijfelen of je het wel waard bent.</em></div>
-      </div>
-      <div class="feeling__moment">
-        <div class="feeling__moment-when">Een post plaatsen</div>
-        <div class="feeling__moment-text">Je schrijft wat je denkt. Je drukt op publiceren. <em>Je legt je telefoon weg.</em></div>
-      </div>
-      <div class="feeling__moment">
-        <div class="feeling__moment-when">Die stem horen</div>
-        <div class="feeling__moment-text">"Wie denk jij wel niet dat je bent?" Je denkt: <em>oh jij weer. Ik ken je.</em> En je doet het toch.</div>
       </div>
     </div>
   </div>
@@ -457,88 +378,54 @@
 
 <!-- GOLD BAND -->
 <div class="gold-band">
-  <p class="gold-band__text">
-    "Spiegels verkopen beter dan verhalen.<br>
-    Want verhalen bewonder je.<br>
-    Spiegels veranderen je."
-  </p>
-  <p class="gold-band__attr">— Anouk Kievit</p>
+  <p>"Spiegels verkopen beter dan verhalen.<br>Want verhalen bewonder je. Spiegels veranderen je."</p>
+  <span>— Anouk Kievit</span>
 </div>
 
 
-<!-- VOOR WIE -->
-<section class="for-who" style="background: var(--white);">
-  <div class="container">
-    <span class="label label--coral">Is dit voor jou?</span>
-    <h2 class="section-title">
-      Dit is niet voor iedereen.<br>
-      <em>Maar misschien wel voor jou.</em>
-    </h2>
-    <ul class="for-who__list">
-      <li>Je zorgt uitstekend voor iedereen om je heen. Alleen niet zo goed voor jezelf.</li>
-      <li>Je hoofd staat nooit echt uit. Ook niet als je 'ontspant'.</li>
-      <li>Je weet wat je wilt. Maar de twijfel wint het altijd.</li>
-      <li>Je bent klaar met wachten op het juiste moment. Dat moment komt niet vanzelf.</li>
-      <li>Je voelt dat er iets groters op je wacht. En je bent eindelijk bereid het te gaan halen.</li>
-    </ul>
-    <p style="color:var(--text-soft);">Herken je iets? Dan is dit jouw moment.</p>
-  </div>
-</section>
-
-
-<!-- PRICING -->
+<!-- ══ PRICING ══ -->
 <section class="pricing" id="investering">
   <div class="container--wide">
-    <div class="center">
-      <span class="label label--coral">Jouw investering</span>
-      <h2 class="section-title">
-        Stop met overdenken.<br>
-        <em>Start met kiezen.</em>
-      </h2>
-    </div>
-
-    <div class="pricing__intro">
-      <p>Twee manieren. Gericht op hetzelfde: jij die door je angst heen loopt. Jij kiest wat bij jou past.</p>
+    <div class="pricing__intro center">
+      <span class="eyebrow eyebrow--coral">Jouw investering</span>
+      <h2>Stop met overdenken.<br><em>Start met kiezen.</em></h2>
+      <p>Twee opties. Gericht op hetzelfde: jij die door je angst heen loopt.</p>
     </div>
 
     <div class="pricing__cards">
 
       <div class="price-card">
-        <div class="price-card__type">Online · 60–90 minuten</div>
+        <div class="price-card__type">Online sessie</div>
         <div class="price-card__name">De Doorbraak Sessie</div>
         <div class="price-card__tagline">
-          We vinden de gedachte die jou tegenhoudt,
-          onderzoeken of hij klopt, en bepalen jouw eerste stap.
-          Concreet. Direct. Diep.
+          We vinden de gedachte die jou tegenhoudt, onderzoeken of hij klopt en bepalen jouw eerste stap. Concreet. Direct. Diep.
         </div>
         <div class="price-card__price">€175</div>
         <div class="price-card__note">60–90 minuten · online · datum flexibel</div>
         <ul class="price-card__includes">
-          <li>1:1 online met Anouk</li>
-          <li>De Gedachte Methode: alle 4 stappen</li>
+          <li>Online sessie met Anouk</li>
           <li>Jouw gedachte gevonden en onderzocht</li>
           <li>Een concreet experiment als vertrekpunt</li>
+          <li>Datum flexibel in te plannen</li>
         </ul>
         <a href="#contact" class="btn btn--blue">Ik boek de sessie</a>
       </div>
 
       <div class="price-card price-card--featured">
         <div class="price-card__badge">Meest diepgaand</div>
-        <div class="price-card__type">Live · halve dag</div>
+        <div class="price-card__type">Live dagdeel</div>
         <div class="price-card__name">De Doorbraak Dag</div>
         <div class="price-card__tagline">
-          2,5 tot 3 uur live. Alleen jij en Anouk.
-          De ruimte en diepgang die een call niet kan bieden.
-          Hier gebeurt de echte verschuiving.
+          2,5 tot 3 uur live. De ruimte en diepgang die een online sessie niet kan bieden. Hier gebeurt de echte verschuiving.
         </div>
         <div class="price-card__price">€425</div>
         <div class="price-card__note">2,5–3 uur live · op maat · ochtend of middag</div>
         <ul class="price-card__includes">
-          <li>1:1 live met Anouk</li>
-          <li>De Gedachte Methode: alle 4 stappen</li>
+          <li>Live dagdeel met Anouk</li>
           <li>Lichamelijk en mentaal werk</li>
           <li>Persoonlijk werkboek</li>
-          <li>Concreet 90-dagen experiment als afsluiter</li>
+          <li>Concreet 90-dagen experiment</li>
+          <li>Ochtend of middag, naar keuze</li>
         </ul>
         <a href="#contact" class="btn btn--coral">Ik boek de dag</a>
       </div>
@@ -548,18 +435,18 @@
 </section>
 
 
-<!-- ABOUT -->
+<!-- ══ ABOUT ══ -->
 <section class="about">
   <div class="container--wide">
     <div class="about__inner">
       <div class="about__photo">
         <div class="about__photo-placeholder">[ foto Anouk ]</div>
       </div>
-      <div class="about__text">
-        <span class="label">Even voorstellen</span>
-        <h2 class="section-title">Hoi,<br>ik ben <em>Anouk.</em></h2>
+      <div>
+        <span class="eyebrow eyebrow--coral">Even voorstellen</span>
+        <h2>Hoi,<br>ik ben <em>Anouk.</em></h2>
         <p>Ik weet hoe het voelt om te weten dat er meer in zit en het toch niet te doen. Jarenlang liet ik angst bepalen wat ik wel en niet durfde. Niet omdat ik het niet zag. Maar omdat het veiliger leek om te blijven waar ik was.</p>
-        <p>Tot ik ontdekte dat vrijheid geen kwestie is van de juiste omstandigheden. Vrijheid ontstaat op het moment dat je anders leert omgaan met wat er in je hoofd gebeurt. Dat klinkt simpel. Het is het niet. Maar het is mogelijk.</p>
+        <p>Tot ik ontdekte dat vrijheid geen kwestie is van de juiste omstandigheden. Vrijheid ontstaat op het moment dat je anders leert omgaan met wat er in je hoofd gebeurt.</p>
 
         <div class="about__pullquote">
           Sindsdien laat een vraag me niet meer los:<br>
@@ -567,25 +454,26 @@
         </div>
 
         <p>Ik werk met mensen die klaar zijn om dat eerlijk onder ogen te komen. Met echte ruimte, echte stilte en een spiegel die niet liegt.</p>
+        <p style="margin-top:28px;"><a href="#investering" class="btn btn--coral">Boek jouw plek</a></p>
       </div>
     </div>
   </div>
 </section>
 
 
-<!-- FAQ -->
+<!-- ══ FAQ ══ -->
 <section class="faq">
   <div class="container">
-    <span class="label label--blue">Vragen</span>
-    <h2 class="section-title">Misschien vraag<br><em>jij je af…</em></h2>
+    <span class="eyebrow eyebrow--blue">Vragen</span>
+    <h2>Misschien vraag<br><em>jij je af…</em></h2>
 
     <div class="faq__item">
       <div class="faq__q">Sessie of dag — hoe weet ik wat bij mij past?</div>
-      <div class="faq__a">De sessie is direct en krachtig. De dag biedt meer ruimte voor wat meer tijd nodig heeft om te landen. Als je twijfelt: kies de dag.</div>
+      <div class="faq__a">De sessie is direct en krachtig. De dag biedt meer ruimte voor wat meer tijd nodig heeft om echt te landen. Als je twijfelt: kies de dag.</div>
     </div>
     <div class="faq__item">
-      <div class="faq__q">Wat als ik niet weet welke gedachte mij tegenhoudt?</div>
-      <div class="faq__a">Dat is precies waar we samen mee beginnen. Je hoeft hem niet te kennen — alleen eerlijk te zijn over waar je vastloopt.</div>
+      <div class="faq__q">Wat als ik niet weet wat mij tegenhoudt?</div>
+      <div class="faq__a">Dat is precies waar we samen mee beginnen. Je hoeft het niet te kennen, alleen eerlijk te zijn over waar je vastloopt.</div>
     </div>
     <div class="faq__item">
       <div class="faq__q">Wat als ik me er nog niet klaar voor voel?</div>
@@ -599,18 +487,15 @@
 </section>
 
 
-<!-- FINAL CTA -->
+<!-- ══ FINAL CTA ══ -->
 <section class="final-cta" id="contact">
   <div class="container">
-    <h2 class="section-title">
-      Na een gesprek kijk je<br>
-      <em>nooit meer hetzelfde naar jezelf.</em>
-    </h2>
+    <h2>Na een gesprek kijk je nooit<br>meer hetzelfde naar <em>jezelf.</em></h2>
     <p>
-      De gedachte die jou tegenhoudt is geen feit.<br>
-      Het is tijd om hem te ontmaskeren.
+      Succesvolle mensen zijn niet minder bang.<br>
+      Ze zijn alleen minder gehoorzaam aan hun angst.
     </p>
-    <a href="mailto:hallo@anoukkievit.nl" class="btn btn--coral">Ja, ik wil mijn doorbraak →</a>
+    <a href="mailto:hallo@anoukkievit.nl" class="btn btn--white-solid">Ja, ik wil mijn doorbraak →</a>
   </div>
 </section>
 
