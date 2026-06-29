@@ -118,12 +118,12 @@
     .band__attr  { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; display: block; margin-top: 16px; }
 
     /* ═══ VERLANGEN ═══ */
-    .verlangen { background: var(--blue); padding: 100px 0; }
+    .verlangen { background: var(--white); padding: 100px 0; }
     .verlangen__header { text-align: center; max-width: 640px; margin: 0 auto 72px; }
-    .verlangen__header p { font-size: 17px; color: rgba(255,255,255,.85); line-height: 1.8; }
-    .verlangen__header h2 { color: #fff; font-size: clamp(52px, 10vw, 130px); text-transform: uppercase; letter-spacing: -1px; font-weight: 300; line-height: 1; }
-    .verlangen__header .eyebrow { color: rgba(255,255,255,.65); }
-    .verlangen__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(255,255,255,.25); border: 1px solid rgba(255,255,255,.25); }
+    .verlangen__header p { font-size: 17px; color: var(--soft); line-height: 1.8; }
+    .verlangen__header h2 { color: var(--text); font-size: clamp(52px, 10vw, 130px); text-transform: uppercase; letter-spacing: -1px; font-weight: 300; line-height: 1; }
+    .verlangen__header .eyebrow { color: var(--blue); }
+    .verlangen__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); }
     @media (max-width:640px) { .verlangen__grid { grid-template-columns: 1fr; } }
     .verlangen__card { background: var(--white); padding: 48px 44px; }
     .verlangen__card:nth-child(odd) { background: var(--off); }
@@ -151,16 +151,16 @@
     .watals__copy p { font-size: 15px; color: var(--soft); line-height: 1.8; }
 
     /* ═══ VERSIE BAND ═══ */
-    .versie { background: var(--purple); padding: 96px 40px; }
+    .versie { background: var(--cream); padding: 96px 40px; }
     .versie__inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; max-width: 1100px; margin: 0 auto; }
     @media (max-width:760px) { .versie__inner { grid-template-columns: 1fr; gap: 40px; } }
     .versie__photo { border-radius: 2px; overflow: hidden; }
     .versie__photo img { height: 560px; border-radius: 2px; }
-    .versie__text .eyebrow { color: rgba(255,255,255,.55); }
-    .versie__text h2 { color: #fff; margin-bottom: 24px; }
-    .versie__text h2 em { color: var(--pink); }
-    .versie__text p { font-size: 16px; color: rgba(255,255,255,.8); line-height: 1.85; margin-bottom: 16px; }
-    .versie__quote { border-left: 2px solid rgba(255,255,255,.35); padding-left: 20px; margin: 28px 0; font-family: 'Cormorant Garamond', serif; font-size: 22px; font-style: italic; color: #fff; line-height: 1.45; }
+    .versie__text .eyebrow { color: var(--coral); }
+    .versie__text h2 { color: var(--text); margin-bottom: 24px; }
+    .versie__text h2 em { color: var(--blue); }
+    .versie__text p { font-size: 16px; color: var(--soft); line-height: 1.85; margin-bottom: 16px; }
+    .versie__quote { border-left: 2px solid var(--coral); padding-left: 20px; margin: 28px 0; font-family: 'Cormorant Garamond', serif; font-size: 22px; font-style: italic; color: var(--text); line-height: 1.45; }
 
     /* ═══ VOOR WIE ═══ */
     .voor-wie { background: var(--cream); padding: 100px 0; }
@@ -223,7 +223,7 @@
     .final-cta__content p { font-size: 17px; color: rgba(255,255,255,.8); max-width: 460px; margin: 0 auto 44px; line-height: 1.75; font-weight: 300; }
 
     /* ═══ INZICHT SECTIE ═══ */
-    .inzicht { background: var(--pink); padding: 96px 40px; text-align: center; }
+    .inzicht { background: var(--off); padding: 96px 40px; text-align: center; }
     .inzicht__inner { max-width: 760px; margin: 0 auto; }
     .inzicht__body { font-family: 'Cormorant Garamond', serif; font-size: clamp(22px, 3vw, 34px); font-weight: 300; line-height: 1.65; color: var(--text); margin-bottom: 32px; }
     .inzicht__body em { font-style: italic; color: var(--coral); }
@@ -458,7 +458,7 @@
         Die versie bestaat al.<br>Ze zit in je. Ze wacht.
       </div>
       <p>En ze wacht op één ding: dat jij de gedachte onderzoekt die haar tegenhoudt.</p>
-      <p style="margin-top:32px;"><a href="#investering" class="btn btn--outline-white">Ik wil mijn doorbraak →</a></p>
+      <p style="margin-top:32px;"><a href="#investering" class="btn btn--coral">Ik wil mijn doorbraak →</a></p>
     </div>
   </div>
 </section>
