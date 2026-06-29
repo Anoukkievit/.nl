@@ -50,8 +50,8 @@
 
     /* BUTTONS */
     .btn { display: inline-block; padding: 16px 40px; font-family: 'Jost', sans-serif; font-size: 10px; letter-spacing: 3px; text-transform: uppercase; font-weight: 600; text-decoration: none; transition: all .2s ease; cursor: pointer; border: none; border-radius: 2px; }
-    .btn--coral { background: var(--blue); color: #fff; }
-    .btn--coral:hover { background: var(--blue-d); transform: translateY(-2px); }
+    .btn--coral { background: var(--coral); color: #fff; }
+    .btn--coral:hover { background: var(--coral-d); transform: translateY(-2px); }
     .btn--pink { background: var(--pink); color: var(--text); }
     .btn--pink:hover { background: #C498BA; }
     .btn--outline-dark { background: transparent; border: 1.5px solid var(--text); color: var(--text); }
@@ -60,7 +60,7 @@
     .btn--outline-white:hover { background: rgba(255,255,255,.15); }
 
     /* ═══ URGENCY ═══ */
-    .urgency { background: var(--blue); color: #fff; text-align: center; padding: 11px 20px; font-size: 10px; letter-spacing: 3px; text-transform: uppercase; font-weight: 600; }
+    .urgency { background: var(--coral); color: #fff; text-align: center; padding: 11px 20px; font-size: 10px; letter-spacing: 3px; text-transform: uppercase; font-weight: 600; }
 
     /* ═══ HERO — full bleed photo ═══ */
     .hero { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; }
@@ -69,7 +69,7 @@
     .hero__content { position: relative; z-index: 1; padding: 80px 40px; max-width: 900px; }
     .hero__pretitle { font-size: 10px; letter-spacing: 5px; text-transform: uppercase; color: rgba(255,255,255,.7); font-weight: 500; margin-bottom: 28px; display: block; }
     .hero__h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(42px, 7.5vw, 96px); font-weight: 300; line-height: 1.05; color: #fff; margin-bottom: 32px; }
-    .hero__h1 em { font-style: italic; color: var(--pink); }
+    .hero__h1 em { font-style: italic; color: var(--coral); }
     .hero__sub { font-family: 'Cormorant Garamond', serif; font-size: clamp(18px, 2.5vw, 26px); font-style: italic; font-weight: 300; color: rgba(255,255,255,.85); max-width: 560px; margin: 0 auto 52px; line-height: 1.55; }
     .hero__ctas { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 
@@ -221,7 +221,7 @@
     .inzicht__vraag { font-family: 'Cormorant Garamond', serif; font-size: clamp(26px, 3.5vw, 42px); font-style: italic; font-weight: 300; color: var(--text); line-height: 1.4; border-top: 1px solid var(--line); padding-top: 36px; margin-top: 8px; }
 
     /* ═══ FOOTER ═══ */
-    footer { background: var(--blue); color: rgba(255,255,255,.7); text-align: center; padding: 18px 28px; font-size: 11px; letter-spacing: 1.5px; }
+    footer { background: var(--coral); color: rgba(255,255,255,.7); text-align: center; padding: 18px 28px; font-size: 11px; letter-spacing: 1.5px; }
     footer a { color: #fff; text-decoration: none; }
     </style>
   <?php wp_head(); ?>
@@ -318,7 +318,7 @@
 
 
 <!-- CORAL BAND -->
-<div class="band band--blue">
+<div class="band band--coral">
   <p class="band__text">"We leven niet vanuit de werkelijkheid.<br>We leven vanuit wat we geloven."</p>
   <cite class="band__attr">Anouk Kievit</cite>
 </div>
