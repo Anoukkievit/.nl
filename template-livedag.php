@@ -158,7 +158,7 @@ get_header(); ?>
     .versie__quote { border-left: 2px solid rgba(255,255,255,.4); padding-left: 20px; margin: 28px 0; font-family: 'Cormorant Garamond', serif; font-size: 22px; font-style: italic; color: rgba(255,255,255,.9); line-height: 1.45; }
 
     /* ═══ VOOR WIE ═══ */
-    .voor-wie { background: var(--cream); padding: 100px 0; }
+    .voor-wie { background: var(--white); padding: 100px 0; }
     .voor-wie__inner { display: grid; grid-template-columns: 1fr 2fr; gap: 80px; align-items: start; }
     @media (max-width:760px) { .voor-wie__inner { grid-template-columns: 1fr; gap: 40px; } }
     .voor-wie__list { list-style: none; }
@@ -191,8 +191,8 @@ get_header(); ?>
     @media (max-width:740px) { .about__inner { grid-template-columns: 1fr; gap: 48px; } }
     .about__photo { position: relative; display: flex; align-items: center; justify-content: center; }
     .about__circles { position: relative; width: 420px; height: 420px; flex-shrink: 0; margin: 0 auto; }
-    .about__circles::before { content: ''; position: absolute; width: 340px; height: 340px; border-radius: 50%; background: var(--purple); bottom: 0; left: 0; z-index: 0; }
-    .about__circles::after  { content: ''; position: absolute; width: 220px; height: 220px; border-radius: 50%; background: var(--pink); top: 0; right: 20px; z-index: 0; }
+    .about__circles::before { content: none; }
+    .about__circles::after  { content: none; }
     .about__circle-img { position: absolute; inset: 0; margin: auto; width: 300px; height: 300px; border-radius: 50%; overflow: hidden; z-index: 1; border: 4px solid var(--white); }
     .about__circle-img img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
     @media (max-width:740px) { .about__circles { width: 300px; height: 300px; } .about__circles::before { width: 240px; height: 240px; } .about__circles::after { width: 160px; height: 160px; } .about__circle-img { width: 220px; height: 220px; } }
@@ -200,7 +200,7 @@ get_header(); ?>
     .about__pullquote { border-left: 3px solid var(--coral); padding-left: 22px; margin: 28px 0; font-family: 'Cormorant Garamond', serif; font-size: 22px; font-style: italic; color: var(--text); line-height: 1.45; }
 
     /* ═══ FAQ ═══ */
-    .faq { background: var(--off); padding: 100px 0; }
+    .faq { background: var(--white); padding: 100px 0; }
     .faq__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 80px; }
     @media (max-width:700px) { .faq__grid { grid-template-columns: 1fr; } }
     .faq__item { padding: 24px 0; border-bottom: 1px solid var(--line); }
