@@ -58,7 +58,7 @@ get_header(); ?>
 
     /* ═══ HERO — full bleed photo ═══ */
     .hero { position: relative; min-height: 92vh; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; background: var(--white); }
-    .hero__bg { position: absolute; inset: 0; background: url('https://anoukkievit.nl/wp-content/uploads/2026/06/Anouk-Kievit_Kramer-Fotografeert-0744.jpg') center center / cover no-repeat; opacity: 0; transition: opacity .5s; }
+    .hero__bg { position: absolute; inset: 0; background: url('https://anoukkievit.nl/wp-content/uploads/2026/06/Anouk-Kievit_Kramer-Fotografeert-0869.jpg') center center / cover no-repeat; opacity: 0; transition: opacity .5s; }
     .hero__bg.loaded { opacity: 1; }
     .hero__bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(20,15,10,.5) 0%, rgba(20,15,10,.6) 100%); }
     .hero__content { position: relative; z-index: 1; padding: 80px 40px; max-width: 900px; }
@@ -190,12 +190,12 @@ get_header(); ?>
     .about__inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
     @media (max-width:740px) { .about__inner { grid-template-columns: 1fr; gap: 48px; } }
     .about__photo { position: relative; display: flex; align-items: center; justify-content: center; }
-    .about__circles { position: relative; width: 420px; height: 420px; flex-shrink: 0; margin: 0 auto; }
+    .about__circles { position: relative; width: 420px; height: 520px; flex-shrink: 0; margin: 0 auto; }
     .about__circles::before { content: none; }
     .about__circles::after  { content: none; }
-    .about__circle-img { position: absolute; inset: 0; margin: auto; width: 300px; height: 300px; border-radius: 50%; overflow: hidden; z-index: 1; border: 4px solid var(--white); }
-    .about__circle-img img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
-    @media (max-width:740px) { .about__circles { width: 300px; height: 300px; } .about__circles::before { width: 240px; height: 240px; } .about__circles::after { width: 160px; height: 160px; } .about__circle-img { width: 220px; height: 220px; } }
+    .about__circle-img { position: absolute; inset: 0; margin: auto; width: 380px; height: 480px; border-radius: 4px; overflow: hidden; z-index: 1; }
+    .about__circle-img img { width: 100%; height: 100%; object-fit: cover; border-radius: 4px; }
+    @media (max-width:740px) { .about__circles { width: 100%; height: 380px; } .about__circle-img { width: 100%; height: 360px; } }
     .about__text p { font-size: 16px; color: var(--soft); line-height: 1.85; }
     .about__pullquote { border-left: 3px solid var(--coral); padding-left: 22px; margin: 28px 0; font-family: 'Cormorant Garamond', serif; font-size: 22px; font-style: italic; color: var(--text); line-height: 1.45; }
 
@@ -210,7 +210,7 @@ get_header(); ?>
 
     /* ═══ FINAL CTA — photo bg ═══ */
     .final-cta { position: relative; min-height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; }
-    .final-cta__bg { position: absolute; inset: 0; background: url('https://anoukkievit.nl/wp-content/uploads/2026/06/Anouk-Kievit_Kramer-Fotografeert-0869.jpg') center 20% / cover no-repeat; }
+    .final-cta__bg { position: absolute; inset: 0; background: url('https://anoukkievit.nl/wp-content/uploads/2026/06/Anouk-Kievit_Kramer-Fotografeert-0744.jpg') center 20% / cover no-repeat; }
     .final-cta__bg::after { content: ''; position: absolute; inset: 0; background: rgba(15,10,5,.6); }
     .final-cta__content { position: relative; z-index: 1; padding: 80px 40px; max-width: 760px; }
     .final-cta__content h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(44px, 8vw, 96px); font-weight: 300; line-height: 1.05; color: #fff; margin-bottom: 24px; }
@@ -242,7 +242,7 @@ get_header(); ?>
       bg.classList.add('loaded');
       content.classList.add('hero--photo');
     };
-    img.src = 'https://anoukkievit.nl/wp-content/uploads/2026/06/Anouk-Kievit_Kramer-Fotografeert-0744.jpg';
+    img.src = 'https://anoukkievit.nl/wp-content/uploads/2026/06/Anouk-Kievit_Kramer-Fotografeert-0869.jpg';
   });
 })();
 </script>
