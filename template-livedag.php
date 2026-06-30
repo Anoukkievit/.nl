@@ -326,6 +326,7 @@
       En het heeft niets te maken met strategie, mindset of discipline. Na één gesprek zie je het. En daarna is er geen weg terug.
     </p>
     <div class="hero__ctas">
+      <a href="#investering" class="btn btn--pink">Dit wil ik →</a>
       <a href="#verlangen" class="btn btn--outline-white">Wat is er mogelijk?</a>
     </div>
   </div>
