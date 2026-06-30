@@ -1,4 +1,4 @@
-<?php
+<?php /* Template Name: Livedag */ ?>
 <!DOCTYPE html>
 <html lang="nl">
 <head>
