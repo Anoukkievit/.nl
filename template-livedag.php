@@ -60,7 +60,7 @@
 
     /* ═══ HERO — fullbleed foto ═══ */
     .hero { position: relative; min-height: 92vh; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; }
-    .hero__bg { position: absolute; inset: 0; background: url('https://anoukkievit.nl/wp-content/uploads/2026/06/Anouk-Kievit_Kramer-Fotografeert-0869.jpg') center top / cover no-repeat; opacity: 0; transition: opacity .5s; }
+    .hero__bg { position: absolute; inset: 0; background: url('https://anoukkievit.nl/wp-content/uploads/2026/06/Anouk-Kievit_Kramer-Fotografeert-0760.jpg') center top / cover no-repeat; opacity: 0; transition: opacity .5s; }
     .hero__bg.loaded { opacity: 1; }
     .hero__bg::after { content: ''; position: absolute; inset: 0; background: rgba(10,8,6,.65); }
     .hero__content { position: relative; z-index: 1; padding: 80px 40px; display: flex; flex-direction: column; align-items: center; text-align: center; max-width: 860px; }
