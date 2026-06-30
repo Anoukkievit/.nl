@@ -56,19 +56,20 @@ get_header(); ?>
     /* ═══ URGENCY ═══ */
     .urgency { background: var(--coral); color: #fff; text-align: center; padding: 11px 20px; font-size: 10px; letter-spacing: 3px; text-transform: uppercase; font-weight: 600; }
 
-    /* ═══ HERO — full bleed photo ═══ */
-    .hero { position: relative; min-height: 92vh; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; background: var(--white); }
-    .hero__bg { position: absolute; inset: 0; background: url('https://anoukkievit.nl/wp-content/uploads/2026/06/Anouk-Kievit_Kramer-Fotografeert-0869.jpg') center center / 75% auto no-repeat; opacity: 0; transition: opacity .5s; }
+    /* ═══ HERO — split layout ═══ */
+    .hero { position: relative; min-height: 92vh; display: grid; grid-template-columns: 1fr 1fr; overflow: hidden; background: var(--white); }
+    .hero__bg { position: relative; background: url('https://anoukkievit.nl/wp-content/uploads/2026/06/Anouk-Kievit_Kramer-Fotografeert-0869.jpg') center 15% / cover no-repeat; opacity: 0; transition: opacity .5s; min-height: 92vh; }
     .hero__bg.loaded { opacity: 1; }
-    .hero__bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10,8,5,.65) 0%, rgba(10,8,5,.75) 100%); }
-    .hero__content { position: relative; z-index: 1; padding: 80px 40px; max-width: 900px; }
-    .hero__pretitle { font-size: 10px; letter-spacing: 5px; text-transform: uppercase; color: rgba(255,255,255,.75); font-weight: 600; margin-bottom: 28px; display: block; }
+    .hero__bg::after { content: none; }
+    .hero__content { position: relative; z-index: 1; padding: 80px 56px; background: var(--purple); display: flex; flex-direction: column; justify-content: center; text-align: left; max-width: none; }
+    .hero__pretitle { font-size: 10px; letter-spacing: 5px; text-transform: uppercase; color: rgba(255,255,255,.6); font-weight: 600; margin-bottom: 28px; display: block; }
     .script { font-family: 'Dancing Script', cursive; font-size: 1.4em; font-weight: 700; display: inline-block; line-height: 1; vertical-align: middle; }
     .about__sig { font-size: 11px; letter-spacing: 4px; text-transform: uppercase; font-weight: 600; color: var(--coral); margin-bottom: 16px; display: block; }
-    .hero__h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(42px, 7.5vw, 96px); font-weight: 300; line-height: 1.05; color: #fff; margin-bottom: 32px; }
+    .hero__h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 5vw, 72px); font-weight: 300; line-height: 1.05; color: #fff; margin-bottom: 32px; }
     .hero__h1 em { font-style: italic; color: var(--pink); }
-    .hero__sub { font-family: 'Cormorant Garamond', serif; font-size: clamp(18px, 2.5vw, 26px); font-style: italic; font-weight: 300; color: rgba(255,255,255,.85); max-width: 560px; margin: 0 auto 52px; line-height: 1.55; }
-    .hero__ctas { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .hero__sub { font-family: 'Cormorant Garamond', serif; font-size: clamp(16px, 1.8vw, 22px); font-style: italic; font-weight: 300; color: rgba(255,255,255,.85); max-width: 420px; margin: 0 0 52px; line-height: 1.55; }
+    .hero__ctas { display: flex; gap: 14px; flex-wrap: wrap; }
+    @media (max-width:780px) { .hero { grid-template-columns: 1fr; } .hero__bg { min-height: 50vh; order: -1; } .hero__content { padding: 56px 32px; } }
 
     /* ═══ STRIP ═══ */
     .strip { background: var(--white); border-bottom: 1px solid var(--line); padding: 24px 40px; }
@@ -252,12 +253,8 @@ get_header(); ?>
   .hero.has-photo .hero__h1 { color: #fff; }
   .hero.has-photo .hero__sub { color: rgba(255,255,255,.85); }
 </style>
-<div class="urgency">✦ &nbsp; Nog maar een paar plekken beschikbaar &nbsp; ✦</div>
-
-
 <!-- ═══ HERO ═══ -->
 <section class="hero">
-  <div class="hero__bg"></div>
   <div class="hero__content">
     <span class="hero__pretitle">Anouk Kievit</span>
     <h1 class="hero__h1">
@@ -272,6 +269,7 @@ get_header(); ?>
       <a href="#verlangen" class="btn btn--outline-white">Wat is er mogelijk?</a>
     </div>
   </div>
+  <div class="hero__bg"></div>
 </section>
 
 <div class="strip">
