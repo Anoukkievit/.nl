@@ -597,7 +597,7 @@
         </div>
         <div class="faq__item">
           <div class="faq__q">Is er ook een optie voor langdurige samenwerking?</div>
-          <div class="faq__a">Ja — voor wie na de sessie verder wil gaan, is er de mogelijkheid om samen een traject aan te gaan. Ik ben hierin selectief: niet omdat ik moeilijk wil doen, maar omdat goede begeleiding vraagt om een echte klik. Daarom begin ik altijd met een gratis kennismakingsgesprek. Zonder agenda, zonder druk. Gewoon even voelen of het past. <a href="https://calendly.com/anoukkievit/strategiesessie" style="color:var(--coral);text-decoration:none;font-weight:600;">Plan hier jouw gratis gesprek →</a></div>
+          <div class="faq__a">Ja — voor wie na de sessie verder wil gaan, is er de mogelijkheid om samen een traject aan te gaan. Ik ben hierin selectief: niet omdat ik moeilijk wil doen, maar omdat goede begeleiding vraagt om een echte klik. Daarom begin ik altijd met een gratis kennismakingsgesprek. Zonder agenda, zonder druk. Gewoon even voelen of het past. <a href="https://calendly.com/anoukkievit/call" style="color:var(--coral);text-decoration:none;font-weight:600;">Plan hier jouw gratis gesprek →</a></div>
         </div>
       </div>
     </div>
