@@ -66,7 +66,7 @@ get_header(); ?>
     .script { font-family: 'Dancing Script', cursive; font-size: 1.4em; font-weight: 700; display: inline-block; line-height: 1; vertical-align: middle; }
     .about__sig { font-size: 11px; letter-spacing: 4px; text-transform: uppercase; font-weight: 600; color: var(--coral); margin-bottom: 16px; display: block; }
     .hero__h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(42px, 7.5vw, 96px); font-weight: 300; line-height: 1.05; color: var(--text); margin-bottom: 32px; }
-    .hero__h1 em { font-style: italic; color: var(--coral); }
+    .hero__h1 em { font-style: italic; color: var(--blue); }
     .hero__sub { font-family: 'Cormorant Garamond', serif; font-size: clamp(18px, 2.5vw, 26px); font-style: italic; font-weight: 300; color: var(--soft); max-width: 560px; margin: 0 auto 52px; line-height: 1.55; }
     .hero__ctas { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 
@@ -268,7 +268,7 @@ get_header(); ?>
       En het heeft niets te maken met strategie, mindset of discipline. Na één gesprek zie je het. En daarna is er geen weg terug.
     </p>
     <div class="hero__ctas">
-      <a href="#investering" class="btn btn--coral">Dit wil ik →</a>
+      <a href="#investering" class="btn btn--pink">Dit wil ik →</a>
       <a href="#verlangen" class="btn btn--outline-dark">Wat is er mogelijk?</a>
     </div>
   </div>
