@@ -261,11 +261,11 @@ get_header(); ?>
   <div class="hero__content">
     <span class="hero__pretitle">Anouk Kievit</span>
     <h1 class="hero__h1">
-      Je leeft niet vanuit je leven.<br>Je leeft vanuit wat je<br>
-      <em>bent gaan geloven.</em>
+      Er is één ding dat al<br>jouw pogingen steeds<br>
+      <em>weer ondermijnt.</em>
     </h1>
     <p class="hero__sub">
-      Ergens in jou zit een overtuiging die jij als de waarheid bent gaan leven. Die overtuiging stuurt alles. Elke keuze, elke aarzeling, elk moment dat je je inhoudt. En hij is nooit onderzocht.
+      En het heeft niets te maken met strategie, mindset of discipline. Na één gesprek zie je het. En daarna is er geen weg terug.
     </p>
     <div class="hero__ctas">
       <a href="#investering" class="btn btn--coral">Dit wil ik →</a>
@@ -278,7 +278,7 @@ get_header(); ?>
   <div class="strip__grid">
     <div class="strip__item"><div class="strip__label">Formaat</div><div class="strip__val">Online of live</div></div>
     <div class="strip__item"><div class="strip__label">Duur</div><div class="strip__val">60 min of halve dag</div></div>
-    <div class="strip__item"><div class="strip__label">Locatie</div><div class="strip__val">Overal of bij jou</div></div>
+    <div class="strip__item"><div class="strip__label">Locatie</div><div class="strip__val">Bij mij op locatie</div></div>
     <div class="strip__item"><div class="strip__label">Focus</div><div class="strip__val">Jouw doorbraak</div></div>
   </div>
 </div>
@@ -297,41 +297,41 @@ get_header(); ?>
         <span class="eyebrow eyebrow--coral">Herken jij dit</span>
         <h2>Je hebt het echt<br><em>niet nagelaten.</em></h2>
         <p class="pijn__intro">
-          Je hebt gelezen, gewerkt, geprobeerd. Er waren momenten waarop je dacht: nu snap ik het. Totdat je een week later precies hetzelfde deed. Niet omdat jij faalt. Maar omdat niemand je heeft laten zien wat er werkelijk onder zit.
+          Je hebt boeken gelezen, cursussen gekocht, coaches gehad. Er waren momenten dat je dacht: dit is het. Dit werkt. Totdat je een maand later precies hetzelfde deed als altijd.
         </p>
 
         <ul class="pijn__list">
           <li>
             <span class="pijn__list-num">01</span>
-            <div class="pijn__list-title">"Ik ben er nog niet klaar voor."</div>
-            <div class="pijn__list-body">Geen feit. Maar je hebt er wel elke beslissing op gebaseerd. Wanneer je begon. Wat je vroeg. Of je jezelf liet zien. Die ene zin heeft meer bepaald dan welke strategie dan ook.</div>
+            <div class="pijn__list-title">Je hebt je strategie veranderd. Meerdere keren.</div>
+            <div class="pijn__list-body">Nieuwe niche. Andere doelgroep. Andere boodschap. Elke keer een frisse start. Tot je merkte dat je hetzelfde patroon meeneemt, ongeacht de strategie.</div>
           </li>
           <li>
             <span class="pijn__list-num">02</span>
-            <div class="pijn__list-title">"Als ik mezelf echt laat zien, gaan ze me afwijzen."</div>
-            <div class="pijn__list-body">Dus hield je een deel van jezelf achter. In je content, in je aanbod, in hoe je sprak over wat je doet. Niet uit keuze. Maar vanuit een overtuiging die zich voordeed als voorzichtigheid.</div>
+            <div class="pijn__list-title">Je hebt een business coach gehad.</div>
+            <div class="pijn__list-body">Systemen, structuur, aanbod aangescherpt. De buitenkant klopte. Maar vanbinnen voelde je nog steeds die rem. Die coach kon hem niet vinden.</div>
           </li>
           <li>
             <span class="pijn__list-num">03</span>
-            <div class="pijn__list-title">"Ik moet het eerst perfect hebben."</div>
-            <div class="pijn__list-body">Die gedachte kost je meer dan je weet. Niet alleen tijd. Maar de versie van jou die al lang klaar was om te gaan. Die wacht nog steeds.</div>
+            <div class="pijn__list-title">Positionering, website, professionele fotoshoot.</div>
+            <div class="pijn__list-body">Alles ziet er goed uit. En toch aarzelt iets in je om het echt te laten zien. Je weet zelf ook niet waarom.</div>
           </li>
           <li>
             <span class="pijn__list-num">04</span>
-            <div class="pijn__list-title">"Mensen vinden me arrogant als ik groter ga denken."</div>
-            <div class="pijn__list-body">Dus bleef je kleiner dan je bent. Niet uit bescheidenheid. Maar vanuit een gedachte die je als feit bent gaan leven. Ongetest. Jaar na jaar.</div>
+            <div class="pijn__list-title">Masterclasses, cursussen, podcasts, boeken.</div>
+            <div class="pijn__list-body">Je bent niet lui. Niet onwetend. Je doet alles goed. Juist dat maakt het zo frustrerend. Want je bent er nog steeds niet.</div>
           </li>
           <li>
             <span class="pijn__list-num">05</span>
-            <div class="pijn__list-title">"Ik mag niemand teleurstellen."</div>
-            <div class="pijn__list-body">Deze ene overtuiging heeft meer van jouw leven bepaald dan je je realiseert. In relaties, in werk, in wat je wel en niet toelaat. En hij is nooit op de proef gesteld.</div>
+            <div class="pijn__list-title">Je hebt aan je mindset gewerkt. Gejournald.</div>
+            <div class="pijn__list-body">Het voelde goed op de ochtend dat je het deed. Maar de volgende dag was die stem er gewoon weer. En hij klonk harder dan al jouw affirmaties bij elkaar.</div>
           </li>
         </ul>
 
         <p class="pijn__close">
           Het is niet jouw schuld dat het niet werkte.<br>
-          <strong>Je werkte aan het gedrag. Niet aan de overtuiging eronder.</strong><br>
-          Dat is het enige verschil.
+          <strong>Je pakte elke keer het verkeerde gereedschap.</strong><br>
+          Niet omdat jij faalde. Maar omdat niemand je heeft geholpen te vinden wat er echt speelt.
         </p>
       </div>
 
@@ -353,82 +353,35 @@ get_header(); ?>
     <div class="verlangen__header">
       <span class="eyebrow eyebrow--blue">Wat je eigenlijk wil</span>
       <h2>Diep van binnen<br><em>weet je het al.</em></h2>
-      <p>Niet meer werken aan jezelf. Niet positiever denken. Maar eindelijk weten of de overtuiging die jou al jaren stuurt, eigenlijk wel klopt.</p>
+      <p>Je hoeft het niet te verdienen. Je hoeft er niet eerst klaar voor te zijn. Dit is wat je al heel lang wil. Je bent er klaar voor om het eindelijk te krijgen.</p>
     </div>
 
     <div class="verlangen__grid">
       <div class="verlangen__card">
         <span class="verlangen__card-num">01</span>
-        <p class="verlangen__card-q">"Ik wil die stem midden in de nacht niet meer geloven. Die zegt: jij bent er gewoon niet goed genoeg voor."</p>
-        <p class="verlangen__card-body">Je wil niet positiever denken. Je wil weten of het waar is. Want als het niet waar is, verandert alles. Niet een beetje. Alles.</p>
+        <p class="verlangen__card-q">"Ik wil 's ochtends wakker worden en weten: vandaag doe ik wat ik wil doen. En ik doe het ook."</p>
+        <p class="verlangen__card-body">Niet eerst een halfuur liggen piekeren. Niet die stem die al begint voordat je je ogen open hebt. Gewoon: wakker worden en in beweging komen. Vanuit jezelf.</p>
       </div>
       <div class="verlangen__card">
         <span class="verlangen__card-num">02</span>
-        <p class="verlangen__card-q">"Ik wil stoppen met leven vanuit de overtuiging dat ik mensen ga teleurstellen als ik mezelf echt laat zien."</p>
-        <p class="verlangen__card-body">Die gedachte heeft je klein gehouden. Niet jij. Die gedachte. En hij is nooit serieus onderzocht. Dat is precies wat we hier gaan doen.</p>
+        <p class="verlangen__card-q">"Ik wil mijn prijs noemen, en daarna gewoon zwijgen. Zonder mijn adem in te houden."</p>
+        <p class="verlangen__card-body">Zonder die snelle uitleg die erachteraan komt. Zonder de halve nacht wakker liggen of het wel goed voelde. Gewoon: zeggen wat het is. En klaar.</p>
       </div>
       <div class="verlangen__card">
         <span class="verlangen__card-num">03</span>
-        <p class="verlangen__card-q">"Ik wil weten wat er werkelijk van mij is, en wat ik ben gaan aannemen over mezelf."</p>
-        <p class="verlangen__card-body">Hoeveel van wat jou tegenhoudt is eigenlijk echt waar? Dat is de vraag. En het antwoord verandert meer dan je nu kunt bedenken.</p>
+        <p class="verlangen__card-q">"Ik wil stoppen met die stem die altijd weet waarom het niet gaat lukken."</p>
+        <p class="verlangen__card-body">Die twijfel die zich voordoet als voorzichtigheid. Die bij elke stap vooruit al drie stappen terug denkt. Je bent hem zo moe.</p>
       </div>
       <div class="verlangen__card">
         <span class="verlangen__card-num">04</span>
-        <p class="verlangen__card-q">"Ik wil vrij zijn in mijn hoofd. Niet minder bang. Echt vrij."</p>
-        <p class="verlangen__card-body">Vrijheid komt niet van harder werken aan jezelf. Het komt van het loslaten van wat nooit waar was. En dat is te doen.</p>
+        <p class="verlangen__card-q">"Ik wil een beslissing nemen, en er niet dagen later nog over nadenken."</p>
+        <p class="verlangen__card-body">Vanuit zekerheid. Niet vanuit angst dat je je vergist of dat je teleurstelt. Gewoon: kiezen. En verder gaan.</p>
       </div>
     </div>
   </div>
 </section>
 
 
-<!-- ═══ ZO VOELT HET DAARNA ═══ -->
-<div class="watals-intro">
-  <div class="w--narrow">
-    <span class="eyebrow eyebrow--coral">Wat er verandert</span>
-    <h2>Niet minder bang.<br><em>Werkelijk vrij.</em></h2>
-    <p>Niet vaag. Niet 'je voelt je beter'. Maar wat er concreet verschuift als je stopt met leven vanuit wat je bent gaan geloven:</p>
-  </div>
-</div>
-
-<div class="watals__row">
-  <div class="watals__photo">
-    <img src="images/anouk-bank.jpg" alt="Anouk Kievit" />
-  </div>
-  <div class="watals__copy">
-    <div>
-      <span class="watals__copy-tag">Die stem 's nachts</span>
-      <h3>Je hoort hem nog.<br><em>Maar je gelooft hem niet meer.</em></h3>
-      <p>Vroeger bepaalde die stem al voor je dag begon wat er mogelijk was. Nu onderzoek je hem. En je ontdekt keer op keer: hij klopt niet. Dat verandert alles.</p>
-    </div>
-  </div>
-</div>
-
-<div class="watals__row watals__row--flip">
-  <div class="watals__photo">
-    <img src="images/anouk-bogen2.jpg" alt="Anouk Kievit" />
-  </div>
-  <div class="watals__copy">
-    <div>
-      <span class="watals__copy-tag">Overtuigingen testen</span>
-      <h3>Je leeft niet meer vanuit<br><em>wat je bent gaan aannemen.</em></h3>
-      <p>Je stelt vragen die je nooit durfde stellen. Je test gedachten die je als feiten behandelde. En je ontdekt: veel van wat jou tegenhield, was nooit de waarheid.</p>
-    </div>
-  </div>
-</div>
-
-<div class="watals__row">
-  <div class="watals__photo">
-    <img src="images/anouk-dichtbij.jpg" alt="Anouk Kievit" />
-  </div>
-  <div class="watals__copy">
-    <div>
-      <span class="watals__copy-tag">Vrijheid in je hoofd</span>
-      <h3>Je hoofd is stiller.<br><em>Niet door harder te werken.</em></h3>
-      <p>Maar omdat je weet hoe je een gedachte onderzoekt. Je hoeft hem niet weg te drukken. Niet te bestrijden. Je onderzoekt hem. En hij verliest zijn grip.</p>
-    </div>
-  </div>
-</div>
 
 
 <!-- ═══ VERSIE VAN JOU ═══ -->
@@ -439,12 +392,12 @@ get_header(); ?>
     </div>
     <div class="versie__text">
       <span class="eyebrow">Er is een versie van jou</span>
-      <h2>Die niet meer leeft vanuit<br>wat ze <em>is gaan geloven.</em></h2>
-      <p>Die haar overtuigingen onderzoekt in plaats van gelooft. Die weet hoe ze een gedachte op de proef stelt. Die vrijheid heeft gevonden, niet door harder te werken, maar door te stoppen met geloven wat nooit waar was.</p>
+      <h2>Die anders wakker<br>wordt <em>'s ochtends.</em></h2>
+      <p>Die haar prijs noemt zonder verontschuldiging. Die beslissingen neemt vanuit zekerheid. Die zegt wat ze denkt.</p>
       <div class="versie__quote">
-        Die versie bestaat al.<br>Ze is er al heel lang.<br>Ze wacht op één vraag: is het eigenlijk wel waar?
+        Die versie bestaat al.<br>Ze zit in je. Ze wacht.
       </div>
-      <p>En het antwoord op die vraag verandert meer dan je nu kunt bedenken.</p>
+      <p>En ze wacht op één ding: dat jij de gedachte onderzoekt die haar tegenhoudt.</p>
       <p style="margin-top:32px;"><a href="#investering" class="btn btn--outline-white">Ik wil mijn doorbraak →</a></p>
     </div>
   </div>
@@ -525,8 +478,8 @@ get_header(); ?>
         <ul class="price-card__includes">
           <li>Live dagdeel met Anouk</li>
           <li>Lichamelijk en mentaal werk</li>
-          <li>Persoonlijk werkboek</li>
-          <li>Concreet 90-dagen experiment als afsluiter</li>
+          <li>Jouw patroon gevonden en onderzocht</li>
+          <li>Concreet vertrekpunt om mee verder te gaan</li>
           <li>Ochtend of middag, naar keuze</li>
         </ul>
         <a href="#contact" class="btn btn--coral">Ik boek de dag</a>
@@ -575,21 +528,21 @@ get_header(); ?>
       <div>
         <div class="faq__item">
           <div class="faq__q">Ik heb al zoveel geprobeerd. Waarom zou dit anders zijn?</div>
-          <div class="faq__a">Omdat we niet kijken naar wat je doet. Maar naar de overtuiging die het gedrag aanstuurt. De meeste aanpakken werken aan de buitenkant. Hier gaan we naar de laag daarvoor. En die is te onderzoeken.</div>
+          <div class="faq__a">Omdat we niet kijken naar wat je doet, maar naar wat er onder zit. De meeste aanpakken werken aan het gedrag. Wij gaan naar de laag daarvoor. Dat is het verschil.</div>
         </div>
         <div class="faq__item">
           <div class="faq__q">Sessie of dag: hoe weet ik wat bij mij past?</div>
-          <div class="faq__a">De sessie is direct en krachtig: één overtuiging blootgelegd en onderzocht. De dag geeft ruimte voor wat dieper zit. Als je twijfelt: kies de dag.</div>
+          <div class="faq__a">De sessie is krachtig en direct. De dag biedt meer ruimte voor wat echt tijd nodig heeft om te landen. Als je twijfelt: kies de dag.</div>
         </div>
       </div>
       <div>
         <div class="faq__item">
           <div class="faq__q">Wat als ik me er nog niet klaar voor voel?</div>
-          <div class="faq__a">"Ik ben er nog niet klaar voor" is precies het soort gedachte dat we hier gaan onderzoeken. Je hoeft je niet klaar te voelen. Je hoeft alleen eerlijk te zijn.</div>
+          <div class="faq__a">"Klaar voelen" is precies het soort gedachte dat we hier gaan onderzoeken. Je hoeft je niet klaar te voelen. Je hoeft alleen eerlijk te zijn.</div>
         </div>
         <div class="faq__item">
-          <div class="faq__q">Is dit therapie?</div>
-          <div class="faq__a">Nee. We werken niet aan het verleden. We onderzoeken de overtuiging die je nu tegenhoudt. Concreet, gericht, met een duidelijk resultaat na de sessie.</div>
+          <div class="faq__q">Heb ik nog vragen voor ik boek?</div>
+          <div class="faq__a">Stel ze. Mail of DM me. Geen verkoopgesprek, geen druk. Gewoon een eerlijk antwoord.</div>
         </div>
       </div>
     </div>
