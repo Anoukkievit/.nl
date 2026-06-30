@@ -58,7 +58,7 @@ get_header(); ?>
 
     /* ═══ HERO — split layout ═══ */
     .hero { position: relative; min-height: 92vh; display: grid; grid-template-columns: 1fr 1fr; overflow: hidden; background: var(--white); }
-    .hero__bg { position: relative; background: url('https://anoukkievit.nl/wp-content/uploads/2026/06/Anouk-Kievit_Kramer-Fotografeert-0869.jpg') center 5% / cover no-repeat; opacity: 0; transition: opacity .5s; min-height: 92vh; }
+    .hero__bg { position: relative; background: url('https://anoukkievit.nl/wp-content/uploads/2026/06/Anouk-Kievit_Kramer-Fotografeert-0869.jpg') center 15% / cover no-repeat; opacity: 0; transition: opacity .5s; min-height: 92vh; }
     .hero__bg.loaded { opacity: 1; }
     .hero__bg::after { content: none; }
     .hero__content { position: relative; z-index: 1; padding: 80px 56px; background: var(--purple); display: flex; flex-direction: column; justify-content: center; text-align: left; max-width: none; }
@@ -69,7 +69,7 @@ get_header(); ?>
     .hero__h1 em { font-style: italic; color: var(--pink); }
     .hero__sub { font-family: 'Cormorant Garamond', serif; font-size: clamp(16px, 1.8vw, 22px); font-style: italic; font-weight: 300; color: rgba(255,255,255,.85); max-width: 420px; margin: 0 0 52px; line-height: 1.55; }
     .hero__ctas { display: flex; gap: 14px; flex-wrap: wrap; }
-    @media (max-width:780px) { .hero { grid-template-columns: 1fr; } .hero__bg { min-height: 65vw; order: -1; background-position: center 5%; } .hero__content { padding: 56px 32px; } }
+    @media (max-width:780px) { .hero { grid-template-columns: 1fr; } .hero__bg { min-height: 65vw; order: -1; background-position: center 15%; } .hero__content { padding: 56px 32px; } }
 
     /* ═══ STRIP ═══ */
     .strip { background: var(--white); border-bottom: 1px solid var(--line); padding: 24px 40px; }
@@ -195,7 +195,7 @@ get_header(); ?>
     .about__circles::before { content: none; }
     .about__circles::after  { content: none; }
     .about__circle-img { position: absolute; inset: 0; margin: auto; width: 380px; height: 480px; border-radius: 4px; overflow: hidden; z-index: 1; }
-    .about__circle-img img { width: 100%; height: 100%; object-fit: cover; object-position: center 5%; border-radius: 4px; }
+    .about__circle-img img { width: 100%; height: 100%; object-fit: cover; border-radius: 4px; }
     @media (max-width:740px) { .about__circles { width: 100%; height: 380px; } .about__circle-img { width: 100%; height: 360px; } }
     .about__text p { font-size: 16px; color: var(--soft); line-height: 1.85; }
     .about__pullquote { border-left: 3px solid var(--coral); padding-left: 22px; margin: 28px 0; font-family: 'Cormorant Garamond', serif; font-size: 22px; font-style: italic; color: var(--text); line-height: 1.45; }
