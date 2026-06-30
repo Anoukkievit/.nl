@@ -227,6 +227,65 @@ get_header(); ?>
 
     /* ═══ FOOTER ═══ */
     footer { background: var(--coral); color: rgba(255,255,255,.7); text-align: center; padding: 18px 28px; font-size: 11px; letter-spacing: 1.5px; }
+
+    /* ═══ MOBIEL ═══ */
+    @media (max-width:780px) {
+      /* Hero */
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero__bg { min-height: 55vw; order: -1; }
+      .hero__content { padding: 48px 28px; }
+      .hero__ctas { flex-direction: column; }
+      .hero__ctas .btn { text-align: center; width: 100%; }
+
+      /* Secties */
+      .pijn { padding: 64px 0; }
+      .pijn__photo { display: none; }
+      .pijn__inner { grid-template-columns: 1fr; gap: 0; }
+
+      /* Bands */
+      .band { padding: 60px 28px; }
+
+      /* Verlangen */
+      .verlangen { padding: 64px 0; }
+      .verlangen__header { padding: 0 24px; margin-bottom: 40px; }
+      .verlangen__card { padding: 36px 28px; }
+      .verlangen__grid { grid-template-columns: 1fr; }
+
+      /* Versie */
+      .versie { padding: 64px 24px; }
+      .versie__inner { grid-template-columns: 1fr; gap: 32px; }
+      .versie__photo img { height: 300px; }
+
+      /* Voor wie */
+      .voor-wie { padding: 64px 0; }
+      .voor-wie__inner { grid-template-columns: 1fr; gap: 28px; }
+
+      /* Pricing */
+      .pricing { padding: 64px 0; }
+      .pricing__cards { grid-template-columns: 1fr; }
+      .price-card { padding: 40px 28px; }
+
+      /* About */
+      .about { padding: 64px 0; }
+      .about__inner { grid-template-columns: 1fr; gap: 36px; }
+      .about__circles { width: 100%; height: 320px; }
+      .about__circle-img { width: 100%; height: 300px; }
+
+      /* FAQ */
+      .faq { padding: 64px 0; }
+      .faq__grid { grid-template-columns: 1fr; gap: 0; }
+
+      /* Inzicht */
+      .inzicht { padding: 64px 28px; }
+
+      /* Final CTA */
+      .final-cta { min-height: 60vh; }
+      .final-cta__content { padding: 60px 28px; }
+
+      /* Strip */
+      .strip { padding: 16px 24px; }
+      .strip__item { padding: 8px 20px; width: 50%; border-right: none; }
+    }
     footer a { color: #fff; text-decoration: none; }
   
 </style>
