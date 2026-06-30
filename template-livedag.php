@@ -69,7 +69,7 @@ get_header(); ?>
     .hero__h1 em { font-style: italic; color: var(--pink); }
     .hero__sub { font-family: 'Cormorant Garamond', serif; font-size: clamp(16px, 1.8vw, 22px); font-style: italic; font-weight: 300; color: rgba(255,255,255,.85); max-width: 420px; margin: 0 0 52px; line-height: 1.55; }
     .hero__ctas { display: flex; gap: 14px; flex-wrap: wrap; }
-    @media (max-width:780px) { .hero { grid-template-columns: 1fr; } .hero__bg { min-height: 65vw; order: -1; background-position: center 15%; } .hero__content { padding: 56px 32px; } }
+    @media (max-width:780px) { .hero { grid-template-columns: 1fr; } .hero__bg { display: none; } .hero__content { padding: 56px 32px; } }
 
     /* ═══ STRIP ═══ */
     .strip { background: var(--white); border-bottom: 1px solid var(--line); padding: 24px 40px; }
