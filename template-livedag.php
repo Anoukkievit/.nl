@@ -58,9 +58,9 @@ get_header(); ?>
 
     /* ═══ HERO — full bleed photo ═══ */
     .hero { position: relative; min-height: 92vh; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; background: var(--white); }
-    .hero__bg { position: absolute; inset: 0; background: url('https://anoukkievit.nl/wp-content/uploads/2026/06/Anouk-Kievit_Kramer-Fotografeert-0869.jpg') center center / cover no-repeat; opacity: 0; transition: opacity .5s; }
+    .hero__bg { position: absolute; inset: 0; background: url('https://anoukkievit.nl/wp-content/uploads/2026/06/Anouk-Kievit_Kramer-Fotografeert-0869.jpg') center center / 75% auto no-repeat; opacity: 0; transition: opacity .5s; }
     .hero__bg.loaded { opacity: 1; }
-    .hero__bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(20,15,10,.5) 0%, rgba(20,15,10,.6) 100%); }
+    .hero__bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10,8,5,.65) 0%, rgba(10,8,5,.75) 100%); }
     .hero__content { position: relative; z-index: 1; padding: 80px 40px; max-width: 900px; }
     .hero__pretitle { font-size: 10px; letter-spacing: 5px; text-transform: uppercase; color: rgba(255,255,255,.75); font-weight: 600; margin-bottom: 28px; display: block; }
     .script { font-family: 'Dancing Script', cursive; font-size: 1.4em; font-weight: 700; display: inline-block; line-height: 1; vertical-align: middle; }
