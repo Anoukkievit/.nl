@@ -1,10 +1,12 @@
 <?php
-/*
-Template Name: Livedag
-*/
-get_header(); ?>
-<style>
-
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Doorbraak Sessie – Anouk Kievit</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Dancing+Script:wght@600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
       --coral:  #E07035;
@@ -56,20 +58,20 @@ get_header(); ?>
     /* ═══ URGENCY ═══ */
     .urgency { background: var(--coral); color: #fff; text-align: center; padding: 11px 20px; font-size: 10px; letter-spacing: 3px; text-transform: uppercase; font-weight: 600; }
 
-    /* ═══ HERO — split layout ═══ */
-    .hero { position: relative; min-height: 92vh; display: grid; grid-template-columns: 1fr 1fr; overflow: hidden; background: var(--white); }
-    .hero__bg { position: relative; background: url('https://anoukkievit.nl/wp-content/uploads/2026/06/Anouk-Kievit_Kramer-Fotografeert-0869.jpg') center 15% / cover no-repeat; opacity: 0; transition: opacity .5s; min-height: 92vh; }
+    /* ═══ HERO — fullbleed foto ═══ */
+    .hero { position: relative; min-height: 92vh; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; }
+    .hero__bg { position: absolute; inset: 0; background: url('https://anoukkievit.nl/wp-content/uploads/2026/06/Anouk-Kievit_Kramer-Fotografeert-0869.jpg') center 15% / cover no-repeat; opacity: 0; transition: opacity .5s; }
     .hero__bg.loaded { opacity: 1; }
-    .hero__bg::after { content: none; }
-    .hero__content { position: relative; z-index: 1; padding: 80px 56px; background: var(--purple); display: flex; flex-direction: column; justify-content: center; text-align: left; max-width: none; }
-    .hero__pretitle { font-size: 10px; letter-spacing: 5px; text-transform: uppercase; color: rgba(255,255,255,.6); font-weight: 600; margin-bottom: 28px; display: block; }
+    .hero__bg::after { content: ''; position: absolute; inset: 0; background: rgba(10,8,6,.52); }
+    .hero__content { position: relative; z-index: 1; padding: 80px 40px; display: flex; flex-direction: column; align-items: center; text-align: center; max-width: 860px; }
+    .hero__pretitle { font-size: 10px; letter-spacing: 5px; text-transform: uppercase; color: rgba(255,255,255,.65); font-weight: 600; margin-bottom: 28px; display: block; }
     .script { font-family: 'Dancing Script', cursive; font-size: 1.4em; font-weight: 700; display: inline-block; line-height: 1; vertical-align: middle; }
     .about__sig { font-size: 11px; letter-spacing: 4px; text-transform: uppercase; font-weight: 600; color: var(--coral); margin-bottom: 16px; display: block; }
-    .hero__h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 5vw, 72px); font-weight: 300; line-height: 1.05; color: #fff; margin-bottom: 32px; }
+    .hero__h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(42px, 7vw, 90px); font-weight: 300; line-height: 1.05; color: #fff; margin-bottom: 32px; }
     .hero__h1 em { font-style: italic; color: var(--pink); }
-    .hero__sub { font-family: 'Cormorant Garamond', serif; font-size: clamp(16px, 1.8vw, 22px); font-style: italic; font-weight: 300; color: rgba(255,255,255,.85); max-width: 420px; margin: 0 0 52px; line-height: 1.55; }
-    .hero__ctas { display: flex; gap: 14px; flex-wrap: wrap; }
-    @media (max-width:780px) { .hero { grid-template-columns: 1fr; } .hero__bg { display: none; } .hero__content { padding: 56px 32px; } }
+    .hero__sub { font-family: 'Cormorant Garamond', serif; font-size: clamp(16px, 1.8vw, 22px); font-style: italic; font-weight: 300; color: rgba(255,255,255,.85); max-width: 520px; margin: 0 0 52px; line-height: 1.55; }
+    .hero__ctas { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+    @media (max-width:780px) { .hero__content { padding: 60px 28px; } .hero__ctas { flex-direction: column; } .hero__ctas .btn { width: 100%; text-align: center; } }
 
     /* ═══ STRIP ═══ */
     .strip { background: var(--white); border-bottom: 1px solid var(--line); padding: 24px 40px; }
@@ -287,9 +289,9 @@ get_header(); ?>
       .strip__item { padding: 8px 20px; width: 50%; border-right: none; }
     }
     footer a { color: #fff; text-decoration: none; }
-  
-</style>
-
+  </style>
+</head>
+<body>
 
 <script>
 (function(){
@@ -621,5 +623,5 @@ get_header(); ?>
   <p>© 2025 Anouk Kievit &nbsp;·&nbsp; <a href="/privacy">Privacy</a> &nbsp;·&nbsp; <a href="/algemene-voorwaarden">Algemene voorwaarden</a></p>
 </footer>
 
-
-<?php get_footer(); ?>
+</body>
+</html>
