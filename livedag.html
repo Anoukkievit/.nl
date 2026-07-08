@@ -90,8 +90,8 @@
     .pijn__text h2 { margin-bottom: 12px; }
     .pijn__intro { font-family: 'Cormorant Garamond', serif; font-size: clamp(18px, 2.2vw, 23px); font-style: italic; font-weight: 300; color: var(--soft); line-height: 1.6; margin-bottom: 40px; }
     .pijn__list { list-style: none; }
-    .pijn__list li { padding: 22px 0; border-bottom: 1px solid var(--line); }
-    .pijn__list li:first-child { border-top: 1px solid var(--line); }
+    .pijn__list li { padding: 22px 0; }
+    .pijn__list li:first-child { }
     .pijn__list-num { font-family: 'Cormorant Garamond', serif; font-size: 13px; font-weight: 300; color: var(--coral); letter-spacing: 1px; margin-bottom: 4px; display: block; }
     .pijn__list-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(18px, 2vw, 22px); font-weight: 400; color: var(--text); margin-bottom: 6px; }
     .pijn__list-body { font-size: 16px; color: var(--soft); line-height: 1.75; }
@@ -164,8 +164,8 @@
     .voor-wie__inner { display: grid; grid-template-columns: 1fr 2fr; gap: 80px; align-items: start; }
     @media (max-width:760px) { .voor-wie__inner { grid-template-columns: 1fr; gap: 40px; } }
     .voor-wie__list { list-style: none; }
-    .voor-wie__list li { padding: 18px 0; border-bottom: 1px solid var(--line); font-size: 16px; line-height: 1.7; color: var(--text); display: flex; gap: 16px; align-items: flex-start; }
-    .voor-wie__list li:first-child { border-top: 1px solid var(--line); }
+    .voor-wie__list li { padding: 18px 0; font-size: 16px; line-height: 1.7; color: var(--text); display: flex; gap: 16px; align-items: flex-start; }
+    .voor-wie__list li:first-child { }
     .voor-wie__list li::before { content: '→'; color: var(--coral); flex-shrink: 0; font-weight: 600; margin-top: 2px; }
 
     /* ═══ PRICING ═══ */
@@ -183,7 +183,7 @@
     .price-card__price { font-family: 'Cormorant Garamond', serif; font-size: 64px; font-weight: 300; color: var(--coral); line-height: 1; margin: 0 0 4px; }
     .price-card__note { font-size: 12px; color: var(--soft); margin-bottom: 28px; }
     .price-card__includes { list-style: none; margin-bottom: 36px; }
-    .price-card__includes li { font-size: 14px; padding: 10px 0; border-bottom: 1px solid var(--line); display: flex; gap: 10px; color: var(--text); align-items: flex-start; }
+    .price-card__includes li { font-size: 14px; padding: 10px 0; display: flex; gap: 10px; color: var(--text); align-items: flex-start; }
     .price-card__includes li::before { content: '✓'; color: var(--coral); flex-shrink: 0; font-weight: 700; }
     .price-card .btn { width: 100%; text-align: center; }
 
@@ -205,8 +205,8 @@
     .faq { background: var(--white); padding: 100px 0; }
     .faq__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 80px; }
     @media (max-width:700px) { .faq__grid { grid-template-columns: 1fr; } }
-    .faq__item { padding: 24px 0; border-bottom: 1px solid var(--line); }
-    .faq__item:first-child { border-top: 1px solid var(--line); }
+    .faq__item { padding: 24px 0; }
+    .faq__item:first-child { }
     .faq__q { font-family: 'Cormorant Garamond', serif; font-size: 21px; color: var(--text); margin-bottom: 8px; }
     .faq__a { font-size: 14px; color: var(--soft); line-height: 1.8; }
 
@@ -224,7 +224,7 @@
     .inzicht__inner { max-width: 760px; margin: 0 auto; }
     .inzicht__body { font-family: 'Cormorant Garamond', serif; font-size: clamp(22px, 3vw, 34px); font-weight: 300; line-height: 1.65; color: var(--text); margin-bottom: 32px; }
     .inzicht__body em { font-style: italic; color: var(--coral); }
-    .inzicht__vraag { font-family: 'Cormorant Garamond', serif; font-size: clamp(30px, 4.5vw, 56px); font-style: italic; font-weight: 300; color: var(--text); line-height: 1.3; border-top: 1px solid var(--line); padding-top: 40px; margin-top: 16px; }
+    .inzicht__vraag { font-family: 'Cormorant Garamond', serif; font-size: clamp(30px, 4.5vw, 56px); font-style: italic; font-weight: 300; color: var(--text); line-height: 1.3; padding-top: 40px; margin-top: 16px; }
 
     /* ═══ FOOTER ═══ */
     footer { background: var(--coral-d); color: rgba(255,255,255,.7); text-align: center; padding: 18px 28px; font-size: 11px; letter-spacing: 1.5px; }
