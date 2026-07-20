@@ -333,7 +333,7 @@ window.addEventListener('DOMContentLoaded', function(){
         <span class="eyebrow eyebrow--coral">Herken jij dit</span>
         <h2>Je bent niet moe<br>van het ondernemen.<br><em>Je bent moe van<br>jezelf tegenhouden.</em></h2>
         <p class="pijn__intro">
-          Je weet wat je moet doen. Je bent niet naïef, je bent niet lui — je hebt al zoveel gedaan om verder te komen. En toch rijdt je al jaren met de handrem erop, zonder dat je precies kunt zeggen waarom.
+          Je weet wat je moet doen. Je bent niet naïef, je bent niet lui. Je hebt al zoveel gedaan om verder te komen. En toch rijdt je al jaren met de handrem erop, zonder dat je precies kunt zeggen waarom.
         </p>
 
         <ul class="pijn__list">
@@ -345,17 +345,17 @@ window.addEventListener('DOMContentLoaded', function(){
           <li>
             <span class="pijn__list-num">02</span>
             <div class="pijn__list-title">Je houdt jezelf online kleiner dan je werkelijk bent.</div>
-            <div class="pijn__list-body">De post staat klaar. De prijs staat klaar. Maar je klikt niet op verzenden — niet omdat je niets te zeggen hebt, maar omdat er een stem is die fluistert dat het nog niet goed genoeg is.</div>
+            <div class="pijn__list-body">De post staat klaar. De prijs staat klaar. Maar je klikt niet op verzenden. Niet omdat je niets te zeggen hebt, maar omdat er een stem is die fluistert dat het nog niet goed genoeg is.</div>
           </li>
           <li>
             <span class="pijn__list-num">03</span>
             <div class="pijn__list-title">Je hebt alles geprobeerd en blijft zoeken.</div>
-            <div class="pijn__list-body">Businesscoaching, nieuwe strategie, boeken, mindset — de buitenkant klopt allang. Maar vanbinnen voelt ondernemen zwaarder dan het zou moeten, en dat frustreert je, want je weet dat er meer in je zit.</div>
+            <div class="pijn__list-body">Businesscoaching, nieuwe strategie, boeken, mindset. De buitenkant klopt allang. Maar vanbinnen voelt ondernemen zwaarder dan het zou moeten, en dat frustreert je, want je weet dat er meer in je zit.</div>
           </li>
           <li>
             <span class="pijn__list-num">04</span>
             <div class="pijn__list-title">Je weet dat de oplossing ergens anders ligt.</div>
-            <div class="pijn__list-body">Niet in een nieuwe cursus, niet in een nieuw plan. Je voelt het — er is een laag die je nog niet hebt aangeraakt. Dat is precies de laag waar wij naartoe gaan.</div>
+            <div class="pijn__list-body">Niet in een nieuwe cursus, niet in een nieuw plan. Je voelt het. Er is een laag die je nog niet hebt aangeraakt. Dat is precies de laag waar wij naartoe gaan.</div>
           </li>
         </ul>
 
@@ -382,29 +382,29 @@ window.addEventListener('DOMContentLoaded', function(){
     <div class="verlangen__header">
       <span class="eyebrow eyebrow--blue">Wat er verandert</span>
       <h2>Echte rust.<br>Echt vertrouwen.<br><em>Echt vrij ondernemen.</em></h2>
-      <p>Niet harder werken, niet een nieuwe aanpak. Gewoon ondernemen vanuit wie je werkelijk bent — zonder dat het je zoveel kost als het nu doet.</p>
+      <p>Niet harder werken, niet een nieuwe aanpak. Gewoon ondernemen vanuit wie je werkelijk bent, zonder dat het je zoveel kost als het nu doet.</p>
     </div>
 
     <div class="verlangen__grid">
       <div class="verlangen__card">
         <span class="verlangen__card-num">01</span>
         <p class="verlangen__card-q">"Ik wil echte mentale rust. Niet de rust die ik verdien. Gewoon rust."</p>
-        <p class="verlangen__card-body">Niet meer constant 'aan' staan, niet meer malen na elke beslissing. Gewoon aanwezig zijn in je werk, bij de mensen om je heen en bij jezelf — zonder dat het energie kost die je niet hebt.</p>
+        <p class="verlangen__card-body">Niet meer constant 'aan' staan, niet meer malen na elke beslissing. Gewoon aanwezig zijn in je werk, bij de mensen om je heen en bij jezelf, zonder dat het energie kost die je niet hebt.</p>
       </div>
       <div class="verlangen__card">
         <span class="verlangen__card-num">02</span>
         <p class="verlangen__card-q">"Ik wil mijn prijs noemen zonder me daarna te verontschuldigen."</p>
-        <p class="verlangen__card-body">Geen snelle uitleg erachteraan, geen halve nacht wakker liggen of het wel goed voelde. Gewoon zeggen wat het is, met de zekerheid van iemand die weet wat ze waard is — en daarna zwijgen.</p>
+        <p class="verlangen__card-body">Geen snelle uitleg erachteraan, geen halve nacht wakker liggen of het wel goed voelde. Gewoon zeggen wat het is, met de zekerheid van iemand die weet wat ze waard is. En daarna zwijgen.</p>
       </div>
       <div class="verlangen__card">
         <span class="verlangen__card-num">03</span>
         <p class="verlangen__card-q">"Ik wil online laten zien wie ik werkelijk ben. Niet de gefilterde versie."</p>
-        <p class="verlangen__card-body">Op 'Plaatsen' drukken zonder hem daarna drie keer te verwijderen. Zichtbaar zijn als de ondernemer die je al bent — niet de versie die staat te wachten tot het allemaal goed genoeg is.</p>
+        <p class="verlangen__card-body">Op 'Plaatsen' drukken zonder hem daarna drie keer te verwijderen. Zichtbaar zijn als de ondernemer die je al bent, niet de versie die staat te wachten tot het allemaal goed genoeg is.</p>
       </div>
       <div class="verlangen__card">
         <span class="verlangen__card-num">04</span>
         <p class="verlangen__card-q">"Ik wil beslissen vanuit vertrouwen, niet vanuit angst dat ik me vergis."</p>
-        <p class="verlangen__card-body">Sneller, lichter, zonder de keuze daarna nog drie dagen te analyseren. Kiezen vanuit wie je bent en gewoon verder gaan — dat is wat er mogelijk is als de rem er eindelijk af gaat.</p>
+        <p class="verlangen__card-body">Sneller, lichter, zonder de keuze daarna nog drie dagen te analyseren. Kiezen vanuit wie je bent en gewoon verder gaan. Dat is wat er mogelijk is als de rem er eindelijk af gaat.</p>
       </div>
     </div>
   </div>
@@ -420,9 +420,9 @@ window.addEventListener('DOMContentLoaded', function(){
     <div class="versie__text">
       <span class="eyebrow">Je hebt geen nieuw traject nodig</span>
       <h2>Je bent de<br>bottleneck in<br><em>je eigen bedrijf.</em></h2>
-      <p>Dat is niet erg — het is gewoon de waarheid. En het is ook het beste nieuws dat je vandaag kunt horen, want als jij de bottleneck bent, dan ben jij ook de oplossing. Niet door meer te leren of harder te werken, maar door te zien welke overtuiging onzichtbaar alles stuurt.</p>
+      <p>Dat is niet erg, het is gewoon de waarheid. En het is ook het beste nieuws dat je vandaag kunt horen, want als jij de bottleneck bent, dan ben jij ook de oplossing. Niet door meer te leren of harder te werken, maar door te zien welke overtuiging onzichtbaar alles stuurt.</p>
       <div class="versie__quote">
-        Je kiest nooit op basis van feiten. Je kiest op basis van wat voor jou waar voelt — en wat waar voelt, wordt bepaald door overtuigingen die je ooit hebt aangenomen en nooit meer hebt onderzocht.
+        Je kiest nooit op basis van feiten. Je kiest op basis van wat voor jou waar voelt. En wat waar voelt, wordt bepaald door overtuigingen die je ooit hebt aangenomen en nooit meer hebt onderzocht.
       </div>
       <p>Één gesprek is genoeg om dat te zien. En daarna kijk je nooit meer hetzelfde naar de keuzes die je maakt.</p>
       <p style="margin-top:32px;"><a href="#investering" class="btn btn--outline-white">Ik wil dit nu aanpakken →</a></p>
@@ -438,19 +438,19 @@ window.addEventListener('DOMContentLoaded', function(){
       <div>
         <span class="eyebrow eyebrow--coral">Is dit voor jou</span>
         <h2>Dit is voor<br>gevestigde<br><em>ondernemers.</em></h2>
-        <p style="font-size:15px;color:var(--soft);line-height:1.85;margin-top:16px;">Niet voor starters. Voor ondernemers die al weten hoe het werkt — maar voelen dat er een laag is die ze nog niet hebben aangeraakt.</p>
+        <p style="font-size:15px;color:var(--soft);line-height:1.85;margin-top:16px;">Niet voor starters. Voor ondernemers die al weten hoe het werkt, maar voelen dat er een laag is die ze nog niet hebben aangeraakt.</p>
       </div>
       <div>
         <ul class="voor-wie__list">
-          <li>Je draait omzet en je bedrijf loopt, maar de groei stagneert of ondernemen kost je meer energie dan het zou moeten — en je weet dat dat niet normaal hoeft te zijn.</li>
+          <li>Je draait omzet en je bedrijf loopt, maar de groei stagneert of ondernemen kost je meer energie dan het zou moeten. En je weet dat dat niet normaal hoeft te zijn.</li>
           <li>Je hebt geïnvesteerd in coaches, cursussen en trajecten. Je weet wat je moet doen. Toch doe je het niet, en je weet zelf ook niet precies waarom.</li>
-          <li>Je staat bijna altijd 'aan'. Rust voelt als iets wat je verdient, niet als iets wat er gewoon mag zijn — en je bent het moe om dat met jezelf te onderhandelen.</li>
+          <li>Je staat bijna altijd 'aan'. Rust voelt als iets wat je verdient, niet als iets wat er gewoon mag zijn. En je bent het moe om dat met jezelf te onderhandelen.</li>
           <li>Je weet dat er meer in je zit, en dat frustreert je. De buitenkant klopt allang, maar vanbinnen rijdt je nog steeds met de handrem erop.</li>
-          <li>Je voelt dat de oplossing ergens anders ligt dan strategie — en je bent klaar om dat nu echt te onderzoeken, zonder omwegen.</li>
+          <li>Je voelt dat de oplossing ergens anders ligt dan strategie. En je bent klaar om dat nu echt te onderzoeken, zonder omwegen.</li>
         </ul>
         <div style="margin-top:40px;padding:28px 32px;background:var(--cream);">
           <p style="font-size:13px;letter-spacing:3px;text-transform:uppercase;font-weight:700;color:var(--soft);margin-bottom:14px;">Dit is niet voor jou als</p>
-          <p style="font-size:15px;color:var(--soft);line-height:1.85;margin:0;">Je net begint en nog geen klanten hebt, of als je twijfelt of persoonlijke groei überhaupt iets voor jou is. Dit werk vraagt eerlijkheid en echte bereidheid — zonder dat heeft het geen zin om te beginnen.</p>
+          <p style="font-size:15px;color:var(--soft);line-height:1.85;margin:0;">Je net begint en nog geen klanten hebt, of als je twijfelt of persoonlijke groei überhaupt iets voor jou is. Dit werk vraagt eerlijkheid en echte bereidheid. Zonder dat heeft het geen zin om te beginnen.</p>
         </div>
       </div>
     </div>
@@ -469,9 +469,9 @@ window.addEventListener('DOMContentLoaded', function(){
 <section class="inzicht">
   <div class="inzicht__inner">
     <p class="inzicht__body">
-      Wat er speelt heeft niets te maken met een gebrek aan kennis of discipline. Het zit in de overtuigingen waarmee je jarenlang hebt geleefd — overtuigingen die ooit logisch waren, maar vandaag <em>ongemerkt al jouw keuzes bepalen.</em> Niet omdat je ze bewust kiest, maar omdat je ze nooit hebt onderzocht.
+      Wat er speelt heeft niets te maken met een gebrek aan kennis of discipline. Het zit in de overtuigingen waarmee je jarenlang hebt geleefd, overtuigingen die ooit logisch waren, maar vandaag <em>ongemerkt al jouw keuzes bepalen.</em> Niet omdat je ze bewust kiest, maar omdat je ze nooit hebt onderzocht.
     </p>
-    <p class="inzicht__vraag">Als je voelt dat het niet meer<br>aan de strategie ligt —<br>dan is dit jouw volgende stap.</p>
+    <p class="inzicht__vraag">Als je voelt dat het niet meer<br>aan de strategie ligt,<br>dan is dit jouw volgende stap.</p>
   </div>
 </section>
 
@@ -489,7 +489,7 @@ window.addEventListener('DOMContentLoaded', function(){
       <div class="price-card">
         <div class="price-card__type">Online · 60 minuten</div>
         <div class="price-card__name">De Doorbraak Sessie</div>
-        <div class="price-card__tagline">In één gesprek ontdekken we welke overtuiging jouw keuzes bepaalt — en wat er verandert als je hem niet meer gelooft.</div>
+        <div class="price-card__tagline">In één gesprek ontdekken we welke overtuiging jouw keuzes bepaalt. En wat er verandert als je hem niet meer gelooft.</div>
         <div class="price-card__price">€125</div>
         <div class="price-card__note">60 minuten · online · datum flexibel</div>
         <ul class="price-card__includes">
@@ -505,7 +505,7 @@ window.addEventListener('DOMContentLoaded', function(){
         <div class="price-card__badge">Meest diepgaand</div>
         <div class="price-card__type">Live · 2,5 uur</div>
         <div class="price-card__name">De Doorbraak Dag</div>
-        <div class="price-card__tagline">2,5 uur live samen. De ruimte en diepgang die een online sessie niet kan bieden — hier verschuift er iets wat je voelt, niet alleen begrijpt.</div>
+        <div class="price-card__tagline">2,5 uur live samen. De ruimte en diepgang die een online sessie niet kan bieden. Hier verschuift er iets wat je voelt, niet alleen begrijpt.</div>
         <div class="price-card__price">€425</div>
         <div class="price-card__note">2,5 uur live · ochtend of middag · op maat</div>
         <ul class="price-card__includes">
@@ -537,12 +537,12 @@ window.addEventListener('DOMContentLoaded', function(){
         <span class="eyebrow eyebrow--coral">Even voorstellen</span>
         <span class="about__sig">Anouk Kievit</span>
         <h2>Hoi,<br>ik ben <em>Anouk.</em></h2>
-        <p>Ik leefde jarenlang alsof één gedachte de waarheid was. Het stuurde alles — wat ik at, hoe ik mezelf zag, wat ik toeliet en wat ik mezelf ontzegde. Het voelde zo echt dat ik nooit op het idee kwam het te bevragen. Het was gewoon zo.</p>
-        <p>Pas toen ik hem durfde onderzoeken, veranderde er iets wat ik niet meer terug wil draaien. Niet door er harder aan te werken, niet door er meer over na te denken — maar door te stoppen met hem als de waarheid te behandelen.</p>
+        <p>Ik leefde jarenlang alsof één gedachte de waarheid was. Het stuurde alles: wat ik at, hoe ik mezelf zag, wat ik toeliet en wat ik mezelf ontzegde. Het voelde zo echt dat ik nooit op het idee kwam het te bevragen. Het was gewoon zo.</p>
+        <p>Pas toen ik hem durfde onderzoeken, veranderde er iets wat ik niet meer terug wil draaien. Niet door er harder aan te werken, niet door er meer over na te denken, maar door te stoppen met hem als de waarheid te behandelen.</p>
         <div class="about__pullquote">
           Ik ga niemand vertellen wat ze moeten doen voordat we begrijpen wat ze zichzelf al jaren vertellen.
         </div>
-        <p>Ik werk met ondernemers die klaar zijn om eerlijk te kijken naar wat er werkelijk speelt — niet met mensen die nog aan het overwegen zijn. Dat verschil voel ik meteen, en het bepaalt alles.</p>
+        <p>Ik werk met ondernemers die klaar zijn om eerlijk te kijken naar wat er werkelijk speelt, niet met mensen die nog aan het overwegen zijn. Dat verschil voel ik meteen, en het bepaalt alles.</p>
         <p style="margin-top:28px;"><a href="#investering" class="btn btn--coral">Boek jouw plek</a></p>
       </div>
     </div>
@@ -561,29 +561,29 @@ window.addEventListener('DOMContentLoaded', function(){
       <div>
         <div class="faq__item">
           <div class="faq__q">Ik heb al zoveel geprobeerd. Waarom zou dit anders zijn?</div>
-          <div class="faq__a">Omdat de meeste aanpakken werken aan je gedrag, je strategie of je mindset — en dat is precies waarom je blijft zoeken. Wij gaan naar de laag daarvoor: de overtuiging die onzichtbaar alles stuurt. Dat is het verschil, en het is ook de reden dat het voor het eerst voelt alsof je bij de kern bent.</div>
+          <div class="faq__a">Omdat de meeste aanpakken werken aan je gedrag, je strategie of je mindset. En dat is precies waarom je blijft zoeken. Wij gaan naar de laag daarvoor: de overtuiging die onzichtbaar alles stuurt. Dat is het verschil, en het is ook de reden dat het voor het eerst voelt alsof je bij de kern bent.</div>
         </div>
         <div class="faq__item">
           <div class="faq__q">Sessie of dag: hoe weet ik wat bij mij past?</div>
-          <div class="faq__a">De sessie is direct en krachtig — in één gesprek zie je wat er speelt en heb je een concreet vertrekpunt. De dag biedt meer ruimte en diepgang, ook lichamelijk, voor wat echt tijd nodig heeft om te landen. Als je twijfelt, kies de dag.</div>
+          <div class="faq__a">De sessie is direct en krachtig. In één gesprek zie je wat er speelt en heb je een concreet vertrekpunt. De dag biedt meer ruimte en diepgang, ook lichamelijk, voor wat echt tijd nodig heeft om te landen. Als je twijfelt, kies de dag.</div>
         </div>
         <div class="faq__item">
           <div class="faq__q">Werkt dit ook als ik al veel aan mezelf heb gewerkt?</div>
-          <div class="faq__a">Juist dan. De ondernemers die ik spreek hebben bijna altijd al veel gedaan — en dat is precies waarom ze voelen dat er nog een laag is. Die laag is wat we hier gaan onderzoeken.</div>
+          <div class="faq__a">Juist dan. De ondernemers die ik spreek hebben bijna altijd al veel gedaan. En dat is precies waarom ze voelen dat er nog een laag is. Die laag is wat we hier gaan onderzoeken.</div>
         </div>
       </div>
       <div>
         <div class="faq__item">
           <div class="faq__q">Wat als ik me er nog niet klaar voor voel?</div>
-          <div class="faq__a">"Klaar voelen" is precies het soort gedachte dat we hier gaan onderzoeken. Je hoeft je niet klaar te voelen — je hoeft alleen eerlijk te zijn en bereid om te kijken naar wat er werkelijk speelt.</div>
+          <div class="faq__a">"Klaar voelen" is precies het soort gedachte dat we hier gaan onderzoeken. Je hoeft je niet klaar te voelen. Je hoeft alleen eerlijk te zijn en bereid om te kijken naar wat er werkelijk speelt.</div>
         </div>
         <div class="faq__item">
           <div class="faq__q">Heb ik nog vragen voor ik boek?</div>
-          <div class="faq__a">Stel ze gerust. Mail of DM me — geen verkoopgesprek, geen druk, gewoon een eerlijk antwoord op wat je wilt weten.</div>
+          <div class="faq__a">Stel ze gerust. Mail of DM me, geen verkoopgesprek, geen druk. Gewoon een eerlijk antwoord op wat je wilt weten.</div>
         </div>
         <div class="faq__item">
           <div class="faq__q">Is er ook een optie voor langdurige samenwerking?</div>
-          <div class="faq__a">Ja. Voor wie na de sessie verder wil gaan, is er de mogelijkheid voor een langer traject. Ik ben daarin selectief — niet omdat ik moeilijk wil doen, maar omdat goede begeleiding vraagt om een echte klik. Daarom begin ik altijd met een gratis kennismakingsgesprek. <a href="https://calendly.com/anoukkievit/call" style="color:var(--coral);text-decoration:none;font-weight:600;">Plan hier jouw gratis gesprek →</a></div>
+          <div class="faq__a">Ja. Voor wie na de sessie verder wil gaan, is er de mogelijkheid voor een langer traject. Ik ben daarin selectief, niet omdat ik moeilijk wil doen, maar omdat goede begeleiding vraagt om een echte klik. Daarom begin ik altijd met een gratis kennismakingsgesprek. <a href="https://calendly.com/anoukkievit/call" style="color:var(--coral);text-decoration:none;font-weight:600;">Plan hier jouw gratis gesprek →</a></div>
         </div>
       </div>
     </div>
@@ -595,8 +595,8 @@ window.addEventListener('DOMContentLoaded', function(){
 <section class="final-cta" id="contact">
   <div class="final-cta__bg"></div>
   <div class="final-cta__content">
-    <h2>Als je voelt dat dit<br>het is —<br><em>dan is dit het moment.</em></h2>
-    <p>Mensen die nog twijfelen of hier wat voor hen in zit: dit is waarschijnlijk niet voor jou. Ondernemers die voelen dat er nu iets moet veranderen en klaar zijn om eerlijk te kijken — boek jouw plek.</p>
+    <h2>Als je voelt dat dit<br>het is.<br><em>Dan is dit het moment.</em></h2>
+    <p>Mensen die nog twijfelen of hier wat voor hen in zit: dit is waarschijnlijk niet voor jou. Ondernemers die voelen dat er nu iets moet veranderen en klaar zijn om eerlijk te kijken. Boek jouw plek.</p>
     <a href="#investering" class="btn btn--coral">Ik wil dit doorbreken →</a>
   </div>
 </section>
