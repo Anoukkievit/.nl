@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Doorbraak Sessie – Anouk Kievit</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Dancing+Script:wght@600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -25,7 +25,7 @@
       --line:   #DDD5C8;
     }
     html { scroll-behavior: smooth; }
-    body { font-family: 'Jost', sans-serif; background: var(--off); color: var(--text); font-size: 17px; line-height: 1.9; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--off); color: var(--text); font-size: 17px; line-height: 1.9; }
     img { display: block; width: 100%; height: 100%; object-fit: cover; }
 
     /* LAYOUT */
@@ -38,14 +38,14 @@
     .eyebrow--coral { color: var(--coral); }
     .eyebrow--blue  { color: var(--blue); }
     .eyebrow--gold  { color: #8a6520; }
-    h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(38px, 6vw, 72px); font-weight: 300; line-height: 1.08; color: var(--text); margin-bottom: 32px; }
+    h2 { font-family: 'Playfair Display', serif; font-size: clamp(34px, 5.5vw, 64px); font-weight: 500; line-height: 1.15; color: var(--text); margin-bottom: 32px; }
     h2 em { font-style: italic; }
     h2.display { font-size: clamp(52px, 9vw, 110px); line-height: 1; letter-spacing: -1px; }
     p { margin-bottom: 18px; }
     p:last-child { margin-bottom: 0; }
 
     /* BUTTONS */
-    .btn { display: inline-block; padding: 16px 40px; font-family: 'Jost', sans-serif; font-size: 10px; letter-spacing: 3px; text-transform: uppercase; font-weight: 600; text-decoration: none; transition: all .2s ease; cursor: pointer; border: none; border-radius: 2px; }
+    .btn { display: inline-block; padding: 16px 40px; font-family: 'DM Sans', sans-serif; font-size: 10px; letter-spacing: 3px; text-transform: uppercase; font-weight: 600; text-decoration: none; transition: all .2s ease; cursor: pointer; border: none; border-radius: 2px; }
     .btn--coral { background: var(--coral); color: #fff; }
     .btn--coral:hover { background: var(--coral-d); transform: translateY(-2px); }
     .btn--pink { background: var(--pink); color: var(--text); }
@@ -67,9 +67,9 @@
     .hero__pretitle { font-size: 10px; letter-spacing: 5px; text-transform: uppercase; color: rgba(255,255,255,.65); font-weight: 600; margin-bottom: 28px; display: block; }
     .script { font-family: 'Dancing Script', cursive; font-size: 1.4em; font-weight: 700; display: inline-block; line-height: 1; vertical-align: middle; }
     .about__sig { font-size: 11px; letter-spacing: 4px; text-transform: uppercase; font-weight: 600; color: var(--coral); margin-bottom: 16px; display: block; }
-    .hero__h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(42px, 7vw, 90px); font-weight: 300; line-height: 1.05; color: #fff; margin-bottom: 32px; }
+    .hero__h1 { font-family: 'Playfair Display', serif; font-size: clamp(38px, 6vw, 80px); font-weight: 500; line-height: 1.1; color: #fff; margin-bottom: 32px; }
     .hero__h1 em { font-style: italic; color: var(--pink); }
-    .hero__sub { font-family: 'Cormorant Garamond', serif; font-size: clamp(18px, 2vw, 24px); font-style: italic; font-weight: 300; color: rgba(255,255,255,.85); max-width: 520px; margin: 0 0 52px; line-height: 1.55; }
+    .hero__sub { font-family: 'Playfair Display', serif; font-size: clamp(17px, 1.8vw, 22px); font-style: italic; font-weight: 400; color: rgba(255,255,255,.85); max-width: 520px; margin: 0 0 52px; line-height: 1.55; }
     .hero__ctas { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
     @media (max-width:780px) { .hero__content { padding: 60px 28px; } .hero__ctas { flex-direction: column; } .hero__ctas .btn { width: 100%; text-align: center; } }
 
@@ -79,7 +79,7 @@
     .strip__item { text-align: center; padding: 8px 44px; border-right: 1px solid var(--line); }
     .strip__item:last-child { border-right: none; }
     .strip__label { font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--soft); font-weight: 600; margin-bottom: 3px; }
-    .strip__val { font-family: 'Cormorant Garamond', serif; font-size: 19px; color: var(--text); }
+    .strip__val { font-family: 'Playfair Display', serif; font-size: 19px; color: var(--text); }
     @media (max-width:580px) { .strip__item { border-right: none; width: 50%; } }
 
     /* ═══ PIJN — al geprobeerd ═══ */
@@ -89,14 +89,14 @@
     .pijn__photo { position: sticky; top: 80px; }
     .pijn__photo img { border-radius: 2px; height: 600px; }
     .pijn__text h2 { margin-bottom: 12px; }
-    .pijn__intro { font-family: 'Cormorant Garamond', serif; font-size: clamp(18px, 2.2vw, 23px); font-style: italic; font-weight: 300; color: var(--soft); line-height: 1.6; margin-bottom: 40px; }
+    .pijn__intro { font-family: 'Playfair Display', serif; font-size: clamp(17px, 2vw, 21px); font-style: italic; font-weight: 400; color: var(--soft); line-height: 1.6; margin-bottom: 40px; }
     .pijn__list { list-style: none; }
     .pijn__list li { padding: 22px 0; }
     .pijn__list li:first-child { }
-    .pijn__list-num { font-family: 'Cormorant Garamond', serif; font-size: 13px; font-weight: 300; color: var(--coral); letter-spacing: 1px; margin-bottom: 4px; display: block; }
-    .pijn__list-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(18px, 2vw, 22px); font-weight: 400; color: var(--text); margin-bottom: 6px; }
+    .pijn__list-num { font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 600; color: var(--coral); letter-spacing: 1px; margin-bottom: 4px; display: block; }
+    .pijn__list-title { font-family: 'Playfair Display', serif; font-size: clamp(17px, 1.8vw, 20px); font-weight: 600; color: var(--text); margin-bottom: 6px; }
     .pijn__list-body { font-size: 16px; color: var(--soft); line-height: 1.75; }
-    .pijn__close { margin-top: 40px; font-family: 'Cormorant Garamond', serif; font-size: clamp(20px, 2.5vw, 26px); font-style: italic; font-weight: 300; color: var(--text); line-height: 1.5; }
+    .pijn__close { margin-top: 40px; font-family: 'Playfair Display', serif; font-size: clamp(20px, 2.5vw, 26px); font-style: italic; font-weight: 300; color: var(--text); line-height: 1.5; }
     .pijn__close strong { font-style: normal; color: var(--coral); }
 
     /* ═══ CORAL FULLBLEED ═══ */
@@ -111,7 +111,7 @@
     .band--pink .band__text { color: var(--text); }
     .band--blue   { background: var(--blue); }
     .band--blue .band__text { color: #fff; }
-    .band__text { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 5vw, 58px); font-weight: 300; font-style: italic; line-height: 1.3; max-width: 820px; margin: 0 auto 16px; }
+    .band__text { font-family: 'Playfair Display', serif; font-size: clamp(24px, 4vw, 48px); font-weight: 400; font-style: italic; line-height: 1.3; max-width: 820px; margin: 0 auto 16px; }
     .band__attr  { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; display: block; margin-top: 16px; }
 
     /* ═══ VERLANGEN ═══ */
@@ -125,8 +125,8 @@
     @media (max-width:640px) { .verlangen__grid { grid-template-columns: 1fr; } }
     .verlangen__card { background: var(--white); padding: 48px 44px; }
     .verlangen__card:nth-child(odd) { background: var(--off); }
-    .verlangen__card-num { font-family: 'Cormorant Garamond', serif; font-size: 11px; font-weight: 300; color: var(--coral); letter-spacing: 2px; margin-bottom: 16px; display: block; }
-    .verlangen__card-q { font-family: 'Cormorant Garamond', serif; font-size: clamp(20px, 2.2vw, 25px); font-style: italic; font-weight: 300; color: var(--text); line-height: 1.4; margin-bottom: 14px; }
+    .verlangen__card-num { font-family: 'DM Sans', sans-serif; font-size: 10px; font-weight: 600; color: var(--coral); letter-spacing: 2px; margin-bottom: 16px; display: block; }
+    .verlangen__card-q { font-family: 'Playfair Display', serif; font-size: clamp(18px, 2vw, 22px); font-style: italic; font-weight: 400; color: var(--text); line-height: 1.4; margin-bottom: 14px; }
     .verlangen__card-body { font-size: 16px; color: var(--soft); line-height: 1.75; }
 
     /* ═══ WATALS — photo fullbleed sections ═══ */
@@ -144,7 +144,7 @@
     .watals__copy { background: var(--off); display: flex; align-items: center; padding: 64px 56px; }
     @media (max-width:720px) { .watals__copy { padding: 48px 32px; } }
     .watals__copy-tag { font-size: 9px; letter-spacing: 3px; text-transform: uppercase; font-weight: 700; color: var(--coral); margin-bottom: 14px; display: block; }
-    .watals__copy h3 { font-family: 'Cormorant Garamond', serif; font-size: clamp(26px, 3vw, 38px); font-weight: 300; line-height: 1.2; color: var(--text); margin-bottom: 16px; }
+    .watals__copy h3 { font-family: 'Playfair Display', serif; font-size: clamp(22px, 2.5vw, 32px); font-weight: 500; line-height: 1.2; color: var(--text); margin-bottom: 16px; }
     .watals__copy h3 em { font-style: italic; color: var(--coral); }
     .watals__copy p { font-size: 15px; color: var(--soft); line-height: 1.8; }
 
@@ -158,7 +158,7 @@
     .versie__text h2 { color: #fff; margin-bottom: 24px; }
     .versie__text h2 em { color: var(--pink); font-style: italic; }
     .versie__text p { font-size: 16px; color: rgba(255,255,255,.85); line-height: 1.85; margin-bottom: 16px; }
-    .versie__quote { margin: 28px 0; font-family: 'Cormorant Garamond', serif; font-size: 22px; font-style: italic; color: rgba(255,255,255,.9); line-height: 1.45; }
+    .versie__quote { margin: 28px 0; font-family: 'Playfair Display', serif; font-size: 20px; font-style: italic; color: rgba(255,255,255,.9); line-height: 1.45; }
 
     /* ═══ VOOR WIE ═══ */
     .voor-wie { background: var(--white); padding: 100px 0; }
@@ -179,9 +179,9 @@
     .price-card--featured { background: var(--cream); }
     .price-card__badge { display: inline-block; background: var(--coral); color: #fff; font-size: 9px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; padding: 4px 14px; border-radius: 2px; margin-bottom: 16px; }
     .price-card__type { font-size: 9px; letter-spacing: 3px; text-transform: uppercase; font-weight: 700; color: var(--soft); margin-bottom: 6px; }
-    .price-card__name { font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 300; color: var(--text); margin-bottom: 8px; }
+    .price-card__name { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 500; color: var(--text); margin-bottom: 8px; }
     .price-card__tagline { font-size: 14px; font-style: italic; color: var(--soft); margin-bottom: 28px; padding-bottom: 28px; border-bottom: 1px solid var(--line); line-height: 1.6; }
-    .price-card__price { font-family: 'Cormorant Garamond', serif; font-size: 64px; font-weight: 300; color: var(--coral); line-height: 1; margin: 0 0 4px; }
+    .price-card__price { font-family: 'Playfair Display', serif; font-size: 56px; font-weight: 400; color: var(--coral); line-height: 1; margin: 0 0 4px; }
     .price-card__note { font-size: 12px; color: var(--soft); margin-bottom: 28px; }
     .price-card__includes { list-style: none; margin-bottom: 36px; }
     .price-card__includes li { font-size: 14px; padding: 10px 0; display: flex; gap: 10px; color: var(--text); align-items: flex-start; }
@@ -200,7 +200,7 @@
     .about__circle-img img { width: 100%; height: 100%; object-fit: cover; border-radius: 4px; }
     @media (max-width:740px) { .about__circles { width: 100%; height: 380px; } .about__circle-img { width: 100%; height: 360px; } }
     .about__text p { font-size: 16px; color: var(--soft); line-height: 1.85; }
-    .about__pullquote { margin: 28px 0; font-family: 'Cormorant Garamond', serif; font-size: 22px; font-style: italic; color: var(--text); line-height: 1.45; }
+    .about__pullquote { margin: 28px 0; font-family: 'Playfair Display', serif; font-size: 20px; font-style: italic; color: var(--text); line-height: 1.45; }
 
     /* ═══ FAQ ═══ */
     .faq { background: var(--white); padding: 100px 0; }
@@ -208,7 +208,7 @@
     @media (max-width:700px) { .faq__grid { grid-template-columns: 1fr; } }
     .faq__item { padding: 24px 0; }
     .faq__item:first-child { }
-    .faq__q { font-family: 'Cormorant Garamond', serif; font-size: 21px; color: var(--text); margin-bottom: 8px; }
+    .faq__q { font-family: 'Playfair Display', serif; font-size: 19px; color: var(--text); margin-bottom: 8px; }
     .faq__a { font-size: 14px; color: var(--soft); line-height: 1.8; }
 
     /* ═══ FINAL CTA — photo bg ═══ */
@@ -216,16 +216,16 @@
     .final-cta__bg { position: absolute; inset: 0; background: url('https://anoukkievit.nl/wp-content/uploads/2026/06/Anouk-Kievit_Kramer-Fotografeert-0744.jpg') center bottom / cover no-repeat; }
     .final-cta__bg::after { content: ''; position: absolute; inset: 0; background: rgba(15,10,5,.6); }
     .final-cta__content { position: relative; z-index: 1; padding: 80px 40px; max-width: 760px; }
-    .final-cta__content h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(44px, 8vw, 96px); font-weight: 300; line-height: 1.05; color: #fff; margin-bottom: 24px; }
+    .final-cta__content h2 { font-family: 'Playfair Display', serif; font-size: clamp(36px, 6vw, 72px); font-weight: 500; line-height: 1.05; color: #fff; margin-bottom: 24px; }
     .final-cta__content h2 em { font-style: italic; color: var(--coral); }
     .final-cta__content p { font-size: 17px; color: rgba(255,255,255,.8); max-width: 460px; margin: 0 auto 44px; line-height: 1.75; font-weight: 300; }
 
     /* ═══ INZICHT SECTIE ═══ */
     .inzicht { background: var(--off); padding: 96px 40px; text-align: center; }
     .inzicht__inner { max-width: 760px; margin: 0 auto; }
-    .inzicht__body { font-family: 'Cormorant Garamond', serif; font-size: clamp(22px, 3vw, 34px); font-weight: 300; line-height: 1.65; color: var(--text); margin-bottom: 32px; }
+    .inzicht__body { font-family: 'Playfair Display', serif; font-size: clamp(20px, 2.5vw, 28px); font-weight: 400; line-height: 1.65; color: var(--text); margin-bottom: 32px; }
     .inzicht__body em { font-style: italic; color: var(--coral); }
-    .inzicht__vraag { font-family: 'Cormorant Garamond', serif; font-size: clamp(30px, 4.5vw, 56px); font-style: italic; font-weight: 300; color: var(--text); line-height: 1.3; padding-top: 40px; margin-top: 16px; }
+    .inzicht__vraag { font-family: 'Playfair Display', serif; font-size: clamp(26px, 3.5vw, 44px); font-style: italic; font-weight: 400; color: var(--text); line-height: 1.3; padding-top: 40px; margin-top: 16px; }
 
     /* ═══ FOOTER ═══ */
     footer { background: var(--coral-d); color: rgba(255,255,255,.7); text-align: center; padding: 18px 28px; font-size: 11px; letter-spacing: 1.5px; }
