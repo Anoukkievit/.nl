@@ -515,7 +515,7 @@
       <div class="about__img-col">
         <img
           class="about__photo"
-          src="https://anoukkievit.nl/wp-content/uploads/2026/06/Anouk-Kievit_Kramer-Fotografeert-0744.jpg"
+          src="https://anoukkievit.nl/wp-content/uploads/2026/06/Anouk-Kievit_Kramer-Fotografeert-0782.jpg"
           alt="Anouk Kievit"
         />
       </div>
