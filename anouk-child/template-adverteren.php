@@ -297,7 +297,7 @@
     }
 
     /* ═══ OVER ANOUK ═══ */
-    .about { background: var(--beige); padding: 100px 0; border-top: 2px solid var(--text); }
+    .about { background: var(--beige); padding: 100px 0; }
     .about__inner {
       display: grid;
       grid-template-columns: 440px 1fr;
@@ -328,8 +328,7 @@
       color: var(--muted);
       display: block;
       margin-bottom: 44px;
-      padding-top: 16px;
-      border-top: 2px solid var(--text);
+      padding-top: 0;
     }
     .about__text p { font-size: 16px; color: var(--muted); line-height: 1.85; margin-bottom: 18px; }
     .about__text p:last-child { margin-bottom: 0; }
@@ -396,19 +395,6 @@
     </div>
   </div>
 </section>
-
-<!-- BAND -->
-<div class="band band--peach">
-  <div class="w">
-    <div class="band__row">
-      <span class="band__item">221 ondernemers<span class="band__dot"></span></span>
-      <span class="band__item">Meta Ads<span class="band__dot"></span></span>
-      <span class="band__item">Winstgevend adverteren<span class="band__dot"></span></span>
-      <span class="band__item">Zelf de regie<span class="band__dot"></span></span>
-      <span class="band__item">Geen bureau nodig<span class="band__dot"></span></span>
-    </div>
-  </div>
-</div>
 
 <!-- AANBOD -->
 <section class="aanbod" id="aanbod">
@@ -531,7 +517,6 @@
         />
       </div>
       <div class="about__content">
-        <span class="section-label" style="margin-bottom:12px;">Over mij</span>
         <h2 class="about__title">MEET<br><span>ANOUK</span></h2>
         <span class="about__role">Meta Ads Strateeg &amp; Mentor</span>
         <div class="about__text">
