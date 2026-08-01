@@ -418,7 +418,7 @@
           <h3 class="pcard__title">De 3 grootste fouten die drukke ondernemers maken met advertenties</h3>
           <p class="pcard__sub">(waardoor ze onnodig klanten, tijd en omzet mislopen)</p>
           <p class="pcard__desc">Ontdek waarom zoveel ondernemers advertenties ingewikkelder maken dan nodig is en wat er werkelijk nodig is om voorspelbaar nieuwe leads aan te trekken, zonder dagelijks online te zijn en zonder marketingbureau.</p>
-          <a href="#" class="btn btn--dark btn--full">Ik schrijf me gratis in</a>
+          <a href="https://anoukkievit.membirds.site/3-fouten-ads-webinar" class="btn btn--dark btn--full">Ik schrijf me gratis in</a>
         </div>
       </div>
 
@@ -435,7 +435,7 @@
           <span class="pcard__tag">Wachtlijst · Start september</span>
           <h3 class="pcard__title">De Admeester</h3>
           <p class="pcard__desc">Schrijf je in voor de wachtlijst en hoor als eerste wanneer de deuren openen. Leer hoe je zelf winstgevende Meta Ads inzet, zodat je niet langer afhankelijk bent van dagelijks posten of een marketingbureau.</p>
-          <a href="#" class="btn btn--dark btn--full">Zet me op de wachtlijst</a>
+          <a href="https://anoukkievit.membirds.site/wachtlijst-inschrijving" class="btn btn--dark btn--full">Zet me op de wachtlijst</a>
         </div>
       </div>
 
@@ -452,7 +452,7 @@
           <span class="pcard__tag">Exclusief · Max 3 plekken</span>
           <h3 class="pcard__title">1:1 Werken</h3>
           <p class="pcard__desc">Wil je samen aan de slag zodat ik 4 maanden naast je sta? We bouwen jouw advertentiestrategie en klantreis uit. Intensief, persoonlijk en op maat. Slechts 3 plekken beschikbaar.</p>
-          <a href="#" class="btn btn--dark btn--full">Neem contact op</a>
+          <a href="https://calendly.com/anoukkievit/call" class="btn btn--dark btn--full">Neem contact op</a>
         </div>
       </div>
 
