@@ -308,7 +308,7 @@
       .about__inner { grid-template-columns: 1fr; gap: 48px; }
     }
     .about__photo-wrap { position: sticky; top: 80px; }
-    .about__photo { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: top; border: 2px solid var(--text); }
+    .about__photo { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: top; }
     .about__title {
       font-family: 'Syne', sans-serif;
       font-size: clamp(52px, 8vw, 96px);
