@@ -526,7 +526,8 @@
           <p>Ruim 4 jaar geleden besloot ik de sprong te wagen. Ik begon als virtueel assistent, bouwde binnen korte tijd een volle agenda op en leerde ondernemen vooral door te doen.</p>
           <p>Ik heb heel veel geïnvesteerd in top experts, omdat ik geloof in ontwikkeling. Altijd heb ik een coach naast me gehad en soms zelfs drie tegelijkertijd.</p>
           <p>Later specialiseerde ik me in Meta Ads. Uiteindelijk hielp ik ruim <strong>150 ondernemers</strong> 1-op-1 en stond ik naast ondernemers die doorgroeiden van 50.000 naar 500.000 euro omzet.</p>
-          <p>Maar ik ontdekte ook iets anders: <strong>ik geloof niet dat ondernemers afhankelijk zouden moeten zijn van een marketingbureau.</strong> Ik geloof dat je zelf moet begrijpen hoe je klanten aantrekt.</p>
+          <p>Maar ik ontdekte ook iets anders.</p>
+          <p>Ik geloof dat jij dit als ondernemer zelf kan. Adverteren wordt veel te ingewikkeld gemaakt, maar het is het niet. En als je het eenmaal zelf begrijpt en je besluit het later uit te besteden? Dan snap je precies wat de andere partij doet. Je staat er niet meer naast, je staat erboven.</p>
           <p>Daarom besloot ik mijn kennis áán ondernemers te leren. De eerste editie van mijn training werd direct door <strong>221 ondernemers</strong> gekocht.</p>
           <p>Mijn doel: zoveel mogelijk ondernemers laten ervaren dat je veel meer vrijheid en rust krijgt als je zelf leert adverteren. En laten zien dat het makkelijker is dan je nu denkt.</p>
         </div>
