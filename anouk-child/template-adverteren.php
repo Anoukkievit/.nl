@@ -13,8 +13,10 @@
       --terra-d: #7A3A1E;
       --rust:    #C4673D;
       --salmon:  #E8906A;
-      --gold:    #B8960A;
-      --gold-bg: #C4A227;
+      --gold:    #D4B000;
+      --gold-bg: #E8C420;
+      --pink:    #E8A8C0;
+      --pink-d:  #D490AC;
       --cream:   #FAF6F0;
       --off:     #F5EFE7;
       --warm:    #EDE3D8;
@@ -95,19 +97,7 @@
       text-transform: uppercase;
       color: rgba(255,255,255,.55);
       font-weight: 500;
-      margin-bottom: 32px;
-    }
-    .hero__sub {
-      font-family: 'Cormorant', serif;
-      font-size: clamp(20px, 2.8vw, 30px);
-      font-style: italic;
-      font-weight: 400;
-      color: rgba(255,255,255,.88);
-      line-height: 1.5;
       margin-bottom: 48px;
-      max-width: 580px;
-      margin-left: auto;
-      margin-right: auto;
     }
     .hero__links {
       display: flex;
@@ -137,8 +127,10 @@
       border: none;
       text-decoration: none;
     }
-    .btn--gold { background: var(--gold-bg); color: var(--text); }
+    .btn--gold { background: var(--gold-bg); color: var(--text); font-weight: 700; }
     .btn--gold:hover { background: var(--gold); }
+    .btn--pink { background: var(--pink); color: var(--text); }
+    .btn--pink:hover { background: var(--pink-d); }
     .btn--terra { background: var(--terra); color: #fff; }
     .btn--terra:hover { background: var(--terra-d); transform: translateY(-2px); }
     .btn--outline { background: transparent; border: 1.5px solid var(--line); color: var(--text); }
@@ -204,9 +196,9 @@
       margin-bottom: 16px;
       align-self: flex-start;
     }
-    .card__badge--gratis    { background: rgba(184,150,10,.15); color: #7a5e00; border: 1px solid rgba(184,150,10,.3); }
+    .card__badge--gratis    { background: var(--gold-bg); color: var(--text); }
     .card__badge--wacht     { background: rgba(155,78,42,.1); color: var(--terra); border: 1px solid rgba(155,78,42,.25); }
-    .card__badge--exclusief { background: rgba(232,144,106,.15); color: var(--rust); border: 1px solid rgba(232,144,106,.3); }
+    .card__badge--exclusief { background: var(--pink); color: var(--text); }
     .card__title {
       font-family: 'Cormorant', serif;
       font-size: clamp(20px, 2.2vw, 26px);
@@ -358,7 +350,6 @@
     <span class="hero__pretitle">Hoi, ik ben:</span>
     <h1 class="hero__name"><em>Anouk</em><br>Kievit</h1>
     <p class="hero__tagline">Meta Ads Strateeg &amp; Mentor</p>
-    <p class="hero__sub">Ik leer ondernemers zelf de regie pakken<br>over hun groei, door winstgevend te adverteren.</p>
     <div class="hero__links">
       <a href="#aanbod">Masterclass</a>
       <a href="#aanbod">De Admeester</a>
@@ -395,7 +386,7 @@
             Ontdek waarom zoveel ondernemers advertenties veel ingewikkelder maken dan nodig is en wat er werkelijk nodig is om voorspelbaar nieuwe leads en klanten aan te trekken, zonder dagelijks online te zijn en zonder marketingbureau.
           </p>
           <div class="card__cta">
-            <a href="#" class="btn btn--gold btn--full">Ik schrijf me gratis in</a>
+            <a href="#" class="btn btn--gold btn--full">Ik schrijf me gratis in &rarr;</a>
           </div>
         </div>
       </div>
@@ -437,7 +428,7 @@
             Wil je samen aan de slag zodat ik 4 maanden naast je sta? We bouwen samen jouw advertentiestrategie en klantreis uit. Intensief, persoonlijk en op maat, zodat jij zelf leert adverteren en niet langer afhankelijk bent van anderen. Slechts 3 plekken.
           </p>
           <div class="card__cta">
-            <a href="#" class="btn btn--terra btn--full">Neem contact op</a>
+            <a href="#" class="btn btn--pink btn--full">Neem contact op &rarr;</a>
           </div>
         </div>
       </div>
