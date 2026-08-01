@@ -392,7 +392,7 @@
   </div>
   <img
     class="hero__img"
-    src="https://anoukkievit.nl/wp-content/uploads/2026/06/Anouk-Kievit_Kramer-Fotografeert-0760.jpg"
+    src="https://anoukkievit.nl/wp-content/uploads/2026/06/Anouk-Kievit_Kramer-Fotografeert-0869.jpg"
     alt="Anouk Kievit"
   />
 </section>
@@ -408,7 +408,7 @@
       <div>
         <div class="pcard">
           <img class="pcard__img"
-            src="https://anoukkievit.nl/wp-content/uploads/2026/06/Anouk-Kievit_Kramer-Fotografeert-0714.jpg"
+            src="https://anoukkievit.nl/wp-content/uploads/2026/06/Anouk-Kievit_Kramer-Fotografeert-0744.jpg"
             alt="Gratis Webinar" loading="lazy"
           />
           <div class="pcard__label">Gratis Webinar</div>
@@ -426,7 +426,7 @@
       <div>
         <div class="pcard">
           <img class="pcard__img"
-            src="https://anoukkievit.nl/wp-content/uploads/2026/06/Anouk-Kievit_Kramer-Fotografeert-0730.jpg"
+            src="https://anoukkievit.nl/wp-content/uploads/2026/06/Anouk-Kievit_Kramer-Fotografeert-0782.jpg"
             alt="De Admeester" loading="lazy"
           />
           <div class="pcard__label">De Admeester</div>
@@ -444,7 +444,7 @@
       <div>
         <div class="pcard">
           <img class="pcard__img"
-            src="https://anoukkievit.nl/wp-content/uploads/2026/06/Anouk-Kievit_Kramer-Fotografeert-0760.jpg"
+            src="https://anoukkievit.nl/wp-content/uploads/2026/06/Anouk-Kievit_Kramer-Fotografeert-0869.jpg"
             alt="1:1 Werken" loading="lazy"
           />
           <div class="pcard__label">1:1 Werken</div>
@@ -528,7 +528,7 @@
       <div class="about__img-col">
         <img
           class="about__photo"
-          src="https://anoukkievit.nl/wp-content/uploads/2026/06/Anouk-Kievit_Kramer-Fotografeert-0714.jpg"
+          src="https://anoukkievit.nl/wp-content/uploads/2026/06/Anouk-Kievit_Kramer-Fotografeert-0744.jpg"
           alt="Anouk Kievit"
         />
       </div>
