@@ -514,7 +514,7 @@
         <div class="about__body">
           <p>Jarenlang werkte ik als hbo-verpleegkundige op de oncologie en tijdens de coronaperiode op de Intensive Care. Werk waar ik met veel liefde op terugkijk, maar diep vanbinnen wist ik dat ik ooit wilde ondernemen.</p>
           <p>Ruim 4 jaar geleden besloot ik de sprong te wagen.</p>
-          <p>Ik begon als virtueel assistent, bouwde binnen een paar maanden een volle agenda op en hielp uiteindelijk ruim <strong>150 ondernemers</strong> 1-op-1 met hun marketing en advertenties. In die periode stond ik naast ondernemers die doorgroeiden van €50.000 naar €500.000 omzet en zag ik van dichtbij wat een bedrijf écht laat groeien.</p>
+          <p>Ik begon als virtueel assistent, bouwde binnen een paar maanden een volle agenda op en hielp uiteindelijk ruim <strong>150 ondernemers</strong> 1-op-1 met hun marketing en advertenties. In die periode stond ik naast ondernemers die doorgroeiden van €50.000 naar €500.000 tot 1 miljoen omzet per jaar en zag ik van dichtbij wat een bedrijf écht laat groeien.</p>
           <p>Maar ik ontdekte ook iets anders.</p>
           <p>De meeste ondernemers zijn veel te afhankelijk van een marketingbureau of van dagelijks zichtbaar moeten zijn.</p>
           <p>Dat kan anders.</p>
