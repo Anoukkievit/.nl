@@ -14,7 +14,7 @@
       --cream:    #fdf8f4;
       --white:    #ffffff;
       --dark:     #1c1410;
-      --muted:    #6b5e58;
+      --muted:    #2a2220;
       --gold:     #c9922a;
       --gold-pale:#fdf0d8;
       --lav:      #d4c8e8;
@@ -66,7 +66,7 @@
 
     /* ── HERO ── */
     .hero {
-      background: var(--blush);
+      background: var(--white);
       text-align: center;
       padding: 80px 48px 0;
       overflow: hidden;
@@ -225,7 +225,7 @@
       margin-bottom: 10px;
     }
     .pcard__desc {
-      font-size: 14px;
+      font-size: 15px;
       color: var(--muted);
       line-height: 1.8;
       margin-bottom: 20px;
@@ -289,7 +289,7 @@
 
     /* ── OVER ANOUK ── */
     .about {
-      background: var(--blush);
+      background: var(--cream);
       padding: 96px 0 108px;
     }
     .about__inner {
@@ -323,11 +323,11 @@
     }
     .about__heading em { font-style: italic; }
     .about__body p {
-      font-size: 15px;
+      font-size: 17px;
       color: var(--muted);
       line-height: 1.9;
       margin-bottom: 18px;
-      font-weight: 300;
+      font-weight: 400;
     }
     .about__body p:last-child { margin-bottom: 0; }
     .about__body strong { color: var(--dark); font-weight: 500; }
@@ -355,23 +355,22 @@
     .footer a:hover { color: #fff; }
 
     @media (max-width: 640px) {
-      .hero { padding: 60px 24px 0; }
-      .aanbod, .reviews, .about { padding: 64px 0; }
+      .hero { padding: 52px 24px 0; }
+      .aanbod, .reviews, .about { padding: 60px 0; }
       .hero__ctas { flex-direction: column; align-items: center; }
+      .hero__title { font-size: 64px; }
+      .sec-title { font-size: 38px; margin-bottom: 36px; }
+      .pcard__title { font-size: 20px; }
+      .rev { grid-template-columns: 48px 1fr; gap: 16px; }
+      .rev__avatar { width: 48px; height: 48px; }
+      .rev__quote { font-size: 17px; }
+      .about__heading { font-size: 52px; }
+      .about__body p { font-size: 16px; }
+      .btn { padding: 14px 24px; }
     }
   </style>
 </head>
 <body>
-
-<!-- NAV -->
-<nav class="nav">
-  <span class="nav__name">Anouk Kievit</span>
-  <ul class="nav__links">
-    <li><a href="#aanbod">Aanbod</a></li>
-    <li><a href="#reviews">Ervaringen</a></li>
-    <li><a href="#over">Over mij</a></li>
-  </ul>
-</nav>
 
 <!-- HERO -->
 <section class="hero">
