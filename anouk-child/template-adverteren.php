@@ -113,7 +113,8 @@
       display: block;
       object-fit: cover;
       object-position: top center;
-      max-height: 520px;
+      max-height: 780px;
+      height: auto;
     }
 
     /* ── BUTTONS ── */
