@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anouk Kievit – Meta Ads Strateeg & Mentor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --blush:    #f9f6ef;
+      --blush-d:  #ede8dc;
+      --cream:    #fdf8f4;
+      --white:    #ffffff;
+      --dark:     #1c1410;
+      --muted:    #2a2220;
+      --gold:     #ddb345;
+      --gold-pale:#fdf0d8;
+      --lav:      #d4c8e8;
+      --pink:     #e8a5bf;
+      --line:     #eedde6;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--dark);
+      font-size: 16px;
+      line-height: 1.8;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+
+    .w { max-width: 1120px; margin: 0 auto; padding: 0 48px; }
+    @media (max-width: 640px) { .w { padding: 0 24px; } }
+
+    /* ── NAV ── */
+    .nav {
+      background: var(--cream);
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 52px;
+    }
+    .nav__name {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 500;
+      letter-spacing: .5px;
+      color: var(--dark);
+    }
+    .nav__links {
+      display: flex;
+      gap: 36px;
+      list-style: none;
+      font-size: 11px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: var(--muted);
+    }
+    .nav__links a:hover { color: var(--dark); }
+    @media (max-width: 680px) { .nav__links { display: none; } }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--white);
+      text-align: center;
+      padding: 80px 48px 0;
+      overflow: hidden;
+    }
+    .hero__eye {
+      font-size: 10px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: var(--muted);
+      display: block;
+      margin-bottom: 20px;
+    }
+    .hero__title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(52px, 8vw, 108px);
+      font-weight: 500;
+      line-height: .92;
+      color: var(--dark);
+      letter-spacing: -1px;
+      margin-bottom: 28px;
+    }
+    .hero__title em { font-style: italic; }
+    .hero__sub {
+      font-size: 17px;
+      color: var(--muted);
+      max-width: 520px;
+      margin: 0 auto 44px;
+      line-height: 1.75;
+      font-weight: 300;
+    }
+    .hero__sub strong { color: var(--dark); font-weight: 500; }
+    .hero__ctas {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 60px;
+    }
+    .hero__img {
+      width: 100%;
+      max-width: 680px;
+      margin: 0 auto;
+      display: block;
+      object-fit: cover;
+      object-position: top center;
+      max-height: 780px;
+      height: auto;
+    }
+
+    /* ── BUTTONS ── */
+    .btn {
+      display: inline-block;
+      padding: 14px 32px;
+      font-size: 10px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      font-weight: 500;
+      cursor: pointer;
+      border: 1.5px solid transparent;
+      transition: all .2s;
+      text-decoration: none;
+    }
+    .btn--dark  { background: var(--dark); color: #fff; border-color: var(--dark); }
+    .btn--dark:hover { background: #333; border-color: #333; }
+    .btn--ghost { background: transparent; border-color: var(--dark); color: var(--dark); }
+    .btn--ghost:hover { background: var(--dark); color: #fff; }
+    .btn--gold  { background: var(--gold); color: var(--dark); border-color: var(--gold); }
+    .btn--gold:hover { opacity: .88; }
+    .btn--full  { width: 100%; text-align: center; display: block; }
+
+    /* ── SECTION TITLES (centered, Sanny-style) ── */
+    .sec-wrap { text-align: center; }
+    .sec-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(36px, 5.5vw, 64px);
+      font-weight: 500;
+      line-height: 1.05;
+      color: var(--dark);
+      margin-bottom: 56px;
+      letter-spacing: -.3px;
+    }
+    .sec-title em { font-style: italic; }
+
+    /* ── AANBOD (Sanny photo-card style) ── */
+    .aanbod {
+      background: var(--blush);
+      padding: 96px 0 108px;
+    }
+
+    .photo-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 0;
+    }
+    @media (max-width: 800px) {
+      .photo-cards { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
+    }
+
+    .pcard {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .pcard__img {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+      transition: transform .7s ease;
+    }
+    .pcard:hover .pcard__img { transform: scale(1.04); }
+
+    .pcard__label {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--dark);
+      color: #fff;
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-weight: 500;
+      padding: 14px 20px;
+      text-align: center;
+    }
+
+    /* Below each card: title + desc + button */
+    .pcard__body {
+      padding: 24px 4px 0;
+      text-align: left;
+    }
+    .pcard__tag {
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: var(--muted);
+      display: block;
+      margin-bottom: 8px;
+    }
+    .pcard__title {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 1.2;
+      color: var(--dark);
+      margin-bottom: 10px;
+    }
+    .pcard__sub {
+      font-size: 12px;
+      font-style: italic;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+    .pcard__desc {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 20px;
+      font-weight: 300;
+    }
+
+    /* ── REVIEWS ── */
+    .reviews {
+      background: var(--cream);
+      padding: 96px 0 108px;
+    }
+
+    .rev-list { display: flex; flex-direction: column; gap: 0; }
+
+    .rev {
+      display: grid;
+      grid-template-columns: 64px 1fr;
+      gap: 24px;
+      align-items: start;
+      padding: 36px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .rev:first-child { border-top: 1px solid var(--line); }
+
+    .rev__avatar {
+      width: 64px; height: 64px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: var(--blush);
+      position: relative;
+      flex-shrink: 0;
+    }
+    .rev__avatar img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+    .rev__avatar img[src*="URL_HIER"] { display: none; }
+    .rev__initials {
+      position: absolute; inset: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 20px; font-weight: 600;
+      color: var(--muted);
+    }
+
+    .rev__right {}
+    .rev__name {
+      font-size: 10px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: var(--muted);
+      display: block;
+      margin-bottom: 10px;
+    }
+    .rev__quote {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 400;
+      font-style: italic;
+      line-height: 1.65;
+      color: var(--dark);
+    }
+
+    /* ── OVER ANOUK ── */
+    .about {
+      background: var(--cream);
+      padding: 96px 0 108px;
+    }
+    .about__inner {
+      display: grid;
+      grid-template-columns: 1fr 480px;
+      gap: 80px;
+      align-items: center;
+    }
+    @media (max-width: 900px) {
+      .about__inner { grid-template-columns: 1fr; gap: 52px; }
+      .about__img-col { order: -1; }
+    }
+
+    .about__eye {
+      font-size: 10px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: var(--muted);
+      display: block;
+      margin-bottom: 16px;
+    }
+    .about__heading {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(48px, 7vw, 88px);
+      font-weight: 500;
+      line-height: .92;
+      color: var(--dark);
+      letter-spacing: -.5px;
+      margin-bottom: 32px;
+    }
+    .about__heading em { font-style: italic; }
+    .about__body p {
+      font-size: 17px;
+      color: var(--muted);
+      line-height: 1.9;
+      margin-bottom: 18px;
+      font-weight: 400;
+    }
+    .about__body p:last-child { margin-bottom: 0; }
+    .about__body strong { color: var(--dark); font-weight: 500; }
+
+    .about__img-col {}
+    .about__photo {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+    }
+
+    /* ── FOOTER ── */
+    .footer {
+      background: var(--dark);
+      color: rgba(255,255,255,.35);
+      text-align: center;
+      padding: 36px;
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .footer a { color: var(--pink); }
+    .footer a:hover { color: #fff; }
+
+    @media (max-width: 640px) {
+      .hero { padding: 52px 24px 0; }
+      .aanbod, .reviews, .about { padding: 60px 0; }
+      .hero__ctas { flex-direction: column; align-items: center; }
+      .hero__title { font-size: 64px; }
+      .sec-title { font-size: 38px; margin-bottom: 36px; }
+      .pcard__title { font-size: 20px; }
+      .rev { grid-template-columns: 48px 1fr; gap: 16px; }
+      .rev__avatar { width: 48px; height: 48px; }
+      .rev__quote { font-size: 17px; }
+      .about__heading { font-size: 52px; }
+      .about__body p { font-size: 16px; }
+      .btn { padding: 14px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+
+  <h1 class="hero__title">Anouk<br><em>Kievit</em></h1>
+  <p class="hero__sub">Ik leer ondernemers <strong>zelf de regie pakken</strong> over hun groei. Winstgevend adverteren op Meta, zonder dagelijks online te zijn en zonder marketingbureau.</p>
+  <img
+    class="hero__img"
+    src="https://anoukkievit.nl/wp-content/uploads/2026/06/Anouk-Kievit_Kramer-Fotografeert-0869.jpg"
+    alt="Anouk Kievit"
+  />
+</section>
+
+<!-- AANBOD -->
+<section class="aanbod" id="aanbod">
+  <div class="w sec-wrap">
+    <h2 class="sec-title">Hoe kan ik<br><em>je helpen?</em></h2>
+
+    <div class="photo-cards">
+
+      <!-- MASTERCLASS -->
+      <div>
+        <div class="pcard">
+          <img class="pcard__img"
+            src="https://anoukkievit.nl/wp-content/uploads/2026/06/Anouk-Kievit_Kramer-Fotografeert-0744.jpg"
+            alt="Gratis Webinar" loading="lazy"
+          />
+          <div class="pcard__label">Gratis Webinar</div>
+        </div>
+        <div class="pcard__body">
+          <span class="pcard__tag">Gratis · Online</span>
+          <h3 class="pcard__title">De 3 grootste fouten die drukke ondernemers maken met advertenties</h3>
+          <p class="pcard__sub">(waardoor ze onnodig klanten, tijd en omzet mislopen)</p>
+          <p class="pcard__desc">Ontdek waarom zoveel ondernemers advertenties ingewikkelder maken dan nodig is en wat er werkelijk nodig is om voorspelbaar nieuwe leads aan te trekken, zonder dagelijks online te zijn en zonder marketingbureau.</p>
+          <a href="https://anoukkievit.membirds.site/3-fouten-ads-webinar" class="btn btn--gold btn--full">Ik schrijf me gratis in</a>
+        </div>
+      </div>
+
+      <!-- DE ADMEESTER -->
+      <div>
+        <div class="pcard">
+          <img class="pcard__img"
+            src="https://anoukkievit.nl/wp-content/uploads/2026/06/Anouk-Kievit_Kramer-Fotografeert-0782.jpg"
+            alt="De Admeester" loading="lazy"
+          />
+          <div class="pcard__label">De Admeester</div>
+        </div>
+        <div class="pcard__body">
+          <span class="pcard__tag">Wachtlijst · Start september</span>
+          <h3 class="pcard__title">De Admeester</h3>
+          <p class="pcard__desc">Schrijf je in voor de wachtlijst en hoor als eerste wanneer de deuren openen. Leer hoe je zelf winstgevende Meta Ads inzet, zodat je niet langer afhankelijk bent van dagelijks posten of een marketingbureau.</p>
+          <p class="pcard__desc"><strong>Ruim 220 gingen je de vorige ronde voor.</strong></p>
+          <a href="https://anoukkievit.membirds.site/wachtlijst-inschrijving" class="btn btn--gold btn--full">Zet me op de wachtlijst</a>
+        </div>
+      </div>
+
+      <!-- 1:1 EXCLUSIEF -->
+      <div>
+        <div class="pcard">
+          <img class="pcard__img"
+            src="https://anoukkievit.nl/wp-content/uploads/2026/06/Anouk-Kievit_Kramer-Fotografeert-0869.jpg"
+            alt="1:1 Werken" loading="lazy"
+          />
+          <div class="pcard__label">1:1 Werken</div>
+        </div>
+        <div class="pcard__body">
+          <span class="pcard__tag">Exclusief · Max 3 plekken</span>
+          <h3 class="pcard__title">1:1 Werken</h3>
+          <p class="pcard__desc">Wil je samen aan de slag zodat ik 4 maanden naast je sta? We bouwen jouw advertentiestrategie en klantreis uit. Intensief, persoonlijk en op maat. Slechts 3 plekken beschikbaar.</p>
+          <a href="https://calendly.com/anoukkievit/call" class="btn btn--gold btn--full">Neem contact op</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="w sec-wrap">
+    <h2 class="sec-title">Wat klanten<br><em>zeggen</em></h2>
+
+    <div class="rev-list" style="text-align:left;">
+
+      <div class="rev">
+        <div class="rev__avatar">
+          <img src="https://anoukkievit.nl/wp-content/uploads/2026/08/Schermafbeelding-2026-02-05-134747.png" alt="Suzanne Hoogstra" />
+          <div class="rev__initials">SH</div>
+        </div>
+        <div class="rev__right">
+          <span class="rev__name">Suzanne Hoogstra</span>
+          <p class="rev__quote">"Anouk is een absolute aanwinst voor mijn bedrijf. Ze kijkt zoveel verder met je mee dan alleen ads draaien. De kennis die ze heeft is enorm. Ze is lief én to the point tegelijk en dat werkt heel fijn. Heel blij met je!"</p>
+        </div>
+      </div>
+
+      <div class="rev">
+        <div class="rev__avatar">
+          <img src="https://anoukkievit.nl/wp-content/uploads/2026/08/Schermafbeelding-2026-02-05-134856.png" alt="Gino Ilondo" />
+          <div class="rev__initials">GI</div>
+        </div>
+        <div class="rev__right">
+          <span class="rev__name">Gino Ilondo</span>
+          <p class="rev__quote">"Anouk heeft mij, als leek in de advertentiewereld, geholpen om het van de grond af te krijgen. Op een fijne, behulpzame en betrouwbare manier. Ze is bereid om altijd met je mee te denken en ik heb in korte tijd lekker geld kunnen verdienen."</p>
+        </div>
+      </div>
+
+      <div class="rev">
+        <div class="rev__avatar">
+          <img src="https://anoukkievit.nl/wp-content/uploads/2026/08/Schermafbeelding-2026-02-05-134903.png" alt="Chantal Hopstaken" />
+          <div class="rev__initials">CH</div>
+        </div>
+        <div class="rev__right">
+          <span class="rev__name">Chantal Hopstaken</span>
+          <p class="rev__quote">"Anouk is echt zo'n goudmijn die vanaf dag één naast me stond. Ze denkt echt met je mee en durft kritisch te zijn, maar altijd op een opbouwende manier. Mede dankzij haar inzet is mijn bedrijf zo hard gegroeid."</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- OVER ANOUK -->
+<section class="about" id="over">
+  <div class="w">
+    <div class="about__inner">
+      <div>
+        <span class="about__eye">Over mij</span>
+        <h2 class="about__heading">Meet<br><em>Anouk</em></h2>
+        <div class="about__body">
+          <p>Jarenlang werkte ik als hbo-verpleegkundige op de oncologie en tijdens de coronaperiode op de Intensive Care. Werk waar ik met veel liefde op terugkijk, maar diep vanbinnen wist ik dat ik ooit wilde ondernemen.</p>
+          <p>Ruim 4 jaar geleden besloot ik de sprong te wagen.</p>
+          <p>Ik begon als virtueel assistent, bouwde binnen een paar maanden een volle agenda op en hielp uiteindelijk ruim <strong>150 ondernemers</strong> 1-op-1 met hun marketing en advertenties. In die periode stond ik naast ondernemers die doorgroeiden van €50.000 naar €500.000 tot 1 miljoen omzet per jaar en zag ik van dichtbij wat een bedrijf écht laat groeien.</p>
+          <p>Maar ik ontdekte ook iets anders.</p>
+          <p>De meeste ondernemers zijn veel te afhankelijk van een marketingbureau of van dagelijks zichtbaar moeten zijn.</p>
+          <p>Dat kan anders.</p>
+          <p>Daarom besloot ik mijn kennis niet langer alleen uit te voeren, maar ondernemers te leren hoe ze zelf winstgevend kunnen adverteren. De eerste editie van mijn training werd direct door <strong>220 ondernemers</strong> gekocht.</p>
+          <p>Vandaag is dat mijn missie.</p>
+          <p>Zoveel mogelijk ondernemers laten ervaren hoeveel vrijheid advertenties kunnen geven. Meer bereik. Meer omzet. Meer rust. En vooral: een bedrijf dat ook doorgaat als jij even offline bent.</p>
+          <p>Naast mijn bedrijf schrijf ik aan een boek over mijn verleden met anorexia. Want uiteindelijk draait alles waar ik aan werk om hetzelfde: vrijheid.</p>
+        </div>
+      </div>
+      <div class="about__img-col">
+        <img
+          class="about__photo"
+          src="https://anoukkievit.nl/wp-content/uploads/2026/06/Anouk-Kievit_Kramer-Fotografeert-0782.jpg"
+          alt="Anouk Kievit"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© 2026 Anouk Kievit &nbsp;·&nbsp; <a href="https://www.instagram.com/anoukkievit.nl/" target="_blank">Instagram</a></p>
+</footer>
+
+</body>
+</html>
