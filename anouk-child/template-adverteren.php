@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Anouk Kievit – Meta Ads Strateeg & Mentor</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,600;1,9..144,700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -45,7 +45,7 @@
       padding: 20px 52px;
     }
     .nav__name {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Fraunces', serif;
       font-size: 22px;
       font-weight: 500;
       letter-spacing: .5px;
@@ -81,7 +81,7 @@
       margin-bottom: 20px;
     }
     .hero__title {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Fraunces', serif;
       font-size: clamp(52px, 8vw, 108px);
       font-weight: 500;
       line-height: .92;
@@ -140,7 +140,7 @@
     /* ── SECTION TITLES (centered, Sanny-style) ── */
     .sec-wrap { text-align: center; }
     .sec-title {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Fraunces', serif;
       font-size: clamp(36px, 5.5vw, 64px);
       font-weight: 500;
       line-height: 1.05;
@@ -211,7 +211,7 @@
       margin-bottom: 8px;
     }
     .pcard__title {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Fraunces', serif;
       font-size: 22px;
       font-weight: 600;
       line-height: 1.2;
@@ -263,7 +263,7 @@
     .rev__initials {
       position: absolute; inset: 0;
       display: flex; align-items: center; justify-content: center;
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Fraunces', serif;
       font-size: 20px; font-weight: 600;
       color: var(--muted);
     }
@@ -279,7 +279,7 @@
       margin-bottom: 10px;
     }
     .rev__quote {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Fraunces', serif;
       font-size: 20px;
       font-weight: 400;
       font-style: italic;
@@ -313,7 +313,7 @@
       margin-bottom: 16px;
     }
     .about__heading {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Fraunces', serif;
       font-size: clamp(48px, 7vw, 88px);
       font-weight: 500;
       line-height: .92;
