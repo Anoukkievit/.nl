@@ -4,363 +4,356 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Anouk Kievit – Meta Ads Strateeg & Mentor</title>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Dancing+Script:wght@700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --blue:   #6578be;
-      --blue-d: #4d61a8;
-      --beige:  #fcf9f4;
-      --peach:  #ffbd99;
-      --peach-d:#e8a07a;
-      --gold:   #e3b24b;
-      --gold-d: #c89830;
-      --pink:   #eec3e6;
-      --pink-d: #d8a8d0;
-      --text:   #111111;
-      --muted:  #555555;
-      --line:   #e0dbd4;
-      --white:  #ffffff;
+      --cream:    #faf6f1;
+      --white:    #ffffff;
+      --terra:    #c85f44;
+      --terra-d:  #a84a32;
+      --lav:      #8e7fbf;
+      --lav-d:    #7265a8;
+      --lav-pale: #ede9f7;
+      --pink:     #e8a5bf;
+      --pink-pale:#faeef5;
+      --gold:     #d4a030;
+      --gold-d:   #b88020;
+      --gold-pale:#fdf3dc;
+      --text:     #1a1614;
+      --muted:    #5a5250;
+      --line:     #e4ddd6;
     }
     html { scroll-behavior: smooth; }
-    body { font-family: 'DM Sans', sans-serif; background: var(--beige); color: var(--text); font-size: 16px; line-height: 1.8; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--text); font-size: 16px; line-height: 1.8; }
     img { display: block; max-width: 100%; }
     a { color: inherit; text-decoration: none; }
 
-    .w { max-width: 1140px; margin: 0 auto; padding: 0 48px; }
+    .w { max-width: 1160px; margin: 0 auto; padding: 0 52px; }
     @media (max-width: 640px) { .w { padding: 0 24px; } }
 
-    /* ═══ TOPBAR ═══ */
+    /* ── TOPBAR ── */
     .topbar {
-      background: var(--blue);
-      color: #fff;
+      background: var(--text);
+      color: rgba(255,255,255,.55);
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 32px;
-      padding: 14px 32px;
-      font-family: 'Syne', sans-serif;
-      font-size: 11px;
-      letter-spacing: 3px;
+      gap: 28px;
+      padding: 13px 32px;
+      font-size: 10px;
+      letter-spacing: 3.5px;
       text-transform: uppercase;
-      font-weight: 600;
+      font-weight: 500;
     }
-    .topbar a { color: var(--peach); text-decoration: underline; text-underline-offset: 3px; }
+    .topbar a { color: var(--pink); }
+    .topbar span.sep { color: rgba(255,255,255,.2); }
 
-    /* ═══ HERO ═══ */
+    /* ── HERO ── */
     .hero {
-      background: var(--beige);
-      padding: 80px 0 60px;
-      border-bottom: 2px solid var(--text);
-      overflow: hidden;
-    }
-    .hero__inner {
+      background: var(--cream);
       display: grid;
-      grid-template-columns: 1fr 480px;
-      gap: 0;
-      align-items: end;
+      grid-template-columns: 1fr 520px;
+      min-height: 580px;
+      border-bottom: 1px solid var(--line);
     }
-    @media (max-width: 900px) {
-      .hero__inner { grid-template-columns: 1fr; }
-      .hero__photo { display: none; }
+    @media (max-width: 960px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero__img-col { display: none; }
     }
-    .hero__left { padding: 0 0 0 48px; }
+    .hero__text-col {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 80px 64px 72px 52px;
+    }
     .hero__kicker {
-      font-family: 'Syne', sans-serif;
-      font-size: 11px;
+      font-size: 10px;
       letter-spacing: 4px;
       text-transform: uppercase;
-      font-weight: 700;
-      color: var(--blue);
-      margin-bottom: 20px;
+      font-weight: 600;
+      color: var(--terra);
+      margin-bottom: 24px;
       display: block;
     }
     .hero__name {
-      font-family: 'Syne', sans-serif;
-      font-size: clamp(68px, 10vw, 136px);
-      font-weight: 800;
-      line-height: .92;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(72px, 9vw, 128px);
+      font-weight: 700;
+      line-height: .88;
       color: var(--text);
-      margin-bottom: 32px;
-      letter-spacing: -2px;
+      margin-bottom: 36px;
+      letter-spacing: -1px;
     }
-    .hero__name span { color: var(--blue); }
+    .hero__name em {
+      font-style: italic;
+      color: var(--terra);
+    }
     .hero__desc {
-      font-size: 18px;
+      font-size: 17px;
       color: var(--muted);
-      max-width: 480px;
-      line-height: 1.7;
-      margin-bottom: 40px;
-      font-weight: 400;
+      max-width: 440px;
+      line-height: 1.75;
+      margin-bottom: 44px;
     }
     .hero__desc strong { color: var(--text); font-weight: 600; }
     .hero__ctas { display: flex; gap: 14px; flex-wrap: wrap; }
-    .hero__photo {
+    .hero__img-col {
+      position: relative;
+      overflow: hidden;
+      background: var(--lav-pale);
+    }
+    .hero__img-col img {
       width: 100%;
-      height: 600px;
+      height: 100%;
       object-fit: cover;
       object-position: top;
-      display: block;
     }
 
-    /* ═══ KLEURVLAK ═══ */
-    .band {
-      padding: 28px 0;
-      font-family: 'Syne', sans-serif;
-      font-size: 13px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      font-weight: 700;
-    }
-    .band--peach { background: var(--peach); color: var(--text); }
-    .band__row {
-      display: flex;
-      align-items: center;
-      gap: 40px;
-      overflow: hidden;
-      white-space: nowrap;
-    }
-    .band__item { display: inline-flex; align-items: center; gap: 20px; }
-    .band__dot { width: 6px; height: 6px; background: var(--text); border-radius: 50%; flex-shrink: 0; }
-
-    /* ═══ BUTTONS ═══ */
+    /* ── BUTTONS ── */
     .btn {
       display: inline-block;
-      padding: 16px 36px;
-      font-family: 'Syne', sans-serif;
-      font-size: 11px;
-      letter-spacing: 2px;
+      padding: 15px 34px;
+      font-size: 10px;
+      letter-spacing: 2.5px;
       text-transform: uppercase;
-      font-weight: 700;
-      transition: all .18s;
+      font-weight: 600;
       cursor: pointer;
-      border: 2px solid transparent;
+      border: 1.5px solid transparent;
+      transition: all .18s;
       text-decoration: none;
     }
-    .btn--blue   { background: var(--blue); color: #fff; border-color: var(--blue); }
-    .btn--blue:hover { background: var(--blue-d); border-color: var(--blue-d); }
+    .btn--terra  { background: var(--terra); color: #fff; border-color: var(--terra); }
+    .btn--terra:hover { background: var(--terra-d); border-color: var(--terra-d); }
+    .btn--lav    { background: var(--lav); color: #fff; border-color: var(--lav); }
+    .btn--lav:hover { background: var(--lav-d); border-color: var(--lav-d); }
     .btn--gold   { background: var(--gold); color: var(--text); border-color: var(--gold); }
     .btn--gold:hover { background: var(--gold-d); border-color: var(--gold-d); }
-    .btn--peach  { background: var(--peach); color: var(--text); border-color: var(--peach); }
-    .btn--peach:hover { background: var(--peach-d); border-color: var(--peach-d); }
-    .btn--outline { background: transparent; border-color: var(--text); color: var(--text); }
-    .btn--outline:hover { background: var(--text); color: #fff; }
+    .btn--ghost  { background: transparent; border-color: var(--text); color: var(--text); }
+    .btn--ghost:hover { background: var(--text); color: #fff; }
     .btn--full { width: 100%; text-align: center; display: block; }
 
-    /* ═══ AANBOD ═══ */
-    .aanbod { background: var(--beige); padding: 100px 0; }
-    .section-label {
-      font-family: 'Syne', sans-serif;
+    /* ── SECTION HEADINGS ── */
+    .sec-eye {
       font-size: 10px;
-      letter-spacing: 5px;
+      letter-spacing: 4px;
       text-transform: uppercase;
-      font-weight: 700;
+      font-weight: 600;
       color: var(--muted);
-      margin-bottom: 12px;
       display: block;
+      margin-bottom: 10px;
     }
-    .section-title {
-      font-family: 'Syne', sans-serif;
-      font-size: clamp(36px, 5.5vw, 68px);
-      font-weight: 800;
-      line-height: 1;
-      letter-spacing: -1px;
+    .sec-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(42px, 6vw, 76px);
+      font-weight: 700;
+      line-height: .95;
       color: var(--text);
       margin-bottom: 64px;
+      letter-spacing: -.5px;
     }
+    .sec-title em { font-style: italic; color: var(--terra); }
 
-    .aanbod__grid {
+    /* ── AANBOD ── */
+    .aanbod { background: var(--cream); padding: 100px 0; }
+
+    .cards {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 2px;
-      border: 2px solid var(--text);
+      gap: 0;
+      border-top: 1.5px solid var(--text);
+      border-left: 1.5px solid var(--text);
     }
-    @media (max-width: 820px) {
-      .aanbod__grid { grid-template-columns: 1fr; }
+    @media (max-width: 840px) {
+      .cards { grid-template-columns: 1fr; }
     }
 
     .card {
+      border-right: 1.5px solid var(--text);
+      border-bottom: 1.5px solid var(--text);
       display: flex;
       flex-direction: column;
       background: var(--white);
     }
-    .card:nth-child(2) { background: var(--blue); }
-    .card:nth-child(2) .card__title,
-    .card:nth-child(2) .card__num  { color: #fff; }
-    .card:nth-child(2) .card__desc { color: rgba(255,255,255,.75); }
-    .card:nth-child(2) .card__badge { background: var(--peach); color: var(--text); }
+    .card:nth-child(2) { background: var(--lav-pale); }
+    .card:nth-child(3) { background: var(--pink-pale); }
 
     .card__img-wrap { overflow: hidden; }
     .card__img {
       width: 100%;
-      aspect-ratio: 3/2;
+      aspect-ratio: 4/3;
       object-fit: cover;
       object-position: top;
       display: block;
-      transition: transform .5s;
-      filter: grayscale(20%);
+      transition: transform .6s ease;
     }
-    .card:hover .card__img { transform: scale(1.04); filter: grayscale(0%); }
+    .card:hover .card__img { transform: scale(1.05); }
 
     .card__body { padding: 28px 28px 36px; flex: 1; display: flex; flex-direction: column; }
-    .card__num {
-      font-family: 'Syne', sans-serif;
-      font-size: 11px;
-      letter-letter-spacing: 2px;
-      font-weight: 700;
-      color: var(--muted);
-      margin-bottom: 8px;
-      display: block;
-    }
-    .card__badge {
-      display: inline-block;
-      font-family: 'Syne', sans-serif;
+
+    .card__tag {
       font-size: 9px;
-      letter-spacing: 2px;
+      letter-spacing: 2.5px;
       text-transform: uppercase;
-      font-weight: 700;
+      font-weight: 600;
       padding: 5px 12px;
-      margin-bottom: 14px;
+      display: inline-block;
       align-self: flex-start;
+      margin-bottom: 18px;
     }
-    .card__badge--gold  { background: var(--gold); color: var(--text); }
-    .card__badge--peach { background: var(--peach); color: var(--text); }
-    .card__badge--pink  { background: var(--pink); color: var(--text); }
+    .card__tag--gold  { background: var(--gold-pale); color: var(--gold-d); }
+    .card__tag--lav   { background: var(--lav); color: #fff; }
+    .card__tag--pink  { background: var(--pink); color: var(--text); }
 
     .card__title {
-      font-family: 'Syne', sans-serif;
-      font-size: clamp(18px, 1.8vw, 22px);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(20px, 2vw, 26px);
       font-weight: 700;
+      line-height: 1.15;
       color: var(--text);
-      line-height: 1.2;
-      margin-bottom: 14px;
+      margin-bottom: 10px;
     }
-    .card__subtitle { font-size: 13px; font-style: italic; color: var(--muted); margin-bottom: 14px; }
-    .card__desc { font-size: 14px; color: var(--muted); line-height: 1.75; flex: 1; margin-bottom: 28px; }
+    .card__sub {
+      font-size: 12px;
+      font-style: italic;
+      color: var(--muted);
+      margin-bottom: 14px;
+      line-height: 1.5;
+    }
+    .card__desc {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.8;
+      flex: 1;
+      margin-bottom: 28px;
+    }
     .card__cta { margin-top: auto; }
 
-    /* ═══ REVIEWS ═══ */
-    .reviews { background: var(--blue); padding: 100px 0; }
-    .reviews .section-label { color: rgba(255,255,255,.5); }
-    .reviews .section-title { color: #fff; margin-bottom: 64px; }
+    /* ── REVIEWS ── */
+    .reviews { background: var(--lav); padding: 100px 0; }
+    .reviews .sec-eye  { color: rgba(255,255,255,.45); }
+    .reviews .sec-title { color: #fff; }
 
-    .reviews__grid {
+    .rev-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
+      gap: 2px;
+      background: rgba(255,255,255,.12);
     }
     @media (max-width: 860px) {
-      .reviews__grid { grid-template-columns: 1fr; max-width: 500px; margin: 0 auto; }
+      .rev-grid { grid-template-columns: 1fr; }
     }
 
-    .review {
+    .rev {
       background: rgba(255,255,255,.08);
-      border: 1px solid rgba(255,255,255,.15);
-      padding: 32px 28px 36px;
+      padding: 36px 30px 40px;
       display: flex;
       flex-direction: column;
     }
-    .review__photo-wrap {
-      width: 64px; height: 64px;
+    .rev:hover { background: rgba(255,255,255,.14); }
+
+    .rev__avatar {
+      width: 56px; height: 56px;
       border-radius: 50%;
       overflow: hidden;
-      margin-bottom: 20px;
+      margin-bottom: 22px;
+      background: rgba(255,255,255,.2);
       position: relative;
-      background: rgba(255,255,255,.15);
       flex-shrink: 0;
     }
-    .review__photo { width: 100%; height: 100%; object-fit: cover; object-position: top; border-radius: 50%; }
-    .review__photo-placeholder {
+    .rev__avatar img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+    .rev__avatar img[src*="URL_HIER"] { display: none; }
+    .rev__initials {
       position: absolute; inset: 0;
       display: flex; align-items: center; justify-content: center;
-      font-family: 'Syne', sans-serif;
-      font-size: 18px; font-weight: 700; color: rgba(255,255,255,.6);
+      font-size: 16px; font-weight: 700;
+      color: rgba(255,255,255,.7);
     }
-    .review__photo[src*="URL_HIER"] { display: none; }
 
-    .review__text {
-      font-size: 15px;
-      color: rgba(255,255,255,.82);
-      line-height: 1.75;
+    .rev__quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1.6;
+      color: rgba(255,255,255,.9);
       flex: 1;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
     }
-    .review__name {
-      font-family: 'Syne', sans-serif;
+    .rev__name {
       font-size: 10px;
-      letter-spacing: 2px;
+      letter-spacing: 2.5px;
       text-transform: uppercase;
-      font-weight: 700;
-      color: var(--peach);
-      display: block;
+      font-weight: 600;
+      color: var(--pink);
     }
 
-    /* ═══ OVER ANOUK ═══ */
-    .about { background: var(--beige); padding: 100px 0; }
+    /* ── OVER ANOUK ── */
+    .about { background: var(--cream); padding: 100px 0; }
     .about__inner {
       display: grid;
-      grid-template-columns: 440px 1fr;
-      gap: 80px;
+      grid-template-columns: 420px 1fr;
+      gap: 88px;
       align-items: start;
     }
-    @media (max-width: 860px) {
-      .about__inner { grid-template-columns: 1fr; gap: 48px; }
+    @media (max-width: 900px) {
+      .about__inner { grid-template-columns: 1fr; gap: 52px; }
     }
-    .about__photo-wrap { position: sticky; top: 80px; }
-    .about__photo { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: top; }
-    .about__title {
-      font-family: 'Syne', sans-serif;
-      font-size: clamp(52px, 8vw, 96px);
-      font-weight: 800;
-      color: var(--text);
-      line-height: .9;
-      letter-spacing: -2px;
-      margin-bottom: 8px;
+
+    .about__sticky { position: sticky; top: 80px; }
+    .about__photo {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      object-position: top;
+      display: block;
     }
-    .about__title span { color: var(--blue); }
-    .about__role {
-      font-family: 'Syne', sans-serif;
-      font-size: 10px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
+
+    .about__heading {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(56px, 8vw, 100px);
       font-weight: 700;
+      line-height: .88;
+      color: var(--text);
+      letter-spacing: -1px;
+      margin-bottom: 6px;
+    }
+    .about__heading em { font-style: italic; color: var(--terra); }
+    .about__role {
+      font-size: 10px;
+      letter-spacing: 3.5px;
+      text-transform: uppercase;
+      font-weight: 600;
       color: var(--muted);
       display: block;
-      margin-bottom: 44px;
-      padding-top: 0;
+      margin-bottom: 48px;
     }
-    .about__text p { font-size: 16px; color: var(--muted); line-height: 1.85; margin-bottom: 18px; }
-    .about__text p:last-child { margin-bottom: 0; }
-    .about__text strong { color: var(--text); font-weight: 600; }
-    .about__sig {
-      font-family: 'Dancing Script', cursive;
-      font-size: 52px;
-      color: var(--text);
-      margin-top: 44px;
-      display: block;
+    .about__body p {
+      font-size: 16px;
+      color: var(--muted);
+      line-height: 1.9;
+      margin-bottom: 20px;
     }
+    .about__body p:last-child { margin-bottom: 0; }
+    .about__body strong { color: var(--text); font-weight: 600; }
 
-    /* ═══ FOOTER ═══ */
+    /* ── FOOTER ── */
     .footer {
       background: var(--text);
-      color: rgba(255,255,255,.4);
+      color: rgba(255,255,255,.35);
       text-align: center;
       padding: 40px;
-      font-family: 'Syne', sans-serif;
-      font-size: 11px;
-      letter-spacing: 2px;
+      font-size: 10px;
+      letter-spacing: 2.5px;
       text-transform: uppercase;
     }
-    .footer a { color: var(--peach); }
+    .footer a { color: var(--pink); }
     .footer a:hover { color: #fff; }
 
-    @media (max-width: 900px) {
-      .hero__left { padding: 0; }
-    }
     @media (max-width: 640px) {
-      .hero { padding: 60px 0 48px; }
+      .hero__text-col { padding: 60px 24px 56px; }
       .aanbod, .reviews, .about { padding: 64px 0; }
       .hero__ctas { flex-direction: column; }
+      .sec-title { margin-bottom: 44px; }
     }
   </style>
 </head>
@@ -369,39 +362,36 @@
 <!-- TOPBAR -->
 <div class="topbar">
   <span>Meta Ads Strateeg &amp; Mentor</span>
-  <span style="color:rgba(255,255,255,.3)">·</span>
+  <span class="sep">·</span>
   <a href="#aanbod">Bekijk het aanbod</a>
 </div>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="w">
-    <div class="hero__inner">
-      <div class="hero__left">
-        <span class="hero__kicker">Meta Ads Strateeg &amp; Mentor</span>
-        <h1 class="hero__name">ANOUK<br><span>KIEVIT</span></h1>
-        <p class="hero__desc">Ik leer ondernemers <strong>zelf de regie pakken</strong> over hun groei. Winstgevend adverteren op Meta, zonder dagelijks online te zijn en zonder marketingbureau.</p>
-        <div class="hero__ctas">
-          <a href="#aanbod" class="btn btn--blue">Bekijk het aanbod</a>
-          <a href="#over" class="btn btn--outline">Over mij</a>
-        </div>
-      </div>
-      <img
-        class="hero__photo"
-        src="https://anoukkievit.nl/wp-content/uploads/2026/06/Anouk-Kievit_Kramer-Fotografeert-0760.jpg"
-        alt="Anouk Kievit"
-      />
+  <div class="hero__text-col">
+    <span class="hero__kicker">Meta Ads Strateeg &amp; Mentor</span>
+    <h1 class="hero__name">ANOUK<br><em>Kievit</em></h1>
+    <p class="hero__desc">Ik leer ondernemers <strong>zelf de regie pakken</strong> over hun groei. Winstgevend adverteren op Meta, zonder dagelijks online te zijn en zonder marketingbureau.</p>
+    <div class="hero__ctas">
+      <a href="#aanbod" class="btn btn--terra">Bekijk het aanbod</a>
+      <a href="#over" class="btn btn--ghost">Over mij</a>
     </div>
+  </div>
+  <div class="hero__img-col">
+    <img
+      src="https://anoukkievit.nl/wp-content/uploads/2026/06/Anouk-Kievit_Kramer-Fotografeert-0760.jpg"
+      alt="Anouk Kievit"
+    />
   </div>
 </section>
 
 <!-- AANBOD -->
 <section class="aanbod" id="aanbod">
   <div class="w">
-    <span class="section-label">Wat ik aanbied</span>
-    <h2 class="section-title">Kies je<br>volgende stap.</h2>
+    <span class="sec-eye">Wat ik aanbied</span>
+    <h2 class="sec-title">Kies je<br><em>volgende stap.</em></h2>
 
-    <div class="aanbod__grid">
+    <div class="cards">
 
       <!-- MASTERCLASS -->
       <div class="card">
@@ -412,10 +402,9 @@
           />
         </div>
         <div class="card__body">
-          <span class="card__num">01</span>
-          <span class="card__badge card__badge--gold">Gratis</span>
+          <span class="card__tag card__tag--gold">Gratis</span>
           <h3 class="card__title">De 3 grootste fouten die drukke ondernemers maken met advertenties</h3>
-          <p class="card__subtitle">(waardoor ze onnodig klanten, tijd en omzet mislopen)</p>
+          <p class="card__sub">(waardoor ze onnodig klanten, tijd en omzet mislopen)</p>
           <p class="card__desc">Ontdek waarom zoveel ondernemers advertenties ingewikkelder maken dan nodig is en wat er werkelijk nodig is om voorspelbaar nieuwe leads aan te trekken, zonder dagelijks online te zijn en zonder marketingbureau.</p>
           <div class="card__cta">
             <a href="#" class="btn btn--gold btn--full">Ik schrijf me gratis in</a>
@@ -432,12 +421,11 @@
           />
         </div>
         <div class="card__body">
-          <span class="card__num">02</span>
-          <span class="card__badge card__badge--peach">Wachtlijst · Start september</span>
+          <span class="card__tag card__tag--lav">Wachtlijst · Start september</span>
           <h3 class="card__title">De Admeester</h3>
           <p class="card__desc">Schrijf je in voor de wachtlijst en hoor als eerste wanneer de deuren openen. Leer hoe je zelf winstgevende Meta Ads inzet, zodat je niet langer afhankelijk bent van dagelijks posten of een marketingbureau.</p>
           <div class="card__cta">
-            <a href="#" class="btn btn--peach btn--full">Zet me op de wachtlijst</a>
+            <a href="#" class="btn btn--lav btn--full">Zet me op de wachtlijst</a>
           </div>
         </div>
       </div>
@@ -451,12 +439,11 @@
           />
         </div>
         <div class="card__body">
-          <span class="card__num">03</span>
-          <span class="card__badge card__badge--pink">Exclusief · Max 3 plekken</span>
+          <span class="card__tag card__tag--pink">Exclusief · Max 3 plekken</span>
           <h3 class="card__title">1:1 Werken</h3>
           <p class="card__desc">Wil je samen aan de slag zodat ik 4 maanden naast je sta? We bouwen jouw advertentiestrategie en klantreis uit. Intensief, persoonlijk en op maat. Slechts 3 plekken beschikbaar.</p>
           <div class="card__cta">
-            <a href="#" class="btn btn--blue btn--full">Neem contact op</a>
+            <a href="#" class="btn btn--terra btn--full">Neem contact op</a>
           </div>
         </div>
       </div>
@@ -468,36 +455,36 @@
 <!-- REVIEWS -->
 <section class="reviews" id="reviews">
   <div class="w">
-    <span class="section-label">Ervaringen</span>
-    <h2 class="section-title">Wat klanten zeggen.</h2>
+    <span class="sec-eye">Ervaringen</span>
+    <h2 class="sec-title" style="color:#fff;">Wat klanten<br><em style="color:var(--pink);">zeggen.</em></h2>
 
-    <div class="reviews__grid">
+    <div class="rev-grid">
 
-      <div class="review">
-        <div class="review__photo-wrap">
-          <img class="review__photo" src="SUZANNE_URL_HIER" alt="Suzanne Hoogstra" />
-          <div class="review__photo-placeholder">SH</div>
+      <div class="rev">
+        <div class="rev__avatar">
+          <img src="SUZANNE_URL_HIER" alt="Suzanne Hoogstra" />
+          <div class="rev__initials">SH</div>
         </div>
-        <p class="review__text">"Anouk is een absolute aanwinst voor mijn bedrijf. Ze kijkt zoveel verder met je mee dan alleen ads draaien. De kennis die ze heeft is enorm. Ze is lief én to the point tegelijk en dat werkt heel fijn. Heel blij met je!"</p>
-        <span class="review__name">Suzanne Hoogstra</span>
+        <p class="rev__quote">"Anouk is een absolute aanwinst voor mijn bedrijf. Ze kijkt zoveel verder met je mee dan alleen ads draaien. De kennis die ze heeft is enorm. Ze is lief én to the point tegelijk en dat werkt heel fijn. Heel blij met je!"</p>
+        <span class="rev__name">Suzanne Hoogstra</span>
       </div>
 
-      <div class="review">
-        <div class="review__photo-wrap">
-          <img class="review__photo" src="GINO_URL_HIER" alt="Gino Ilondo" />
-          <div class="review__photo-placeholder">GI</div>
+      <div class="rev">
+        <div class="rev__avatar">
+          <img src="GINO_URL_HIER" alt="Gino Ilondo" />
+          <div class="rev__initials">GI</div>
         </div>
-        <p class="review__text">"Anouk heeft mij, als leek in de advertentiewereld, geholpen om het van de grond af te krijgen. Op een fijne, behulpzame en betrouwbare manier. Ze is bereid om altijd met je mee te denken en ik heb in korte tijd lekker geld kunnen verdienen."</p>
-        <span class="review__name">Gino Ilondo</span>
+        <p class="rev__quote">"Anouk heeft mij, als leek in de advertentiewereld, geholpen om het van de grond af te krijgen. Op een fijne, behulpzame en betrouwbare manier. Ze is bereid om altijd met je mee te denken en ik heb in korte tijd lekker geld kunnen verdienen."</p>
+        <span class="rev__name">Gino Ilondo</span>
       </div>
 
-      <div class="review">
-        <div class="review__photo-wrap">
-          <img class="review__photo" src="CHANTAL_URL_HIER" alt="Chantal Hopstaken" />
-          <div class="review__photo-placeholder">CH</div>
+      <div class="rev">
+        <div class="rev__avatar">
+          <img src="CHANTAL_URL_HIER" alt="Chantal Hopstaken" />
+          <div class="rev__initials">CH</div>
         </div>
-        <p class="review__text">"Anouk is echt zo'n goudmijn die vanaf dag één naast me stond. Ze denkt echt met je mee en durft kritisch te zijn, maar altijd op een opbouwende manier. Mede dankzij haar inzet is mijn bedrijf zo hard gegroeid."</p>
-        <span class="review__name">Chantal Hopstaken</span>
+        <p class="rev__quote">"Anouk is echt zo'n goudmijn die vanaf dag één naast me stond. Ze denkt echt met je mee en durft kritisch te zijn, maar altijd op een opbouwende manier. Mede dankzij haar inzet is mijn bedrijf zo hard gegroeid."</p>
+        <span class="rev__name">Chantal Hopstaken</span>
       </div>
 
     </div>
@@ -508,23 +495,23 @@
 <section class="about" id="over">
   <div class="w">
     <div class="about__inner">
-      <div class="about__photo-wrap">
+      <div class="about__sticky">
         <img
           class="about__photo"
           src="https://anoukkievit.nl/wp-content/uploads/2026/06/Anouk-Kievit_Kramer-Fotografeert-0714.jpg"
           alt="Anouk Kievit"
         />
       </div>
-      <div class="about__content">
-        <h2 class="about__title">MEET<br><span>ANOUK</span></h2>
+      <div>
+        <h2 class="about__heading">MEET<br><em>Anouk</em></h2>
         <span class="about__role">Meta Ads Strateeg &amp; Mentor</span>
-        <div class="about__text">
+        <div class="about__body">
           <p>Ik ben Anouk.</p>
           <p>Als ik ergens voor ga, dan ga ik ook echt all-in.</p>
           <p>Dat bracht me eerst naar de zorg, waar ik als hbo-verpleegkundige werkte op de oncologie en tijdens corona op de Intensive Care. Maar diep vanbinnen wist ik al jaren dat ik wilde ondernemen.</p>
           <p>Ruim 4 jaar geleden besloot ik de sprong te wagen. Ik begon als virtueel assistent, bouwde binnen korte tijd een volle agenda op en leerde ondernemen vooral door te doen.</p>
           <p>Ik heb heel veel geïnvesteerd in top experts, omdat ik geloof in ontwikkeling. Altijd heb ik een coach naast me gehad en soms zelfs drie tegelijkertijd.</p>
-          <p>Later specialiseerde ik me in Meta Ads. Uiteindelijk hielp ik ruim <strong>150 ondernemers</strong> 1-op-1 en stond ik naast ondernemers die doorgroeiden van 50.000 naar 500.000 euro omzet.</p>
+          <p>Later specialiseerde ik me in Meta Ads. Uiteindelijk hielp ik ruim <strong>150 ondernemers</strong> 1-op-1 en stond ik naast ondernemers die doorgroeiden van 50.000 naar 500.000 tot 1 miljoen omzet per jaar.</p>
           <p>Maar ik ontdekte ook iets anders.</p>
           <p>Ik geloof dat jij dit als ondernemer zelf kan. Adverteren wordt veel te ingewikkeld gemaakt, maar het is het niet. En als je het eenmaal zelf begrijpt en je besluit het later uit te besteden? Dan snap je precies wat de andere partij doet. Je staat er niet meer naast, je staat erboven.</p>
           <p>Daarom besloot ik mijn kennis áán ondernemers te leren. De eerste editie van mijn training werd direct door <strong>221 ondernemers</strong> gekocht.</p>
