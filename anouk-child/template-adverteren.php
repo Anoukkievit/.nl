@@ -525,7 +525,7 @@
 
 <!-- FOOTER -->
 <footer class="footer">
-  <p>© 2026 Anouk Kievit &nbsp;·&nbsp; <a href="mailto:anouk@anoukkievit.nl">anouk@anoukkievit.nl</a></p>
+  <p>© 2026 Anouk Kievit &nbsp;·&nbsp; <a href="https://www.instagram.com/anoukkievit.nl/" target="_blank">Instagram</a></p>
 </footer>
 
 </body>
