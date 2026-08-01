@@ -470,7 +470,7 @@
 
       <div class="rev">
         <div class="rev__avatar">
-          <img src="SUZANNE_URL_HIER" alt="Suzanne Hoogstra" />
+          <img src="https://anoukkievit.nl/wp-content/uploads/2026/08/Schermafbeelding-2026-02-05-134747.png" alt="Suzanne Hoogstra" />
           <div class="rev__initials">SH</div>
         </div>
         <div class="rev__right">
@@ -481,7 +481,7 @@
 
       <div class="rev">
         <div class="rev__avatar">
-          <img src="GINO_URL_HIER" alt="Gino Ilondo" />
+          <img src="https://anoukkievit.nl/wp-content/uploads/2026/08/Schermafbeelding-2026-02-05-134856.png" alt="Gino Ilondo" />
           <div class="rev__initials">GI</div>
         </div>
         <div class="rev__right">
@@ -492,7 +492,7 @@
 
       <div class="rev">
         <div class="rev__avatar">
-          <img src="CHANTAL_URL_HIER" alt="Chantal Hopstaken" />
+          <img src="https://anoukkievit.nl/wp-content/uploads/2026/08/Schermafbeelding-2026-02-05-134903.png" alt="Chantal Hopstaken" />
           <div class="rev__initials">CH</div>
         </div>
         <div class="rev__right">
