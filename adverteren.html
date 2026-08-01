@@ -354,6 +354,11 @@
     .footer a { color: var(--pink); }
     .footer a:hover { color: #fff; }
 
+    /* Desktop: hide hero photo, show card photos */
+    @media (min-width: 641px) {
+      .hero__img { display: none; }
+    }
+    /* Mobile: show hero photo, hide card photos */
     @media (max-width: 640px) {
       .hero { padding: 52px 24px 0; }
       .aanbod, .reviews, .about { padding: 60px 0; }
@@ -367,6 +372,7 @@
       .about__heading { font-size: 52px; }
       .about__body p { font-size: 16px; }
       .btn { padding: 14px 24px; }
+      .pcard { display: none; }
     }
   </style>
 </head>
@@ -393,6 +399,13 @@
 
       <!-- MASTERCLASS -->
       <div>
+        <div class="pcard">
+          <img class="pcard__img"
+            src="https://anoukkievit.nl/wp-content/uploads/2026/06/Anouk-Kievit_Kramer-Fotografeert-0744.jpg"
+            alt="Gratis Webinar" loading="lazy"
+          />
+          <div class="pcard__label">Gratis Webinar</div>
+        </div>
         <div class="pcard__body">
           <span class="pcard__tag">Gratis · Online</span>
           <h3 class="pcard__title">De 3 grootste fouten die drukke ondernemers maken met advertenties</h3>
@@ -404,6 +417,13 @@
 
       <!-- DE ADMEESTER -->
       <div>
+        <div class="pcard">
+          <img class="pcard__img"
+            src="https://anoukkievit.nl/wp-content/uploads/2026/06/Anouk-Kievit_Kramer-Fotografeert-0782.jpg"
+            alt="De Admeester" loading="lazy"
+          />
+          <div class="pcard__label">De Admeester</div>
+        </div>
         <div class="pcard__body">
           <span class="pcard__tag">Wachtlijst · Start september</span>
           <h3 class="pcard__title">De Admeester</h3>
@@ -415,6 +435,13 @@
 
       <!-- 1:1 EXCLUSIEF -->
       <div>
+        <div class="pcard">
+          <img class="pcard__img"
+            src="https://anoukkievit.nl/wp-content/uploads/2026/06/Anouk-Kievit_Kramer-Fotografeert-0869.jpg"
+            alt="1:1 Werken" loading="lazy"
+          />
+          <div class="pcard__label">1:1 Werken</div>
+        </div>
         <div class="pcard__body">
           <span class="pcard__tag">Exclusief · Max 3 plekken</span>
           <h3 class="pcard__title">1:1 Werken</h3>
