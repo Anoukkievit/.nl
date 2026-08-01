@@ -4,56 +4,126 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Leer winstgevend adverteren – Anouk Kievit</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet" />
+  <title>Anouk Kievit – Meta Ads Strateeg & Mentor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --coral:   #E07035;
-      --coral-d: #C05820;
-      --blue:    #5B6BB0;
-      --blue-d:  #4454A0;
-      --gold:    #D4A832;
-      --gold-bg: #C9A030;
-      --pink:    #D4A8C8;
-      --cream:   #FAF5EE;
-      --off:     #FDFAF7;
+      --terra:   #9B4E2A;
+      --terra-d: #7A3A1E;
+      --rust:    #C4673D;
+      --salmon:  #E8906A;
+      --gold:    #B8960A;
+      --gold-bg: #C4A227;
+      --cream:   #FAF6F0;
+      --off:     #F5EFE7;
+      --warm:    #EDE3D8;
       --white:   #FFFFFF;
-      --text:    #1a1a1a;
-      --muted:   #5a5a5a;
-      --line:    #DDD5C8;
-      --warm:    #F0E8DC;
+      --text:    #1C1008;
+      --muted:   #5C4A38;
+      --line:    #DDD0C0;
     }
     html { scroll-behavior: smooth; }
-    body { font-family: 'DM Sans', sans-serif; background: var(--off); color: var(--text); font-size: 16px; line-height: 1.85; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--text); font-size: 16px; line-height: 1.85; }
     img { display: block; max-width: 100%; }
     a { color: inherit; text-decoration: none; }
 
-    .w { max-width: 1080px; margin: 0 auto; padding: 0 40px; }
+    .w { max-width: 1100px; margin: 0 auto; padding: 0 48px; }
     @media (max-width: 640px) { .w { padding: 0 24px; } }
 
-    /* EYEBROW */
-    .eyebrow {
-      display: block;
+    /* ═══ TOPBAR ═══ */
+    .topbar {
+      background: var(--salmon);
+      color: #fff;
+      text-align: center;
+      padding: 12px 24px;
       font-size: 10px;
-      letter-spacing: 4px;
+      letter-spacing: 3px;
       text-transform: uppercase;
       font-weight: 600;
-      margin-bottom: 16px;
     }
-    .eyebrow--blue  { color: var(--blue); }
-    .eyebrow--gold  { color: #8a6520; }
 
-    /* SECTION TITLE */
-    .section-title {
-      font-family: 'Poppins', sans-serif;
-      font-size: clamp(32px, 5vw, 54px);
+    /* ═══ HERO ═══ */
+    .hero {
+      position: relative;
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: var(--terra);
+    }
+    .hero__bg {
+      position: absolute;
+      inset: 0;
+      background: url('https://anoukkievit.nl/wp-content/uploads/2026/06/Anouk-Kievit_Kramer-Fotografeert-0760.jpg') center top / cover no-repeat;
+      mix-blend-mode: multiply;
+      opacity: .55;
+    }
+    .hero__inner {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 80px 40px;
+      max-width: 900px;
+    }
+    .hero__pretitle {
+      font-size: 10px;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.65);
+      font-weight: 600;
+      margin-bottom: 20px;
+      display: block;
+    }
+    .hero__name {
+      font-family: 'Cormorant', serif;
+      font-size: clamp(72px, 12vw, 148px);
+      font-weight: 600;
+      color: #fff;
+      line-height: .95;
+      letter-spacing: -1px;
+      margin-bottom: 24px;
+    }
+    .hero__name em {
+      font-style: italic;
+      font-weight: 300;
+    }
+    .hero__tagline {
+      font-size: 11px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.55);
+      font-weight: 500;
+      margin-bottom: 32px;
+    }
+    .hero__sub {
+      font-family: 'Cormorant', serif;
+      font-size: clamp(20px, 2.8vw, 30px);
+      font-style: italic;
       font-weight: 400;
-      line-height: 1.15;
-      color: var(--text);
+      color: rgba(255,255,255,.88);
+      line-height: 1.5;
+      margin-bottom: 48px;
+      max-width: 580px;
+      margin-left: auto;
+      margin-right: auto;
     }
+    .hero__links {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.6);
+      font-weight: 600;
+    }
+    .hero__links a { color: rgba(255,255,255,.65); transition: color .2s; }
+    .hero__links a:hover { color: #fff; }
 
-    /* BUTTONS */
+    /* ═══ BUTTONS ═══ */
     .btn {
       display: inline-block;
       padding: 15px 38px;
@@ -64,102 +134,55 @@
       font-family: 'DM Sans', sans-serif;
       transition: all .2s;
       cursor: pointer;
-      border-radius: 2px;
       border: none;
       text-decoration: none;
     }
-    .btn--blue  { background: var(--blue); color: #fff; }
-    .btn--blue:hover { background: var(--blue-d); transform: translateY(-2px); }
-    .btn--outline-white { background: transparent; border: 1.5px solid rgba(255,255,255,.65); color: #fff; }
-    .btn--outline-white:hover { background: rgba(255,255,255,.12); }
+    .btn--gold { background: var(--gold-bg); color: var(--text); }
+    .btn--gold:hover { background: var(--gold); }
+    .btn--terra { background: var(--terra); color: #fff; }
+    .btn--terra:hover { background: var(--terra-d); transform: translateY(-2px); }
+    .btn--outline { background: transparent; border: 1.5px solid var(--line); color: var(--text); }
+    .btn--outline:hover { background: var(--text); color: #fff; }
     .btn--full { width: 100%; text-align: center; display: block; }
-
-    /* ═══ HERO ═══ */
-    .hero {
-      position: relative;
-      min-height: 90vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-    .hero__bg {
-      position: absolute;
-      inset: 0;
-      background: url('https://anoukkievit.nl/wp-content/uploads/2026/06/Anouk-Kievit_Kramer-Fotografeert-0760.jpg') center top / cover no-repeat;
-    }
-    .hero__bg::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: rgba(10,8,6,.60);
-    }
-    .hero__inner {
-      position: relative;
-      z-index: 1;
-      text-align: center;
-      padding: 100px 40px 80px;
-      max-width: 820px;
-    }
-    .hero__eyebrow {
-      display: block;
-      font-size: 10px;
-      letter-spacing: 5px;
-      text-transform: uppercase;
-      color: rgba(255,255,255,.58);
-      font-weight: 600;
-      margin-bottom: 28px;
-    }
-    .hero__name {
-      font-family: 'Poppins', sans-serif;
-      font-size: clamp(46px, 8vw, 96px);
-      font-weight: 400;
-      color: #fff;
-      line-height: 1.05;
-      margin-bottom: 20px;
-    }
-    .hero__tagline {
-      font-size: 11px;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      color: rgba(255,255,255,.5);
-      font-weight: 500;
-      margin-bottom: 36px;
-    }
-    .hero__sub {
-      font-family: 'Poppins', sans-serif;
-      font-size: clamp(19px, 2.5vw, 26px);
-      font-style: italic;
-      color: rgba(255,255,255,.85);
-      line-height: 1.5;
-      margin-bottom: 48px;
-    }
 
     /* ═══ AANBOD ═══ */
     .aanbod {
-      background: var(--cream);
-      padding: 96px 0;
+      background: var(--white);
+      padding: 100px 0;
       border-bottom: 1px solid var(--line);
     }
     .aanbod__header {
       text-align: center;
-      margin-bottom: 64px;
+      margin-bottom: 72px;
     }
+    .eyebrow {
+      display: block;
+      font-size: 10px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 16px;
+      color: var(--muted);
+    }
+    .section-title {
+      font-family: 'Cormorant', serif;
+      font-size: clamp(42px, 7vw, 88px);
+      font-weight: 500;
+      line-height: 1.05;
+      color: var(--text);
+    }
+    .section-title em { font-style: italic; font-weight: 300; }
+
     .aanbod__grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 28px;
+      gap: 32px;
     }
     @media (max-width: 820px) {
       .aanbod__grid { grid-template-columns: 1fr; max-width: 500px; margin: 0 auto; }
     }
 
-    .card {
-      display: flex;
-      flex-direction: column;
-      background: var(--white);
-      border: 1px solid var(--line);
-    }
+    .card { display: flex; flex-direction: column; background: var(--cream); border: 1px solid var(--line); }
     .card__img-wrap { overflow: hidden; }
     .card__img {
       width: 100%;
@@ -167,16 +190,10 @@
       object-fit: cover;
       object-position: top;
       display: block;
-      transition: transform .4s;
+      transition: transform .5s;
     }
-    .card:hover .card__img { transform: scale(1.03); }
-
-    .card__body {
-      padding: 28px 28px 32px;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-    }
+    .card:hover .card__img { transform: scale(1.04); }
+    .card__body { padding: 28px 28px 32px; flex: 1; display: flex; flex-direction: column; }
     .card__badge {
       display: inline-block;
       font-size: 9px;
@@ -184,36 +201,22 @@
       text-transform: uppercase;
       font-weight: 600;
       padding: 4px 10px;
-      margin-bottom: 18px;
-      align-self: flex-start;
-      border-radius: 2px;
-    }
-    .card__badge--gratis    { background: rgba(212,168,50,.15); color: #8a6520; border: 1px solid rgba(212,168,50,.3); }
-    .card__badge--wacht     { background: rgba(91,107,176,.1); color: var(--blue); border: 1px solid rgba(91,107,176,.25); }
-    .card__badge--exclusief { background: rgba(212,168,200,.2); color: #8a5070; border: 1px solid rgba(212,168,200,.4); }
-
-    .card__title {
-      font-family: 'Poppins', sans-serif;
-      font-size: clamp(18px, 2vw, 22px);
-      font-weight: 400;
-      color: var(--text);
-      line-height: 1.3;
-      margin-bottom: 14px;
-    }
-    .card__subtitle {
-      font-size: 13px;
-      font-style: italic;
-      color: var(--muted);
       margin-bottom: 16px;
-      line-height: 1.5;
+      align-self: flex-start;
     }
-    .card__desc {
-      font-size: 14.5px;
-      color: var(--muted);
-      line-height: 1.8;
-      flex: 1;
-      margin-bottom: 28px;
+    .card__badge--gratis    { background: rgba(184,150,10,.15); color: #7a5e00; border: 1px solid rgba(184,150,10,.3); }
+    .card__badge--wacht     { background: rgba(155,78,42,.1); color: var(--terra); border: 1px solid rgba(155,78,42,.25); }
+    .card__badge--exclusief { background: rgba(232,144,106,.15); color: var(--rust); border: 1px solid rgba(232,144,106,.3); }
+    .card__title {
+      font-family: 'Cormorant', serif;
+      font-size: clamp(20px, 2.2vw, 26px);
+      font-weight: 500;
+      color: var(--text);
+      line-height: 1.25;
+      margin-bottom: 12px;
     }
+    .card__subtitle { font-size: 13px; font-style: italic; color: var(--muted); margin-bottom: 14px; line-height: 1.5; }
+    .card__desc { font-size: 14.5px; color: var(--muted); line-height: 1.8; flex: 1; margin-bottom: 28px; }
     .card__cta { margin-top: auto; }
 
     /* ═══ REVIEWS ═══ */
@@ -222,10 +225,7 @@
       padding: 100px 0;
       border-bottom: 1px solid var(--line);
     }
-    .reviews__header {
-      text-align: center;
-      margin-bottom: 64px;
-    }
+    .reviews__header { text-align: center; margin-bottom: 64px; }
     .reviews__grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -234,7 +234,6 @@
     @media (max-width: 860px) {
       .reviews__grid { grid-template-columns: 1fr; max-width: 540px; margin: 0 auto; }
     }
-
     .review {
       background: var(--white);
       border: 1px solid var(--line);
@@ -243,8 +242,8 @@
       flex-direction: column;
     }
     .review__photo-wrap {
-      width: 72px;
-      height: 72px;
+      width: 76px;
+      height: 76px;
       border-radius: 50%;
       overflow: hidden;
       margin-bottom: 20px;
@@ -253,28 +252,20 @@
       flex-shrink: 0;
     }
     .review__photo {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: top;
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: top;
       border-radius: 50%;
     }
     .review__photo-placeholder {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 22px;
-      font-weight: 600;
-      color: var(--muted);
-      font-family: 'Poppins', sans-serif;
+      position: absolute; inset: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Cormorant', serif;
+      font-size: 24px; font-weight: 600; color: var(--muted);
     }
     .review__photo[src*="URL_HIER"] { display: none; }
-
     .review__text {
-      font-family: 'Poppins', sans-serif;
-      font-size: 15.5px;
+      font-family: 'Cormorant', serif;
+      font-size: 17px;
       font-style: italic;
       color: var(--text);
       line-height: 1.75;
@@ -282,11 +273,11 @@
       margin-bottom: 20px;
     }
     .review__name {
-      font-size: 11px;
+      font-size: 10px;
       letter-spacing: 2px;
       text-transform: uppercase;
       font-weight: 600;
-      color: var(--blue);
+      color: var(--terra);
       display: block;
     }
 
@@ -297,7 +288,7 @@
     }
     .about__inner {
       display: grid;
-      grid-template-columns: 400px 1fr;
+      grid-template-columns: 420px 1fr;
       gap: 80px;
       align-items: start;
     }
@@ -305,39 +296,30 @@
       .about__inner { grid-template-columns: 1fr; gap: 48px; }
     }
     .about__photo-wrap { position: sticky; top: 80px; }
-    .about__photo {
-      width: 100%;
-      aspect-ratio: 3/4;
-      object-fit: cover;
-      object-position: top;
-    }
+    .about__photo { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: top; }
     .about__title {
-      font-family: 'Poppins', sans-serif;
-      font-size: clamp(40px, 6.5vw, 72px);
-      font-weight: 400;
+      font-family: 'Cormorant', serif;
+      font-size: clamp(52px, 8vw, 100px);
+      font-weight: 500;
       color: var(--text);
-      line-height: 1.05;
+      line-height: .95;
       margin-bottom: 10px;
     }
+    .about__title em { font-style: italic; font-weight: 300; }
     .about__role {
-      font-size: 11px;
+      font-size: 10px;
       letter-spacing: 3px;
       text-transform: uppercase;
       font-weight: 600;
-      color: var(--blue);
+      color: var(--terra);
       display: block;
       margin-bottom: 40px;
     }
-    .about__text p {
-      font-size: 15.5px;
-      color: var(--muted);
-      line-height: 1.85;
-      margin-bottom: 18px;
-    }
+    .about__text p { font-size: 16px; color: var(--muted); line-height: 1.85; margin-bottom: 18px; }
     .about__text p:last-child { margin-bottom: 0; }
     .about__sig {
       font-family: 'Dancing Script', cursive;
-      font-size: 46px;
+      font-size: 50px;
       color: var(--text);
       margin-top: 40px;
       display: block;
@@ -345,33 +327,44 @@
 
     /* ═══ FOOTER ═══ */
     .footer {
-      background: var(--warm);
-      border-top: 1px solid var(--line);
-      color: var(--muted);
+      background: var(--terra);
+      color: rgba(255,255,255,.5);
       text-align: center;
       padding: 44px 40px;
       font-size: 13px;
+      letter-spacing: .5px;
     }
-    .footer a { color: var(--blue); }
-    .footer a:hover { color: var(--blue-d); }
+    .footer a { color: rgba(255,255,255,.7); }
+    .footer a:hover { color: #fff; }
 
     @media (max-width: 640px) {
-      .hero__inner { padding: 80px 24px 64px; }
+      .hero__inner { padding: 60px 24px; }
+      .hero__links { gap: 20px; }
       .aanbod, .reviews, .about { padding: 64px 0; }
     }
   </style>
 </head>
 <body>
 
+<!-- TOPBAR -->
+<div class="topbar">
+  Leer zelf winstgevend adverteren zonder dagelijks online te zijn
+</div>
+
 <!-- HERO -->
 <section class="hero">
   <div class="hero__bg"></div>
   <div class="hero__inner">
-    <span class="hero__eyebrow">Meta Ads Strateeg &amp; Mentor</span>
-    <h1 class="hero__name">Anouk Kievit</h1>
-    <p class="hero__tagline">Adverteren · Groeien · Vrijheid</p>
-    <p class="hero__sub">Leer zelf winstgevend adverteren,<br>zodat jij de regie houdt over je eigen groei.</p>
-    <a href="#aanbod" class="btn btn--outline-white">Bekijk het aanbod</a>
+    <span class="hero__pretitle">Hoi, ik ben:</span>
+    <h1 class="hero__name"><em>Anouk</em><br>Kievit</h1>
+    <p class="hero__tagline">Meta Ads Strateeg &amp; Mentor</p>
+    <p class="hero__sub">Ik leer ondernemers zelf de regie pakken<br>over hun groei, door winstgevend te adverteren.</p>
+    <div class="hero__links">
+      <a href="#aanbod">Masterclass</a>
+      <a href="#aanbod">De Admeester</a>
+      <a href="#aanbod">1:1 Werken</a>
+      <a href="#over">Over mij</a>
+    </div>
   </div>
 </section>
 
@@ -379,8 +372,8 @@
 <section class="aanbod" id="aanbod">
   <div class="w">
     <div class="aanbod__header">
-      <span class="eyebrow eyebrow--gold">Wat ik aanbied</span>
-      <h2 class="section-title">Kies jouw volgende stap</h2>
+      <span class="eyebrow">Recente links + laatste updates</span>
+      <h2 class="section-title">Vind mij <em>hier</em></h2>
     </div>
 
     <div class="aanbod__grid">
@@ -395,14 +388,14 @@
           />
         </div>
         <div class="card__body">
-          <span class="card__badge card__badge--gratis">Gratis</span>
+          <span class="card__badge card__badge--gratis">01 Gratis</span>
           <h3 class="card__title">De 3 grootste fouten die drukke ondernemers maken met advertenties</h3>
           <p class="card__subtitle">(waardoor ze onnodig klanten, tijd en omzet mislopen)</p>
           <p class="card__desc">
             Ontdek waarom zoveel ondernemers advertenties veel ingewikkelder maken dan nodig is en wat er werkelijk nodig is om voorspelbaar nieuwe leads en klanten aan te trekken, zonder dagelijks online te zijn en zonder marketingbureau.
           </p>
           <div class="card__cta">
-            <a href="#" class="btn btn--blue btn--full">Ik schrijf me gratis in</a>
+            <a href="#" class="btn btn--gold btn--full">Ik schrijf me gratis in</a>
           </div>
         </div>
       </div>
@@ -417,13 +410,13 @@
           />
         </div>
         <div class="card__body">
-          <span class="card__badge card__badge--wacht">Wachtlijst · Start september</span>
+          <span class="card__badge card__badge--wacht">02 Wachtlijst · Start september</span>
           <h3 class="card__title">De Admeester</h3>
           <p class="card__desc">
             Schrijf je in voor de wachtlijst van Admeester en hoor als eerste wanneer de deuren openen. Leer hoe je zelf winstgevende Meta Ads inzet, zodat je niet langer afhankelijk bent van dagelijks posten of een marketingbureau. De volgende ronde start in september.
           </p>
           <div class="card__cta">
-            <a href="#" class="btn btn--blue btn--full">Zet me op de wachtlijst</a>
+            <a href="#" class="btn btn--terra btn--full">Zet me op de wachtlijst</a>
           </div>
         </div>
       </div>
@@ -438,13 +431,13 @@
           />
         </div>
         <div class="card__body">
-          <span class="card__badge card__badge--exclusief">Exclusief · Max 3 plekken</span>
+          <span class="card__badge card__badge--exclusief">03 Exclusief · Max 3 plekken</span>
           <h3 class="card__title">1:1 Werken</h3>
           <p class="card__desc">
-            Wil je samen aan de slag zodat ik 4 maanden naast je sta? We bouwen samen jouw advertentiestrategie én klantreis uit. Intensief, persoonlijk en op maat, zodat jij zelf leert adverteren, begrijpt wat werkt voor jouw bedrijf en niet langer afhankelijk bent van anderen. Voor ondernemers die écht willen doorgroeien. Slechts 3 plekken.
+            Wil je samen aan de slag zodat ik 4 maanden naast je sta? We bouwen samen jouw advertentiestrategie en klantreis uit. Intensief, persoonlijk en op maat, zodat jij zelf leert adverteren en niet langer afhankelijk bent van anderen. Slechts 3 plekken.
           </p>
           <div class="card__cta">
-            <a href="#" class="btn btn--blue btn--full">Neem contact op</a>
+            <a href="#" class="btn btn--terra btn--full">Neem contact op</a>
           </div>
         </div>
       </div>
@@ -457,8 +450,8 @@
 <section class="reviews" id="reviews">
   <div class="w">
     <div class="reviews__header">
-      <span class="eyebrow eyebrow--blue">Ervaringen</span>
-      <h2 class="section-title">Wat klanten zeggen</h2>
+      <span class="eyebrow">Ervaringen</span>
+      <h2 class="section-title">Wat klanten <em>zeggen</em></h2>
     </div>
     <div class="reviews__grid">
 
@@ -467,7 +460,7 @@
           <img class="review__photo" src="SUZANNE_URL_HIER" alt="Suzanne Hoogstra" />
           <div class="review__photo-placeholder">SH</div>
         </div>
-        <p class="review__text">"Anouk is een absolute aanwinst voor mijn bedrijf. Ze kijkt zoveel verder met je mee dan alleen ads draaien en dat is nodig om ze winstgevend te maken. De kennis die Anouk heeft is enorm. Daarnaast is ze echt iemand die naast je staat als persoon, lief én to the point tegelijk. Heel blij met je!"</p>
+        <p class="review__text">"Anouk is een absolute aanwinst voor mijn bedrijf. Ze kijkt zoveel verder met je mee dan alleen ads draaien. De kennis die Anouk heeft is enorm en ze is echt iemand die naast je staat als persoon, lief én to the point tegelijk. Heel blij met je!"</p>
         <span class="review__name">Suzanne Hoogstra</span>
       </div>
 
@@ -476,7 +469,7 @@
           <img class="review__photo" src="GINO_URL_HIER" alt="Gino Ilondo" />
           <div class="review__photo-placeholder">GI</div>
         </div>
-        <p class="review__text">"Anouk heeft mij, als leek in de advertentiewereld, geholpen om het van de grond af te krijgen. Op een hele fijne, behulpzame en betrouwbare manier. Ze is zo bereid om altijd met je mee te denken en ik heb in korte tijd lekker geld kunnen verdienen met de advertenties die live gingen."</p>
+        <p class="review__text">"Anouk heeft mij, als leek in de advertentiewereld, geholpen om het van de grond af te krijgen. Op een fijne, behulpzame en betrouwbare manier. Ze is bereid om altijd met je mee te denken en ik heb in korte tijd lekker geld kunnen verdienen."</p>
         <span class="review__name">Gino Ilondo</span>
       </div>
 
@@ -505,15 +498,15 @@
         />
       </div>
       <div class="about__content">
-        <span class="eyebrow eyebrow--blue" style="margin-bottom:20px;">Over mij</span>
-        <h2 class="about__title">Meet<br>Anouk</h2>
+        <span class="eyebrow" style="margin-bottom:20px; color:var(--terra);">Over mij</span>
+        <h2 class="about__title">Meet<br><em>Anouk</em></h2>
         <span class="about__role">Meta Ads Strateeg &amp; Mentor</span>
         <div class="about__text">
           <p>Ik ben Anouk.</p>
           <p>Als ik ergens voor ga, dan ga ik ook echt all-in.</p>
           <p>Dat bracht me eerst naar de zorg, waar ik als hbo-verpleegkundige werkte op de oncologie en tijdens corona op de Intensive Care. Maar diep vanbinnen wist ik al jaren dat ik wilde ondernemen.</p>
           <p>Ruim 2,5 jaar geleden besloot ik de sprong te wagen. Ik begon als virtueel assistent, bouwde binnen korte tijd een volle agenda op en leerde ondernemen vooral door te doen. Door fouten te maken, veel te werken en steeds beter te worden.</p>
-          <p>Later specialiseerde ik me in Meta Ads. Uiteindelijk hielp ik ruim 150 ondernemers 1-op-1 met hun techniek en uiteindelijk met een team samen het uit handen nemen van hun advertenties. Ik stond naast ondernemers die doorgroeiden van 50.000 naar 500.000 euro omzet en zag van dichtbij wat groei écht vraagt.</p>
+          <p>Later specialiseerde ik me in Meta Ads. Uiteindelijk hielp ik ruim 150 ondernemers 1-op-1 met hun techniek en nam ik met een team hun advertenties uit handen. Ik stond naast ondernemers die doorgroeiden van 50.000 naar 500.000 euro omzet en zag van dichtbij wat groei écht vraagt.</p>
           <p>Maar ik ontdekte ook iets anders.</p>
           <p>Ik geloof niet dat ondernemers afhankelijk zouden moeten zijn van een marketingbureau. Ik geloof dat je zelf moet begrijpen hoe je klanten aantrekt.</p>
           <p>Daarom besloot ik mijn kennis niet langer alleen vóór ondernemers in te zetten, maar juist áán ondernemers te leren. De eerste editie van mijn training werd direct door 221 ondernemers gekocht.</p>
